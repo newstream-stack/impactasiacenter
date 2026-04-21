@@ -1,8 +1,6 @@
-const THUMBNAIL = 'https://images.unsplash.com/photo-1540039155732-d68f760ceec7?auto=format&fit=crop&q=80&w=1200'
-
 import styles from './TrailerSection.module.css'
 
-export default function TrailerSection({ onPlayVideo }) {
+export default function TrailerSection() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -10,15 +8,15 @@ export default function TrailerSection({ onPlayVideo }) {
           <h2 className={styles.title}>官方前導預告</h2>
           <p className={styles.subtitle}>OFFICIAL TRAILER 2026</p>
         </div>
-        <div className={styles.player} onClick={onPlayVideo}>
-          <div
-            className={styles.thumbnail}
-            style={{ backgroundImage: `url('${THUMBNAIL}')` }}
-          />
-          <div className={styles.overlay}>
-            <div className={styles.playBtn}>
-              <div className={styles.playIcon} />
-            </div>
+        <div className={styles.player}>
+          <div className={styles.videoResponsive}>
+            <iframe
+              src="https://www.youtube.com/embed/2IvNbOhBPwA"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Impact Asia 2026 Official Trailer"
+            ></iframe>
           </div>
         </div>
       </div>

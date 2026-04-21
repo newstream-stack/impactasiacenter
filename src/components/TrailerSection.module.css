@@ -25,57 +25,24 @@
 
 .player {
   width: 100%;
-  aspect-ratio: 16 / 9;
   border-radius: 1.5rem;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 30px 60px rgba(0,0,0,0.45);
 }
 
-.thumbnail {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.8s cubic-bezier(0.19,1,0.22,1);
-}
-
-.player:hover .thumbnail { transform: scale(1.05); }
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(34,37,51,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-}
-
-.player:hover .overlay { background: rgba(34,37,51,0.3); }
-
-.playBtn {
-  width: 96px;
-  height: 96px;
-  background: #FF5E00;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 0 16px rgba(255,94,0,0.12), 0 0 40px rgba(255,94,0,0.4);
-  transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
-  will-change: transform;
-}
-
-.player:hover .playBtn { transform: scale(1.15); }
-
-.playIcon {
-  width: 0;
+.videoResponsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left: 24px solid #fff;
-  margin-left: 7px;
+  background: #000;
+}
+
+.videoResponsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

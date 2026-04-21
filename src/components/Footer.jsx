@@ -21,7 +21,7 @@ export default function Footer() {
           <div className={styles.links}>
             <h4>快速連結</h4>
             <a href="#vision" onClick={(e) => handleSmoothScroll(e, '#vision')}>年會異象</a>
-            <a href="#speakers" onClick={(e) => handleSmoothScroll(e, '#speakers')}>大會講員</a>
+            {/* <a href="#speakers" onClick={(e) => handleSmoothScroll(e, '#speakers')}>大會講員</a> */}
             <a href="#themes" onClick={(e) => handleSmoothScroll(e, '#themes')}>專題議題</a>
             <a href="#venue" onClick={(e) => handleSmoothScroll(e, '#venue')}>會場資訊</a>
           </div>

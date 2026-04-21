@@ -6,19 +6,19 @@ export default function Timeline() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>亞洲信仰新世代崛起</h2>
+          <h2 className={styles.title}>亞洲信仰新世代</h2>
           <p className={styles.subtitle}>OUR JOURNEY (2022 - 2026)</p>
         </div>
 
         <div className={styles.timeline}>
           <div className={styles.line} />
           {timelineData.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`${styles.item} ${index % 2 === 0 ? styles.even : styles.odd} ${item.active ? styles.activeItem : ''}`}
             >
               <div className={styles.dot} />
-              
+
               <div className={styles.content}>
                 <div className={styles.textContent}>
                   <div className={styles.location}>

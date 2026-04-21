@@ -2,7 +2,7 @@ import styles from './Hero.module.css';
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=2000'; // Arizona Desert Vibe
 
-export default function Hero({ onPlayVideo }) {
+export default function Hero() {
   return (
     <section className={styles.hero} style={{ backgroundImage: `linear-gradient(to bottom, rgba(34,37,51,0.6), #222533), url('${HERO_IMG}')` }}>
       <div className={styles.content}>
@@ -11,9 +11,14 @@ export default function Hero({ onPlayVideo }) {
         <p className={styles.eventName}>IMPACT ASIA ALLIANCE SUMMIT</p>
         <div className={styles.cta}>
           <button className={styles.btnPrimary}>立即報名</button>
-          <button className={styles.btnSecondary} onClick={onPlayVideo}>
-            觀看前導片 <span>▶</span>
-          </button>
+          <a 
+            href="https://ct.org.tw/html/dedication/8-2-2.php?article=117" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.btnSecondary}
+          >
+            線上奉獻 Support
+          </a>
         </div>
       </div>
     </section>

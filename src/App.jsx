@@ -18,7 +18,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Hero onPlayVideo={() => setIsVideoOpen(true)} />
+      <Hero />
       <Vision />
       <Timeline />
       <TrailerSection onPlayVideo={() => setIsVideoOpen(true)} />

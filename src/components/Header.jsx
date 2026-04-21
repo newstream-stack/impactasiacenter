@@ -45,7 +45,7 @@ export default function Header() {
               {label}
             </a>
           ))}
-          <a href="#" className={styles.btnDonate}>
+          <a href="https://ct.org.tw/html/dedication/8-2-2.php?article=117" target="_blank" rel="noopener noreferrer" className={styles.btnDonate}>
             奉獻 Support
           </a>
         </div>

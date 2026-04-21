@@ -27,8 +27,8 @@ export default function Footer() {
           </div>
           <div className={styles.contact}>
             <h4>聯繫我們</h4>
-            <p>Email: contact@impactasiacenter.com</p>
-            <p>Phone: +886-2-XXXX-XXXX</p>
+            <p>Email: service@ct.org.tw</p>
+            <p>Phone: 0800096101 謝秘書</p>
           </div>
         </div>
         <div className={styles.bottom}>

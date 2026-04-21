@@ -1,6 +1,6 @@
 import styles from './Venue.module.css'
 
-const VENUE_IMG = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=1200'
+const VENUE_IMG = 'https://media.ct.org.tw/upload/news_article_cms/2026/04/21/59235_2.jpg'
 
 export default function Venue() {
   return (
@@ -16,11 +16,11 @@ export default function Venue() {
           </div>
           <div className={styles.info}>
             <h3>曠野中的奢華靜謐</h3>
-            <p>2026 年大會將於美國鳳凰城著名的沙漠度假村舉行。這裡獨特的地貌與現代建築的融合，將為每一位與會者提供深刻的反思空間。</p>
+            <p>2026年前往北美鳳凰城，祝福北美地區與亞太教會的聯合，邀請您與我們一同見證神在沙漠開江河、曠野開道路的奇妙作為！</p>
             <ul className={styles.list}>
-              <li><span>📍</span> JW Marriott Phoenix Desert Ridge</li>
-              <li><span>📅</span> 2026 年 10 月 22-25 日</li>
-              <li><span>🛏️</span> 尊榮住宿體驗與頂級餐飲</li>
+              <li><span>📍</span> First Baptist Church Tempe</li>
+              <li><span>📅</span> 2026 年 10 月 20-23 日</li>
+              {/* <li><span>🛏️</span> 尊榮住宿體驗與頂級餐飲</li> */}
             </ul>
           </div>
         </div>

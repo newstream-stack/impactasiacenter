@@ -1,0 +1,23 @@
+.section {
+  padding: 8rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.verse {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-style: italic;
+  color: #cbd5e0;
+  border-left: 4px solid #FF5E00;
+  padding-left: 2rem;
+  max-width: 800px;
+  line-height: 1.8;
+}
+
+.ref {
+  font-style: normal;
+  font-size: 0.85rem;
+  opacity: 0.55;
+  display: block;
+  margin-top: 1.2rem;
+}

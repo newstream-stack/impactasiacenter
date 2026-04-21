@@ -102,3 +102,32 @@
 .list span {
   color: #FF5E00;
 }
+
+.mapContainer {
+  margin-top: 4rem;
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  line-height: 0; /* Clear iframe extra space */
+}
+
+.mapContainer iframe {
+  filter: grayscale(0.6) invert(0.9) contrast(1.1); /* Dark mode map style */
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mapContainer:hover iframe {
+  filter: grayscale(0) invert(0) contrast(1); /* Return to full color on hover */
+}
+
+@media (max-width: 768px) {
+  .mapContainer {
+    margin-top: 3rem;
+    height: 300px;
+  }
+  .mapContainer iframe {
+    height: 300px;
+  }
+}

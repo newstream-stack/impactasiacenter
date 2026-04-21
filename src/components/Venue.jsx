@@ -24,6 +24,19 @@ export default function Venue() {
             </ul>
           </div>
         </div>
+
+        <div className={styles.mapContainer}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.066479018446!2d-111.9100067!3d33.3768853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b05cf14e7a78b%3A0x8a3ec1d720adb80e!2sFirst%20Baptist%20Church%20Tempe!5e0!3m2!1sen!2stw!4v1713687350000!5m2!1sen!2stw"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map of First Baptist Church Tempe"
+          ></iframe>
+        </div>
       </div>
     </section>
   )

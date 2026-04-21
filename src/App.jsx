@@ -20,7 +20,7 @@ export default function App() {
       <Vision />
       <Timeline />
       <TrailerSection />
-      <Speakers />
+      {/* <Speakers /> */}
       <Themes onThemeClick={setActiveTheme} />
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <Venue />

@@ -3,7 +3,7 @@ import styles from './Header.module.css';
 
 const navLinks = [
   { href: '#vision', label: '年會異象' },
-  { href: '#speakers', label: '大會講員' },
+  // { href: '#speakers', label: '大會講員' },
   { href: '#themes', label: '專題研討' },
   { href: '#venue', label: '會場資訊' },
 ];

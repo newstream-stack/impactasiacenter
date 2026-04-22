@@ -15,13 +15,13 @@ const translations = {
     navVision: '年會異象',
     navThemes: '專題研討',
     navVenue: '會場資訊',
-    navSupport: '奉獻 Support',
+    navSupport: '奉獻',
     // Hero
     heroSubtitle: 'Phoenix, Arizona | Oct 2026',
     heroTitle: '曠野中的重生',
     heroEventName: 'IMPACT ASIA ALLIANCE SUMMIT',
     btnRegister: '立即報名',
-    btnSupportOnline: '線上奉獻 Support',
+    btnSupportOnline: '奉獻',
     // Vision
     vision: {
       verse1: '「看哪，我要做一件新事；如今就要顯明，你們豈不知道嗎？',

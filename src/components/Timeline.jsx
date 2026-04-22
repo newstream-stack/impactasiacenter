@@ -1,13 +1,16 @@
-import { timelineData } from '../data/timeline';
+import { useI18n } from '../i18n/I18nContext';
 import styles from './Timeline.module.css';
 
 export default function Timeline() {
+  const { t } = useI18n();
+  const timelineSection = t('timelineSection');
+  const timelineData = t('timeline');
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>亞洲信仰新世代</h2>
-          <p className={styles.subtitle}>OUR JOURNEY (2022 - 2026)</p>
+          <h2 className={styles.title}>{timelineSection.title}</h2>
+          <p className={styles.subtitle}>{timelineSection.subtitle}</p>
         </div>
 
         <div className={styles.timeline}>

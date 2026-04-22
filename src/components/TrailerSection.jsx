@@ -1,12 +1,15 @@
 import styles from './TrailerSection.module.css'
+import { useI18n } from '../i18n/I18nContext'
 
 export default function TrailerSection() {
+  const { t } = useI18n()
+  const trailer = t('trailer')
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>官方前導預告</h2>
-          <p className={styles.subtitle}>OFFICIAL TRAILER 2026</p>
+          <h2 className={styles.title}>{trailer.title}</h2>
+          <p className={styles.subtitle}>{trailer.subtitle}</p>
         </div>
         <div className={styles.player}>
           <div className={styles.videoResponsive}>

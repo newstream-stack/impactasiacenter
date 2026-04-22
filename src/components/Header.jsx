@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
-
-const navLinks = [
-  { href: '#vision', label: '年會異象' },
-  // { href: '#speakers', label: '大會講員' },
-  { href: '#themes', label: '專題研討' },
-  { href: '#venue', label: '會場資訊' },
-];
+import { useI18n } from '../i18n/I18nContext';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, language, toggleLanguage } = useI18n();
+
+  const navLinks = [
+    { href: '#vision', label: t('navVision') },
+    // { href: '#speakers', label: '大會講員' },
+    { href: '#themes', label: t('navThemes') },
+    { href: '#venue', label: t('navVenue') },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 100);
@@ -45,8 +47,11 @@ export default function Header() {
               {label}
             </a>
           ))}
+          <button onClick={toggleLanguage} className={styles.langToggle} style={{ background: 'transparent', border: '1px solid currentColor', color: 'inherit', padding: '4px 8px', borderRadius: '4px', cursor: 'pointer', marginLeft: '1rem' }}>
+            {language === 'zh' ? 'EN' : '中文'}
+          </button>
           <a href="https://ct.org.tw/html/dedication/8-2-2.php?article=117" target="_blank" rel="noopener noreferrer" className={styles.btnDonate}>
-            奉獻 Support
+            {t('navSupport')}
           </a>
         </div>
       </div>

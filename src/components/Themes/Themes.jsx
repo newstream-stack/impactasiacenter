@@ -1,5 +1,5 @@
-import ThemeCard from './ThemeCard'
-import { useI18n } from '../i18n/I18nContext'
+import ThemeCard from '../ThemeCard/ThemeCard'
+import { useI18n } from '../../i18n/I18nContext'
 import styles from './Themes.module.css'
 
 export default function Themes({ onThemeClick }) {

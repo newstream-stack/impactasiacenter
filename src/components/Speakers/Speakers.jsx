@@ -1,5 +1,5 @@
-import SpeakerCard from './SpeakerCard'
-import { speakers } from '../data/speakers'
+import SpeakerCard from '../SpeakerCard/SpeakerCard'
+import { speakers } from '../../data/speakers'
 import styles from './Speakers.module.css'
 
 export default function Speakers() {

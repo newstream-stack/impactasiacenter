@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
-import { useI18n } from '../i18n/I18nContext';
+import { useI18n } from '../../i18n/I18nContext';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);

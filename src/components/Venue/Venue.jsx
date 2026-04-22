@@ -1,5 +1,5 @@
 import styles from './Venue.module.css'
-import { useI18n } from '../i18n/I18nContext'
+import { useI18n } from '../../i18n/I18nContext'
 
 const VENUE_IMG = 'https://media.ct.org.tw/upload/news_article_cms/2026/04/21/59235_2.jpg'
 

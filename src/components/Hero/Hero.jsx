@@ -1,5 +1,5 @@
 import styles from './Hero.module.css';
-import { useI18n } from '../i18n/I18nContext';
+import { useI18n } from '../../i18n/I18nContext';
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=2000'; // Arizona Desert Vibe
 

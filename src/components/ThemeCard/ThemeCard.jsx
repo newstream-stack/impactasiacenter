@@ -1,5 +1,5 @@
 import styles from './ThemeCard.module.css'
-import { useI18n } from '../i18n/I18nContext'
+import { useI18n } from '../../i18n/I18nContext'
 
 export default function ThemeCard({ theme, onClick }) {
   const { language } = useI18n()

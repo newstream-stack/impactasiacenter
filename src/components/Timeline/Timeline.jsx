@@ -1,4 +1,4 @@
-import { useI18n } from '../i18n/I18nContext';
+import { useI18n } from '../../i18n/I18nContext';
 import styles from './Timeline.module.css';
 
 export default function Timeline() {

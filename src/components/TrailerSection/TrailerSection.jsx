@@ -1,5 +1,5 @@
 import styles from './TrailerSection.module.css'
-import { useI18n } from '../i18n/I18nContext'
+import { useI18n } from '../../i18n/I18nContext'
 
 export default function TrailerSection() {
   const { t } = useI18n()

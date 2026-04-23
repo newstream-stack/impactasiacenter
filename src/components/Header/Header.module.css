@@ -32,8 +32,36 @@
 
 .links {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.langToggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  min-width: 48px;
+}
+
+.langToggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #FF5E00;
+  color: #FF5E00;
 }
 
 /* Hamburger Styles */
@@ -57,10 +85,16 @@
 
 @media (max-width: 768px) {
   .hamburger {
-    display: flex; /* Higher specificity or placed after base styles */
+    display: flex; 
+  }
+
+  .navActions {
+    z-index: 200;
   }
 
   .links {
+    margin-right: 0;
+    margin-left: 0;
     position: fixed;
     top: 0;
     right: 0;

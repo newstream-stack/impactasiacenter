@@ -35,24 +35,27 @@ export default function Header() {
       <div className={styles.container}>
         <div className={styles.logo}>IMPACT ASIA 2026</div>
         
-        <button className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Menu">
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-        </button>
-
         <div className={`${styles.links} ${isMenuOpen ? styles.linksVisible : ''}`}>
           {navLinks.map(({ href, label }) => (
             <a key={href} href={href} onClick={(e) => handleSmoothScroll(e, href)}>
               {label}
             </a>
           ))}
-          <button onClick={toggleLanguage} className={styles.langToggle} style={{ background: 'transparent', border: '1px solid currentColor', color: 'inherit', padding: '4px 8px', borderRadius: '4px', cursor: 'pointer', marginLeft: '1rem' }}>
-            {language === 'zh' ? 'EN' : '中文'}
-          </button>
           <a href="https://ct.org.tw/html/dedication/8-2-2.php?article=117" target="_blank" rel="noopener noreferrer" className={styles.btnDonate}>
             {t('navSupport')}
           </a>
+        </div>
+
+        <div className={styles.navActions}>
+          <button onClick={toggleLanguage} className={styles.langToggle}>
+            {language === 'zh' ? 'EN' : '中文'}
+          </button>
+          
+          <button className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Menu">
+            <span className={styles.bar}></span>
+            <span className={styles.bar}></span>
+            <span className={styles.bar}></span>
+          </button>
         </div>
       </div>
     </nav>

@@ -48,11 +48,42 @@
     "subtitle": "OUR JOURNEY (2022 - 2026)"
   },
   "timeline": [
-    { "year": "2022", "region": "Kuala Lumpur, Malaysia", "title": "Malaysia", "description": "Winds of Change", "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/77945_64f14b306e7bb.jpg" },
-    { "year": "2023", "region": "Jakarta, Indonesia", "title": "Indonesia", "description": "He Walks on Waves", "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/85525_64f1918b31877.jpg" },
-    { "year": "2024", "region": "Kaohsiung, Taiwan", "title": "Taiwan", "description": "Into the Deep", "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/18181_674d2d6b99f05.jpg" },
-    { "year": "2025", "region": "Tokyo, Japan", "title": "Japan", "description": "Sunrise in the East", "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/39637_海報.jpg" },
-    { "year": "2026", "region": "Phoenix, USA", "title": "USA", "description": "Rebirth in the Wilderness", "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/30209_632906082_1387636540070401_4268236876262369224_n.jpg", "active": true }
+    {
+      "year": "2022",
+      "region": "Kuala Lumpur, Malaysia",
+      "title": "Malaysia",
+      "description": "Winds of Change",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/77945_64f14b306e7bb.jpg"
+    },
+    {
+      "year": "2023",
+      "region": "Jakarta, Indonesia",
+      "title": "Indonesia",
+      "description": "He Walks on Waves",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/85525_64f1918b31877.jpg"
+    },
+    {
+      "year": "2024",
+      "region": "Kaohsiung, Taiwan",
+      "title": "Taiwan",
+      "description": "Into the Deep",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/18181_674d2d6b99f05.jpg"
+    },
+    {
+      "year": "2025",
+      "region": "Tokyo, Japan",
+      "title": "Japan",
+      "description": "Sunrise in the East",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/39637_海報.jpg"
+    },
+    {
+      "year": "2026",
+      "region": "Phoenix, USA",
+      "title": "USA",
+      "description": "Rebirth in the Wilderness",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/30209_632906082_1387636540070401_4268236876262369224_n.jpg",
+      "active": true
+    }
   ],
   "trailer": {
     "title": "Official Trailer",
@@ -63,16 +94,73 @@
   },
   "themes": [
     {
-      "id": "ai", "title": "Digital Transformation & AI Future", "summary": "Exploring how AI can lead corporate transformation based on faith, achieving technological breakthroughs in the wilderness.",
-      "detail": { "heading": "Rebirth in the Digital Wilderness", "intro": "As AI technology sweeps across the wasteland like a storm, under the scorching sun of Phoenix, Arizona, we explore the core question: Can technology truly bring freedom to the soul?", "points": [{ "title": "The Clash of AI and Faith Ethics", "desc": "Exploring the divine source of human dignity and creativity in an era dominated by algorithms." }, { "title": "From Complex Data to Life Wisdom", "desc": "How to maintain focus on the sustainable vision of the Kingdom in an age of information explosion." }, { "title": "The Covenant Model of AI in Corporate Governance", "desc": "Practicing data justice, making technology a servant to all." }] }
+      "id": "ai",
+      "title": "Digital Transformation & AI Future",
+      "summary": "Exploring how AI can lead corporate transformation based on faith, achieving technological breakthroughs in the wilderness.",
+      "detail": {
+        "heading": "Rebirth in the Digital Wilderness",
+        "intro": "As AI technology sweeps across the wasteland like a storm, under the scorching sun of Phoenix, Arizona, we explore the core question: Can technology truly bring freedom to the soul?",
+        "points": [
+          {
+            "title": "The Clash of AI and Faith Ethics",
+            "desc": "Exploring the divine source of human dignity and creativity in an era dominated by algorithms."
+          },
+          {
+            "title": "From Complex Data to Life Wisdom",
+            "desc": "How to maintain focus on the sustainable vision of the Kingdom in an age of information explosion."
+          },
+          {
+            "title": "The Covenant Model of AI in Corporate Governance",
+            "desc": "Practicing data justice, making technology a servant to all."
+          }
+        ]
+      }
     },
     {
-      "id": "leadership", "title": "Kingdom Impact Leadership", "summary": "How to maintain spiritual vitality and exercise the value of servant leadership in a high-pressure competitive business jungle.",
-      "detail": { "heading": "Contemporary Challenges of Servant Leadership", "intro": "In a volatile, uncertain, and chaotic business environment, true leadership stems from the stability of the soul.", "points": [{ "title": "Oasis in the Desert", "desc": "The integration of work and spirituality." }, { "title": "Connecting Generations", "desc": "How to pass on a cross-cultural Kingdom vision." }, { "title": "Growth in Adversity", "desc": "How wilderness experiences shape resilient character." }] }
+      "id": "leadership",
+      "title": "Kingdom Impact Leadership",
+      "summary": "How to maintain spiritual vitality and exercise the value of servant leadership in a high-pressure competitive business jungle.",
+      "detail": {
+        "heading": "Contemporary Challenges of Servant Leadership",
+        "intro": "In a volatile, uncertain, and chaotic business environment, true leadership stems from the stability of the soul.",
+        "points": [
+          {
+            "title": "Oasis in the Desert",
+            "desc": "The integration of work and spirituality."
+          },
+          {
+            "title": "Connecting Generations",
+            "desc": "How to pass on a cross-cultural Kingdom vision."
+          },
+          {
+            "title": "Growth in Adversity",
+            "desc": "How wilderness experiences shape resilient character."
+          }
+        ]
+      }
     },
     {
-      "id": "stewardship", "title": "Land Stewardship & Sustainability", "summary": "Guarding creation as stewards, connecting ESG with the practice and commitment of sustainable business models.",
-      "detail": { "heading": "Rethinking Stewardship", "intro": "The desert landscape of Phoenix reminds us: every drop of water, every inch of land is entrusted to us by the Creator.", "points": [{ "title": "ESG Practices from a Biblical Perspective", "desc": "Building sustainable strategies from covenant theology." }, { "title": "Supply Chain Transparency & Labor Justice", "desc": "The glocalized implementation of business ethics." }, { "title": "Greening the Desert", "desc": "How business models can give back to creation." }] }
+      "id": "stewardship",
+      "title": "Land Stewardship & Sustainability",
+      "summary": "Guarding creation as stewards, connecting ESG with the practice and commitment of sustainable business models.",
+      "detail": {
+        "heading": "Rethinking Stewardship",
+        "intro": "The desert landscape of Phoenix reminds us: every drop of water, every inch of land is entrusted to us by the Creator.",
+        "points": [
+          {
+            "title": "ESG Practices from a Biblical Perspective",
+            "desc": "Building sustainable strategies from covenant theology."
+          },
+          {
+            "title": "Supply Chain Transparency & Labor Justice",
+            "desc": "The glocalized implementation of business ethics."
+          },
+          {
+            "title": "Greening the Desert",
+            "desc": "How business models can give back to creation."
+          }
+        ]
+      }
     }
   ],
   "venue": {

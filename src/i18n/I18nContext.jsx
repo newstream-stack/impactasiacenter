@@ -16,7 +16,8 @@ export const I18nProvider = ({ children }) => {
   const [language, setLanguage] = useState('zh');
 
   const t = (key) => {
-    return translations[language][key] || key;
+    const value = key.split('.').reduce((acc, part) => acc && acc[part], translations[language]);
+    return value || key;
   };
 
   const toggleLanguage = () => {

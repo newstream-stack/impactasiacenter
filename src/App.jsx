@@ -19,7 +19,7 @@ export default function App() {
       <Header />
       <Hero />
       <Vision />
-      <AboutIntro />
+      <AboutIntro onMoreClick={setActiveTheme} />
       <Timeline />
       <TrailerSection />
       {/* <Speakers /> */}

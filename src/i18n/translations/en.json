@@ -15,9 +15,32 @@
   },
   "about": {
     "summary": "At this critical moment,\nthe wind of the Holy Spirit is blowing to every corner of this generation.\nGod's will is not only within the four walls of the church,\nbut to expand the place of the tent,\nentering AI generations, forward-looking technology, business transformation,\nmedical missions, and environmental governance to take authority!",
-    "btnMore": "Learn More",
-    "btnLess": "Show Less",
-    "details": "We firmly believe that 2026 will be a year of \"alignment\" for Asian churches and workplace leaders.\nThe Lord is calling His elite soldiers,\nwhether at the forefront of the digital wave,\nor in the position of guarding the created earth,\nto arise and shine, winning the cultural mountaintops of this generation for the Lord.\n\nThe \"2026 Impact Asia Alliance Summit\" is about to begin!\nWe see that God's glorious plan has been set in motion.\nThis is not just a gathering,\nbut a spiritual convergence,\na feast preparing for the future of God's Kingdom.\nAs the computing power of AI reshapes the world,\nwe are standing at the most critical turning point of human civilization.\n\nIn October 2026, the IAA International Summit\nwill initiate a divine conversation in Phoenix, Arizona.\n\nIn the future AI era, how humans can return to the role of \"steward,\"\nfinding a way of coexistence between technology and the soul.\nThis is not just a gathering of digital intelligence,\nlifestyle aesthetics, and Christian faith.\n\nIt is a rebirth of thought in the magnificent desert landscape.\nWe sincerely invite you to walk with leaders from around the world,\ngathering and conversing for the peace, wisdom, and love of the future world.\nWe look forward to witnessing the dawn from God's creation to eternal future with you in Phoenix, USA.\n\nThe church should enter society and produce world influence.\n\nLet us stand on the breach together,\nbecoming vessels to receive new wine.\n\nGoing to Phoenix, North America in 2026,\nblessing the union of North American and Asia-Pacific churches,\n\nWe invite you to witness with us\nGod's wondrous work of making streams in the desert and paths in the wilderness!"
+    "detail": {
+      "heading": "About 2026 International Summit",
+      "intro": "We firmly believe that 2026 will be a year of \"alignment\" for Asian churches and workplace leaders.\nThe Lord is calling His elite soldiers, whether at the forefront of the digital wave, or in the position of guarding the created earth, to arise and shine, winning the cultural mountaintops for the Lord.",
+      "points": [
+        {
+          "title": "Spiritual Convergence",
+          "desc": "The \"2026 Impact Asia Alliance Summit\" is about to begin! We see that God's glorious plan has been set in motion. This is not just a gathering, but a feast preparing for the future of God's Kingdom."
+        },
+        {
+          "title": "Critical Turning Point",
+          "desc": "As AI reshapes the world, we are standing at the most critical turning point of human civilization. In Oct 2026, the IAA Summit will initiate a divine conversation in Phoenix, Arizona."
+        },
+        {
+          "title": "Role of Stewardship",
+          "desc": "In the future AI era, how humans can return to the role of \"steward,\" finding a way of coexistence between technology and the soul. This is more than just a gathering of digital intelligence and lifestyle."
+        },
+        {
+          "title": "Rebirth in Wilderness",
+          "desc": "It is a rebirth of thought in the magnificent desert landscape. We sincerely invite you to walk with leaders from around the world, gathering for the peace, wisdom, and love of the future world."
+        },
+        {
+          "title": "Vision & Commitment",
+          "desc": "The church should enter society and produce world influence. Let us stand on the breach together, becoming vessels to receive new wine, blessing the union of North American and Asia-Pacific churches."
+        }
+      ]
+    }
   },
   "timelineSection": {
     "title": "A New Generation of Faith in Asia",

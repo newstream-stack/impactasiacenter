@@ -2,9 +2,8 @@ import { useState } from 'react';
 import styles from './AboutIntro.module.css';
 import { useI18n } from '../../i18n/I18nContext';
 
-export default function AboutIntro() {
+export default function AboutIntro({ onMoreClick }) {
   const { t } = useI18n();
-  const [isExpanded, setIsExpanded] = useState(false);
   const about = t('about');
 
   return (
@@ -18,19 +17,10 @@ export default function AboutIntro() {
         
         <button 
           className={styles.moreBtn}
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => onMoreClick(about)}
         >
-          {isExpanded ? about.btnLess : about.btnMore}
-          <span className={`${styles.arrow} ${isExpanded ? styles.up : ''}`}>↓</span>
+          {t('about.btnMore') || '了解更多'} <span className={styles.arrow}>→</span>
         </button>
-
-        <div className={`${styles.details} ${isExpanded ? styles.expanded : ''}`}>
-          <div className={styles.detailsContent}>
-            {about.details.split('\n').map((line, i) => (
-              <p key={i} className={styles.detailLine}>{line || '\u00A0'}</p>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

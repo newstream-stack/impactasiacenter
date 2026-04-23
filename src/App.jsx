@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Vision from './components/Vision/Vision';
 import Timeline from './components/Timeline/Timeline';
+import AboutIntro from './components/AboutIntro/AboutIntro';
 import TrailerSection from './components/TrailerSection/TrailerSection';
 import Speakers from './components/Speakers/Speakers';
 import Themes from './components/Themes/Themes';
@@ -18,6 +19,7 @@ export default function App() {
       <Header />
       <Hero />
       <Vision />
+      <AboutIntro />
       <Timeline />
       <TrailerSection />
       {/* <Speakers /> */}

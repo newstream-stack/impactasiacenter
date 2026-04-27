@@ -10,6 +10,7 @@ import Themes from './components/Themes/Themes';
 import DetailView from './components/DetailView/DetailView';
 import Venue from './components/Venue/Venue';
 import Footer from './components/Footer/Footer';
+import ChatBot from './components/ChatBot/ChatBot';
 
 export default function App() {
   const [activeTheme, setActiveTheme] = useState(null); // 側滑面板
@@ -27,6 +28,7 @@ export default function App() {
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <Venue />
       <Footer />
+      <ChatBot />
     </>
   );
 }

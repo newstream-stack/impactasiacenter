@@ -1,25 +1,36 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
+// 恢復資料導入
+import { themes } from "../src/data/themes.js";
+import { speakers } from "../src/data/speakers.js";
+import { timelineData } from "../src/data/timeline.js";
+import zhTranslations from "../src/i18n/translations/zh.json" assert { type: "json" };
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
+  const { message } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
+
   if (!apiKey) return res.status(500).json({ error: "API Key 缺失" });
 
   try {
-    // 透過 API 查詢目前 Key 支援的所有模型名稱
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
-    const data = await response.json();
+    const genAI = new GoogleGenerativeAI(apiKey);
     
-    if (data.error) {
-      return res.status(500).json({ error: `API 錯誤: ${data.error.message}` });
-    }
+    // 使用清單中支援的 gemini-2.0-flash
+    const model = genAI.getGenerativeModel({ 
+      model: "gemini-2.0-flash",
+      systemInstruction: `你是亞洲論壇影響力中心的小助手。請根據以下資料回答問題。
+資料：${JSON.stringify({ themes, speakers, timelineData, zhTranslations })}
+請使用繁體中文，溫暖專業且精簡。`
+    });
 
-    const modelNames = data.models ? data.models.map(m => m.name.replace('models/', '')).join(', ') : "無可用模型";
-    
-    return res.status(200).json({ text: `你的 Key 目前支援以下模型，請從中選擇一個（或告訴我清單）：\n\n${modelNames}` });
+    const result = await model.generateContent(message);
+    const response = await result.response;
+    const text = response.text();
+
+    return res.status(200).json({ text });
   } catch (error) {
-    console.error("List Models Error:", error);
-    return res.status(500).json({ error: `連線失敗: ${error.message}` });
+    console.error("Gemini Error:", error);
+    return res.status(500).json({ error: `AI 暫時無法回應: ${error.message}` });
   }
 }

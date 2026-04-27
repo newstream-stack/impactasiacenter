@@ -31,9 +31,13 @@ export default function ChatBot() {
     try {
       // Use Firebase local emulator or deployed endpoint
       const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      
+      // 注意：請在部署成功後，將下方網址替換為 Firebase Console 或終端機顯示的實際網址
+      const DEPLOYED_URL = 'https://chatwithai-j3724ywhaq-uc.a.run.app'; 
+      
       const functionUrl = isLocalhost 
         ? 'http://127.0.0.1:5001/impact-asia-ai/us-central1/chatWithAI'
-        : 'https://chatwithai-uc.a.run.app'; // Will be updated to actual URL if needed
+        : DEPLOYED_URL;
 
       const response = await fetch(functionUrl, {
         method: 'POST',

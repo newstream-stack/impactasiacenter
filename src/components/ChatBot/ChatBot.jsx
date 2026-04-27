@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
+import { functions } from '../../firebase';
+import { httpsCallable } from 'firebase/functions';
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,48 +28,31 @@ export default function ChatBot() {
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
     
+    // Add an empty assistant message to type into
     setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
 
     try {
-      // Use Firebase local emulator or deployed endpoint
-      const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const chatWithAI = httpsCallable(functions, 'chatWithAI');
+      const result = await chatWithAI({ message: userMessage });
       
-      // 注意：請在部署成功後，將下方網址替換為 Firebase Console 或終端機顯示的實際網址
-      const DEPLOYED_URL = 'https://chatwithai-j3724ywhaq-uc.a.run.app'; 
+      const fullText = result.data.text || result.data.error || '抱歉，我無法回答這個問題。';
       
-      const functionUrl = isLocalhost 
-        ? 'http://127.0.0.1:5001/impact-asia-ai/us-central1/chatWithAI'
-        : DEPLOYED_URL;
-
-      const response = await fetch(functionUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMessage })
-      });
-
-      if (!response.ok) throw new Error('Network response was not ok');
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder('utf-8');
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        const chunk = decoder.decode(value, { stream: true });
-        
+      // Simulate typing effect
+      let currentText = '';
+      for (const char of fullText) {
+        currentText += char;
         setMessages(prev => {
           const newMessages = [...prev];
-          const lastMsg = newMessages[newMessages.length - 1];
-          lastMsg.content += chunk;
+          newMessages[newMessages.length - 1].content = currentText;
           return newMessages;
         });
+        await new Promise(resolve => setTimeout(resolve, 20)); // Adjust typing speed here
       }
     } catch (error) {
-      console.error('Error fetching chat response:', error);
+      console.error('Error calling chat function:', error);
       setMessages(prev => {
         const newMessages = [...prev];
-        const lastMsg = newMessages[newMessages.length - 1];
-        lastMsg.content = '抱歉，系統目前出現錯誤，請稍後再試。';
+        newMessages[newMessages.length - 1].content = '抱歉，連線至 AI 助手時出現錯誤，請確認網路連線。';
         return newMessages;
       });
     } finally {

@@ -12,28 +12,40 @@ interface ChatRequestBody {
   };
 }
 
+import cors from 'cors';
+
+const corsHandler = cors({ 
+  origin: [
+    "https://impactasiacenter.vercel.app", 
+    "http://localhost:5173", 
+    "http://127.0.0.1:5173"
+  ] 
+});
+
 export const chatWithAI = onRequest(
   { cors: true },
   async (req: Request, res: Response) => {
-    if (req.method === 'OPTIONS') {
-      res.status(204).send('');
-      return;
-    }
+    return new Promise((resolve) => {
+      corsHandler(req, res, async () => {
+        if (req.method === 'OPTIONS') {
+          res.status(204).send('');
+          return resolve();
+        }
 
-    try {
+        try {
       const body = req.body as ChatRequestBody;
       const userMessage = body.message || body.data?.message;
 
       if (!userMessage) {
         res.status(400).send("Message is required");
-        return;
+        return resolve();
       }
 
       const apiKey = process.env.GEMINI_API_KEY;
       if (!apiKey) {
         logger.error("GEMINI_API_KEY is not set.");
         res.status(500).send("Server Configuration Error");
-        return;
+        return resolve();
       }
 
       // Read knowledge files
@@ -62,9 +74,13 @@ export const chatWithAI = onRequest(
         }
       }
       res.end();
+      resolve();
     } catch (error) {
       logger.error("Error calling Gemini API:", error);
       res.status(500).send("Internal Server Error");
+      resolve();
     }
-  }
+  });
+});
+}
 );

@@ -1,6 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import { functions } from '../../firebase';
-import { httpsCallable } from 'firebase/functions';
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,10 +30,16 @@ export default function ChatBot() {
     setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
 
     try {
-      const chatWithAI = httpsCallable(functions, 'chatWithAI');
-      const result = await chatWithAI({ message: userMessage });
-      
-      const fullText = result.data.text || result.data.error || '抱歉，我無法回答這個問題。';
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: userMessage }),
+      });
+
+      const result = await response.json();
+      const fullText = result.text || result.error || '抱歉，我無法回答這個問題。';
       
       // Simulate typing effect
       let currentText = '';

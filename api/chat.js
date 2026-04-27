@@ -24,10 +24,22 @@ export default async function handler(req, res) {
     const dataDir = path.join(process.cwd(), "src", "data");
     const i18nDir = path.join(process.cwd(), "src", "i18n", "translations");
 
-    const themesContent = fs.readFileSync(path.join(dataDir, "themes.js"), "utf8");
-    const speakersContent = fs.readFileSync(path.join(dataDir, "speakers.js"), "utf8");
-    const timelineContent = fs.readFileSync(path.join(dataDir, "timeline.js"), "utf8");
-    const translationsContent = fs.readFileSync(path.join(i18nDir, "zh.json"), "utf8");
+    const readFileSafe = (filePath) => {
+      if (fs.existsSync(filePath)) {
+        return fs.readFileSync(filePath, "utf8");
+      }
+      console.warn(`File not found: ${filePath}`);
+      return "";
+    };
+
+    const themesContent = readFileSafe(path.join(dataDir, "themes.js"));
+    const speakersContent = readFileSafe(path.join(dataDir, "speakers.js"));
+    const timelineContent = readFileSafe(path.join(dataDir, "timeline.js"));
+    const translationsContent = readFileSafe(path.join(i18nDir, "zh.json"));
+
+    if (!themesContent && !translationsContent) {
+      console.error("Critical knowledge files are missing.");
+    }
 
     const systemInstruction = `你是亞洲論壇影響力中心的小助手。請根據提供的 JSON 與 JS 資料（包含議程、講員、主題等）回答關於 2026 年鳳凰城年會的問題。請使用繁體中文回答，口氣要專業且溫暖。\n\n資料內容如下：\n\n【themes.js】\n${themesContent}\n\n【speakers.js】\n${speakersContent}\n\n【timeline.js】\n${timelineContent}\n\n【zh.json】\n${translationsContent}`;
 

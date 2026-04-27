@@ -1,20 +1,14 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html { scroll-behavior: smooth; }
-
-body {
-  background-color: #222533;
-  color: #ffffff;
-  font-family: 'Inter', system-ui, sans-serif;
-  overflow-x: hidden;
-  line-height: 1.6;
+/* 這裡可以放原本 index.css 的內容 */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-:root {
-  --accent: #FF5E00;
-  --accent-glow: rgba(255, 94, 0, 0.35);
-  --bg: #222533;
-  --bg-dark: #1a1c26;
-  --surface: rgba(255,255,255,0.05);
-  --border: rgba(255,255,255,0.1);
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
 }

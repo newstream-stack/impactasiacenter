@@ -1,9 +1,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import fs from "fs";
-import path from "path";
+// 直接 import 資料，確保 Vercel 打包時會包含進去
+import { themes } from "../src/data/themes.js";
+import { speakers } from "../src/data/speakers.js";
+import { timelineData } from "../src/data/timeline.js";
+import zhTranslations from "../src/i18n/translations/zh.json" with { type: "json" };
 
 export default async function handler(req, res) {
-  // Vercel Serverless Functions use this handler format for Node.js
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -15,33 +17,25 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    console.error("GEMINI_API_KEY is not set in environment variables.");
-    return res.status(500).json({ error: "Server Configuration Error" });
+    console.error("GEMINI_API_KEY is missing");
+    return res.status(500).json({ error: "Server Configuration Error: API Key missing" });
   }
 
   try {
-    // Read knowledge files for context
-    const dataDir = path.join(process.cwd(), "src", "data");
-    const i18nDir = path.join(process.cwd(), "src", "i18n", "translations");
+    // 將資料轉為字串作為 Context
+    const themesContent = JSON.stringify(themes);
+    const speakersContent = JSON.stringify(speakers);
+    const timelineContent = JSON.stringify(timelineData);
+    const translationsContent = JSON.stringify(zhTranslations);
 
-    const readFileSafe = (filePath) => {
-      if (fs.existsSync(filePath)) {
-        return fs.readFileSync(filePath, "utf8");
-      }
-      console.warn(`File not found: ${filePath}`);
-      return "";
-    };
+    const systemInstruction = `你是亞洲論壇影響力中心的小助手。請根據提供的資料回答關於 2026 年鳳凰城年會的問題。
+資料內容如下：
+【主題】: ${themesContent}
+【講員】: ${speakersContent}
+【歷屆與今年議程】: ${timelineContent}
+【常用翻譯】: ${translationsContent}
 
-    const themesContent = readFileSafe(path.join(dataDir, "themes.js"));
-    const speakersContent = readFileSafe(path.join(dataDir, "speakers.js"));
-    const timelineContent = readFileSafe(path.join(dataDir, "timeline.js"));
-    const translationsContent = readFileSafe(path.join(i18nDir, "zh.json"));
-
-    if (!themesContent && !translationsContent) {
-      console.error("Critical knowledge files are missing.");
-    }
-
-    const systemInstruction = `你是亞洲論壇影響力中心的小助手。請根據提供的 JSON 與 JS 資料（包含議程、講員、主題等）回答關於 2026 年鳳凰城年會的問題。請使用繁體中文回答，口氣要專業且溫暖。\n\n資料內容如下：\n\n【themes.js】\n${themesContent}\n\n【speakers.js】\n${speakersContent}\n\n【timeline.js】\n${timelineContent}\n\n【zh.json】\n${translationsContent}`;
+請使用繁體中文回答，口氣要專業且溫暖。回答要精簡，不要太冗長。`;
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
@@ -55,7 +49,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ text });
   } catch (error) {
-    console.error("Error calling Gemini API:", error);
-    return res.status(500).json({ error: "Internal Server Error" });
+    console.error("Gemini API Error details:", error);
+    return res.status(500).json({ error: "AI 暫時無法回應，請稍後再試。" });
   }
 }

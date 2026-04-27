@@ -1,6 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// 直接嵌入資料，徹底解決 Vercel 讀取路徑與匯入語法問題
 const THEMES = [
   { id: 'ai', title: '數位轉型與 AI 未來', summary: '探討人工智慧如何在信仰基礎上引領企業變革...' },
   { id: 'leadership', title: '國度影響力領導力', summary: '在高壓競爭的商業叢林中，如何保持靈性生命力...' },
@@ -28,8 +27,10 @@ export default async function handler(req, res) {
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
+    
+    // 改用通用別名 gemini-flash-latest，這通常有最高優先權的免費額度
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-2.0-flash",
+      model: "gemini-flash-latest",
       systemInstruction: `你是亞洲論壇影響力中心的小助手。請根據以下資料回答問題。
 主題：${JSON.stringify(THEMES)}
 講員：${JSON.stringify(SPEAKERS)}
@@ -41,6 +42,7 @@ export default async function handler(req, res) {
     const response = await result.response;
     return res.status(200).json({ text: response.text() });
   } catch (error) {
+    console.error("Gemini Error:", error);
     return res.status(500).json({ error: `AI 暫時無法回應: ${error.message}` });
   }
 }

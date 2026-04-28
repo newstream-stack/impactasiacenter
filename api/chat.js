@@ -31,26 +31,30 @@ const LOCATION_INFO = {
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
-  const { message } = req.body;
+  const { message, language = 'zh' } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
 
   if (!apiKey) return res.status(500).json({ error: "API Key 缺失" });
+
+  const isEn = language === 'en';
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
     
     const model = genAI.getGenerativeModel({ 
       model: "gemini-flash-latest",
-      systemInstruction: `你是亞洲論壇影響力中心的小助手。請根據以下資料回答問題：
-主題資料：${JSON.stringify(THEMES)}
-講員資料：${JSON.stringify(SPEAKERS)}
-議程與地點：${JSON.stringify(TIMELINE)}
-地點背景：${JSON.stringify(LOCATION_INFO)}
+      systemInstruction: `You are the AI assistant for the Impact Asia Alliance Summit 2026.
+Theme Info: ${JSON.stringify(THEMES)}
+Speaker Info: ${JSON.stringify(SPEAKERS)}
+Schedule & Location: ${JSON.stringify(TIMELINE)}
+Location Background: ${JSON.stringify(LOCATION_INFO)}
 
-請使用繁體中文回答，口氣溫暖專業且精簡。
-**特別要求**：
-1. 請在回答結束時，根據對話內容提供 2-3 個相關的簡短後續問題，放在 [SUGGESTIONS] 標記之後。
-2. 格式範例：這裡的回答內容... [SUGGESTIONS] 如何報名鳳凰城年會？, 亞利桑那州的天氣如何？, 還有其他講員嗎？`
+Please respond in ${isEn ? 'English' : 'Traditional Chinese'}. 
+Tone: Warm, professional, and concise.
+
+**Special Requirements**:
+1. At the end of your response, provide 2-3 brief follow-up questions after the [SUGGESTIONS] tag.
+2. Example: [SUGGESTIONS] ${isEn ? 'How to register?, Who are the speakers?' : '如何報名年會？, 講員名單有哪些？'}`
     });
 
     const result = await model.generateContentStream(message);

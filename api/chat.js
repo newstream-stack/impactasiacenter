@@ -47,7 +47,8 @@ Guidelines:
 2. NEVER let suggestions be questions from the AI to the user.
 3. If info is missing, say "目前沒有相關資訊". 
 4. Use [TRIGGER:id] (ai, leadership, stewardship) only for those IDs.
-5. Style: Extremely TERSE, friendly.`
+5. Suggestions: ALWAYS end with [SUGGESTIONS] followed by 2-3 brief questions, SEPARATED BY COMMAS (e.g., "有哪些講員?, 年會在哪舉辦?"). 
+6. Style: Extremely TERSE, friendly.`
     });
 
     let formattedHistory = history

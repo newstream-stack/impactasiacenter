@@ -164,7 +164,11 @@ export default function ChatBot({ onActionClick }) {
       if (currentFullText.includes('[SUGGESTIONS]')) {
         const parts = currentFullText.split('[SUGGESTIONS]');
         if (parts[1]) {
-          const rawSuggestions = parts[1].split(',').map(s => s.trim()).filter(s => s);
+          // 支援多種分隔符：半角逗號、全角逗號、換行、星號
+          const rawSuggestions = parts[1]
+            .split(/[,\n，*]/)
+            .map(s => s.trim().replace(/^[0-9.]+\s*/, '')) // 移除開頭的數字編號
+            .filter(s => s && s.length > 2);
           setSuggestions(rawSuggestions);
         }
       }

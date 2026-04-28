@@ -20,16 +20,24 @@ export default function ChatBot() {
   const [suggestions, setSuggestions] = useState([]);
   const messagesEndRef = useRef(null);
 
-  // Sync welcome message when language changes
+  // Sync welcome message and insert system notice when language changes
   useEffect(() => {
     if (messages.length === 1) {
+      // If only welcome message, replace it
       setMessages([{ 
         role: 'assistant', 
         content: isEn 
           ? 'Hello! I am the Impact Asia assistant. How can I help you today?' 
           : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？' 
       }]);
+    } else {
+      // If conversation exists, add a system notice
+      setMessages(prev => [...prev, { 
+        role: 'system', 
+        content: isEn ? '--- Language switched to English ---' : '--- 語系已切換為繁體中文 ---' 
+      }]);
     }
+    setSuggestions([]); // Clear suggestions to avoid language mismatch
   }, [language]);
 
   const scrollToBottom = () => {
@@ -136,26 +144,38 @@ export default function ChatBot() {
 
           {/* Messages Area */}
           <div className="flex-1 p-4 overflow-y-auto space-y-4 custom-scrollbar">
-            {messages.map((msg, index) => (
-              <div 
-                key={index} 
-                className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-              >
+            {messages.map((msg, index) => {
+              if (msg.role === 'system') {
+                return (
+                  <div key={index} className="flex justify-center">
+                    <span className="text-[10px] uppercase tracking-widest text-slate-500 bg-slate-800/50 px-3 py-1 rounded-full">
+                      {msg.content}
+                    </span>
+                  </div>
+                );
+              }
+              
+              return (
                 <div 
-                  className={`max-w-[80%] rounded-2xl px-4 py-2 break-words ${
-                    msg.role === 'user' 
-                      ? 'bg-[#FF5E00] text-white rounded-br-none whitespace-pre-wrap' 
-                      : 'bg-slate-700 text-slate-100 rounded-bl-none prose prose-invert prose-sm'
-                  }`}
+                  key={index} 
+                  className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  {msg.role === 'assistant' ? (
-                    <ReactMarkdown>{msg.content}</ReactMarkdown>
-                  ) : (
-                    msg.content
-                  )}
+                  <div 
+                    className={`max-w-[80%] rounded-2xl px-4 py-2 break-words ${
+                      msg.role === 'user' 
+                        ? 'bg-[#FF5E00] text-white rounded-br-none whitespace-pre-wrap' 
+                        : 'bg-slate-700 text-slate-100 rounded-bl-none prose prose-invert prose-sm'
+                    }`}
+                  >
+                    {msg.role === 'assistant' ? (
+                      <ReactMarkdown>{msg.content}</ReactMarkdown>
+                    ) : (
+                      msg.content
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
             {/* Suggestions */}
             {!isLoading && suggestions.length > 0 && (

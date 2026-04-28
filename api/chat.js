@@ -35,13 +35,12 @@ const LOCATION_INFO = {
 export default async function handler(req) {
   if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405 });
 
-  const { message, history = [], language = 'zh' } = await req.json();
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return new Response('API Key 缺失', { status: 500 });
-
-  const isEn = language === 'en';
-
   try {
+    const { message, history = [], language = 'zh' } = await req.json();
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) return new Response('API Key 缺失', { status: 500 });
+
+    const isEn = language === 'en';
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ 
       model: "gemini-flash-latest",
@@ -50,7 +49,10 @@ export default async function handler(req) {
 
     let formattedHistory = history
       .filter(msg => msg.content && msg.content.trim() !== '')
-      .map(msg => ({ role: msg.role === 'user' ? 'user' : 'model', parts: [{ text: msg.content }] }));
+      .map(msg => ({ 
+        role: msg.role === 'user' ? 'user' : 'model', 
+        parts: [{ text: msg.content }] 
+      }));
 
     const firstUserIndex = formattedHistory.findIndex(msg => msg.role === 'user');
     formattedHistory = firstUserIndex !== -1 ? formattedHistory.slice(firstUserIndex).slice(-6) : [];
@@ -61,56 +63,29 @@ export default async function handler(req) {
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
-        for await (const chunk of result.stream) {
-          controller.enqueue(encoder.encode(chunk.text()));
+        try {
+          for await (const chunk of result.stream) {
+            controller.enqueue(encoder.encode(chunk.text()));
+          }
+        } catch (e) {
+          console.error("Stream error:", e);
+        } finally {
+          controller.close();
         }
-        controller.close();
       },
     });
 
     return new Response(stream, {
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      headers: { 
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive'
+      },
     });
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), { 
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
-  }
-}ser' ? 'user' : 'model',
-        parts: [{ text: msg.content }],
-      }));
-
-    // Gemini 要求第一條訊息必須是 'user'
-    const firstUserIndex = formattedHistory.findIndex(msg => msg.role === 'user');
-    if (firstUserIndex !== -1) {
-      formattedHistory = formattedHistory.slice(firstUserIndex);
-    } else {
-      formattedHistory = [];
-    }
-
-    // 限制最近 10 則
-    formattedHistory = formattedHistory.slice(-10);
-
-    const chat = model.startChat({
-      history: formattedHistory,
-    });
-
-    const result = await chat.sendMessageStream(message);
-    
-    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-    res.setHeader('Transfer-Encoding', 'chunked');
-
-    for await (const chunk of result.stream) {
-      const chunkText = chunk.text();
-      res.write(chunkText);
-    }
-    
-    res.end();
-  } catch (error) {
-    console.error("Gemini Error:", error);
-    if (!res.writableEnded) {
-      res.status(500).json({ error: error.message });
-    }
   }
 }

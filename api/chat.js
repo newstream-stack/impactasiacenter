@@ -54,6 +54,8 @@ Location Background: ${JSON.stringify(LOCATION_INFO)}
 Tone: Warm, professional, and concise.
 Current Language Setting: ${isEn ? 'English' : 'Chinese'}
 
+**Constraint**: If a user's question is unrelated to the Impact Asia Alliance Summit, the themes, speakers, or location, politely decline to answer and redirect them to ask about the summit.
+
 **Special Requirements**:
 1. At the end of your response, provide 2-3 brief follow-up questions after the [SUGGESTIONS] tag.
 2. Example: [SUGGESTIONS] ${isEn ? 'How to register?, Who are the speakers?' : '如何報名年會？, 講員名單有哪些？'}`

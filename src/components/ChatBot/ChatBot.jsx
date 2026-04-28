@@ -7,6 +7,7 @@ export default function ChatBot() {
   const isEn = language === 'en';
   
   const [isOpen, setIsOpen] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
   const [messages, setMessages] = useState([
     { 
       role: 'assistant', 
@@ -15,10 +16,24 @@ export default function ChatBot() {
         : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？' 
     }
   ]);
+
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const messagesEndRef = useRef(null);
+
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+    setShowTooltip(false);
+  };
+
+  // Show tooltip after a delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!isOpen) setShowTooltip(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Sync welcome message and insert system notice when language changes
   useEffect(() => {
@@ -116,9 +131,24 @@ export default function ChatBot() {
 
   return (
     <>
+      {/* Tooltip Reminder */}
+      {showTooltip && !isOpen && (
+        <div className="fixed bottom-24 right-6 bg-[#FF5E00] text-white px-4 py-2 rounded-2xl shadow-xl z-50 animate-bounce-subtle cursor-pointer" onClick={toggleChat}>
+          <div className="relative text-sm font-semibold">
+            {isEn ? 'Ask me anything!' : '有問題可以問我喔！'}
+            {/* Triangle indicator */}
+            <div className="absolute -bottom-4 right-4 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-[#FF5E00]"></div>
+          </div>
+          <button 
+            className="absolute -top-2 -right-2 bg-slate-800 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] border border-slate-700"
+            onClick={(e) => { e.stopPropagation(); setShowTooltip(false); }}
+          >✕</button>
+        </div>
+      )}
+
       {/* Floating Button - Brand Orange */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={toggleChat}
         className={`fixed bottom-6 right-6 w-14 h-14 bg-[#FF5E00] rounded-full flex items-center justify-center shadow-lg hover:brightness-110 transition-all z-50 ${isOpen ? 'hidden' : ''}`}
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -235,6 +265,13 @@ export default function ChatBot() {
         .prose strong { color: #fff; font-weight: 700; }
         .prose ul, .prose ol { margin: 0.5rem 0; padding-left: 1.25rem; }
         .prose li { margin: 0.25rem 0; }
+        @keyframes bounce-subtle {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+        }
+        .animate-bounce-subtle {
+          animation: bounce-subtle 2s infinite ease-in-out;
+        }
       `}} />
     </>
   );

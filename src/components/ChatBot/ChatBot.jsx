@@ -38,19 +38,24 @@ export default function ChatBot() {
         body: JSON.stringify({ message: userMessage }),
       });
 
-      const result = await response.json();
-      const fullText = result.text || result.error || '抱歉，我無法回答這個問題。';
-      
-      // Simulate typing effect
+      if (!response.ok) throw new Error('Network response was not ok');
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let done = false;
       let currentText = '';
-      for (const char of fullText) {
-        currentText += char;
+
+      while (!done) {
+        const { value, done: doneReading } = await reader.read();
+        done = doneReading;
+        const chunkValue = decoder.decode(value);
+        currentText += chunkValue;
+        
         setMessages(prev => {
           const newMessages = [...prev];
           newMessages[newMessages.length - 1].content = currentText;
           return newMessages;
         });
-        await new Promise(resolve => setTimeout(resolve, 20)); // Adjust typing speed here
       }
     } catch (error) {
       console.error('Error calling chat function:', error);

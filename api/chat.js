@@ -38,11 +38,22 @@ export default async function handler(req, res) {
 請使用繁體中文回答，口氣溫暖專業且精簡。`
     });
 
-    const result = await model.generateContent(message);
-    const response = await result.response;
-    return res.status(200).json({ text: response.text() });
+    const result = await model.generateContentStream(message);
+    
+    // 設定串流回應標頭
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.setHeader('Transfer-Encoding', 'chunked');
+
+    for await (const chunk of result.stream) {
+      const chunkText = chunk.text();
+      res.write(chunkText);
+    }
+    
+    res.end();
   } catch (error) {
     console.error("Gemini Error:", error);
-    return res.status(500).json({ error: `AI 暫時無法回應: ${error.message}` });
+    if (!res.writableEnded) {
+      res.status(500).json({ error: `AI 暫時無法回應: ${error.message}` });
+    }
   }
 }

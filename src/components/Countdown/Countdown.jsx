@@ -5,8 +5,8 @@ export default function Countdown() {
   const { language } = useI18n();
   const isEn = language === 'en';
   
-  // Target date: Oct 1, 2026
-  const targetDate = new Date('2026-10-01T00:00:00').getTime();
+  // Target date: Oct 23, 2026
+  const targetDate = new Date('2026-10-23T00:00:00').getTime();
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0, hours: 0, minutes: 0, seconds: 0

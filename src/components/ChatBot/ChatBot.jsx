@@ -8,6 +8,7 @@ export default function ChatBot() {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -16,14 +17,16 @@ export default function ChatBot() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, suggestions]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!input.trim() || isLoading) return;
+  const handleSubmit = async (e, suggestedMessage = null) => {
+    if (e) e.preventDefault();
+    const userMessage = suggestedMessage || input.trim();
+    
+    if (!userMessage || isLoading) return;
 
-    const userMessage = input.trim();
     setInput('');
+    setSuggestions([]); // Clear old suggestions
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
     
@@ -44,17 +47,29 @@ export default function ChatBot() {
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let done = false;
-      let currentText = '';
+      let currentFullText = '';
 
       while (!done) {
         const { value, done: doneReading } = await reader.read();
         done = doneReading;
         const chunkValue = decoder.decode(value);
-        currentText += chunkValue;
+        currentFullText += chunkValue;
         
+        // Parse suggestions out of the stream
+        let displayContent = currentFullText;
+        if (currentFullText.includes('[SUGGESTIONS]')) {
+          const parts = currentFullText.split('[SUGGESTIONS]');
+          displayContent = parts[0].trim();
+          
+          if (done) {
+            const rawSuggestions = parts[1].split(',').map(s => s.trim()).filter(s => s);
+            setSuggestions(rawSuggestions);
+          }
+        }
+
         setMessages(prev => {
           const newMessages = [...prev];
-          newMessages[newMessages.length - 1].content = currentText;
+          newMessages[newMessages.length - 1].content = displayContent;
           return newMessages;
         });
       }
@@ -120,6 +135,22 @@ export default function ChatBot() {
                 </div>
               </div>
             ))}
+
+            {/* Suggestions */}
+            {!isLoading && suggestions.length > 0 && (
+              <div className="flex flex-wrap gap-2 justify-start mt-2">
+                {suggestions.map((s, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleSubmit(null, s)}
+                    className="text-xs bg-slate-800 hover:bg-slate-700 text-blue-400 border border-slate-700 rounded-full px-3 py-1.5 transition-colors text-left"
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+            )}
+
             <div ref={messagesEndRef} />
           </div>
 

@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { useI18n } from '../../i18n/I18nContext';
 
 export default function ChatBot({ onActionClick }) {
-  const { language } = useI18n();
+  const { language, t } = useI18n();
   const isEn = language === 'en';
   
   const [isOpen, setIsOpen] = useState(false);

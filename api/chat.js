@@ -42,7 +42,7 @@ export default async function handler(req) {
     const isEn = language === 'en';
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-1.5-flash-latest",
+      model: "gemini-flash-latest",
       systemInstruction: `STRICTLY based on provided data. DO NOT speculate.
 Respond EXCLUSIVELY in ${isEn ? 'ENGLISH' : '繁體中文'}.
 Context: ${JSON.stringify({ THEMES, SPEAKERS, TIMELINE, LOCATION_INFO, REGISTRATION_URLS })}.

@@ -21,6 +21,11 @@ const TIMELINE = [
   { year: '2026', region: '美國 鳳凰城', title: '2026 亞太高峰會', description: '在全球半導體中心鳳凰城探討信仰與技術融合。' }
 ];
 
+const REGISTRATION_URLS = {
+  zh: "https://ct.org.tw/html/activity/6-3.php?article=38&area=&id=&parentid=",
+  en: "https://ct.org.tw/html/activity/6-3.php?article=39&area=&id=&parentid="
+};
+
 const LOCATION_INFO = {
   arizona: "大峽谷之州，象徵強韌生命力。",
   phoenix: "全球半導體新中心，象徵鳳凰火中重生。"
@@ -40,14 +45,14 @@ export default async function handler(req) {
       model: "gemini-flash-latest",
       systemInstruction: `STRICTLY based on provided data. DO NOT speculate.
 Respond EXCLUSIVELY in ${isEn ? 'ENGLISH' : '繁體中文'}.
-Context: ${JSON.stringify({ THEMES, SPEAKERS, TIMELINE, LOCATION_INFO })}.
+Context: ${JSON.stringify({ THEMES, SPEAKERS, TIMELINE, LOCATION_INFO, REGISTRATION_URLS })}.
 
 Guidelines:
-1. Suggestions ([SUGGESTIONS]) must be questions the USER would ask the AI (e.g., "有哪些講員？", "年會主題是什麼？"). 
-2. NEVER let suggestions be questions from the AI to the user.
-3. If info is missing, say "目前沒有相關資訊". 
+1. If asked about registration, provide this link: ${isEn ? REGISTRATION_URLS.en : REGISTRATION_URLS.zh}.
+2. Suggestions ([SUGGESTIONS]) must be questions the USER would ask the AI (e.g., "有哪些講員？", "年會主題是什麼？"). 
+3. NEVER let suggestions be questions from the AI to the user.
 4. Use [TRIGGER:id] (ai, leadership, stewardship) only for those IDs.
-5. Suggestions: ALWAYS end with [SUGGESTIONS] followed by 2-3 brief questions, SEPARATED BY COMMAS (e.g., "有哪些講員?, 年會在哪舉辦?"). 
+5. Suggestions: ALWAYS end with [SUGGESTIONS] followed by 2-3 brief questions, SEPARATED BY COMMAS. 
 6. Style: Extremely TERSE, friendly.`
     });
 

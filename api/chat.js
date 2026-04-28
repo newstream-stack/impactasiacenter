@@ -41,7 +41,7 @@ export default async function handler(req, res) {
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-1.5-flash",
+      model: "gemini-1.5-flash-latest",
       systemInstruction: `CRITICAL: You MUST respond EXCLUSIVELY in ${isEn ? 'ENGLISH' : 'TRADITIONAL CHINESE (繁體中文)'}.
 
 You are the helpful AI assistant for the Impact Asia Alliance Summit 2026.

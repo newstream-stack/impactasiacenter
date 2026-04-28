@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Vision from './components/Vision/Vision';
@@ -12,22 +12,58 @@ import Venue from './components/Venue/Venue';
 import Footer from './components/Footer/Footer';
 import ChatBot from './components/ChatBot/ChatBot';
 
+function BackToTop() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => setVisible(window.scrollY > 500);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  if (!visible) return null;
+  return (
+    <button 
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      className="fixed bottom-24 right-6 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white transition-all z-40 group"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+  );
+}
+
 export default function App() {
-  const [activeTheme, setActiveTheme] = useState(null); // 側滑面板
+  const [activeTheme, setActiveTheme] = useState(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const elements = document.querySelectorAll('.reveal');
+    elements.forEach(el => observer.observe(el));
+
+    return () => elements.forEach(el => observer.unobserve(el));
+  }, []);
 
   return (
     <>
       <Header />
       <Hero />
-      <Vision />
-      <AboutIntro onMoreClick={setActiveTheme} />
-      <Timeline />
-      <TrailerSection />
-      {/* <Speakers /> */}
-      <Themes onThemeClick={setActiveTheme} />
+      <div className="reveal"><Vision /></div>
+      <div className="reveal"><AboutIntro onMoreClick={setActiveTheme} /></div>
+      <div className="reveal"><Timeline /></div>
+      <div className="reveal"><TrailerSection /></div>
+      <div className="reveal"><Themes onThemeClick={setActiveTheme} /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
-      <Venue />
+      <div className="reveal"><Venue /></div>
       <Footer />
+      <BackToTop />
       <ChatBot />
     </>
   );

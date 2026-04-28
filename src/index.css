@@ -26,3 +26,42 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* --- Premium Effects & Animations --- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 94, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glow-orange:hover {
+  box-shadow: 0 0 30px rgba(255, 94, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s infinite ease-in-out;
+}

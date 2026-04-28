@@ -269,7 +269,29 @@ export default function ChatBot({ onActionClick }) {
                     }`}
                   >
                     {msg.role === 'assistant' ? (
-                      <ReactMarkdown>{cleanContent}</ReactMarkdown>
+                      <ReactMarkdown 
+                        components={{
+                          // 自定義連結樣式與行為
+                          a: ({ node, ...props }) => (
+                            <a 
+                              {...props} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              style={{ 
+                                color: '#ff7a3d', 
+                                textDecoration: 'underline', 
+                                fontWeight: 'bold',
+                                cursor: 'pointer'
+                              }}
+                              onClick={(e) => e.stopPropagation()} // 防止點擊連結時觸發氣泡的其他行為
+                            >
+                              {props.children}
+                            </a>
+                          )
+                        }}
+                      >
+                        {cleanContent}
+                      </ReactMarkdown>
                     ) : (
                       msg.content
                     )}

@@ -1,5 +1,9 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+export const config = {
+  runtime: 'edge',
+};
+
 const THEMES = [
   { id: 'ai', title: '數位轉型與 AI 未來', summary: '探討人工智慧如何在信仰基礎上引領企業變革...' },
   { id: 'leadership', title: '國度影響力領導力', summary: '在高壓競爭的商業叢林中，如何保持靈性生命力...' },
@@ -19,22 +23,21 @@ const TIMELINE = [
 
 const LOCATION_INFO = {
   arizona: {
-    overview: "亞利桑那州被稱為『大峽谷之州』（The Grand Canyon State），擁有世界七大自然奇觀之一的大峽谷。這裡有壯闊的紅岩地貌（如靈性之城色多娜 Sedona）與巨大的巨人柱仙人掌（Saguaro），象徵著在極端環境中依然挺立的強韌生命力。",
-    spiritual_connection: "這片曠野不僅是地理上的沙漠，更是靈性重生的聖地。正如聖經中以色列人在曠野受試煉並經歷上帝，參與者能在亞利桑那的廣袤中重新遇見上帝。"
+    overview: "亞利桑那州被稱為『大峽谷之州』（The Grand Canyon State），擁有世界七大自然奇觀之一的大峽谷。這裡有壯闊的紅岩地貌與強韌生命力。",
+    spiritual_connection: "這片曠野是靈性重生的聖地。"
   },
   phoenix: {
-    overview: "鳳凰城（Phoenix）是全美第五大城市，也是全球半導體與高科技的新中心（矽沙漠），如台積電（TSMC）在此的重大投資。它是一座從乾旱沙漠中透過灌溉與創新奇蹟般崛起的現代化大都市。",
-    symbolism: "『鳳凰』在神話中象徵火中重生，與 2026 年會的主題『曠野中的重生』完美契合。這裡展現了如何透過遠見、技術與信仰，將荒蕪之地轉化為充滿活力的繁榮之城。"
+    overview: "鳳凰城是全球半導體新中心，一座從沙漠中崛起的現代化大都市。",
+    symbolism: "『鳳凰』象徵火中重生，與會主題『曠野中的重生』完美契合。"
   }
 };
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+export default async function handler(req) {
+  if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405 });
 
-  const { message, history = [], language = 'zh' } = req.body;
+  const { message, history = [], language = 'zh' } = await req.json();
   const apiKey = process.env.GEMINI_API_KEY;
-
-  if (!apiKey) return res.status(500).json({ error: "API Key 缺失" });
+  if (!apiKey) return new Response('API Key 缺失', { status: 500 });
 
   const isEn = language === 'en';
 
@@ -42,36 +45,39 @@ export default async function handler(req, res) {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ 
       model: "gemini-flash-latest",
-      systemInstruction: `CRITICAL: You MUST respond EXCLUSIVELY in ${isEn ? 'ENGLISH' : 'TRADITIONAL CHINESE (繁體中文)'}.
-
-You are the helpful AI assistant for the Impact Asia Alliance Summit 2026.
-Theme Info: ${JSON.stringify(THEMES)}
-Speaker Info: ${JSON.stringify(SPEAKERS)}
-Schedule & Location: ${JSON.stringify(TIMELINE)}
-Location Background: ${JSON.stringify(LOCATION_INFO)}
-
-Tone: Casual, friendly, and extremely TERSE.
-Current Language Setting: ${isEn ? 'English' : 'Chinese'}
-
-**Constraint**: If a user's question is unrelated to the Impact Asia Alliance Summit, the themes, speakers, or location, politely decline to answer and redirect them.
-
-**Markdown Rule**: Use strict Markdown syntax. For bold text, ensure there are NO spaces between the asterisks and the content.
-
-**Interactive Triggers**: If you mention a specific theme, you can append a trigger tag at the end of the sentence to allow the user to open the detail panel.
-- Format: [TRIGGER:theme_id]
-- Valid IDs: ai, leadership, stewardship
-- Example: "...談談 AI 在信仰中的角色。[TRIGGER:ai]"
-
-**Special Requirements**:
-1. At the end of your response, provide 2-3 brief follow-up questions after the [SUGGESTIONS] tag.
-2. Example: [SUGGESTIONS] ${isEn ? 'How to register?, Who are the speakers?' : '如何報名年會？, 講員名單有哪些？'}`
+      systemInstruction: `Respond in ${isEn ? 'ENGLISH' : '繁體中文'}. You are IAA assistant. Info: ${JSON.stringify({ THEMES, SPEAKERS, TIMELINE, LOCATION_INFO })}. Tone: Terse, friendly. Triggers: [TRIGGER:id] (ai, leadership, stewardship). Suggestions: [SUGGESTIONS] q1, q2.`
     });
 
-    // 轉換歷史記錄，確保交替出現且第一條必須是 'user'
     let formattedHistory = history
       .filter(msg => msg.content && msg.content.trim() !== '')
-      .map(msg => ({
-        role: msg.role === 'user' ? 'user' : 'model',
+      .map(msg => ({ role: msg.role === 'user' ? 'user' : 'model', parts: [{ text: msg.content }] }));
+
+    const firstUserIndex = formattedHistory.findIndex(msg => msg.role === 'user');
+    formattedHistory = firstUserIndex !== -1 ? formattedHistory.slice(firstUserIndex).slice(-6) : [];
+
+    const chat = model.startChat({ history: formattedHistory });
+    const result = await chat.sendMessageStream(message);
+
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
+      async start(controller) {
+        for await (const chunk of result.stream) {
+          controller.enqueue(encoder.encode(chunk.text()));
+        }
+        controller.close();
+      },
+    });
+
+    return new Response(stream, {
+      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+    });
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), { 
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+}ser' ? 'user' : 'model',
         parts: [{ text: msg.content }],
       }));
 

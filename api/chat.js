@@ -67,14 +67,24 @@ Current Language Setting: ${isEn ? 'English' : 'Chinese'}
 2. Example: [SUGGESTIONS] ${isEn ? 'How to register?, Who are the speakers?' : '如何報名年會？, 講員名單有哪些？'}`
     });
 
-    // 轉換歷史記錄，確保交替出現且過濾掉不完整的訊息
-    const formattedHistory = history
+    // 轉換歷史記錄，確保交替出現且第一條必須是 'user'
+    let formattedHistory = history
       .filter(msg => msg.content && msg.content.trim() !== '')
-      .slice(-10)
       .map(msg => ({
         role: msg.role === 'user' ? 'user' : 'model',
         parts: [{ text: msg.content }],
       }));
+
+    // Gemini 要求第一條訊息必須是 'user'
+    const firstUserIndex = formattedHistory.findIndex(msg => msg.role === 'user');
+    if (firstUserIndex !== -1) {
+      formattedHistory = formattedHistory.slice(firstUserIndex);
+    } else {
+      formattedHistory = [];
+    }
+
+    // 限制最近 10 則
+    formattedHistory = formattedHistory.slice(-10);
 
     const chat = model.startChat({
       history: formattedHistory,

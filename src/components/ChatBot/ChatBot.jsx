@@ -127,8 +127,14 @@ export default function ChatBot({ onActionClick }) {
       });
 
       if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(errorText);
+        let errorMsg;
+        try {
+          const errorJson = await response.json();
+          errorMsg = errorJson.error || response.statusText;
+        } catch (e) {
+          errorMsg = await response.text();
+        }
+        throw new Error(errorMsg);
       }
 
       const reader = response.body.getReader();
@@ -164,8 +170,8 @@ export default function ChatBot({ onActionClick }) {
       setMessages(prev => {
         const newMessages = [...prev];
         const errorContent = isEn 
-          ? 'The AI is currently busy or experiencing connection issues. You can try again later or visit our [Contact Page](#venue) for help.'
-          : 'AI 小助手目前忙碌中或連線不穩定。您可以稍後再試，或直接前往 [會場資訊](#venue) 查看相關聯絡方式。';
+          ? `The AI is currently busy or experiencing connection issues (${error.message}). You can try again later or visit our [Contact Page](#venue) for help.`
+          : `AI 小助手目前忙碌中或連線不穩定 (${error.message})。您可以稍後再試，或直接前往 [會場資訊](#venue) 查看相關聯絡方式。`;
         newMessages[newMessages.length - 1].content = errorContent;
         return newMessages;
       });

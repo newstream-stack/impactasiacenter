@@ -67,12 +67,17 @@ Current Language Setting: ${isEn ? 'English' : 'Chinese'}
 2. Example: [SUGGESTIONS] ${isEn ? 'How to register?, Who are the speakers?' : '如何報名年會？, 講員名單有哪些？'}`
     });
 
-    // 將歷史記錄轉換為 Gemini 格式 (限制最近 10 則以節省 Token)
-    const chat = model.startChat({
-      history: history.slice(-10).map(msg => ({
+    // 轉換歷史記錄，確保交替出現且過濾掉不完整的訊息
+    const formattedHistory = history
+      .filter(msg => msg.content && msg.content.trim() !== '')
+      .slice(-10)
+      .map(msg => ({
         role: msg.role === 'user' ? 'user' : 'model',
         parts: [{ text: msg.content }],
-      })),
+      }));
+
+    const chat = model.startChat({
+      history: formattedHistory,
     });
 
     const result = await chat.sendMessageStream(message);
@@ -88,9 +93,8 @@ Current Language Setting: ${isEn ? 'English' : 'Chinese'}
     res.end();
   } catch (error) {
     console.error("Gemini Error:", error);
-    // 傳回更詳細的錯誤資訊給前端處理
     if (!res.writableEnded) {
-      res.status(500).end(`ERROR: ${error.message}`);
+      res.status(500).json({ error: error.message });
     }
   }
 }

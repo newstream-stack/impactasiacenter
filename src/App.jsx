@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useI18n } from './i18n/I18nContext';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Vision from './components/Vision/Vision';

@@ -198,7 +198,9 @@ export default function ChatBot() {
                     }`}
                   >
                     {msg.role === 'assistant' ? (
-                      <ReactMarkdown>{msg.content}</ReactMarkdown>
+                      <ReactMarkdown>
+                        {msg.content.replace(/\*\*\s*(.*?)\s*\*\*/g, '**$1**')}
+                      </ReactMarkdown>
                     ) : (
                       msg.content
                     )}

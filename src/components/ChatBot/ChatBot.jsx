@@ -150,13 +150,7 @@ export default function ChatBot({ onActionClick }) {
         
         let displayContent = currentFullText;
         if (currentFullText.includes('[SUGGESTIONS]')) {
-          const parts = currentFullText.split('[SUGGESTIONS]');
-          displayContent = parts[0].trim();
-          
-          if (done && parts[1]) {
-            const rawSuggestions = parts[1].split(',').map(s => s.trim()).filter(s => s);
-            setSuggestions(rawSuggestions);
-          }
+          displayContent = currentFullText.split('[SUGGESTIONS]')[0].trim();
         }
 
         setMessages(prev => {
@@ -164,6 +158,15 @@ export default function ChatBot({ onActionClick }) {
           newMessages[newMessages.length - 1].content = displayContent;
           return newMessages;
         });
+      } // End of stream loop
+
+      // Final check for suggestions after stream is done
+      if (currentFullText.includes('[SUGGESTIONS]')) {
+        const parts = currentFullText.split('[SUGGESTIONS]');
+        if (parts[1]) {
+          const rawSuggestions = parts[1].split(',').map(s => s.trim()).filter(s => s);
+          setSuggestions(rawSuggestions);
+        }
       }
     } catch (error) {
       console.error('Error calling chat function:', error);

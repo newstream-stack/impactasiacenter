@@ -35,7 +35,7 @@ export default function Countdown() {
 
   const Label = ({ value, labelEn, labelZh }) => (
     <div className="flex flex-col items-center">
-      <span className="text-3xl md:text-5xl font-bold text-[#FF5E00]">{value.toString().padStart(2, '0')}</span>
+      <span className="text-2xl md:text-5xl font-bold text-[#FF5E00]">{value.toString().padStart(2, '0')}</span>
       <span className="text-[10px] uppercase tracking-widest text-slate-400 mt-1">
         {isEn ? labelEn : labelZh}
       </span>
@@ -43,13 +43,13 @@ export default function Countdown() {
   );
 
   return (
-    <div className="flex gap-4 md:gap-8 justify-center mt-12 bg-black/20 backdrop-blur-md px-6 py-4 rounded-3xl border border-white/5 reveal">
+    <div className="flex gap-2 md:gap-8 justify-center mt-8 md:mt-12 bg-black/20 backdrop-blur-md px-4 md:px-6 py-3 md:py-4 rounded-2xl md:rounded-3xl border border-white/5 reveal">
       <Label value={timeLeft.days} labelEn="Days" labelZh="天" />
-      <span className="text-2xl mt-2 text-slate-600">:</span>
+      <span className="text-xl md:text-2xl mt-2 text-slate-600">:</span>
       <Label value={timeLeft.hours} labelEn="Hours" labelZh="時" />
-      <span className="text-2xl mt-2 text-slate-600">:</span>
+      <span className="text-xl md:text-2xl mt-2 text-slate-600">:</span>
       <Label value={timeLeft.minutes} labelEn="Mins" labelZh="分" />
-      <span className="text-2xl mt-2 text-slate-600">:</span>
+      <span className="text-xl md:text-2xl mt-2 text-slate-600">:</span>
       <Label value={timeLeft.seconds} labelEn="Secs" labelZh="秒" />
     </div>
   );

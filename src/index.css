@@ -31,13 +31,37 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(20px); /* Smaller for mobile */
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .reveal {
+    transform: translateY(30px);
+  }
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Optimize floating buttons for mobile */
+@media (max-width: 767px) {
+  .fixed.bottom-6 {
+    bottom: 1.5rem;
+    right: 1rem;
+  }
+  
+  /* Prevent ChatBot and BackToTop overlap if needed */
+  .fixed.bottom-24 {
+    bottom: 5.5rem;
+    right: 1rem;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .glass-card {

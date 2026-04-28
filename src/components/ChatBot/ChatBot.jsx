@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -108,10 +109,14 @@ export default function ChatBot() {
                   className={`max-w-[80%] rounded-2xl px-4 py-2 break-words whitespace-pre-wrap ${
                     msg.role === 'user' 
                       ? 'bg-blue-600 text-white rounded-br-none' 
-                      : 'bg-slate-700 text-slate-100 rounded-bl-none'
+                      : 'bg-slate-700 text-slate-100 rounded-bl-none prose prose-invert prose-sm'
                   }`}
                 >
-                  {msg.content}
+                  {msg.role === 'assistant' ? (
+                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                  ) : (
+                    msg.content
+                  )}
                 </div>
               </div>
             ))}
@@ -154,6 +159,10 @@ export default function ChatBot() {
           background-color: #475569;
           border-radius: 10px;
         }
+        .prose p { margin: 0; }
+        .prose strong { color: #fff; font-weight: 700; }
+        .prose ul, .prose ol { margin: 0.5rem 0; padding-left: 1.25rem; }
+        .prose li { margin: 0.25rem 0; }
       `}} />
     </>
   );

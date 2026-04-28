@@ -271,18 +271,25 @@ export default function ChatBot({ onActionClick }) {
                   {/* Action Buttons for Triggers */}
                   {msg.role === 'assistant' && triggerMatches.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-2">
-                      {triggerMatches.map((match, i) => (
-                        <button 
-                          key={i}
-                          onClick={() => handleActionTrigger(match[1])}
-                          className="text-xs bg-blue-600/20 text-blue-400 border border-blue-600/30 px-3 py-1.5 rounded-lg hover:bg-blue-600/40 transition-all flex items-center gap-2"
-                        >
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                          {isEn ? 'View Details' : '查看詳細介紹'}
-                        </button>
-                      ))}
+                      {triggerMatches.map((match, i) => {
+                        const triggerId = match[1];
+                        const themes = t('themes') || [];
+                        const theme = Array.isArray(themes) ? themes.find(th => th.id === triggerId) : null;
+                        const btnLabel = theme ? theme.title : (isEn ? 'View Details' : '查看詳細介紹');
+                        
+                        return (
+                          <button 
+                            key={i}
+                            onClick={() => handleActionTrigger(triggerId)}
+                            className="text-xs bg-blue-600/20 text-blue-400 border border-blue-600/30 px-3 py-1.5 rounded-lg hover:bg-blue-600/40 transition-all flex items-center gap-2"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            {btnLabel}
+                          </button>
+                        );
+                      })}
                     </div>
                   )}
                 </div>

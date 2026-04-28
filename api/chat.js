@@ -57,6 +57,11 @@ Current Language Setting: ${isEn ? 'English' : 'Chinese'}
 
 **Markdown Rule**: Use strict Markdown syntax. For bold text, ensure there are NO spaces between the asterisks and the content (e.g., use **BoldText**, NEVER ** BoldText **).
 
+**Interactive Triggers**: If you mention a specific theme, you can append a trigger tag at the end of the sentence to allow the user to open the detail panel.
+- Format: [TRIGGER:theme_id]
+- Valid IDs: ai, leadership, stewardship
+- Example: "...you can learn more about our AI sessions. [TRIGGER:ai]"
+
 **Special Requirements**:
 1. At the end of your response, provide 2-3 brief follow-up questions after the [SUGGESTIONS] tag.
 2. Example: [SUGGESTIONS] ${isEn ? 'How to register?, Who are the speakers?' : '如何報名年會？, 講員名單有哪些？'}`

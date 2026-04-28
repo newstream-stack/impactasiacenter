@@ -2,36 +2,68 @@ import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useI18n } from '../../i18n/I18nContext';
 
-export default function ChatBot() {
+export default function ChatBot({ onActionClick }) {
   const { language } = useI18n();
   const isEn = language === 'en';
   
   const [isOpen, setIsOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
-  const [messages, setMessages] = useState([
-    { 
-      role: 'assistant', 
-      content: isEn 
-        ? 'Hello! I am the Impact Asia assistant. How can I help you today?' 
-        : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？' 
-    }
-  ]);
+  const [messages, setMessages] = useState(() => {
+    const saved = localStorage.getItem('chat_history');
+    return saved ? JSON.parse(saved) : [
+      { 
+        role: 'assistant', 
+        content: isEn 
+          ? 'Hello! I am the Impact Asia assistant. How can I help you today?' 
+          : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？' 
+      }
+    ];
+  });
 
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const messagesEndRef = useRef(null);
 
+  useEffect(() => {
+    localStorage.setItem('chat_history', JSON.stringify(messages));
+  }, [messages]);
+
+  const clearChat = () => {
+    const welcome = [
+      { 
+        role: 'assistant', 
+        content: isEn 
+          ? 'Hello! I am the Impact Asia assistant. How can I help you today?' 
+          : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？' 
+      }
+    ];
+    setMessages(welcome);
+    setSuggestions([]);
+    localStorage.removeItem('chat_history');
+  };
+
   const toggleChat = () => {
     setIsOpen(!isOpen);
     setShowTooltip(false);
   };
 
+  const handleActionTrigger = (triggerId) => {
+    if (onActionClick) {
+      onActionClick(triggerId);
+    }
+  };
+
+  const QUICK_ACTIONS = isEn 
+    ? [ { label: '📅 Schedule', q: 'What is the schedule?' }, { label: '🎤 Speakers', q: 'Who are the speakers?' }, { label: '📍 Location', q: 'Where is it?' } ]
+    : [ { label: '📅 年會時間表', q: '這次年會的議程是什麼？' }, { label: '🎤 講員名單', q: '有哪些講員會出席？' }, { label: '📍 舉辦地點', q: '年會在美國哪裡舉辦？' } ];
+
   // Show tooltip after a delay
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (!isOpen) setShowTooltip(true);
-    }, 3000);
+      const chatOpened = localStorage.getItem('chat_opened');
+      if (!isOpen && !chatOpened) setShowTooltip(true);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -73,6 +105,7 @@ export default function ChatBot() {
     setSuggestions([]);
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
+    localStorage.setItem('chat_opened', 'true');
     
     setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
 
@@ -169,7 +202,16 @@ export default function ChatBot() {
         <div className="fixed bottom-6 right-6 w-80 sm:w-96 h-[32rem] bg-slate-900 rounded-2xl shadow-2xl flex flex-col overflow-hidden z-50 border border-slate-700 font-sans animate-in fade-in slide-in-from-bottom-4 duration-300">
           {/* Header */}
           <div className="bg-slate-800 p-4 flex justify-between items-center border-b border-slate-700">
-            <h3 className="text-white font-semibold">{isEn ? 'AI Assistant' : 'AI 小助手'}</h3>
+            <div className="flex items-center gap-3">
+              <h3 className="text-white font-semibold">{isEn ? 'AI Assistant' : 'AI 小助手'}</h3>
+              <button 
+                onClick={clearChat}
+                className="text-[10px] text-slate-500 hover:text-red-400 uppercase tracking-tighter border border-slate-700 px-1.5 py-0.5 rounded transition-colors"
+                title={isEn ? 'Clear History' : '清除記錄'}
+              >
+                {isEn ? 'Clear' : '清除'}
+              </button>
+            </div>
             <button 
               onClick={() => setIsOpen(false)}
               className="text-slate-400 hover:text-white transition-colors"
@@ -193,10 +235,14 @@ export default function ChatBot() {
                 );
               }
               
+              // Interactive Triggers Parser
+              const triggerMatch = msg.content.match(/\[TRIGGER:(.*?)\]/);
+              const cleanContent = msg.content.replace(/\[TRIGGER:.*?\]/g, '').replace(/\*\*\s*(.*?)\s*\*\*/g, '**$1**');
+              
               return (
                 <div 
                   key={index} 
-                  className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                  className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}
                 >
                   <div 
                     className={`max-w-[80%] rounded-2xl px-4 py-2 break-words ${
@@ -206,13 +252,24 @@ export default function ChatBot() {
                     }`}
                   >
                     {msg.role === 'assistant' ? (
-                      <ReactMarkdown>
-                        {msg.content.replace(/\*\*\s*(.*?)\s*\*\*/g, '**$1**')}
-                      </ReactMarkdown>
+                      <ReactMarkdown>{cleanContent}</ReactMarkdown>
                     ) : (
                       msg.content
                     )}
                   </div>
+                  
+                  {/* Action Button for Triggers */}
+                  {msg.role === 'assistant' && triggerMatch && (
+                    <button 
+                      onClick={() => handleActionTrigger(triggerMatch[1])}
+                      className="mt-2 text-xs bg-blue-600/20 text-blue-400 border border-blue-600/30 px-3 py-1.5 rounded-lg hover:bg-blue-600/40 transition-all flex items-center gap-2"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      {isEn ? 'View Details' : '查看詳細介紹'}
+                    </button>
+                  )}
                 </div>
               );
             })}
@@ -235,8 +292,21 @@ export default function ChatBot() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input Area */}
+          {/* Quick Actions & Input */}
           <div className="p-4 bg-slate-800 border-t border-slate-700">
+            {/* Quick Actions Row */}
+            <div className="flex gap-2 mb-3 overflow-x-auto no-scrollbar pb-1">
+              {QUICK_ACTIONS.map((action, i) => (
+                <button
+                  key={i}
+                  onClick={() => handleSubmit(null, action.q)}
+                  className="whitespace-nowrap text-[10px] bg-slate-900 text-slate-300 border border-slate-700 px-2.5 py-1 rounded-md hover:bg-slate-700 transition-colors"
+                >
+                  {action.label}
+                </button>
+              ))}
+            </div>
+
             <form onSubmit={handleSubmit} className="flex gap-2">
               <input
                 type="text"

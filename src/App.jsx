@@ -64,7 +64,7 @@ export default function App() {
       <div className="reveal"><Venue /></div>
       <Footer />
       <BackToTop />
-      <ChatBot />
+      <ChatBot onActionClick={setActiveTheme} />
     </>
   );
 }

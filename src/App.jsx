@@ -34,6 +34,7 @@ function BackToTop() {
 }
 
 export default function App() {
+  const { t } = useI18n();
   const [activeTheme, setActiveTheme] = useState(null);
 
   useEffect(() => {
@@ -51,20 +52,31 @@ export default function App() {
     return () => elements.forEach(el => observer.unobserve(el));
   }, []);
 
+  // Handle both object (from UI) and string ID (from ChatBot)
+  const handleSetActiveTheme = (themeData) => {
+    if (typeof themeData === 'string') {
+      const themes = t('themes');
+      const found = themes.find(th => th.id === themeData);
+      if (found) setActiveTheme(found);
+    } else {
+      setActiveTheme(themeData);
+    }
+  };
+
   return (
     <>
       <Header />
       <Hero />
       <div className="reveal"><Vision /></div>
-      <div className="reveal"><AboutIntro onMoreClick={setActiveTheme} /></div>
+      <div className="reveal"><AboutIntro onMoreClick={handleSetActiveTheme} /></div>
       <div className="reveal"><Timeline /></div>
       <div className="reveal"><TrailerSection /></div>
-      <div className="reveal"><Themes onThemeClick={setActiveTheme} /></div>
+      <div className="reveal"><Themes onThemeClick={handleSetActiveTheme} /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <div className="reveal"><Venue /></div>
       <Footer />
       <BackToTop />
-      <ChatBot onActionClick={setActiveTheme} />
+      <ChatBot onActionClick={handleSetActiveTheme} />
     </>
   );
 }

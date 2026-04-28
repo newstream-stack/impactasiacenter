@@ -24,6 +24,7 @@ export default function ChatBot({ onActionClick }) {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const messagesEndRef = useRef(null);
+  const prevLangRef = useRef(language);
 
   useEffect(() => {
     localStorage.setItem('chat_history', JSON.stringify(messages));
@@ -69,6 +70,8 @@ export default function ChatBot({ onActionClick }) {
 
   // Sync welcome message and insert system notice when language changes
   useEffect(() => {
+    if (prevLangRef.current === language) return;
+    
     if (messages.length === 1) {
       // If only welcome message, replace it
       setMessages([{ 
@@ -85,6 +88,7 @@ export default function ChatBot({ onActionClick }) {
       }]);
     }
     setSuggestions([]); // Clear suggestions to avoid language mismatch
+    prevLangRef.current = language;
   }, [language]);
 
   const scrollToBottom = () => {
@@ -128,14 +132,14 @@ export default function ChatBot({ onActionClick }) {
       }
 
       const reader = response.body.getReader();
-      const decoder = new TextDecoder();
+      const decoder = new TextDecoder('utf-8');
       let done = false;
       let currentFullText = '';
 
       while (!done) {
         const { value, done: doneReading } = await reader.read();
         done = doneReading;
-        const chunkValue = decoder.decode(value);
+        const chunkValue = decoder.decode(value, { stream: true });
         currentFullText += chunkValue;
         
         let displayContent = currentFullText;
@@ -143,7 +147,7 @@ export default function ChatBot({ onActionClick }) {
           const parts = currentFullText.split('[SUGGESTIONS]');
           displayContent = parts[0].trim();
           
-          if (done) {
+          if (done && parts[1]) {
             const rawSuggestions = parts[1].split(',').map(s => s.trim()).filter(s => s);
             setSuggestions(rawSuggestions);
           }
@@ -236,7 +240,7 @@ export default function ChatBot({ onActionClick }) {
               }
               
               // Interactive Triggers Parser
-              const triggerMatch = msg.content.match(/\[TRIGGER:(.*?)\]/);
+              const triggerMatches = Array.from(msg.content.matchAll(/\[TRIGGER:(.*?)\]/g));
               const cleanContent = msg.content.replace(/\[TRIGGER:.*?\]/g, '').replace(/\*\*\s*(.*?)\s*\*\*/g, '**$1**');
               
               return (
@@ -258,17 +262,22 @@ export default function ChatBot({ onActionClick }) {
                     )}
                   </div>
                   
-                  {/* Action Button for Triggers */}
-                  {msg.role === 'assistant' && triggerMatch && (
-                    <button 
-                      onClick={() => handleActionTrigger(triggerMatch[1])}
-                      className="mt-2 text-xs bg-blue-600/20 text-blue-400 border border-blue-600/30 px-3 py-1.5 rounded-lg hover:bg-blue-600/40 transition-all flex items-center gap-2"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {isEn ? 'View Details' : '查看詳細介紹'}
-                    </button>
+                  {/* Action Buttons for Triggers */}
+                  {msg.role === 'assistant' && triggerMatches.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {triggerMatches.map((match, i) => (
+                        <button 
+                          key={i}
+                          onClick={() => handleActionTrigger(match[1])}
+                          className="text-xs bg-blue-600/20 text-blue-400 border border-blue-600/30 px-3 py-1.5 rounded-lg hover:bg-blue-600/40 transition-all flex items-center gap-2"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          {isEn ? 'View Details' : '查看詳細介紹'}
+                        </button>
+                      ))}
+                    </div>
                   )}
                 </div>
               );

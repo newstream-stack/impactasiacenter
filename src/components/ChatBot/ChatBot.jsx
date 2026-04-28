@@ -82,10 +82,17 @@ export default function ChatBot() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: userMessage, language }),
+        body: JSON.stringify({ 
+          message: userMessage, 
+          history: messages.filter(m => m.role !== 'system'), // Don't send system notices to AI
+          language 
+        }),
       });
 
-      if (!response.ok) throw new Error('Network response was not ok');
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText);
+      }
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
@@ -119,9 +126,10 @@ export default function ChatBot() {
       console.error('Error calling chat function:', error);
       setMessages(prev => {
         const newMessages = [...prev];
-        newMessages[newMessages.length - 1].content = isEn 
-          ? 'Sorry, there was an error connecting to the AI. Please check your connection.'
-          : '抱歉，連線至 AI 助手時出現錯誤，請確認網路連線。';
+        const errorContent = isEn 
+          ? 'The AI is currently busy or experiencing connection issues. You can try again later or visit our [Contact Page](#venue) for help.'
+          : 'AI 小助手目前忙碌中或連線不穩定。您可以稍後再試，或直接前往 [會場資訊](#venue) 查看相關聯絡方式。';
+        newMessages[newMessages.length - 1].content = errorContent;
         return newMessages;
       });
     } finally {

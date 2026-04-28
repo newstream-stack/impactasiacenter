@@ -31,7 +31,7 @@ const LOCATION_INFO = {
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
-  const { message, language = 'zh' } = req.body;
+  const { message, history = [], language = 'zh' } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
 
   if (!apiKey) return res.status(500).json({ error: "API Key 缺失" });
@@ -40,7 +40,6 @@ export default async function handler(req, res) {
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    
     const model = genAI.getGenerativeModel({ 
       model: "gemini-flash-latest",
       systemInstruction: `CRITICAL: You MUST respond EXCLUSIVELY in ${isEn ? 'ENGLISH' : 'TRADITIONAL CHINESE (繁體中文)'}.
@@ -63,9 +62,16 @@ Current Language Setting: ${isEn ? 'English' : 'Chinese'}
 2. Example: [SUGGESTIONS] ${isEn ? 'How to register?, Who are the speakers?' : '如何報名年會？, 講員名單有哪些？'}`
     });
 
-    const result = await model.generateContentStream(message);
+    // 將歷史記錄轉換為 Gemini 格式 (限制最近 10 則以節省 Token)
+    const chat = model.startChat({
+      history: history.slice(-10).map(msg => ({
+        role: msg.role === 'user' ? 'user' : 'model',
+        parts: [{ text: msg.content }],
+      })),
+    });
+
+    const result = await chat.sendMessageStream(message);
     
-    // 設定串流回應標頭
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.setHeader('Transfer-Encoding', 'chunked');
 
@@ -77,8 +83,9 @@ Current Language Setting: ${isEn ? 'English' : 'Chinese'}
     res.end();
   } catch (error) {
     console.error("Gemini Error:", error);
+    // 傳回更詳細的錯誤資訊給前端處理
     if (!res.writableEnded) {
-      res.status(500).json({ error: `AI 暫時無法回應: ${error.message}` });
+      res.status(500).end(`ERROR: ${error.message}`);
     }
   }
 }

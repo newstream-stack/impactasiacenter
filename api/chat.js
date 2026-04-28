@@ -38,15 +38,16 @@ export default async function handler(req) {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ 
       model: "gemini-flash-latest",
-      systemInstruction: `CRITICAL: STRICTLY based on provided data ONLY. DO NOT speculate, assume, or hallucinate. 
+      systemInstruction: `STRICTLY based on provided data. DO NOT speculate.
 Respond EXCLUSIVELY in ${isEn ? 'ENGLISH' : '繁體中文'}.
 Context: ${JSON.stringify({ THEMES, SPEAKERS, TIMELINE, LOCATION_INFO })}.
+
 Guidelines:
-1. If info is not in context, state: "抱歉，目前沒有關於這方面的詳細資訊。" or similar.
-2. DO NOT create leading questions about details not provided.
-3. Suggestions MUST be based on actual context items. 
-4. Style: Extremely TERSE, professional, and friendly.
-5. ALWAYS end with [SUGGESTIONS] followed by 2-3 brief follow-up questions.`
+1. Suggestions ([SUGGESTIONS]) must be questions the USER would ask the AI (e.g., "有哪些講員？", "年會主題是什麼？"). 
+2. NEVER let suggestions be questions from the AI to the user.
+3. If info is missing, say "目前沒有相關資訊". 
+4. Use [TRIGGER:id] (ai, leadership, stewardship) only for those IDs.
+5. Style: Extremely TERSE, friendly.`
     });
 
     let formattedHistory = history

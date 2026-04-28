@@ -48,7 +48,7 @@ Respond EXCLUSIVELY in ${isEn ? 'ENGLISH' : '繁體中文'}.
 Context: ${JSON.stringify({ THEMES, SPEAKERS, TIMELINE, LOCATION_INFO, REGISTRATION_URLS })}.
 
 Guidelines:
-1. If asked about registration, provide this link: ${isEn ? REGISTRATION_URLS.en : REGISTRATION_URLS.zh}.
+1. If asked about registration, provide this EXACT Markdown link: [${isEn ? 'Register Now' : '立即報名'}](${isEn ? REGISTRATION_URLS.en : REGISTRATION_URLS.zh}).
 2. Suggestions ([SUGGESTIONS]) must be questions the USER would ask the AI (e.g., "有哪些講員？", "年會主題是什麼？"). 
 3. NEVER let suggestions be questions from the AI to the user.
 4. Use [TRIGGER:id] (ai, leadership, stewardship) only for those IDs.

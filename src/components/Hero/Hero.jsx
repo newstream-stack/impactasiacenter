@@ -14,7 +14,14 @@ export default function Hero() {
         <Countdown />
         <p className={styles.eventName}>{t('heroEventName')}</p>
         <div className={styles.cta}>
-          <button className={`${styles.btnPrimary} glow-orange`}>{t('btnRegister')}</button>
+          <a 
+            href={t('registrationUrl')} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={`${styles.btnPrimary} glow-orange`}
+          >
+            {t('btnRegister')}
+          </a>
           <a 
             href="https://ct.org.tw/html/dedication/8-2-2.php?article=117" 
             target="_blank" 

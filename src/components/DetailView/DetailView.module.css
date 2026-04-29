@@ -97,3 +97,15 @@
 .point span {
   opacity: 0.7;
 }
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.paragraph {
+  line-height: 1.8;
+  color: #ccc;
+  text-align: justify;
+}

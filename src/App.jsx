@@ -74,7 +74,7 @@ export default function App() {
       <div className="reveal"><AboutIntro onMoreClick={handleSetActiveTheme} /></div>
       <div className="reveal"><Timeline /></div>
       <div className="reveal"><TrailerSection /></div>
-      <div className="reveal"><IAAIntro /></div>
+      <div className="reveal"><IAAIntro onBlockClick={handleSetActiveTheme} /></div>
       <div className="reveal"><Presidium /></div>
       <div className="reveal"><Themes onThemeClick={handleSetActiveTheme} /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />

@@ -24,16 +24,25 @@ export default function DetailView({ theme, onClose }) {
         <button className={styles.closeBtn} onClick={onClose} aria-label="關閉">×</button>
         {theme && (
           <div className={styles.content}>
-            <h2 className={styles.heading}>{theme.detail.heading}</h2>
-            <p className={styles.intro}>{theme.detail.intro}</p>
-            <ul className={styles.points}>
-              {theme.detail.points.map((p, i) => (
-                <li key={i} className={styles.point}>
-                  <strong>{p.title}</strong>
-                  <span>{p.desc}</span>
-                </li>
-              ))}
-            </ul>
+            <h2 className={styles.heading}>{theme.detail?.heading || theme.title}</h2>
+            {theme.detail?.intro && <p className={styles.intro}>{theme.detail.intro}</p>}
+            
+            {theme.detail?.points ? (
+              <ul className={styles.points}>
+                {theme.detail.points.map((p, i) => (
+                  <li key={i} className={styles.point}>
+                    <strong>{p.title}</strong>
+                    <span>{p.desc}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : theme.paragraphs ? (
+              <div className={styles.paragraphs}>
+                {theme.paragraphs.map((p, i) => (
+                  <p key={i} className={styles.paragraph}>{p}</p>
+                ))}
+              </div>
+            ) : null}
           </div>
         )}
       </aside>

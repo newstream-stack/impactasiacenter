@@ -12,30 +12,21 @@ export default function IAAIntro() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>{data.title}</h2>
+          <p className={styles.subtitle}>{data.subtitle}</p>
           <div className={styles.line} />
         </div>
 
         <div className={styles.content}>
-          <div className={styles.block}>
-            <h3 className={styles.blockTitle}>{data.origin.title}</h3>
-            <div className={styles.paragraphs}>
-              {data.origin.paragraphs.map((p, index) => (
-                <p key={index}>{p}</p>
-              ))}
+          {data.blocks.map((block, index) => (
+            <div key={index} className={styles.block}>
+              <h3 className={styles.blockTitle}>{block.title}</h3>
+              <div className={styles.paragraphs}>
+                {block.paragraphs.map((p, pIndex) => (
+                  <p key={pIndex}>{p}</p>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div className={styles.block}>
-            <h3 className={styles.blockTitle}>{data.mission.title}</h3>
-            <div className={styles.missionGrid}>
-              {data.mission.items.map((item, index) => (
-                <div key={index} className={styles.missionCard}>
-                  <span className={styles.label}>{item.label}</span>
-                  <p className={styles.text}>{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

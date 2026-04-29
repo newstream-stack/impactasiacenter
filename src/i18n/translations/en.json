@@ -92,23 +92,55 @@
     "subtitle": "OFFICIAL TRAILER 2026"
   },
   "iaaIntro": {
-    "title": "#IAA Impact Asia Alliance",
-    "origin": {
-      "title": "Origins",
-      "paragraphs": [
-        "Christian Tribune started as traditional print media, but under God's guidance, it has continuously surpassed itself, updated and changed. Over the years, it has constantly changed versions and integrated church resources, creating many records; God also bestowed the Impact Asia Alliance Hall, which is now entering Chinese churches and actively connecting with Southeast Asian countries and global Chinese churches.",
-        "In 2021, God ignited the first step of revival in Malaysia, Asia. Many interdenominational pastors gathered, willing to complete an interdenominational, cross-domain connection relationship Christian media integration platform. Heart-to-heart sharing, mutual benefit, mutual learning, and sharing, making church faith lifestyle-oriented and entering the Seven Mountains.",
-        "In the future, the IAA platform will still continue the original intention of the Christian Tribune Foundation: 'Exalt Christ, connect the church, edify believers, and spread the gospel'. Regardless of denomination, language, or political color, it connects the members of Asia, sharing experiences, cooperation, and dreams interwoven with each other. May those who have a burden for Chinese missions participate and support together!"
-      ]
-    },
-    "mission": {
-      "title": "Mission, Vision, & Values",
-      "items": [
-        { "label": "Mission", "text": "Activate the influence of Asian churches, transform generations, and advance the Great Commission." },
-        { "label": "Vision", "text": "By building an interdenominational, cross-domain connection relationship, and heart-to-heart sharing Christian new internet platform, promote the lifestyle-orientation of faith, and promote influence into the Seven Mountains, allowing Asian churches to arise and take the final baton of the Great Commission!" },
-        { "label": "Value", "text": "Innovative, transformative, future Asian churches." }
-      ]
-    }
+    "title": "Impact Asia Alliance (IAA) Global Summit",
+    "subtitle": "Connecting the Body of Christ Across Asia",
+    "blocks": [
+      {
+        "title": "Background & Outlook",
+        "paragraphs": [
+          "In an era of rapid global change, Asia is playing an increasingly critical role in the international community, not only in economic and technological fields but also in cultural exchange and value dialogue.",
+          "In this context, the Impact Asia Alliance (IAA), promoted by the Christian Tribune Foundation, is dedicated to connecting churches, leaders, and workplace influencers across Asia, establishing a transnational, cross-domain, and cross-church exchange platform to promote connection and walking together in faith and mission."
+        ]
+      },
+      {
+        "title": "A Continuous Platform for Asian Influence",
+        "paragraphs": [
+          "The IAA Global Summit is not a one-off event but a continuously operating connection platform.",
+          "Through each summit, church leaders and participants from different countries and cities in Asia gather to exchange, share, and connect on a common faith basis, establishing cross-regional relationship networks.",
+          "The summit also becomes an important node for promoting deeper cooperation between Asian churches and leaders, enabling churches and leaders from different cultures and backgrounds to know and learn from each other, and move forward together in unity."
+        ]
+      },
+      {
+        "title": "Connecting Asian Leaders & Global Elites",
+        "paragraphs": [
+          "One of IAA's core missions is to promote connection and exchange between churches and leaders across Asia.",
+          "Starting from Taiwan, it gradually connects churches and leaders in Malaysia, Indonesia, Japan, and other places, extending to key influencers and global elites in different fields. Through physical gatherings and continuous interaction, it establishes stable and long-term relationships, enabling leaders from different backgrounds to support and walk with each other in mission, pastoral care, and social participation.",
+          "Such connections occur not only during the summit but also extend to continued cooperation and exchange afterward."
+        ]
+      },
+      {
+        "title": "Raising Faith Influence in Various Fields",
+        "paragraphs": [
+          "IAA focuses on how faith is practiced and lived out in various fields outside the church, including workplace, culture, media, and social participation.",
+          "Through the platform's connection and exchange, leaders from different backgrounds are encouraged to learn from and inspire each other, continuing to exert positive influence based on faith values in their respective positions.",
+          "IAA believes that influence is formed through connection and walking together, rather than the action of a single individual."
+        ]
+      },
+      {
+        "title": "Responding to Challenges & Opportunities",
+        "paragraphs": [
+          "Faced with rapid contemporary technological development, the rise of AI, and changes in global social structures, churches and faith communities are also in a new stage of transformation.",
+          "The IAA Global Summit provides a stable and continuous exchange platform in such an era, enabling churches and leaders across Asia to dialogue, understand, and respond together to the challenges and opportunities faced by this generation."
+        ]
+      },
+      {
+        "title": "Asia's Role in Faith and Influence",
+        "paragraphs": [
+          "The Impact Asia Alliance (IAA) Global Summit is a platform that continuously connects Asian churches and leaders.",
+          "Through transnational exchange and cooperation, it promotes deeper understanding and partnership between different cultures and regions, enabling Asian churches and leaders to witness the influence of faith in contemporary society together in unity and connection."
+        ]
+      }
+    ]
   },
   "presidium": {
     "title": "Presidium",

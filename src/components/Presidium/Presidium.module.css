@@ -1,9 +1,8 @@
 .section {
   padding: 8rem 0;
-  background: linear-gradient(to bottom, #0a0a0a, #111);
+  background: var(--bg-dark);
   color: white;
   position: relative;
-  overflow: hidden;
 }
 
 .container {
@@ -31,7 +30,7 @@
 
 .subtitle {
   font-size: 1rem;
-  color: #FF5E00;
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.3em;
   font-weight: 600;
@@ -42,7 +41,7 @@
 .line {
   width: 60px;
   height: 4px;
-  background: #FF5E00;
+  background: var(--accent);
   margin: 0 auto;
   border-radius: 2px;
 }
@@ -55,24 +54,24 @@
 }
 
 .memberCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 3rem;
   border-radius: 20px;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
 }
 
 .memberCard:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 94, 0, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--accent);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .role {
-  color: #FF5E00;
+  color: var(--accent);
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -116,7 +115,7 @@
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
-  border-left: 3px solid #FF5E00;
+  border-left: 3px solid var(--accent);
   transition: all 0.3s ease;
 }
 

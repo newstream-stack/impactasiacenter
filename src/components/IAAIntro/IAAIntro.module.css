@@ -1,0 +1,116 @@
+.section {
+  padding: 8rem 0;
+  background: var(--bg);
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blockTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blockTitle::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.paragraphs p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cbd5e0;
+  text-align: justify;
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.missionCard {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.missionCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 0; }
+  .content { gap: 4rem; }
+  .blockTitle { font-size: 1.5rem; }
+  .paragraphs p { font-size: 1rem; }
+}

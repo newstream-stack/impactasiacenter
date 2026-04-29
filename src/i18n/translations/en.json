@@ -91,6 +91,25 @@
     "title": "Official Trailer",
     "subtitle": "OFFICIAL TRAILER 2026"
   },
+  "iaaIntro": {
+    "title": "#IAA Impact Asia Alliance",
+    "origin": {
+      "title": "Origins",
+      "paragraphs": [
+        "Christian Tribune started as traditional print media, but under God's guidance, it has continuously surpassed itself, updated and changed. Over the years, it has constantly changed versions and integrated church resources, creating many records; God also bestowed the Impact Asia Alliance Hall, which is now entering Chinese churches and actively connecting with Southeast Asian countries and global Chinese churches.",
+        "In 2021, God ignited the first step of revival in Malaysia, Asia. Many interdenominational pastors gathered, willing to complete an interdenominational, cross-domain connection relationship Christian media integration platform. Heart-to-heart sharing, mutual benefit, mutual learning, and sharing, making church faith lifestyle-oriented and entering the Seven Mountains.",
+        "In the future, the IAA platform will still continue the original intention of the Christian Tribune Foundation: 'Exalt Christ, connect the church, edify believers, and spread the gospel'. Regardless of denomination, language, or political color, it connects the members of Asia, sharing experiences, cooperation, and dreams interwoven with each other. May those who have a burden for Chinese missions participate and support together!"
+      ]
+    },
+    "mission": {
+      "title": "Mission, Vision, & Values",
+      "items": [
+        { "label": "Mission", "text": "Activate the influence of Asian churches, transform generations, and advance the Great Commission." },
+        { "label": "Vision", "text": "By building an interdenominational, cross-domain connection relationship, and heart-to-heart sharing Christian new internet platform, promote the lifestyle-orientation of faith, and promote influence into the Seven Mountains, allowing Asian churches to arise and take the final baton of the Great Commission!" },
+        { "label": "Value", "text": "Innovative, transformative, future Asian churches." }
+      ]
+    }
+  },
   "presidium": {
     "title": "Presidium",
     "subtitle": "主席團",

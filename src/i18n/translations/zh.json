@@ -1,6 +1,7 @@
 {
   "navVision": "年會異象",
   "navThemes": "專題研討",
+  "navPresidium": "主席團",
   "navVenue": "會場資訊",
   "navSupport": "奉獻",
   "heroSubtitle": "Phoenix, Arizona | Oct 2026",
@@ -58,6 +59,22 @@
   "trailer": {
     "title": "官方前導預告",
     "subtitle": "OFFICIAL TRAILER 2026"
+  },
+  "presidium": {
+    "title": "主席團",
+    "subtitle": "Presidium",
+    "main": [
+      { "role": "大會主席", "name": "Dr. Simon Hung", "title": "ORTV & IAA 董事長" },
+      { "role": "大會執行長", "name": "Dr. Timothy Cheng", "title": "IAA 國際執行長" }
+    ],
+    "coChairsTitle": "共同主席 (Co-Chairs)",
+    "coChairs": [
+      { "name": "Mike Constantz", "title": "Saddleback Church" },
+      { "name": "John Heston", "title": "First Baptist Church Tempe" },
+      { "name": "Ryan Nunez", "title": "Palm Valley Church" },
+      { "name": "鄭博仁 牧師", "title": "亞洲論壇影響力中心董事" },
+      { "name": "陳貴荔 董事長", "title": "亞洲論壇影響力中心董事" }
+    ]
   },
   "themesSection": {
     "title": "大會議題"

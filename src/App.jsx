@@ -8,6 +8,7 @@ import AboutIntro from './components/AboutIntro/AboutIntro';
 import TrailerSection from './components/TrailerSection/TrailerSection';
 import Speakers from './components/Speakers/Speakers';
 import Themes from './components/Themes/Themes';
+import Presidium from './components/Presidium/Presidium';
 import DetailView from './components/DetailView/DetailView';
 import Venue from './components/Venue/Venue';
 import Footer from './components/Footer/Footer';
@@ -72,6 +73,7 @@ export default function App() {
       <div className="reveal"><AboutIntro onMoreClick={handleSetActiveTheme} /></div>
       <div className="reveal"><Timeline /></div>
       <div className="reveal"><TrailerSection /></div>
+      <div className="reveal"><Presidium /></div>
       <div className="reveal"><Themes onThemeClick={handleSetActiveTheme} /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <div className="reveal"><Venue /></div>

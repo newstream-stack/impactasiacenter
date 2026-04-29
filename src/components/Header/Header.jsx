@@ -9,7 +9,7 @@ export default function Header() {
 
   const navLinks = [
     { href: '#vision', label: t('navVision') },
-    // { href: '#speakers', label: '大會講員' },
+    { href: '#presidium', label: t('navPresidium') },
     { href: '#themes', label: t('navThemes') },
     { href: '#venue', label: t('navVenue') },
   ];

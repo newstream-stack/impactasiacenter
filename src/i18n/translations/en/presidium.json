@@ -1,0 +1,41 @@
+{
+  "presidium": {
+    "title": "Presidium",
+    "subtitle": "主席團",
+    "main": [
+      {
+        "role": "Conference Chairman",
+        "name": "Dr. Simon Hung",
+        "title": "Chairman, ORTV & IAA"
+      },
+      {
+        "role": "Conference Executive Director",
+        "name": "Dr. Timothy Cheng",
+        "title": "International Executive Director, IAA"
+      }
+    ],
+    "coChairsTitle": "Co-Chairs (共同主席)",
+    "coChairs": [
+      {
+        "name": "Rev. Mike Constantz",
+        "title": "Saddleback Church"
+      },
+      {
+        "name": "Rev. John Heston",
+        "title": "First Baptist Church Tempe"
+      },
+      {
+        "name": "Rev. Ryan Nunez",
+        "title": "Palm Valley Church"
+      },
+      {
+        "name": "Rev. John Cheng",
+        "title": "Board Member, Impact Asia Center"
+      },
+      {
+        "name": "Mr. Steven Chen",
+        "title": "Board Member, Impact Asia Center"
+      }
+    ]
+  }
+}

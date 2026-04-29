@@ -1,0 +1,44 @@
+{
+  "timelineSection": {
+    "title": "A New Generation of Faith in Asia",
+    "subtitle": "OUR JOURNEY (2022 - 2026)"
+  },
+  "timeline": [
+    {
+      "year": "2022",
+      "region": "Kuala Lumpur, Malaysia",
+      "title": "Malaysia",
+      "description": "Winds of Change",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/77945_64f14b306e7bb.jpg"
+    },
+    {
+      "year": "2023",
+      "region": "Jakarta, Indonesia",
+      "title": "Indonesia",
+      "description": "He Walks on Waves",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/85525_64f1918b31877.jpg"
+    },
+    {
+      "year": "2024",
+      "region": "Kaohsiung, Taiwan",
+      "title": "Taiwan",
+      "description": "Into the Deep",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/18181_674d2d6b99f05.jpg"
+    },
+    {
+      "year": "2025",
+      "region": "Tokyo, Japan",
+      "title": "Japan",
+      "description": "Sunrise in the East",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/39637_海報.jpg"
+    },
+    {
+      "year": "2026",
+      "region": "Phoenix, USA",
+      "title": "USA",
+      "description": "Rebirth in the Wilderness",
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/30209_632906082_1387636540070401_4268236876262369224_n.jpg",
+      "active": true
+    }
+  ]
+}

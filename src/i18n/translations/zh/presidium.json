@@ -1,0 +1,41 @@
+{
+  "presidium": {
+    "title": "主席團",
+    "subtitle": "Presidium",
+    "main": [
+      {
+        "role": "大會主席",
+        "name": "洪善群 博士",
+        "title": "ORTV & IAA 董事長"
+      },
+      {
+        "role": "大會執行長",
+        "name": "鄭忠信 博士",
+        "title": "IAA 國際執行長"
+      }
+    ],
+    "coChairsTitle": "共同主席 (Co-Chairs)",
+    "coChairs": [
+      {
+        "name": "Rev. Mike Constantz",
+        "title": "Saddleback Church"
+      },
+      {
+        "name": "Rev. John Heston",
+        "title": "First Baptist Church Tempe"
+      },
+      {
+        "name": "Rev. Ryan Nunez",
+        "title": "Palm Valley Church"
+      },
+      {
+        "name": "鄭博仁 牧師",
+        "title": "亞洲論壇影響力中心董事"
+      },
+      {
+        "name": "陳貴荔 董事長",
+        "title": "亞洲論壇影響力中心董事"
+      }
+    ]
+  }
+}

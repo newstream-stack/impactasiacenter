@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
-import zhTranslations from './translations/zh.json';
-import enTranslations from './translations/en.json';
+import zhTranslations from './translations/zh/index.js';
+import enTranslations from './translations/en/index.js';
 
 const translations = {
   zh: zhTranslations,

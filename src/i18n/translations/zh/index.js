@@ -4,6 +4,7 @@ import about from './about.json';
 import timeline from './timeline.json';
 import iaaIntro from './iaaIntro.json';
 import presidium from './presidium.json';
+import speakers from './speakers.json';
 import themes from './themes.json';
 import venue from './venue.json';
 import footer from './footer.json';
@@ -15,6 +16,7 @@ const translations = {
   ...timeline,
   ...iaaIntro,
   ...presidium,
+  ...speakers,
   ...themes,
   ...venue,
   ...footer,

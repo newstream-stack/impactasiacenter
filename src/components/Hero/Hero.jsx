@@ -10,7 +10,18 @@ export default function Hero() {
     <section className={styles.hero} style={{ backgroundImage: `linear-gradient(to bottom, rgba(34,37,51,0.6), #222533), url('${HERO_IMG}')` }}>
       <div className={`${styles.content} animate-float`}>
         <p className={styles.subtitle}>{t('heroSubtitle')}</p>
-        <h1 className={styles.fluidTitle}>{t('heroTitle')}</h1>
+        <div className={styles.titleContainer}>
+          {t('heroTitle') === "From Wilderness\nTo Rebirth" ? (
+            <div className={styles.futuristicTitle}>
+              <span className={styles.small}>FROM</span>
+              <span className={styles.large}>WILDERNESS</span>
+              <span className={styles.small}>TO</span>
+              <span className={styles.large}>REBIRTH</span>
+            </div>
+          ) : (
+            <h1 className={styles.fluidTitle}>{t('heroTitle')}</h1>
+          )}
+        </div>
         <Countdown />
         <p className={styles.eventName}>{t('heroEventName')}</p>
         <div className={styles.cta}>

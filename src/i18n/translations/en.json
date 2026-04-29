@@ -5,7 +5,7 @@
   "navVenue": "Venue",
   "navSupport": "Support",
   "heroSubtitle": "Phoenix, Arizona | Oct 2026",
-  "heroTitle": "Rebirth in the Wilderness",
+  "heroTitle": "From Wilderness To Rebirth ",
   "heroEventName": "IMPACT ASIA ALLIANCE SUMMIT",
   "btnRegister": "Register Now",
   "registrationUrl": "https://ct.org.tw/html/activity/6-3.php?article=39&area=&id=&parentid=",
@@ -95,16 +95,39 @@
     "title": "Presidium",
     "subtitle": "主席團",
     "main": [
-      { "role": "Conference Chair", "name": "Dr. Simon Hung", "title": "Chairman of ORTV & IAA" },
-      { "role": "Executive Director", "name": "Dr. Timothy Cheng", "title": "IAA Global Executive Director" }
+      {
+        "role": "Conference Chairman",
+        "name": "Dr. Simon Hung",
+        "title": "Chairman, ORTV & IAA"
+      },
+      {
+        "role": "Conference Executive Director",
+        "name": "Dr. Timothy Cheng",
+        "title": "International Executive Director, IAA"
+      }
     ],
     "coChairsTitle": "Co-Chairs (共同主席)",
     "coChairs": [
-      { "name": "Mike Constantz", "title": "Saddleback Church" },
-      { "name": "John Heston", "title": "First Baptist Church Tempe" },
-      { "name": "Ryan Nunez", "title": "Palm Valley Church" },
-      { "name": "Rev. Robert Cheng", "title": "Board Member of Impact Asia Center" },
-      { "name": "Chairperson Grace Chen", "title": "Board Member of Impact Asia Center" }
+      {
+        "name": "Mike Constantz",
+        "title": "Saddleback Church"
+      },
+      {
+        "name": "John Heston",
+        "title": "First Baptist Church Tempe"
+      },
+      {
+        "name": "Ryan Nunez",
+        "title": "Palm Valley Church"
+      },
+      {
+        "name": "Rev. John Cheng",
+        "title": "Board Member, Impact Asia Center"
+      },
+      {
+        "name": "Mr. Steven Chen",
+        "title": "Board Member, Impact Asia Center"
+      }
     ]
   },
   "themesSection": {

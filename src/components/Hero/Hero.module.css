@@ -79,19 +79,37 @@
   font-size: clamp(2.5rem, 10vw, 7rem);
   font-weight: 900;
   letter-spacing: -0.02em;
-  background: linear-gradient(180deg, var(--accent) 0%, #fff 50%, var(--accent) 100%);
+  background: linear-gradient(
+    to right,
+    var(--accent) 0%,
+    #fff 25%,
+    var(--accent) 50%,
+    #fff 75%,
+    var(--accent) 100%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 15px rgba(255, 94, 0, 0.2));
   transform: rotateX(10deg);
   margin: 0.2rem 0;
+  animation: fluidShift 4s linear infinite;
 }
 
 .futuristicTitle .large:last-child {
-  background: linear-gradient(180deg, #fff 0%, var(--accent) 50%, #fff 100%);
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    var(--accent) 25%,
+    #fff 50%,
+    var(--accent) 75%,
+    #fff 100%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.2));
+  animation: fluidShift 4s linear infinite reverse; /* Reverse for a bit of dynamic variety */
 }
 
 .eventName {

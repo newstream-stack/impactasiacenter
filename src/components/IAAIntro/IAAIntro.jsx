@@ -16,14 +16,19 @@ export default function IAAIntro() {
           <div className={styles.line} />
         </div>
 
-        <div className={styles.content}>
+        <div className={styles.grid}>
           {data.blocks.map((block, index) => (
-            <div key={index} className={styles.block}>
-              <h3 className={styles.blockTitle}>{block.title}</h3>
-              <div className={styles.paragraphs}>
-                {block.paragraphs.map((p, pIndex) => (
-                  <p key={pIndex}>{p}</p>
-                ))}
+            <div key={index} className={styles.card}>
+              <div className={styles.cardContent}>
+                <h3 className={styles.cardTitle}>{block.title}</h3>
+                <div className={styles.cardText}>
+                  {block.paragraphs[0]}
+                </div>
+              </div>
+              <div className={styles.cardFooter}>
+                <span className={styles.learnMore}>
+                  {t('about.btnMore')} <span className={styles.arrow}>→</span>
+                </span>
               </div>
             </div>
           ))}

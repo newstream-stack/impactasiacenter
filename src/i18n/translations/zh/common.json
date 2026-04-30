@@ -6,5 +6,7 @@
   "navSupport": "奉獻",
   "btnRegister": "立即報名",
   "registrationUrl": "https://ct.org.tw/html/activity/6-3.php?article=38&area=&id=&parentid=",
-  "btnSupportOnline": "奉獻"
+  "btnSupportOnline": "奉獻",
+  "donationUrl": "https://ct.org.tw/html/dedication/8-2-2.php?article=117",
+  "countdownTarget": "2026-10-23T00:00:00"
 }

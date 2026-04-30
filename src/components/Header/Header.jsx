@@ -41,7 +41,7 @@ export default function Header() {
               {label}
             </a>
           ))}
-          <a href="https://ct.org.tw/html/dedication/8-2-2.php?article=117" target="_blank" rel="noopener noreferrer" className={styles.btnDonate}>
+          <a href={t('donationUrl')} target="_blank" rel="noopener noreferrer" className={styles.btnDonate}>
             {t('navSupport')}
           </a>
         </div>

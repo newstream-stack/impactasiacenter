@@ -3,10 +3,10 @@ import { useI18n } from '../../i18n/I18nContext';
 import styles from './Countdown.module.css';
 
 export default function Countdown() {
-  const { language } = useI18n();
+  const { language, t } = useI18n();
   const isEn = language === 'en';
   
-  const targetDate = new Date('2026-10-23T00:00:00').getTime();
+  const targetDate = new Date(t('countdownTarget')).getTime();
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0, hours: 0, minutes: 0, seconds: 0

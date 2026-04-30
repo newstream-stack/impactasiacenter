@@ -6,19 +6,19 @@ import styles from './ChatBot.module.css';
 export default function ChatBot({ onActionClick }) {
   const { language, t } = useI18n();
   const isEn = language === 'en';
-  
+
+  const getWelcome = (en) => ({
+    role: 'assistant',
+    content: en
+      ? 'Hello! I am the Impact Asia assistant. How can I help you today?'
+      : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？',
+  });
+
   const [isOpen, setIsOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [messages, setMessages] = useState(() => {
     const saved = localStorage.getItem('chat_history');
-    return saved ? JSON.parse(saved) : [
-      { 
-        role: 'assistant', 
-        content: isEn 
-          ? 'Hello! I am the Impact Asia assistant. How can I help you today?' 
-          : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？' 
-      }
-    ];
+    return saved ? JSON.parse(saved) : [getWelcome(isEn)];
   });
 
   const [input, setInput] = useState('');
@@ -32,15 +32,7 @@ export default function ChatBot({ onActionClick }) {
   }, [messages]);
 
   const clearChat = () => {
-    const welcome = [
-      { 
-        role: 'assistant', 
-        content: isEn 
-          ? 'Hello! I am the Impact Asia assistant. How can I help you today?' 
-          : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？' 
-      }
-    ];
-    setMessages(welcome);
+    setMessages([getWelcome(isEn)]);
     setSuggestions([]);
     localStorage.removeItem('chat_history');
   };
@@ -72,12 +64,7 @@ export default function ChatBot({ onActionClick }) {
     if (prevLangRef.current === language) return;
     
     if (messages.length === 1) {
-      setMessages([{ 
-        role: 'assistant', 
-        content: isEn 
-          ? 'Hello! I am the Impact Asia assistant. How can I help you today?' 
-          : '您好！我是亞洲論壇影響力中心的小助手，請問有什麼我可以協助您的嗎？' 
-      }]);
+      setMessages([getWelcome(isEn)]);
     } else {
       setMessages(prev => [...prev, { 
         role: 'system', 

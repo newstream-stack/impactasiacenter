@@ -34,7 +34,7 @@ export default function Hero() {
             {t('btnRegister')}
           </a>
           <a 
-            href="https://ct.org.tw/html/dedication/8-2-2.php?article=117" 
+            href={t('donationUrl')}
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.btnSecondary}

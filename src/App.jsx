@@ -14,6 +14,7 @@ import DetailView from './components/DetailView/DetailView';
 import Venue from './components/Venue/Venue';
 import Footer from './components/Footer/Footer';
 import ChatBot from './components/ChatBot/ChatBot';
+import { useReveal } from './hooks/useReveal';
 
 function BackToTop() {
   const [visible, setVisible] = useState(false);
@@ -40,20 +41,7 @@ export default function App() {
   const { t } = useI18n();
   const [activeTheme, setActiveTheme] = useState(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    const elements = document.querySelectorAll('.reveal');
-    elements.forEach(el => observer.observe(el));
-
-    return () => elements.forEach(el => observer.unobserve(el));
-  }, []);
+  useReveal();
 
   // Handle both object (from UI) and string ID (from ChatBot)
   const handleSetActiveTheme = (themeData) => {

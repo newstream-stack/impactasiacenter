@@ -8,7 +8,7 @@ export default function Hero() {
   const { t } = useI18n();
   return (
     <section className={styles.hero} style={{ backgroundImage: `linear-gradient(to bottom, rgba(34,37,51,0.6), #222533), url('${HERO_IMG}')` }}>
-      <div className={`${styles.content} animate-float`}>
+      <div className={styles.content}>
         <p className={styles.subtitle}>{t('heroSubtitle')}</p>
         <div className={styles.titleContainer}>
           {t('heroTitle') === "From Wilderness\nTo Rebirth" ? (
@@ -29,7 +29,7 @@ export default function Hero() {
             href={t('registrationUrl')} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className={`${styles.btnPrimary} glow-orange`}
+            className={styles.btnPrimary}
           >
             {t('btnRegister')}
           </a>

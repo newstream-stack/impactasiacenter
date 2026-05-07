@@ -5,64 +5,12 @@
   width: 100vw;
   height: 100vh;
   z-index: 99999;
-  pointer-events: none; /* Make sure user can click through if they click early */
-  background-color: #000;
-  /* Container fades out after sandification finishes */
-  animation: fadeOutContainer 0.8s ease-in-out 2.5s forwards;
-}
-
-.imageWrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  /* Instead of SVG filter, use CSS blur and contrast to create a granular dissolve effect */
-  animation: dissolveWrapper 2.5s ease-in 0.8s forwards;
-}
-
-.sandOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-image: radial-gradient(circle, rgba(0,0,0,1) 1px, transparent 2px);
-  background-size: 8px 8px;
-  opacity: 0;
-  animation: showSand 2.5s ease-in 0.8s forwards;
+  background: #000;
   pointer-events: none;
 }
 
-.image {
+.canvas {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(1.1);
-  animation: slowZoom 4s linear forwards, dissolveImage 2.5s ease-in 0.8s forwards;
-}
-
-@keyframes fadeOutContainer {
-  from { opacity: 1; }
-  to { opacity: 0; visibility: hidden; }
-}
-
-@keyframes dissolveWrapper {
-  from { filter: blur(0px) contrast(100%); opacity: 1; }
-  to { filter: blur(20px) contrast(200%); opacity: 0; }
-}
-
-@keyframes dissolveImage {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-@keyframes showSand {
-  0% { opacity: 0; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0; }
-}
-
-@keyframes slowZoom {
-  from { transform: scale(1.1); }
-  to { transform: scale(1.3); }
 }

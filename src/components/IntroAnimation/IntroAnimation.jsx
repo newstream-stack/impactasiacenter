@@ -21,7 +21,6 @@ export default function IntroAnimation() {
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Antelope_Canyon_with_light_beams.jpg/1200px-Antelope_Canyon_with_light_beams.jpg" 
           alt="Antelope Canyon" 
-          crossOrigin="anonymous"
           className={styles.image}
         />
       </div>

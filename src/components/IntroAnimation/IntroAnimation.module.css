@@ -1,0 +1,51 @@
+.introContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  pointer-events: none; /* Make sure user can click through if they click early */
+  background-color: #000;
+  /* Container fades out after sandification finishes */
+  animation: fadeOutContainer 0.8s ease-in-out 2.5s forwards;
+}
+
+.filterSvg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  /* Apply SVG filter for sandification displacement */
+  filter: url(#sand-filter);
+  /* The image slowly fades out as it turns to sand */
+  animation: fadeOut 2.5s ease-in 0.8s forwards;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Slight zoom in over time for dramatic effect, and scaling prevents edges from tearing inward initially */
+  transform: scale(1.1);
+  animation: slowZoom 4s linear forwards;
+}
+
+@keyframes fadeOutContainer {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1.1); }
+  to { transform: scale(1.2); }
+}

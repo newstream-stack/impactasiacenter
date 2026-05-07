@@ -16,6 +16,7 @@ import Footer from './components/Footer/Footer';
 import ChatBot from './components/ChatBot/ChatBot';
 import { useReveal } from './hooks/useReveal'
 import BackToTop from './components/BackToTop/BackToTop'
+import IntroAnimation from './components/IntroAnimation/IntroAnimation';
 
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
 
   return (
     <>
+      <IntroAnimation />
       <Header />
       <Hero />
       <div className="reveal"><Vision /></div>

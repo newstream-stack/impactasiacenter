@@ -32,6 +32,7 @@ export default function IntroAnimation() {
         <img 
           src="https://images.unsplash.com/photo-1502758712399-6a3f12bc5525?q=80&w=2000&auto=format&fit=crop" 
           alt="Antelope Canyon" 
+          crossOrigin="anonymous"
           className={styles.image}
         />
       </div>

@@ -38,13 +38,37 @@ export default function IntroAnimation() {
         drawY = 0;
       }
 
-      // 1. 先畫出完整的原圖，讓使用者在一進網頁時就能看到
-      ctx.drawImage(img, drawX, drawY, drawW, drawH);
+      // 1. 圖片優雅漸顯動畫 (Fade-in)
+      let fadeInStart = null;
+      const fadeInDuration = 1200; // 淡入耗時 1.2 秒
+
+      function fadeIn(time) {
+        if (!fadeInStart) fadeInStart = time;
+        const progress = (time - fadeInStart) / fadeInDuration;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (progress >= 1) {
+          ctx.globalAlpha = 1;
+          ctx.drawImage(img, drawX, drawY, drawW, drawH);
+          startSandificationPrep(); // 漸顯完成後，準備沙化
+        } else {
+          // 平滑的 ease-in-out
+          const ease = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+          ctx.globalAlpha = ease;
+          ctx.drawImage(img, drawX, drawY, drawW, drawH);
+          requestAnimationFrame(fadeIn);
+        }
+      }
+      
+      // 開始淡入
+      requestAnimationFrame(fadeIn);
 
       // 2. 準備「薩諾斯彈指」的沙化圖層
-      // 延遲一點點時間（讓使用者看清楚圖片），再開始背景計算
-      setTimeout(() => {
-        const numLayers = 32; // 將圖片拆成 32 個獨立沙化圖層
+      function startSandificationPrep() {
+        // 延遲一點點時間（讓使用者看清楚圖片），再開始背景計算
+        setTimeout(() => {
+          const numLayers = 32; // 將圖片拆成 32 個獨立沙化圖層
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         const pixels = imageData.data;
         
@@ -132,7 +156,8 @@ export default function IntroAnimation() {
         }
 
         requestAnimationFrame(animate);
-      }, 1500); // 1.5 秒後開始沙化
+      }, 1000); // 停留 1 秒後開始沙化 (因為前面已經有漸顯時間)
+    } // 結束 startSandificationPrep 函式
 
     };
 

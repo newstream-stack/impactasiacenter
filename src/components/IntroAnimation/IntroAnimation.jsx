@@ -2,105 +2,104 @@ import { useEffect, useRef, useState } from 'react';
 
 const HOLD_MS = 1500;
 const DISSOLVE_MS = 1800;
-const GRAVITY = 260;   // px/s²
-const PARTICLE = 5;    // px
+const GRAVITY = 320;
+const COLS = 40;
+const ROWS = 25;
 
 export default function IntroAnimation() {
-  const imgRef = useRef(null);
   const canvasRef = useRef(null);
-  const [phase, setPhase] = useState('hold'); // hold | dissolve | done
+  const [done, setDone] = useState(false);
 
-  // Start dissolve after HOLD_MS
   useEffect(() => {
-    const t = setTimeout(() => setPhase('dissolve'), HOLD_MS);
-    return () => clearTimeout(t);
-  }, []);
-
-  // Run canvas particle animation when dissolve phase starts
-  useEffect(() => {
-    if (phase !== 'dissolve') return;
-
-    const img = imgRef.current;
     const canvas = canvasRef.current;
-    if (!img || !canvas) return;
+    if (!canvas) return;
 
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-
+    const CW = canvas.width = window.innerWidth;
+    const CH = canvas.height = window.innerHeight;
     const ctx = canvas.getContext('2d');
 
-    // Draw img into offscreen canvas to sample pixels
-    const off = document.createElement('canvas');
-    off.width = window.innerWidth;
-    off.height = window.innerHeight;
-    const octx = off.getContext('2d');
-    octx.drawImage(img, 0, 0, off.width, off.height);
+    const tileW = CW / COLS;
+    const tileH = CH / ROWS;
 
-    canvas.width = off.width;
-    canvas.height = off.height;
-
-    let imageData;
-    try {
-      imageData = octx.getImageData(0, 0, off.width, off.height);
-    } catch (e) {
-      // tainted canvas fallback — just fade out
-      setPhase('done');
-      return;
-    }
-
-    const data = imageData.data;
-    const CW = off.width;
-    const CH = off.height;
-
-    const particles = [];
-    for (let y = 0; y < CH; y += PARTICLE) {
-      for (let x = 0; x < CW; x += PARTICLE) {
-        const i = (y * CW + x) * 4;
-        const a = data[i + 3];
-        if (a === 0) continue;
-        particles.push({
-          x, y,
-          r: data[i], g: data[i + 1], b: data[i + 2], a: a / 255,
-          vx: (Math.random() - 0.5) * 70,
+    // Build tile grid
+    const tiles = [];
+    for (let row = 0; row < ROWS; row++) {
+      for (let col = 0; col < COLS; col++) {
+        tiles.push({
+          col, row,
+          vx: (Math.random() - 0.5) * 80,
           delay: Math.random() * 900,
         });
       }
     }
 
-    let startTime = null;
-    let rafId;
+    const img = new Image();
 
-    function animate(ts) {
-      if (!startTime) startTime = ts;
-      const elapsed = ts - startTime;
+    img.onload = () => {
+      // Draw full image first (hold phase)
+      ctx.drawImage(img, 0, 0, CW, CH);
 
-      ctx.clearRect(0, 0, CW, CH);
+      let startTime = null;
+      let rafId;
 
-      let alive = false;
-      for (const p of particles) {
-        const t = Math.max(0, elapsed - p.delay) / 1000;
-        const alpha = Math.max(0, p.a * (1 - t / (DISSOLVE_MS / 1000)));
-        if (alpha < 0.01) continue;
+      function animate(ts) {
+        if (!startTime) startTime = ts;
+        const elapsed = ts - startTime;
 
-        alive = true;
-        const px = p.x + p.vx * t;
-        const py = p.y + 0.5 * GRAVITY * t * t;
-        ctx.fillStyle = `rgba(${p.r},${p.g},${p.b},${alpha})`;
-        ctx.fillRect(px, py, PARTICLE, PARTICLE);
+        ctx.clearRect(0, 0, CW, CH);
+
+        if (elapsed < HOLD_MS) {
+          ctx.drawImage(img, 0, 0, CW, CH);
+          rafId = requestAnimationFrame(animate);
+          return;
+        }
+
+        const dElapsed = elapsed - HOLD_MS;
+        let alive = false;
+
+        for (const tile of tiles) {
+          const t = Math.max(0, dElapsed - tile.delay) / 1000;
+          const alpha = Math.max(0, 1 - t / (DISSOLVE_MS / 1000));
+          if (alpha < 0.01) continue;
+
+          alive = true;
+          const srcX = tile.col * tileW;
+          const srcY = tile.row * tileH;
+          const dx = tile.vx * t;
+          const dy = 0.5 * GRAVITY * t * t;
+
+          ctx.save();
+          ctx.globalAlpha = alpha;
+          ctx.drawImage(img, srcX, srcY, tileW, tileH, srcX + dx, srcY + dy, tileW, tileH);
+          ctx.restore();
+        }
+
+        if (alive) {
+          rafId = requestAnimationFrame(animate);
+        } else {
+          setDone(true);
+        }
       }
 
-      if (alive) {
-        rafId = requestAnimationFrame(animate);
-      } else {
-        setPhase('done');
-      }
-    }
+      rafId = requestAnimationFrame(animate);
+      return () => cancelAnimationFrame(rafId);
+    };
 
-    rafId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(rafId);
-  }, [phase]);
+    img.onerror = () => {
+      // Draw placeholder so screen isn't just black
+      ctx.fillStyle = '#1a1a2e';
+      ctx.fillRect(0, 0, CW, CH);
+      ctx.fillStyle = 'rgba(255,255,255,0.15)';
+      ctx.font = `${CW * 0.025}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText('請將開場圖片放至 public/hero.png', CW / 2, CH / 2);
+      setTimeout(() => setDone(true), 2000);
+    };
 
-  if (phase === 'done') return null;
+    img.src = '/hero.png';
+  }, []);
+
+  if (done) return null;
 
   return (
     <div style={{
@@ -109,26 +108,9 @@ export default function IntroAnimation() {
       background: '#000',
       pointerEvents: 'none',
     }}>
-      {/* Real image — shown during hold phase */}
-      <img
-        ref={imgRef}
-        src="/hero.png"
-        alt=""
-        onError={(e) => { e.target.style.display = 'none'; }}
-        style={{
-          position: 'absolute', inset: 0,
-          width: '100%', height: '100%',
-          objectFit: 'cover',
-          opacity: phase === 'hold' ? 1 : 0,
-        }}
-      />
-      {/* Canvas — takes over during dissolve phase */}
       <canvas
         ref={canvasRef}
-        style={{
-          position: 'absolute', inset: 0,
-          display: phase === 'dissolve' ? 'block' : 'none',
-        }}
+        style={{ display: 'block', width: '100%', height: '100%' }}
       />
     </div>
   );

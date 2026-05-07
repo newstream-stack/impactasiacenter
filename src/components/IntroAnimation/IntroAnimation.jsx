@@ -1,107 +1,135 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from './IntroAnimation.module.css';
+
+const HOLD_MS = 1500;
+const DISSOLVE_MS = 1800;
+const GRAVITY = 260;   // px/s²
+const PARTICLE = 5;    // px
 
 export default function IntroAnimation() {
+  const imgRef = useRef(null);
   const canvasRef = useRef(null);
-  const [visible, setVisible] = useState(true);
+  const [phase, setPhase] = useState('hold'); // hold | dissolve | done
 
+  // Start dissolve after HOLD_MS
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    const W = window.innerWidth;
-    const H = window.innerHeight;
-    canvas.width = W;
-    canvas.height = H;
-
-    const img = new Image();
-    img.src = '/hero.png';
-
-    let rafId;
-
-    img.onload = () => {
-      // Sample pixel colors from the image
-      ctx.drawImage(img, 0, 0, W, H);
-      const imageData = ctx.getImageData(0, 0, W, H);
-      const data = imageData.data;
-
-      const SIZE = 5; // particle size in px
-      const particles = [];
-
-      for (let y = 0; y < H; y += SIZE) {
-        for (let x = 0; x < W; x += SIZE) {
-          const i = (y * W + x) * 4;
-          particles.push({
-            x,
-            y,
-            r: data[i],
-            g: data[i + 1],
-            b: data[i + 2],
-            a: data[i + 3] / 255,
-            vx: (Math.random() - 0.5) * 60,   // horizontal drift px/s
-            delay: Math.random() * 1000,         // stagger start ms
-          });
-        }
-      }
-
-      const HOLD = 1500;      // ms to show static image
-      const DISSOLVE = 1600;  // ms for particles to fall
-      const GRAVITY = 280;    // px/s²
-
-      let startTime = null;
-
-      function animate(ts) {
-        if (!startTime) startTime = ts;
-        const elapsed = ts - startTime;
-
-        ctx.clearRect(0, 0, W, H);
-
-        if (elapsed < HOLD) {
-          ctx.drawImage(img, 0, 0, W, H);
-          rafId = requestAnimationFrame(animate);
-          return;
-        }
-
-        const dElapsed = elapsed - HOLD;
-        let anyAlive = false;
-
-        for (const p of particles) {
-          const t = Math.max(0, dElapsed - p.delay) / 1000; // seconds since this particle started
-
-          const px = p.x + p.vx * t;
-          const py = p.y + 0.5 * GRAVITY * t * t;
-          const alpha = Math.max(0, p.a * (1 - t / (DISSOLVE / 1000)));
-
-          if (alpha > 0.01) {
-            ctx.fillStyle = `rgba(${p.r},${p.g},${p.b},${alpha})`;
-            ctx.fillRect(px, py, SIZE, SIZE);
-            anyAlive = true;
-          }
-        }
-
-        if (anyAlive) {
-          rafId = requestAnimationFrame(animate);
-        } else {
-          setVisible(false);
-        }
-      }
-
-      rafId = requestAnimationFrame(animate);
-    };
-
-    img.onerror = () => {
-      setTimeout(() => setVisible(false), 500);
-    };
-
-    return () => cancelAnimationFrame(rafId);
+    const t = setTimeout(() => setPhase('dissolve'), HOLD_MS);
+    return () => clearTimeout(t);
   }, []);
 
-  if (!visible) return null;
+  // Run canvas particle animation when dissolve phase starts
+  useEffect(() => {
+    if (phase !== 'dissolve') return;
+
+    const img = imgRef.current;
+    const canvas = canvasRef.current;
+    if (!img || !canvas) return;
+
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+
+    const ctx = canvas.getContext('2d');
+
+    // Draw img into offscreen canvas to sample pixels
+    const off = document.createElement('canvas');
+    off.width = window.innerWidth;
+    off.height = window.innerHeight;
+    const octx = off.getContext('2d');
+    octx.drawImage(img, 0, 0, off.width, off.height);
+
+    canvas.width = off.width;
+    canvas.height = off.height;
+
+    let imageData;
+    try {
+      imageData = octx.getImageData(0, 0, off.width, off.height);
+    } catch (e) {
+      // tainted canvas fallback — just fade out
+      setPhase('done');
+      return;
+    }
+
+    const data = imageData.data;
+    const CW = off.width;
+    const CH = off.height;
+
+    const particles = [];
+    for (let y = 0; y < CH; y += PARTICLE) {
+      for (let x = 0; x < CW; x += PARTICLE) {
+        const i = (y * CW + x) * 4;
+        const a = data[i + 3];
+        if (a === 0) continue;
+        particles.push({
+          x, y,
+          r: data[i], g: data[i + 1], b: data[i + 2], a: a / 255,
+          vx: (Math.random() - 0.5) * 70,
+          delay: Math.random() * 900,
+        });
+      }
+    }
+
+    let startTime = null;
+    let rafId;
+
+    function animate(ts) {
+      if (!startTime) startTime = ts;
+      const elapsed = ts - startTime;
+
+      ctx.clearRect(0, 0, CW, CH);
+
+      let alive = false;
+      for (const p of particles) {
+        const t = Math.max(0, elapsed - p.delay) / 1000;
+        const alpha = Math.max(0, p.a * (1 - t / (DISSOLVE_MS / 1000)));
+        if (alpha < 0.01) continue;
+
+        alive = true;
+        const px = p.x + p.vx * t;
+        const py = p.y + 0.5 * GRAVITY * t * t;
+        ctx.fillStyle = `rgba(${p.r},${p.g},${p.b},${alpha})`;
+        ctx.fillRect(px, py, PARTICLE, PARTICLE);
+      }
+
+      if (alive) {
+        rafId = requestAnimationFrame(animate);
+      } else {
+        setPhase('done');
+      }
+    }
+
+    rafId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafId);
+  }, [phase]);
+
+  if (phase === 'done') return null;
 
   return (
-    <div className={styles.introContainer}>
-      <canvas ref={canvasRef} className={styles.canvas} />
+    <div style={{
+      position: 'fixed', inset: 0,
+      zIndex: 99999,
+      background: '#000',
+      pointerEvents: 'none',
+    }}>
+      {/* Real image — shown during hold phase */}
+      <img
+        ref={imgRef}
+        src="/hero.png"
+        alt=""
+        onError={(e) => { e.target.style.display = 'none'; }}
+        style={{
+          position: 'absolute', inset: 0,
+          width: '100%', height: '100%',
+          objectFit: 'cover',
+          opacity: phase === 'hold' ? 1 : 0,
+        }}
+      />
+      {/* Canvas — takes over during dissolve phase */}
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: 'absolute', inset: 0,
+          display: phase === 'dissolve' ? 'block' : 'none',
+        }}
+      />
     </div>
   );
 }

@@ -1,0 +1,76 @@
+{
+  "phoenix": {
+    "subtitle": "Conference City",
+    "title": "Phoenix, Arizona",
+    "intro": "Phoenix is in a transformational phase of urban development, rapidly evolving from a traditional tourism and retirement destination into a major semiconductor and high-tech hub in the United States.",
+    "stats": [
+      { "value": "$65B+", "label": "TSMC Total Investment" },
+      { "value": "6.0%", "label": "Projected Income Growth" },
+      { "value": "3 Fabs", "label": "Advanced Wafer Fabs Planned" },
+      { "value": "No.1", "label": "Among Fastest-Growing U.S. Cities" }
+    ],
+    "categories": [
+      {
+        "icon": "chip",
+        "tag": "Tech Development",
+        "heading": "Leading the Semiconductor Industry",
+        "tagline": "Known as the \"Silicon Desert\"",
+        "items": [
+          {
+            "label": "Semiconductor Cluster",
+            "desc": "TSMC's Arizona fab is driving the entire supply chain into the region, with total investment expected to exceed $65 billion and a third advanced wafer fab planned for Phoenix. Intel, KoMiCo, Fujifilm, and other global giants continue to expand, forming a complete semiconductor ecosystem."
+          },
+          {
+            "label": "Emerging Technologies",
+            "desc": "AI, autonomous vehicles (e.g., Joby Aviation's air taxi testing), and battery technology are becoming key new growth drivers."
+          },
+          {
+            "label": "Innovation Energy",
+            "desc": "In 2026, Phoenix hosted the inaugural Arizona Tech Week and the Forbes 30 Under 30 Summit, showcasing its global competitiveness in entrepreneurship and advanced industries."
+          }
+        ]
+      },
+      {
+        "icon": "chart",
+        "tag": "Economic Overview",
+        "heading": "Diversified & Balanced Growth",
+        "tagline": "A stable \"growth city\" structure",
+        "items": [
+          {
+            "label": "Core Pillars",
+            "desc": "Beyond semiconductor manufacturing, financial services, healthcare, e-commerce logistics (as the Southwest's distribution hub), and tourism remain core economic pillars."
+          },
+          {
+            "label": "Global Connectivity",
+            "desc": "In 2026, Phoenix Sky Harbor International Airport (PHX) launched its first direct flight to Asia, greatly enhancing business efficiency and international tourism appeal."
+          },
+          {
+            "label": "Jobs & Income",
+            "desc": "The job market is expected to continue recovering in 2026, with personal income growth projected at 6.0%, demonstrating strong economic resilience."
+          }
+        ]
+      },
+      {
+        "icon": "city",
+        "tag": "Urban Development",
+        "heading": "Demographics & Lifestyle Upgrades",
+        "tagline": "A new benchmark for livable cities",
+        "items": [
+          {
+            "label": "Population Influx",
+            "desc": "Continuous population migration is driving demand for residential and commercial space, with the 2026 real estate market expected to benefit from interest rate reductions."
+          },
+          {
+            "label": "Quality of Life",
+            "desc": "With premium dining (e.g., Din Tai Fung) and major resort developments (e.g., VAI Resort), Phoenix is becoming a world-class culinary destination and high-quality living city."
+          },
+          {
+            "label": "Cost Advantage",
+            "desc": "Compared to coastal cities, Phoenix maintains a relatively lower cost of living and excellent climate, attracting large numbers of professionals and families."
+          }
+        ]
+      }
+    ],
+    "outro": "Phoenix is combining industrial strength, population growth, and comprehensive amenities to demonstrate a clear growth trajectory, securing a prominent position among U.S. cities."
+  }
+}

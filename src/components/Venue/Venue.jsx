@@ -7,12 +7,13 @@ const VENUE_IMAGES = [
   '/Venue/venue-1.jpg',
   '/Venue/venue-2.jpg',
   '/Venue/venue-3.jpg',
-  '/Venue/venue-4.png',
+  '/Venue/venue-4.jpg',
   '/Venue/venue-5.png',
   '/Venue/venue-6.png',
   '/Venue/venue-7.png',
   '/Venue/venue-8.png',
   '/Venue/venue-9.png',
+  '/Venue/venue-10.png',
 ]
 
 const PinIcon = () => (

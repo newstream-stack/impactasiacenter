@@ -97,7 +97,7 @@ export default function IntroAnimation() {
         const centerX = cx;
         const centerY = cy + bob;
 
-        // --- 繪製縮放中的英雄圖（在光圈內可見）---
+        // --- 繪製縮放中的英雄圖（全幅，羽化邊緣由遮罩控制）---
         if (lightR > 2 && imgAlpha > 0) {
           // 鏡頭前進：從 1.35 倍縮放到 1.0
           const zoom = 1.35 - easeOut(Math.min(progress / 0.82, 1)) * 0.35;
@@ -105,12 +105,20 @@ export default function IntroAnimation() {
           const zH = drawH * zoom;
 
           ctx.save();
-          ctx.beginPath();
-          ctx.arc(centerX, centerY, lightR, 0, Math.PI * 2);
-          ctx.clip();
           ctx.globalAlpha = imgAlpha;
           ctx.drawImage(img, centerX - zW / 2, centerY - zH / 2 + bob, zW, zH);
           ctx.globalAlpha = 1;
+
+          // 羽化遮罩：中心透明 → 邊緣黑色，自然柔化光圈邊界
+          const feather = lightR * 0.38;
+          const spotMask = ctx.createRadialGradient(
+            centerX, centerY, Math.max(0, lightR - feather),
+            centerX, centerY, lightR + feather * 0.2
+          );
+          spotMask.addColorStop(0, 'rgba(0,0,0,0)');
+          spotMask.addColorStop(1, 'rgba(0,0,0,1)');
+          ctx.fillStyle = spotMask;
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
           ctx.restore();
         }
 

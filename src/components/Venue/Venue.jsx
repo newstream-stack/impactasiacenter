@@ -8,12 +8,12 @@ const VENUE_IMAGES = [
   '/Venue/venue-2.jpg',
   '/Venue/venue-3.jpg',
   '/Venue/venue-4.jpg',
-  '/Venue/venue-5.png',
-  '/Venue/venue-6.png',
-  '/Venue/venue-7.png',
-  '/Venue/venue-8.png',
-  '/Venue/venue-9.png',
-  '/Venue/venue-10.png',
+  '/Venue/venue-5.jpg',
+  '/Venue/venue-6.jpg',
+  '/Venue/venue-7.jpg',
+  '/Venue/venue-8.jpg',
+  '/Venue/venue-9.jpg',
+  '/Venue/venue-10.jpg',
 ]
 
 const PinIcon = () => (

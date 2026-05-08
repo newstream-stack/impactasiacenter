@@ -5,13 +5,14 @@ import Countdown from '../Countdown/Countdown';
 const HERO_IMG = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=2000'; // Arizona Desert Vibe
 
 export default function Hero() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
+  const hero = t('hero');
   return (
     <section id="hero-section" className={styles.hero} style={{ backgroundImage: `linear-gradient(to bottom, rgba(34,37,51,0.6), #222533), url('${HERO_IMG}')` }}>
       <div className={styles.content}>
-        <p className={styles.subtitle}>{t('heroSubtitle')}</p>
+        <p className={styles.subtitle}>{hero.subtitle}</p>
         <div className={styles.titleContainer}>
-          {t('heroTitle') === "From Wilderness\nTo Rebirth" ? (
+          {language === 'en' ? (
             <div className={styles.futuristicTitle}>
               <span className={styles.small}>FROM</span>
               <span className={styles.large}>WILDERNESS</span>
@@ -19,11 +20,11 @@ export default function Hero() {
               <span className={styles.large}>REBIRTH</span>
             </div>
           ) : (
-            <h1 className={styles.fluidTitle}>{t('heroTitle')}</h1>
+            <h1 className={styles.fluidTitle}>{hero.title}</h1>
           )}
         </div>
         <Countdown />
-        <p className={styles.eventName}>{t('heroEventName')}</p>
+        <p className={styles.eventName}>{hero.eventName}</p>
         <div className={styles.cta}>
           <a 
             href={t('registrationUrl')} 

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useI18n } from './i18n/I18nContext';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Vision from './components/Vision/Vision';
@@ -21,21 +20,9 @@ import IntroAnimation from './components/IntroAnimation/IntroAnimation';
 
 
 export default function App() {
-  const { t } = useI18n();
   const [activeTheme, setActiveTheme] = useState(null);
 
   useReveal();
-
-  // Handle both object (from UI) and string ID (from ChatBot)
-  const handleSetActiveTheme = (themeData) => {
-    if (typeof themeData === 'string') {
-      const themes = t('themes');
-      const found = themes.find(th => th.id === themeData);
-      if (found) setActiveTheme(found);
-    } else {
-      setActiveTheme(themeData);
-    }
-  };
 
   return (
     <>
@@ -43,12 +30,12 @@ export default function App() {
       <Header />
       <Hero />
       <div className="reveal"><Vision /></div>
-      <div className="reveal"><AboutIntro onMoreClick={handleSetActiveTheme} /></div>
+      <div className="reveal"><AboutIntro onMoreClick={setActiveTheme} /></div>
       <div className="reveal"><Timeline /></div>
       <div className="reveal"><TrailerSection /></div>
-      <div className="reveal"><IAAIntro onBlockClick={handleSetActiveTheme} /></div>
+      <div className="reveal"><IAAIntro onBlockClick={setActiveTheme} /></div>
       <div className="reveal"><Presidium /></div>
-      <div className="reveal"><Themes onThemeClick={handleSetActiveTheme} /></div>
+      <div className="reveal"><Themes onThemeClick={setActiveTheme} /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <div className="reveal"><Venue /></div>
       <Footer />

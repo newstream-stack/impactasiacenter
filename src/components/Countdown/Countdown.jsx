@@ -7,16 +7,18 @@ export default function Countdown() {
   const isEn = language === 'en';
   
   const targetDate = new Date(t('countdownTarget')).getTime();
-  
+  const isValidDate = !isNaN(targetDate);
+
   const [timeLeft, setTimeLeft] = useState({
     days: 0, hours: 0, minutes: 0, seconds: 0
   });
 
   useEffect(() => {
+    if (!isValidDate) return;
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate - now;
-      
+
       if (distance < 0) {
         clearInterval(timer);
         return;
@@ -31,7 +33,9 @@ export default function Countdown() {
     }, 1000);
     
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate, isValidDate]);
+
+  if (!isValidDate) return null;
 
   const Label = ({ value, labelEn, labelZh }) => (
     <div className={styles.item}>

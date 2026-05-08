@@ -15,6 +15,10 @@ export const useI18n = () => useContext(I18nContext);
 export const I18nProvider = ({ children }) => {
   const [language, setLanguage] = useState('zh');
 
+  /**
+   * @param {string} key - Dot-notation path into the translation object (e.g. 'hero.title', 'btnRegister')
+   * @returns {any} The translated value, or the key itself if not found
+   */
   const t = (key) => {
     const value = key.split('.').reduce((acc, part) => acc && acc[part], translations[language]);
     return value || key;

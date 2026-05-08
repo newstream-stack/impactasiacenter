@@ -1,7 +1,9 @@
 import styles from './BackToTop.module.css'
 import { useScrollThreshold } from '../../hooks/useScrollThreshold'
+import { useI18n } from '../../i18n/I18nContext'
 
 export default function BackToTop() {
+  const { t } = useI18n()
   const visible = useScrollThreshold(500)
 
   if (!visible) return null
@@ -10,7 +12,7 @@ export default function BackToTop() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       className={styles.btn}
-      aria-label="回到頂端"
+      aria-label={t('ariaBackToTop')}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

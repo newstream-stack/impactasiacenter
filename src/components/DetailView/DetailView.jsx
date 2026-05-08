@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import styles from './DetailView.module.css'
+import { useI18n } from '../../i18n/I18nContext'
 
 export default function DetailView({ theme, onClose }) {
+  const { t } = useI18n()
   const isOpen = !!theme
 
   // lock body scroll when open
@@ -21,7 +23,7 @@ export default function DetailView({ theme, onClose }) {
     <>
       <div className={`${styles.overlay} ${isOpen ? styles.overlayActive : ''}`} onClick={onClose} />
       <aside className={`${styles.panel} ${isOpen ? styles.panelActive : ''}`} aria-hidden={!isOpen}>
-        <button className={styles.closeBtn} onClick={onClose} aria-label="關閉">×</button>
+        <button className={styles.closeBtn} onClick={onClose} aria-label={t('ariaClose')}>×</button>
         {theme && (
           <div className={styles.content}>
             <h2 className={styles.heading}>{theme.detail?.heading || theme.title}</h2>

@@ -43,7 +43,7 @@ export default function Header() {
             {language === 'zh' ? 'EN' : '中文'}
           </button>
           
-          <button className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Menu">
+          <button className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={t('ariaMenu')}>
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>

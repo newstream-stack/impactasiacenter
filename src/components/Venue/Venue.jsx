@@ -1,8 +1,19 @@
+import { useState, useEffect, useCallback } from 'react'
 import styles from './Venue.module.css'
 import { useI18n } from '../../i18n/I18nContext'
 import SectionHeader from '../SectionHeader/SectionHeader'
 
-const VENUE_IMG = 'https://media.ct.org.tw/upload/news_article_cms/2026/04/21/59235_2.jpg'
+const VENUE_IMAGES = [
+  '/Venue/venue-1.jpg',
+  '/Venue/venue-2.jpg',
+  '/Venue/venue-3.jpg',
+  '/Venue/venue-4.png',
+  '/Venue/venue-5.png',
+  '/Venue/venue-6.png',
+  '/Venue/venue-7.png',
+  '/Venue/venue-8.png',
+  '/Venue/venue-9.png',
+]
 
 const PinIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -18,17 +29,80 @@ const CalIcon = () => (
   </svg>
 )
 
+const ChevronLeft = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+)
+
+const ChevronRight = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 18l6-6-6-6" />
+  </svg>
+)
+
 export default function Venue() {
   const { t } = useI18n()
   const venue = t('venue')
+  const [current, setCurrent] = useState(0)
+  const [paused, setPaused] = useState(false)
+
+  const prev = useCallback(() => {
+    setCurrent(c => (c - 1 + VENUE_IMAGES.length) % VENUE_IMAGES.length)
+  }, [])
+
+  const next = useCallback(() => {
+    setCurrent(c => (c + 1) % VENUE_IMAGES.length)
+  }, [])
+
+  useEffect(() => {
+    if (paused) return
+    const timer = setInterval(next, 4000)
+    return () => clearInterval(timer)
+  }, [paused, next])
+
   return (
     <section id="venue" className={styles.section}>
       <div className={styles.container}>
         <SectionHeader title={venue.title} />
         <div className={styles.showcase}>
-          <div className={styles.main} style={{ backgroundImage: `url('${VENUE_IMG}')` }}>
+          <div
+            className={styles.carousel}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
+            {VENUE_IMAGES.map((src, i) => (
+              <img
+                key={src}
+                src={src}
+                alt={`venue-${i + 1}`}
+                className={`${styles.slide} ${i === current ? styles.slideActive : ''}`}
+              />
+            ))}
+
+            <button className={`${styles.arrow} ${styles.arrowLeft}`} onClick={prev} aria-label="Previous">
+              <ChevronLeft />
+            </button>
+            <button className={`${styles.arrow} ${styles.arrowRight}`} onClick={next} aria-label="Next">
+              <ChevronRight />
+            </button>
+
+            <div className={styles.dots}>
+              {VENUE_IMAGES.map((_, i) => (
+                <button
+                  key={i}
+                  className={`${styles.dot} ${i === current ? styles.dotActive : ''}`}
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              ))}
+            </div>
+
             <div className={styles.tag}>{venue.name}</div>
+
+            <div className={styles.counter}>{current + 1} / {VENUE_IMAGES.length}</div>
           </div>
+
           <div className={styles.info}>
             <h3>{venue.heading}</h3>
             <p>{venue.desc}</p>

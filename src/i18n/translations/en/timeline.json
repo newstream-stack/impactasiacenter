@@ -9,7 +9,17 @@
       "region": "Kuala Lumpur, Malaysia",
       "title": "Malaysia",
       "description": "Winds of Change",
-      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/77945_64f14b306e7bb.jpg"
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/77945_64f14b306e7bb.jpg",
+      "detail": {
+        "edition": "1st Edition",
+        "theme": "\"Winds of Change — The Future Church of Asia\"",
+        "tagline": "Reconnecting Asia's Church Networks After the Pandemic",
+        "paragraphs": [
+          "As the world was still in its post-pandemic recovery, churches across Asia faced the challenges of suspended gatherings, restricted cross-border exchanges, and shifting mission models. The 1st IAA convened in Kuala Lumpur, becoming one of the few representative transnational in-person gatherings of Asian churches in the post-pandemic era.",
+          "The assembly centered on the core vision of \"Mutual Flourishing, Mutual Learning, Mutual Sharing,\" emphasizing the need for closer cooperation among Asian churches to break through the limitations of independent development. Pastors, missionaries, and marketplace leaders from various nations and cities gathered to engage in deep dialogue — from how churches responded during the pandemic to the role of Asian evangelical work in the future.",
+          "This inaugural gathering put forward a pivotal idea: Asian churches are not merely recipients of resources, but should gradually become exporters of gospel mission and influence. IAA began building its foundation as a transnational connecting platform, laying the groundwork for future regional collaboration across Asia."
+        ]
+      }
     },
     {
       "year": "2023",

@@ -26,21 +26,51 @@
       "region": "Jakarta, Indonesia",
       "title": "Indonesia",
       "description": "He Walks on Waves",
-      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/85525_64f1918b31877.jpg"
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/85525_64f1918b31877.jpg",
+      "detail": {
+        "edition": "2nd Edition",
+        "theme": "\"He Walks on Waves\"",
+        "tagline": "Finding the Possibility of Faith and Vocation Walking Together in a Changing Era",
+        "paragraphs": [
+          "The 2nd IAA moved to Jakarta. As a major commercial and economic city in Southeast Asia, Jakarta symbolizes rapid change and intense challenge — echoing this edition's theme of walking on waves.",
+          "That year, the assembly placed greater focus on the connection between the marketplace, the city, and faith. Participants included not only church leaders but also business owners, young entrepreneurs, and cross-sector professionals, exploring topics such as digital transformation, urban renewal, workplace mission, and cross-cultural collaboration.",
+          "Through forums and on-site visits, participants from different nations were able to build exchanges and partnerships in real cultural settings. IAA also began to take on a distinctive identity in this edition — not only focused on internal church development, but on how faith can enter society, industries, and the public sphere to respond to Asia's rapidly changing context."
+        ]
+      }
     },
     {
       "year": "2024",
       "region": "Kaohsiung, Taiwan",
       "title": "Taiwan",
       "description": "Into the Deep",
-      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/18181_674d2d6b99f05.jpg"
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/18181_674d2d6b99f05.jpg",
+      "detail": {
+        "edition": "3rd Edition",
+        "theme": "\"Launch Out Into the Deep\"",
+        "tagline": "Exploring Deeper Transformation Amid Geopolitical Shifts and the AI Wave",
+        "paragraphs": [
+          "The 3rd IAA returned to Kaohsiung, Taiwan. As a major port city in southern Taiwan, Kaohsiung has long carried a history of mission, industry, and international exchange — making it a meaningful symbol for this year's gathering.",
+          "Facing rapid global shifts and the new challenges brought by AI technology, the assembly adopted the theme of \"Launch Out Into the Deep,\" encouraging Asian churches and Christian leaders to move beyond surface-level connections and engage more deeply with questions of cultural, professional, and systemic transformation.",
+          "This edition's forums covered topics including tech ethics, sustainable governance (ESG), media influence, and cross-generational leadership, drawing leaders from diverse industries and nations. IAA also began to more clearly focus on a key question: in an era of rising global uncertainty, how can Asian churches build resilient cooperative networks and meaningful public influence."
+        ]
+      }
     },
     {
       "year": "2025",
       "region": "Tokyo, Japan",
       "title": "Japan",
       "description": "Sunrise in the East",
-      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/39637_海報.jpg"
+      "img": "https://media.ct.org.tw/upload/news_article_cms/2026/04/21/39637_海報.jpg",
+      "detail": {
+        "edition": "4th Edition",
+        "theme": "\"Sunrise in the East\"",
+        "tagline": "Seeing a New Beginning of Transnational Unity in Hard Gospel Soil",
+        "paragraphs": [
+          "The 4th IAA advanced to Tokyo, held at Yodobashi Church. Japan has long been regarded as one of the most challenging regions for mission in Asia, making this edition a significant cross-cultural undertaking for IAA.",
+          "Church and marketplace leaders from Taiwan, Japan, the United States, Malaysia, Indonesia, South Korea, and Hong Kong gathered in Tokyo, forging deeper partnerships through worship, forums, and exchanges. Participants from different backgrounds, denominations, and generations engaged in more practical dialogue and fellowship on a shared platform for the first time.",
+          "Compared to previous editions that emphasized regional connectivity, this gathering placed greater stress on \"unity\" and \"shared responsibility.\" In a city as highly modern yet deeply lonely as Tokyo, IAA sought to answer how Asian churches can bridge cultural and linguistic divides to face the challenges of the next generation together."
+        ]
+      }
     },
     {
       "year": "2026",

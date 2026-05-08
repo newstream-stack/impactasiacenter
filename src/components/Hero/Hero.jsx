@@ -7,7 +7,7 @@ const HERO_IMG = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?a
 export default function Hero() {
   const { t } = useI18n();
   return (
-    <section className={styles.hero} style={{ backgroundImage: `linear-gradient(to bottom, rgba(34,37,51,0.6), #222533), url('${HERO_IMG}')` }}>
+    <section id="hero-section" className={styles.hero} style={{ backgroundImage: `linear-gradient(to bottom, rgba(34,37,51,0.6), #222533), url('${HERO_IMG}')` }}>
       <div className={styles.content}>
         <p className={styles.subtitle}>{t('heroSubtitle')}</p>
         <div className={styles.titleContainer}>

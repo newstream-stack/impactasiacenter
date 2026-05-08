@@ -16,6 +16,7 @@ import Footer from './components/Footer/Footer';
 // import ChatBot from './components/ChatBot/ChatBot';
 import { useReveal } from './hooks/useReveal'
 import BackToTop from './components/BackToTop/BackToTop'
+import FloatingRegisterBtn from './components/FloatingRegisterBtn/FloatingRegisterBtn'
 import IntroAnimation from './components/IntroAnimation/IntroAnimation';
 
 
@@ -52,6 +53,7 @@ export default function App() {
       <div className="reveal"><Venue /></div>
       <Footer />
       <BackToTop />
+      <FloatingRegisterBtn />
       {/* <ChatBot onActionClick={handleSetActiveTheme} /> */}
     </>
   );

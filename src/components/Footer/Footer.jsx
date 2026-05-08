@@ -19,14 +19,14 @@ export default function Footer() {
             <p>{footer.brandDesc}</p>
           </div>
           <div className={styles.links}>
-            <h4>{footer.quickLinks}</h4>
+            <span className={styles.colTitle}>{footer.quickLinks}</span>
             <a href="#vision" onClick={(e) => handleSmoothScroll(e, '#vision')}>{t('navVision')}</a>
             {/* <a href="#speakers" onClick={(e) => handleSmoothScroll(e, '#speakers')}>大會講員</a> */}
             <a href="#themes" onClick={(e) => handleSmoothScroll(e, '#themes')}>{t('navThemes')}</a>
             <a href="#venue" onClick={(e) => handleSmoothScroll(e, '#venue')}>{t('navVenue')}</a>
           </div>
           <div className={styles.contact}>
-            <h4>{footer.contact}</h4>
+            <span className={styles.colTitle}>{footer.contact}</span>
             <p>{footer.email}</p>
             <p>{footer.phone}</p>
           </div>

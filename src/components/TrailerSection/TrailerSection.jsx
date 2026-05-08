@@ -8,8 +8,10 @@ export default function TrailerSection() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>{trailer.title}</h2>
-          <p className={styles.subtitle}>{trailer.subtitle}</p>
+          <div className={styles.headerLeft}>
+            <span className={styles.eyebrow}>{trailer.subtitle}</span>
+            <h2 className={styles.title}>{trailer.title}</h2>
+          </div>
         </div>
         <div className={styles.player}>
           <div className={styles.videoResponsive}>

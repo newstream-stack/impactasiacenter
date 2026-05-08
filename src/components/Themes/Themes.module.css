@@ -1,4 +1,7 @@
-.section { padding: 8rem 0; }
+.section {
+  padding: 8rem 0;
+  background: var(--bg-dark);
+}
 
 .container {
   max-width: 1200px;
@@ -6,14 +9,14 @@
   padding: 0 2rem;
 }
 
-@media (max-width: 768px) {
-  .section { padding: 4rem 0; }
-  .container { padding: 0 1.5rem; }
-  .grid { gap: 1.5rem; }
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 0; }
+  .container { padding: 0 1.5rem; }
+  .grid { gap: 1rem; }
 }

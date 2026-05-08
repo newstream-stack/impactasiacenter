@@ -4,6 +4,20 @@ import SectionHeader from '../SectionHeader/SectionHeader'
 
 const VENUE_IMG = 'https://media.ct.org.tw/upload/news_article_cms/2026/04/21/59235_2.jpg'
 
+const PinIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+    <circle cx="12" cy="10" r="3" />
+  </svg>
+)
+
+const CalIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2" />
+    <path d="M16 2v4M8 2v4M3 10h18" />
+  </svg>
+)
+
 export default function Venue() {
   const { t } = useI18n()
   const venue = t('venue')
@@ -19,9 +33,14 @@ export default function Venue() {
             <h3>{venue.heading}</h3>
             <p>{venue.desc}</p>
             <ul className={styles.list}>
-              <li><span>📍</span> {venue.name}</li>
-              <li><span>📅</span> {venue.date}</li>
-              {/* <li><span>🛏️</span> 尊榮住宿體驗與頂級餐飲</li> */}
+              <li className={styles.listItem}>
+                <span className={styles.listIcon}><PinIcon /></span>
+                <span className={styles.listText}>{venue.name}</span>
+              </li>
+              <li className={styles.listItem}>
+                <span className={styles.listIcon}><CalIcon /></span>
+                <span className={styles.listText}>{venue.date}</span>
+              </li>
             </ul>
           </div>
         </div>

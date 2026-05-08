@@ -1,23 +1,62 @@
 .section {
   padding: 8rem 2rem;
-  max-width: 1200px;
+  background: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '"';
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(12rem, 20vw, 18rem);
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255, 94, 0, 0.04);
+  pointer-events: none;
+  user-select: none;
+  font-style: italic;
+}
+
+.inner {
+  max-width: 860px;
   margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.quoteBar {
+  width: 48px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 0 auto 2.5rem;
 }
 
 .verse {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.25rem, 2.8vw, 1.7rem);
   font-style: italic;
-  color: #cbd5e0;
-  border-left: 4px solid #FF5E00;
-  padding-left: 2rem;
-  max-width: 800px;
-  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.9;
+  letter-spacing: 0.01em;
 }
 
 .ref {
   font-style: normal;
   font-size: 0.85rem;
-  opacity: 0.55;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   display: block;
-  margin-top: 1.2rem;
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 5rem 1.5rem; }
+  .section::before { display: none; }
 }

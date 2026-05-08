@@ -12,8 +12,8 @@ export default function Themes({ onThemeClick }) {
       <div className={styles.container}>
         <SectionHeader title={themesSection.title} />
         <div className={styles.grid}>
-          {themes.map((theme) => (
-            <ThemeCard key={theme.id} theme={theme} onClick={onThemeClick} />
+          {themes.map((theme, i) => (
+            <ThemeCard key={theme.id} theme={theme} onClick={onThemeClick} index={i} />
           ))}
         </div>
       </div>

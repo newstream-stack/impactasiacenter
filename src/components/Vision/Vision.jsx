@@ -6,10 +6,13 @@ export default function Vision() {
   const vision = t('vision')
   return (
     <section id="vision" className={styles.section}>
-      <div className={styles.verse}>
-        {vision.verse1}
-        <br />{vision.verse2}
-        <span className={styles.ref}>{vision.ref}</span>
+      <div className={styles.inner}>
+        <div className={styles.quoteBar} />
+        <p className={styles.verse}>
+          {vision.verse1}
+          <br />{vision.verse2}
+          <span className={styles.ref}>{vision.ref}</span>
+        </p>
       </div>
     </section>
   )

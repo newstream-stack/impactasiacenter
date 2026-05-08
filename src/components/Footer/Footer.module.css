@@ -1,73 +1,93 @@
 .footer {
   background: var(--bg-dark);
-  padding: 6rem 0 2rem;
-  border-top: 1px solid var(--border);
-  margin-top: 4rem;
+  padding: 6rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.4;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
   gap: 4rem;
-  margin-bottom: 4rem;
-}
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
+  margin-bottom: 5rem;
 }
 
 .brand .logo {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   color: var(--accent);
+  display: inline-block;
 }
 
 .brand p {
-  opacity: 0.6;
-  max-width: 300px;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 280px;
+  line-height: 1.7;
+  font-size: 0.9rem;
 }
 
-.links h4, .contact h4 {
+.colTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  display: block;
 }
 
 .links a {
   display: block;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  opacity: 0.6;
-  margin-bottom: 1rem;
-  transition: 0.3s;
+  margin-bottom: 0.9rem;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .links a:hover {
-  opacity: 1;
-  color: var(--accent);
+  color: #fff;
+  transform: translateX(3px);
 }
 
 .contact p {
-  opacity: 0.6;
-  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .bottom {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 2rem;
   text-align: center;
-  opacity: 0.4;
-  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 4rem 0 2rem; }
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
 }

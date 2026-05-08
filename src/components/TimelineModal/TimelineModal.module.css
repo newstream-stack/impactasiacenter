@@ -208,25 +208,54 @@
     bottom: 0;
     left: 0;
     right: 0;
-    transform: translateY(6%) scale(0.99);
+    transform: translateY(8%);
     width: 100%;
     max-width: 100%;
-    max-height: 92vh;
-    border-radius: 1.5rem 1.5rem 0 0;
+    max-height: 88vh;
+    border-radius: 1.25rem 1.25rem 0 0;
     box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.8);
   }
 
   .modalActive {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 
+  /* 圖片區塊：固定高度，不用 aspect-ratio，避免裁切過重 */
   .imageWrap {
-    border-radius: 1.5rem 1.5rem 0 0;
-    aspect-ratio: 16 / 7;
+    border-radius: 1.25rem 1.25rem 0 0;
+    aspect-ratio: unset;
+    height: 200px;
   }
+
+  /* 圖片以 contain 方式顯示完整內容，背景填黑 */
+  .imageWrap .image {
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  /* 關閉按鈕移到 body 外，避免被圖片遮住 */
+  .closeBtn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .imageMeta {
+    left: 1rem;
+    bottom: 0.75rem;
+  }
+
+  .year { font-size: 2rem; }
 
   .body { padding: 1.25rem 1.25rem 2.5rem; }
-  .year { font-size: 2.25rem; }
-  .imageMeta { left: 1.25rem; bottom: 1rem; }
-  .theme { font-size: 1.15rem; }
+
+  .theme { font-size: 1.1rem; }
+
+  .tagline { font-size: 0.92rem; padding: 0.85rem 1rem; }
+
+  .paragraph { font-size: 0.92rem; line-height: 1.8; }
 }

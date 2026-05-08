@@ -13,7 +13,7 @@ import Presidium from './components/Presidium/Presidium';
 import DetailView from './components/DetailView/DetailView';
 import Venue from './components/Venue/Venue';
 import Footer from './components/Footer/Footer';
-import ChatBot from './components/ChatBot/ChatBot';
+// import ChatBot from './components/ChatBot/ChatBot';
 import { useReveal } from './hooks/useReveal'
 import BackToTop from './components/BackToTop/BackToTop'
 import IntroAnimation from './components/IntroAnimation/IntroAnimation';
@@ -52,7 +52,7 @@ export default function App() {
       <div className="reveal"><Venue /></div>
       <Footer />
       <BackToTop />
-      <ChatBot onActionClick={handleSetActiveTheme} />
+      {/* <ChatBot onActionClick={handleSetActiveTheme} /> */}
     </>
   );
 }

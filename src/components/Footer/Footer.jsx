@@ -5,10 +5,20 @@ import { smoothScrollTo } from '../../utils/scroll'
 export default function Footer() {
   const { t } = useI18n()
   const footer = t('footer')
+
   const handleSmoothScroll = (e, href) => {
     e.preventDefault()
     smoothScrollTo(href)
   }
+
+  const quickLinks = [
+    { href: '#vision', label: t('navVision') },
+    { href: '#iaa-intro', label: t('navIAAIntro') },
+    { href: '#phoenix', label: t('navPhoenix') },
+    { href: '#presidium', label: t('navPresidium') },
+    { href: '#themes', label: t('navThemes') },
+    { href: '#venue', label: t('navVenue') },
+  ]
 
   return (
     <footer className={styles.footer}>
@@ -20,10 +30,11 @@ export default function Footer() {
           </div>
           <div className={styles.links}>
             <span className={styles.colTitle}>{footer.quickLinks}</span>
-            <a href="#vision" onClick={(e) => handleSmoothScroll(e, '#vision')}>{t('navVision')}</a>
-            {/* <a href="#speakers" onClick={(e) => handleSmoothScroll(e, '#speakers')}>大會講員</a> */}
-            <a href="#themes" onClick={(e) => handleSmoothScroll(e, '#themes')}>{t('navThemes')}</a>
-            <a href="#venue" onClick={(e) => handleSmoothScroll(e, '#venue')}>{t('navVenue')}</a>
+            {quickLinks.map(({ href, label }) => (
+              <a key={href} href={href} onClick={(e) => handleSmoothScroll(e, href)}>
+                {label}
+              </a>
+            ))}
           </div>
           <div className={styles.contact}>
             <span className={styles.colTitle}>{footer.contact}</span>

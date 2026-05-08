@@ -1,7 +1,9 @@
 {
   "navVision": "Vision",
-  "navThemes": "Themes",
+  "navIAAIntro": "About IAC",
+  "navPhoenix": "Summit City",
   "navPresidium": "Presidium",
+  "navThemes": "Themes",
   "navVenue": "Venue",
   "navSupport": "Support",
   "btnRegister": "Register Now",

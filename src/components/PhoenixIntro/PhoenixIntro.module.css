@@ -65,12 +65,69 @@
   margin: 0 auto 2.5rem;
 }
 
-.intro {
-  max-width: 720px;
+.introGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
   margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.65);
+}
+
+.introCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.introCard:hover {
+  background: rgba(255, 94, 0, 0.05);
+  border-color: rgba(255, 94, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+.introIcon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(255, 94, 0, 0.1);
+  border: 1px solid rgba(255, 94, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-top: 0.1rem;
+}
+
+.introIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.introContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.introLabel {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+
+.introDesc {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
 }
 
 /* Stats Row */
@@ -254,6 +311,11 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .introGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -266,6 +328,10 @@
   .card { padding: 2rem; }
 
   .bgText { display: none; }
+
+  .introGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {

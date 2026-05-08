@@ -20,6 +20,23 @@ const ICONS = {
       <path d="M9 21v-4h6v4M9 11h1m4 0h1M9 15h1m4 0h1" />
     </svg>
   ),
+  location: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 21c-4-4-7-7.5-7-11a7 7 0 0 1 14 0c0 3.5-3 7-7 11z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </svg>
+  ),
+  mountain: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 20l5.5-9 3.5 5 2.5-3.5L20 20H3z" />
+      <path d="M16 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+    </svg>
+  ),
+  plane: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 16l-9-9-1 3-6-2 3 4-3 1 2 3 4-1 1 3 6-3 3 1z" />
+    </svg>
+  ),
 }
 
 export default function PhoenixIntro() {
@@ -37,7 +54,17 @@ export default function PhoenixIntro() {
           <span className={styles.subtitle}>{data.subtitle}</span>
           <h2 className={styles.title}>{data.title}</h2>
           <div className={styles.titleLine} />
-          <p className={styles.intro}>{data.intro}</p>
+          <div className={styles.introGrid}>
+            {Array.isArray(data.intro) && data.intro.map((item, i) => (
+              <div key={i} className={styles.introCard}>
+                <div className={styles.introIcon}>{ICONS[item.icon]}</div>
+                <div className={styles.introContent}>
+                  <span className={styles.introLabel}>{item.label}</span>
+                  <p className={styles.introDesc}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className={styles.statsRow}>

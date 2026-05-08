@@ -2,7 +2,23 @@
   "phoenix": {
     "subtitle": "Conference City",
     "title": "Phoenix, Arizona",
-    "intro": "Phoenix is in a transformational phase of urban development, rapidly evolving from a traditional tourism and retirement destination into a major semiconductor and high-tech hub in the United States.",
+    "intro": [
+      {
+        "label": "U.S. Southwest Hub",
+        "desc": "Located at the heart of Arizona in the U.S. Southwest, serving as the state capital and its political and economic center.",
+        "icon": "location"
+      },
+      {
+        "label": "Modern Desert Oasis",
+        "desc": "Nestled in the vast \"Valley of the Sun\" basin, surrounded by red-rock mountain ranges — the most vibrant metropolis in the Sonoran Desert.",
+        "icon": "mountain"
+      },
+      {
+        "label": "Seamless International Access",
+        "desc": "Adjacent to Phoenix Sky Harbor (PHX), just 10–15 minutes from the conference venue in Tempe — exceptionally convenient.",
+        "icon": "plane"
+      }
+    ],
     "stats": [
       { "value": "$65B+", "label": "TSMC Total Investment" },
       { "value": "6.0%", "label": "Projected Income Growth" },

@@ -1,5 +1,6 @@
 import ThemeCard from '../ThemeCard/ThemeCard'
 import { useI18n } from '../../i18n/I18nContext'
+import SectionHeader from '../SectionHeader/SectionHeader'
 import styles from './Themes.module.css'
 
 export default function Themes({ onThemeClick }) {
@@ -9,10 +10,7 @@ export default function Themes({ onThemeClick }) {
   return (
     <section id="themes" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>{themesSection.title}</h2>
-          <div className={styles.line} />
-        </div>
+        <SectionHeader title={themesSection.title} />
         <div className={styles.grid}>
           {themes.map((theme) => (
             <ThemeCard key={theme.id} theme={theme} onClick={onThemeClick} />

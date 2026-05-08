@@ -1,5 +1,6 @@
 import styles from './Venue.module.css'
 import { useI18n } from '../../i18n/I18nContext'
+import SectionHeader from '../SectionHeader/SectionHeader'
 
 const VENUE_IMG = 'https://media.ct.org.tw/upload/news_article_cms/2026/04/21/59235_2.jpg'
 
@@ -9,10 +10,7 @@ export default function Venue() {
   return (
     <section id="venue" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>{venue.title}</h2>
-          <div className={styles.line} />
-        </div>
+        <SectionHeader title={venue.title} />
         <div className={styles.showcase}>
           <div className={styles.main} style={{ backgroundImage: `url('${VENUE_IMG}')` }}>
             <div className={styles.tag}>{venue.name}</div>

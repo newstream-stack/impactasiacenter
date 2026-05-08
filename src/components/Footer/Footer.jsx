@@ -1,17 +1,14 @@
 import styles from './Footer.module.css'
 import { useI18n } from '../../i18n/I18nContext'
+import { smoothScrollTo } from '../../utils/scroll'
 
 export default function Footer() {
   const { t } = useI18n()
   const footer = t('footer')
   const handleSmoothScroll = (e, href) => {
-    if (!href.startsWith('#')) return;
-    e.preventDefault();
-    const target = document.getElementById(href.slice(1));
-    if (!target) return;
-    const offset = target.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top: offset, behavior: 'smooth' });
-  };
+    e.preventDefault()
+    smoothScrollTo(href)
+  }
 
   return (
     <footer className={styles.footer}>

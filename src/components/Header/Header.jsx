@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './Header.module.css';
 import { useI18n } from '../../i18n/I18nContext';
+import { useScrollThreshold } from '../../hooks/useScrollThreshold';
+import { smoothScrollTo } from '../../utils/scroll';
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
+  const scrolled = useScrollThreshold(100);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, language, toggleLanguage } = useI18n();
 
@@ -14,20 +16,10 @@ export default function Header() {
     { href: '#venue', label: t('navVenue') },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 100);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const handleSmoothScroll = (e, href) => {
-    if (!href.startsWith('#')) return;
     e.preventDefault();
-    setIsMenuOpen(false); // Close menu on click
-    const target = document.getElementById(href.slice(1));
-    if (!target) return;
-    const offset = target.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top: offset, behavior: 'smooth' });
+    setIsMenuOpen(false);
+    smoothScrollTo(href);
   };
 
   return (

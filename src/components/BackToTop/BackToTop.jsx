@@ -1,14 +1,8 @@
-import { useState, useEffect } from 'react'
 import styles from './BackToTop.module.css'
+import { useScrollThreshold } from '../../hooks/useScrollThreshold'
 
 export default function BackToTop() {
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setVisible(window.scrollY > 500)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const visible = useScrollThreshold(500)
 
   if (!visible) return null
 

@@ -1,4 +1,5 @@
 import { useI18n } from '../../i18n/I18nContext';
+import SectionHeader from '../SectionHeader/SectionHeader';
 import styles from './Timeline.module.css';
 
 export default function Timeline() {
@@ -8,10 +9,12 @@ export default function Timeline() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>{timelineSection.title}</h2>
-          <p className={styles.subtitle}>{timelineSection.subtitle}</p>
-        </div>
+        <SectionHeader
+          title={timelineSection.title}
+          subtitle={timelineSection.subtitle}
+          showLine={false}
+          style={{ marginBottom: '6rem' }}
+        />
 
         <div className={styles.timeline}>
           <div className={styles.line} />

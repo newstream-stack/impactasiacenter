@@ -1,22 +1,11 @@
-import { useState, useEffect, useRef } from 'react'
 import { useI18n } from '../../i18n/I18nContext'
+import { useIntersectionVisible } from '../../hooks/useIntersectionVisible'
 import styles from './FloatingRegisterBtn.module.css'
 
 export default function FloatingRegisterBtn() {
   const { t } = useI18n()
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const hero = document.getElementById('hero-section')
-    if (!hero) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
-      { threshold: 0 }
-    )
-    observer.observe(hero)
-    return () => observer.disconnect()
-  }, [])
+  const heroVisible = useIntersectionVisible('hero-section')
+  const visible = !heroVisible
 
   return (
     <a

@@ -1,4 +1,5 @@
 import { useI18n } from '../../i18n/I18nContext'
+import SectionHeader from '../SectionHeader/SectionHeader'
 import styles from './IAAIntro.module.css'
 
 export default function IAAIntro({ onBlockClick }) {
@@ -10,11 +11,12 @@ export default function IAAIntro({ onBlockClick }) {
   return (
     <section id="iaa-intro" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>{data.title}</h2>
-          <p className={styles.subtitle}>{data.subtitle}</p>
-          <div className={styles.line} />
-        </div>
+        <SectionHeader
+          title={data.title}
+          subtitle={data.subtitle}
+          accent
+          style={{ marginBottom: '5rem' }}
+        />
 
         <div className={styles.grid}>
           {data.blocks.map((block, index) => (

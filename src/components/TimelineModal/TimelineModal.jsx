@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import styles from './TimelineModal.module.css'
 
 export default function TimelineModal({ item, onClose }) {
@@ -15,7 +16,7 @@ export default function TimelineModal({ item, onClose }) {
     return () => window.removeEventListener('keydown', handleKey)
   }, [onClose])
 
-  return (
+  return createPortal(
     <>
       <div className={`${styles.overlay} ${isOpen ? styles.overlayActive : ''}`} onClick={onClose} />
       <div className={`${styles.modal} ${isOpen ? styles.modalActive : ''}`} role="dialog" aria-modal="true">
@@ -55,6 +56,7 @@ export default function TimelineModal({ item, onClose }) {
           </>
         )}
       </div>
-    </>
+    </>,
+    document.body
   )
 }

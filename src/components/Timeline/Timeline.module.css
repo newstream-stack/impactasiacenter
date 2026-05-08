@@ -134,7 +134,7 @@
 .imageOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%);
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.05) 55%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -146,12 +146,27 @@
 .readMore {
   font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   color: #fff;
-  background: rgba(255, 94, 0, 0.85);
-  padding: 0.4rem 1rem;
+  background: #FF5E00;
+  padding: 0.4rem 1.1rem;
   border-radius: 2rem;
-  backdrop-filter: blur(4px);
+}
+
+/* Always-visible badge for touch devices / mobile */
+.readMoreBadge {
+  position: absolute;
+  bottom: 0.85rem;
+  right: 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: #FF5E00;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  pointer-events: none;
+  display: none;
 }
 
 .activeItem .imageContainer {
@@ -196,5 +211,9 @@
 
   .imageContainer {
     max-width: 100%;
+  }
+
+  .readMoreBadge {
+    display: block;
   }
 }

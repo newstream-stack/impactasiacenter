@@ -49,9 +49,12 @@ export default function Timeline() {
                   >
                     <img src={item.img} alt={item.region} className={styles.image} />
                     {item.detail && (
-                      <div className={styles.imageOverlay}>
-                        <span className={styles.readMore}>了解更多 →</span>
-                      </div>
+                      <>
+                        <div className={styles.imageOverlay}>
+                          <span className={styles.readMore}>了解更多 →</span>
+                        </div>
+                        <span className={styles.readMoreBadge}>了解更多 →</span>
+                      </>
                     )}
                   </div>
                 </div>

@@ -40,7 +40,7 @@ export default function IntroAnimation() {
     resize();
 
     const img = new Image();
-    img.src = '/hero.png';
+    img.src = '/opening.jpg';
 
     img.onload = () => {
       const imgRatio = img.width / img.height;

@@ -19,9 +19,15 @@ export default function Presidium() {
         <div className={styles.mainGrid}>
           {data.main.map((member, index) => (
             <div key={index} className={styles.memberCard}>
+              {member.image && (
+                <div className={styles.avatarWrap}>
+                  <img src={member.image} alt={member.name} className={styles.avatar} />
+                </div>
+              )}
               <span className={styles.role}>{member.role}</span>
               <h3 className={styles.name}>{member.name}</h3>
               <p className={styles.memberTitle}>{member.title}</p>
+              {member.bio && <p className={styles.bio}>{member.bio}</p>}
             </div>
           ))}
         </div>

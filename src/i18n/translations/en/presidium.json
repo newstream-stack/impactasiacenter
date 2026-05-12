@@ -6,12 +6,16 @@
       {
         "role": "Conference Chairman",
         "name": "Dr. Simon Hung",
-        "title": "Chairman, ORTV & IAA"
+        "title": "Chairman, ORTV & IAA",
+        "bio": "Elder Simon Hung dedicated his early years to the Bread of Life Multimedia, pioneering gospel films, music, and media ministry — earning recognition as a trailblazer in Chinese evangelical arts and media missions. After stepping down as president in 2019, he has continued to champion gospel media development and currently serves as Chairman of the Christian Tribune.",
+        "image": "/Presidium/洪善群.png"
       },
       {
         "role": "Conference Executive Director",
         "name": "Dr. Timothy Cheng",
-        "title": "International Executive Director, IAA"
+        "title": "International Executive Director, IAA",
+        "bio": "Currently serving as President of the Christian Tribune and Executive Director of Impact Asia Center, Dr. Cheng leads media and church renewal through innovative and transformative thinking. He guided the Tribune through its digital transformation, expanding news, commentary, and lifestyle content into a vital public platform for the Chinese church. At Impact Asia Center, he actively builds cross-national church exchange and cooperation networks, spreading faith ideals broadly across Asia with far-reaching influence.",
+        "image": "/Presidium/鄭忠信.png"
       }
     ],
     "coChairsTitle": "Co-Chairs (共同主席)",

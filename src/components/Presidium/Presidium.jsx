@@ -36,9 +36,17 @@ export default function Presidium() {
           <h3 className={styles.coChairsTitle}>{data.coChairsTitle}</h3>
           <div className={styles.coChairsGrid}>
             {data.coChairs.map((member, index) => (
-              <div key={index} className={styles.coChairItem}>
-                <div className={styles.coChairName}>{member.name}</div>
-                <div className={styles.coChairTitle}>{member.title}</div>
+              <div key={index} className={`${styles.coChairItem} ${member.bio ? styles.coChairItemExpanded : ''}`}>
+                {member.image && (
+                  <div className={styles.coChairAvatarWrap}>
+                    <img src={member.image} alt={member.name} className={styles.coChairAvatar} />
+                  </div>
+                )}
+                <div className={styles.coChairBody}>
+                  <div className={styles.coChairName}>{member.name}</div>
+                  <div className={styles.coChairTitle}>{member.title}</div>
+                  {member.bio && <p className={styles.coChairBio}>{member.bio}</p>}
+                </div>
               </div>
             ))}
           </div>

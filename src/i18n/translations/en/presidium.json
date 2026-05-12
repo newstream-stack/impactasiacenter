@@ -22,7 +22,8 @@
     "coChairs": [
       {
         "name": "Rev. Mike Constantz",
-        "title": "Saddleback Church"
+        "title": "Saddleback Church",
+        "image": "/Presidium/MIKE.png"
       },
       {
         "name": "Rev. John Heston",
@@ -46,7 +47,8 @@
       },
       {
         "name": "Rev. John Cheng",
-        "title": "Board Member, Impact Asia Center"
+        "title": "Board Member, Impact Asia Center",
+        "image": "/Presidium/鄭博仁.png"
       },
       {
         "name": "Mr. Steven Chen",

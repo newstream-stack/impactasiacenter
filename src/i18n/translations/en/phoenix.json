@@ -20,10 +20,22 @@
       }
     ],
     "stats": [
-      { "value": "$165B+", "label": "TSMC Total Investment" },
-      { "value": "6.0%", "label": "Projected Income Growth" },
-      { "value": "6 Fabs", "label": "Advanced Wafer Fabs Planned" },
-      { "value": "No.1", "label": "Among Fastest-Growing U.S. Cities" }
+      {
+        "value": "$165B+",
+        "label": "TSMC Total Investment"
+      },
+      {
+        "value": "6.0%",
+        "label": "Projected Income Growth"
+      },
+      {
+        "value": "6 Fabs",
+        "label": "Advanced Wafer Fabs Planned"
+      },
+      {
+        "value": "No.1",
+        "label": "Among Fastest-Growing U.S. Cities"
+      }
     ],
     "categories": [
       {
@@ -34,7 +46,7 @@
         "items": [
           {
             "label": "Semiconductor Cluster",
-            "desc": "TSMC's Arizona fab is driving the entire supply chain into the region, with total investment expected to exceed $65 billion and a third advanced wafer fab planned for Phoenix. Intel, KoMiCo, Fujifilm, and other global giants continue to expand, forming a complete semiconductor ecosystem."
+            "desc": "TSMC's Arizona fab is driving the entire supply chain into the region, with total investment expected to exceed $165 billion and a third advanced wafer fab planned for Phoenix. Intel, KoMiCo, Fujifilm, and other global giants continue to expand, forming a complete semiconductor ecosystem."
           },
           {
             "label": "Emerging Technologies",

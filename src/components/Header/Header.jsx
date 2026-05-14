@@ -45,9 +45,6 @@ export default function Header() {
                 {label}
               </a>
             ))}
-            <a href={t('donationUrl')} target="_blank" rel="noopener noreferrer" className={styles.btnDonate}>
-              {t('navSupport')}
-            </a>
           </div>
 
           <div className={styles.navActions}>

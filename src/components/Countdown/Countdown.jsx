@@ -58,6 +58,7 @@ export default function Countdown() {
         <span className={styles.separator}>:</span>
         <Label value={timeLeft.seconds} labelEn="Secs" labelZh="秒" />
       </div>
+      <p className={styles.countdownExpiry}>{t('countdownExpiry')}</p>
     </div>
   );
 }

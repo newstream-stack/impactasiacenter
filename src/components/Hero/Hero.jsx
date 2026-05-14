@@ -23,6 +23,7 @@ export default function Hero() {
             <h1 className={styles.fluidTitle}>{hero.title}</h1>
           )}
         </div>
+        <p className={styles.tagline}>{hero.tagline}</p>
         <Countdown />
         <p className={styles.eventName}>{hero.eventName}</p>
         <div className={styles.cta}>
@@ -33,14 +34,6 @@ export default function Hero() {
             className={styles.btnPrimary}
           >
             {t('btnRegister')}
-          </a>
-          <a 
-            href={t('donationUrl')}
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={styles.btnSecondary}
-          >
-            {t('btnSupportOnline')}
           </a>
         </div>
       </div>

@@ -56,6 +56,13 @@
   color: #475569;
 }
 
+.countdownExpiry {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.15em;
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .countdownWrapper {
     margin-top: 3rem;

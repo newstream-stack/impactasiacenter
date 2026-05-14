@@ -1,20 +1,20 @@
 {
   "presidium": {
-    "title": "Presidium",
+    "title": "Organizing Committee",
     "subtitle": "主席團",
     "main": [
       {
         "role": "Conference Chairman",
         "name": "Dr. Simon Hung",
         "title": "Chairman, ORTV & IAA",
-        "bio": "Elder Simon Hung dedicated his early years to the Bread of Life Multimedia, pioneering gospel films, music, and media ministry — earning recognition as a trailblazer in Chinese evangelical arts and media missions. After stepping down as president in 2019, he has continued to champion gospel media development and currently serves as Chairman of the Christian Tribune.",
+        "bio": "Elder Simon Hung entered Overseas Radio & Television, Inc. (ORTV) as a young man and dedicated decades there, pioneering gospel films, music, and media ministry — earning recognition as a trailblazer in Chinese evangelical arts and media missions along the way. After stepping down as Executive Director of ORTV in 2019, he has continued to champion gospel media development and currently serves as Chairman of the Christian Tribune.",
         "image": "/Presidium/洪善群.png"
       },
       {
         "role": "Conference Executive Director",
         "name": "Dr. Timothy Cheng",
         "title": "International Executive Director, IAA",
-        "bio": "Currently serving as President of the Christian Tribune and Executive Director of Impact Asia Center, Dr. Cheng leads media and church renewal through innovative and transformative thinking. He guided the Tribune through its digital transformation, expanding news, commentary, and lifestyle content into a vital public platform for the Chinese church. At Impact Asia Center, he actively builds cross-national church exchange and cooperation networks, spreading faith ideals broadly across Asia with far-reaching influence.",
+        "bio": "Currently serving as CEO of Christian Tribune and Executive Director of Impact Asia Center, Dr. Cheng leads media and church renewal through innovative and transformative thinking. He guided the former through its digital transformation, expanding news, commentary, and lifestyle content into a vital public platform for the Chinese church. At Impact Asia Center, he actively builds cross-national church exchanges and cooperation networks, spreading faith values across Asia with far-reaching influence.",
         "image": "/Presidium/鄭忠信.png"
       }
     ],
@@ -54,13 +54,13 @@
         "name": "Rev. John Cheng",
         "title": "Board Member, Impact Asia Center",
         "image": "/Presidium/鄭博仁.png",
-        "bio": "Advisor Pastor of Wuchang Church in Kaohsiung, having served as Senior Pastor for many years and leading the congregation from hundreds to thousands, while establishing a solid elder-led governance system and discipleship training framework. He served as Chairman of the Kaohsiung Pastoral Fellowship Prayer Meeting and is recognized as one of the \"Spiritual Elders of Kaohsiung,\" championing cross-denominational unity through citywide prayer altars and evangelistic movements that have profoundly shaped church cohesion in the region. A proponent of \"city transformation\" and \"workplace missions,\" he emphasizes the church's engagement with society, and in recent years has been actively involved with Impact Asia Center, helping connect leaders across sectors to advance cross-border missions and a kingdom vision."
+        "bio": "Pastor Emeritus of Wuchang Church in Kaohsiung, Taiwan, he served as Senior Pastor there for many years, leading the congregation from hundreds to thousands while establishing a solid elder-led governance system and discipleship training framework. He served as Chairman of the Kaohsiung Pastoral Fellowship Prayer Meeting and is recognized as one of the 'Spiritual Elders of Kaohsiung,' championing cross-denominational unity through citywide prayer altars and evangelistic movements that have profoundly shaped church cohesion in the city. A proponent of 'city transformation' and 'workplace missions,' he emphasizes the church's engagement with society, and in recent years has been actively involved with Impact Asia Center, helping connect leaders across sectors to advance cross-border missions and a Kingdom vision."
       },
       {
         "name": "Mr. Steven Chen",
         "title": "Board Member, Impact Asia Center",
         "image": "/Presidium/陳貴荔.png",
-        "bio": "A core elder of Good News Church Kaohsiung and a model for leading marketplace believers to integrate faith into their professional lives. Currently serves as a Board Member of the Christian Tribune, actively supporting the media's digital transformation and committed to amplifying the gospel message through modern communication channels."
+        "bio": "A core elder of Good News Church Kaohsiung and a model for leading marketplace believers to integrate faith into their professional lives, Chen currently serves as a Board Member of the Christian Tribune, actively supporting the media's digital transformation and its commitment to amplifying the gospel message through modern communication channels."
       }
     ]
   }

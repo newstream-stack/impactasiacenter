@@ -57,7 +57,7 @@
 }
 
 .countdownExpiry {
-  font-size: 13px;
+  font-size: clamp(13px, 1.5vw, 18px);
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.15em;
   margin: 0;

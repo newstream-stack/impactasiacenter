@@ -13,7 +13,9 @@ const I18nContext = createContext();
 export const useI18n = () => useContext(I18nContext);
 
 export const I18nProvider = ({ children }) => {
-  const [language, setLanguage] = useState('zh');
+  const browserLang = navigator.language || navigator.userLanguage || 'zh';
+  const defaultLang = browserLang.startsWith('zh') ? 'zh' : 'en';
+  const [language, setLanguage] = useState(defaultLang);
 
   /**
    * @param {string} key - Dot-notation path into the translation object (e.g. 'hero.title', 'btnRegister')

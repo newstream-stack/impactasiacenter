@@ -5,7 +5,7 @@
     "intro": [
       {
         "label": "U.S. Southwest Hub",
-        "desc": "Located at the heart of Arizona in the U.S. Southwest, serving as the state capital and its political and economic center.",
+        "desc": "Located at the heart of the Southwestern U.S., Phoenix is the state capital and the political and economic center of Arizonia.",
         "icon": "location"
       },
       {
@@ -15,7 +15,7 @@
       },
       {
         "label": "Seamless International Access",
-        "desc": "Adjacent to Phoenix Sky Harbor (PHX), just 10–15 minutes from the conference venue in Tempe — exceptionally convenient.",
+        "desc": "Adjacent to Phoenix Sky Harbor (PHX), just 10–15 minutes from the conference venue in Tempe- convenient access.",
         "icon": "plane"
       }
     ],
@@ -26,10 +26,10 @@
       },
       {
         "value": "6.0%",
-        "label": "Projected Income Growth"
+        "label": "Projected Personal Income Growth"
       },
       {
-        "value": "6 Fabs",
+        "value": "6",
         "label": "Advanced Wafer Fabs Planned"
       },
       {
@@ -90,7 +90,7 @@
           },
           {
             "label": "Quality of Life",
-            "desc": "With premium dining (e.g., Din Tai Fung) and major resort developments (e.g., VAI Resort), Phoenix is becoming a world-class culinary destination and high-quality living city."
+            "desc": "With premium dining (e.g., Din Tai Fung) and major resort developments (e.g., VAI Resort), Phoenix is becoming a world-class culinary destination and high-quality of life city."
           },
           {
             "label": "Cost Advantage",

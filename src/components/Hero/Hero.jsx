@@ -27,14 +27,13 @@ export default function Hero() {
         <Countdown />
         <p className={styles.eventName}>{hero.eventName}</p>
         <div className={styles.cta}>
-          <a 
-            href={t('registrationUrl')} 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <button
+            disabled
             className={styles.btnPrimary}
+            style={{ opacity: 0.4, cursor: 'not-allowed', pointerEvents: 'none' }}
           >
             {t('btnRegister')}
-          </a>
+          </button>
         </div>
       </div>
     </section>

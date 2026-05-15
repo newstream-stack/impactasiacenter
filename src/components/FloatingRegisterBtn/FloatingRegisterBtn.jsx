@@ -8,14 +8,13 @@ export default function FloatingRegisterBtn() {
   const visible = !heroVisible
 
   return (
-    <a
-      href={t('registrationUrl')}
-      target="_blank"
-      rel="noopener noreferrer"
+    <button
+      disabled
       className={`${styles.btn} ${visible ? styles.show : ''}`}
       aria-label={t('btnRegister')}
+      style={{ opacity: 0.4, cursor: 'not-allowed', pointerEvents: 'none' }}
     >
       {t('btnRegister')}
-    </a>
+    </button>
   )
 }

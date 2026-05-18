@@ -27,11 +27,16 @@ export default function Hero() {
         <Countdown />
         <p className={styles.eventName}>{hero.eventName}</p>
         <div className={styles.cta}>
-          <button
+          <a
+            href={language === 'en'
+              ? 'https://ct.org.tw/html/activity/6-3-eng.php?article=39&area=&id=&parentid='
+              : 'https://ct.org.tw/html/activity/6-3.php?article=38&area=&id=&parentid='}
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.btnPrimary}
           >
             {t('btnRegister')}
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -9,10 +9,8 @@ export default function FloatingRegisterBtn() {
 
   return (
     <button
-      disabled
       className={`${styles.btn} ${visible ? styles.show : ''}`}
       aria-label={t('btnRegister')}
-      style={{ opacity: 0.4, cursor: 'not-allowed', pointerEvents: 'none' }}
     >
       {t('btnRegister')}
     </button>

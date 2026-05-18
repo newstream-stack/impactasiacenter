@@ -28,9 +28,7 @@ export default function Hero() {
         <p className={styles.eventName}>{hero.eventName}</p>
         <div className={styles.cta}>
           <button
-            disabled
             className={styles.btnPrimary}
-            style={{ opacity: 0.4, cursor: 'not-allowed', pointerEvents: 'none' }}
           >
             {t('btnRegister')}
           </button>

@@ -11,8 +11,8 @@
   "btnSupportOnline": "奉獻",
   "donationUrl": "https://ct.org.tw/html/dedication/8-2-2.php?article=117",
   "countdownTarget": "2026-06-30T23:59:59",
-  "countdownLabel": "第一波早鳥價倒數",
-  "countdownExpiry": "第一波早鳥到期時間：6/30",
+  "countdownLabel": "早鳥價倒數",
+  "countdownExpiry": "早鳥到期時間：6/30",
   "ariaBackToTop": "回到頂端",
   "ariaClose": "關閉",
   "ariaMenu": "選單"

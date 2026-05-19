@@ -11,8 +11,8 @@
   "btnSupportOnline": "Support Us",
   "donationUrl": "https://ct.org.tw/html/dedication/8-2-2.php?article=117",
   "countdownTarget": "2026-06-30T23:59:59",
-  "countdownLabel": "1st Early bird price ends on",
-  "countdownExpiry": "1st Early bird deadline: Jun 30",
+  "countdownLabel": "Early bird price ends on",
+  "countdownExpiry": "Early bird deadline: Jun 30",
   "ariaBackToTop": "Back to top",
   "ariaClose": "Close",
   "ariaMenu": "Menu"

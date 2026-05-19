@@ -43,10 +43,11 @@ export default function FAQ() {
             <div className={styles.refundBlock}>
               <p>{t('faqA3Intro')}</p>
               <ul>
-                <li>{t('faqA3B1')}</li>
-                <li>{t('faqA3B2')}</li>
+                <li dangerouslySetInnerHTML={{ __html: t('faqA3B1') }} />
+                <li dangerouslySetInnerHTML={{ __html: t('faqA3B2') }} />
                 <li dangerouslySetInnerHTML={{ __html: t('faqA3B3') }} />
               </ul>
+              <p className={styles.refundFooter}>{t('faqA3Footer')}</p>
             </div>
           ),
         },

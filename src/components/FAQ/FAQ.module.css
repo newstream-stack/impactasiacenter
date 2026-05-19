@@ -109,6 +109,12 @@
   list-style: disc;
 }
 
+.refundFooter {
+  margin-top: 0.85rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media (max-width: 640px) {
   .question {
     padding: 1rem 1.1rem;

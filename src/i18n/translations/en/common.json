@@ -24,9 +24,10 @@
   "faqA1": "Includes: all sessions of the 4-day 3-night summit and 5 meals.\n(Note: Registration fee is primarily in NTD. Airfare and accommodation are not included.)",
   "faqQ2": "When does the early bird discount end?",
   "faqA2": "The early bird price of $350 USD expires on June 30, 2026. The standard price of $580 USD will apply after that date.",
-  "faqQ3": "Can I get a refund if I'm unable to attend after registering?",
-  "faqA3Intro": "Yes. A 10% processing fee will be deducted from each refund by the Neweb payment platform.",
-  "faqA3B1": "Refund requests submitted before the end of August will receive 50% of the total amount paid, after deducting the 10% processing fee.",
-  "faqA3B2": "Due to advance planning requirements for international conferences, no refunds will be issued after the end of August. If the event is cancelled or postponed, please contact the organizer for refund arrangements.",
-  "faqA3B3": "You may transfer your registration to another colleague. Please notify us at <a href=\"mailto:service@ct.org.tw\">service@ct.org.tw</a> with the updated information."
+  "faqQ3": "Can I request a refund or transfer my registration if I'm unable to attend?",
+  "faqA3Intro": "Yes, but with conditions. As this is a large-scale international conference (Oct 20–23), venue logistics and guest arrangements must be finalized months in advance. The following rules apply:",
+  "faqA3B1": "<strong>On or before August 31:</strong> A 50% refund of the amount paid will be issued after deducting the 10% Neweb payment processing fee.",
+  "faqA3B2": "<strong>From September 1 onwards:</strong> All administrative and logistical preparations will have entered final production. No refund requests will be accepted under any circumstances.",
+  "faqA3B3": "<strong>Registration Transfer:</strong> To protect your investment, we strongly recommend transferring your spot if you are unable to attend. Please email <a href=\"mailto:service@ct.org.tw\">service@ct.org.tw</a> no later than October 13 (one week before the event) with the updated attendee information. Requests after this date will not be accepted.",
+  "faqA3Footer": "In the event of force majeure (e.g., natural disaster, government policy) that causes the event to be cancelled or postponed, refund arrangements will be announced separately by the organizer."
 }

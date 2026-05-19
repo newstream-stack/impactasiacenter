@@ -36,7 +36,28 @@ export default function FAQ() {
       title: t('faqGroup1Title'),
       items: [
         { q: t('faqQ1'), a: t('faqA1') },
-        { q: t('faqQ2'), a: t('faqA2') },
+        {
+          q: t('faqQ2'),
+          custom: (
+            <div className={styles.pricingBlock}>
+              {t('faqA2Tiers').map((tier) => (
+                <div key={tier.tag} className={styles.pricingTier}>
+                  <div className={styles.pricingHeader}>
+                    <span className={styles.pricingTag}>《{tier.tag}》</span>
+                    {tier.discount && <span className={styles.pricingDiscount}>{tier.discount}</span>}
+                  </div>
+                  <div className={styles.pricingRow}>
+                    <span className={styles.pricingLabel}>{tier.label}</span>
+                    <span className={styles.pricingPrice}>{tier.ntd}</span>
+                    <span className={styles.pricingUsd}>{tier.usd}</span>
+                  </div>
+                  <div className={styles.pricingPeriod}>{tier.period}</div>
+                </div>
+              ))}
+              <p className={styles.pricingNote}>{t('faqA2Note')}</p>
+            </div>
+          ),
+        },
         {
           q: t('faqQ3'),
           custom: (

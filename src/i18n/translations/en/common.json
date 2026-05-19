@@ -22,8 +22,33 @@
   "faqGroup1Title": "I. Registration & Fees",
   "faqQ1": "What does the registration fee include?",
   "faqA1": "Includes: all sessions of the 4-day 3-night summit and 5 meals.\n(Note: Registration fee is primarily in NTD. Airfare and accommodation are not included.)",
-  "faqQ2": "When does the early bird discount end?",
-  "faqA2": "The early bird price of $350 USD expires on June 30, 2026. The standard price of $580 USD will apply after that date.",
+  "faqQ2": "What are the registration pricing tiers?",
+  "faqA2Tiers": [
+    {
+      "tag": "Standard Price",
+      "label": "Individual",
+      "ntd": "NT$ 18,000",
+      "usd": "approx. US$ 580",
+      "period": "2026 / 08 / 01 - 10 / 10"
+    },
+    {
+      "tag": "Early Bird Price",
+      "discount": "30% off",
+      "label": "Individual",
+      "ntd": "NT$ 12,600",
+      "usd": "approx. US$ 400",
+      "period": "Now until 2026 / 06 / 30"
+    },
+    {
+      "tag": "Discounted Price",
+      "discount": "20% off",
+      "label": "Individual",
+      "ntd": "NT$ 14,600",
+      "usd": "approx. US$ 464",
+      "period": "2026 / 07 / 01 - 07 / 31"
+    }
+  ],
+  "faqA2Note": "＊Group rate: 10 registrations get 1 free (must register simultaneously)",
   "faqQ3": "Can I request a refund or transfer my registration if I'm unable to attend?",
   "faqA3Intro": "Yes, but with conditions. As this is a large-scale international conference (Oct 20–23), venue logistics and guest arrangements must be finalized months in advance. The following rules apply:",
   "faqA3B1": "<strong>On or before August 31:</strong> A 50% refund of the amount paid will be issued after deducting the 10% Neweb payment processing fee.",

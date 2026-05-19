@@ -17,6 +17,7 @@ export default function Header() {
     { href: '#presidium', label: t('navPresidium') },
     { href: '#themes', label: t('navThemes') },
     { href: '#venue', label: t('navVenue') },
+    { href: '#faq', label: t('navFaq') },
   ];
 
   const sectionIds = useMemo(() => navLinks.map((l) => l.href), [language]);

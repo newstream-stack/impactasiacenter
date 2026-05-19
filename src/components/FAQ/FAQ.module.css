@@ -90,6 +90,7 @@
 
 .answer p {
   margin: 0;
+  white-space: pre-line;
 }
 
 .refundBlock p {

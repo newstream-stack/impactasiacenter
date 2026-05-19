@@ -12,6 +12,7 @@ import Presidium from './components/Presidium/Presidium';
 import PhoenixIntro from './components/PhoenixIntro/PhoenixIntro';
 import DetailView from './components/DetailView/DetailView';
 import Venue from './components/Venue/Venue';
+import FAQ from './components/FAQ/FAQ';
 import Footer from './components/Footer/Footer';
 // import ChatBot from './components/ChatBot/ChatBot';
 import { useReveal } from './hooks/useReveal'
@@ -40,6 +41,7 @@ export default function App() {
       <div className="reveal"><Themes onThemeClick={setActiveTheme} /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <div className="reveal"><Venue /></div>
+      <div className="reveal"><FAQ /></div>
       <Footer />
       <BackToTop />
       <FloatingRegisterBtn />

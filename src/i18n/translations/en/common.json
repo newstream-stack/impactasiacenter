@@ -15,5 +15,17 @@
   "countdownExpiry": "Early bird deadline: Jun 30",
   "ariaBackToTop": "Back to top",
   "ariaClose": "Close",
-  "ariaMenu": "Menu"
+  "ariaMenu": "Menu",
+  "faqEyebrow": "FAQ",
+  "faqTitle": "Frequently Asked Questions",
+  "faqGroup1Title": "I. Registration & Fees",
+  "faqQ1": "What does the registration fee include?",
+  "faqA1": "The fee covers all 4-day 3-night summit sessions and 5 catered meals. (Note: round-trip airfare and accommodation are not included.)",
+  "faqQ2": "When does the early bird discount end?",
+  "faqA2": "The early bird price of $350 USD expires on June 30, 2026. The standard price of $580 USD will apply after that date.",
+  "faqQ3": "Can I get a refund if I'm unable to attend after registering?",
+  "faqA3Intro": "Yes. A 10% processing fee will be deducted from each refund by the Neweb payment platform.",
+  "faqA3B1": "Refund requests submitted before the end of August will receive 50% of the total amount paid, after deducting the 10% processing fee.",
+  "faqA3B2": "Due to advance planning requirements for international conferences, no refunds will be issued after the end of August. If the event is cancelled or postponed, please contact the organizer for refund arrangements.",
+  "faqA3B3": "You may transfer your registration to another colleague. Please notify us at <a href=\"mailto:service@ct.org.tw\">service@ct.org.tw</a> with the updated information."
 }

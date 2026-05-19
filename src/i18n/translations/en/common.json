@@ -33,7 +33,6 @@
     },
     {
       "tag": "Early Bird Price",
-      "discount": "30% off",
       "label": "Individual",
       "ntd": "NT$ 12,600",
       "usd": "approx. US$ 400",
@@ -41,7 +40,6 @@
     },
     {
       "tag": "Discounted Price",
-      "discount": "20% off",
       "label": "Individual",
       "ntd": "NT$ 14,600",
       "usd": "approx. US$ 464",

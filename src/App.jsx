@@ -18,9 +18,6 @@ import Footer from './components/Footer/Footer';
 import { useReveal } from './hooks/useReveal'
 import BackToTop from './components/BackToTop/BackToTop'
 import FloatingRegisterBtn from './components/FloatingRegisterBtn/FloatingRegisterBtn'
-import IntroAnimation from './components/IntroAnimation/IntroAnimation';
-
-
 export default function App() {
   const [activeTheme, setActiveTheme] = useState(null);
 
@@ -28,7 +25,6 @@ export default function App() {
 
   return (
     <>
-      <IntroAnimation />
       <Header />
       <Hero />
       <div className="reveal"><Vision /></div>

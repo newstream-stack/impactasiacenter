@@ -18,8 +18,8 @@
 }
 
 .introLine {
-  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
-  line-height: 1.85;
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  line-height: 2;
   font-weight: 700;
   margin-bottom: 0;
   letter-spacing: 0.02em;
@@ -30,7 +30,7 @@
 }
 
 .introLine + .introLine {
-  margin-top: 0.25rem;
+  margin-top: 2rem;
 }
 
 .moreBtn {

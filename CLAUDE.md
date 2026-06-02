@@ -6,10 +6,11 @@
 - **Preview**: `npm run preview`
 
 ## Project Architecture & Standards
-- **Tech Stack**: React + Vite + TailwindCSS.
-- **Styling**: Use Vanilla CSS or TailwindCSS. Focus on premium, dynamic designs.
+- **Tech Stack**: React + Vite. The current frontend uses CSS Modules and shared global CSS.
+- **Styling**: Follow the existing CSS Modules structure. Focus on premium, dynamic designs.
 - **I18n**: Multi-language support is handled in `src/i18n/`. Always use i18n keys instead of hardcoded text.
 - **API**: Backend functions are in `api/` (Firebase/Vercel compatible).
+- **Source of Truth**: See `AGENT.md` for the most up-to-date project handoff and working conventions.
 
 ## Workflow (OpenSpec)
 This project uses **OpenSpec** for change management.

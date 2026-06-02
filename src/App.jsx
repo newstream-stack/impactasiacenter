@@ -34,6 +34,7 @@ export default function App() {
       <div className="reveal"><IAAIntro onBlockClick={setActiveTheme} /></div>
       <div className="reveal"><PhoenixIntro /></div>
       <div className="reveal"><Presidium /></div>
+      <div className="reveal"><Speakers /></div>
       <div className="reveal"><Themes onThemeClick={setActiveTheme} /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <div className="reveal"><Venue /></div>

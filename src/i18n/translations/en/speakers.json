@@ -3,29 +3,17 @@
     "title": "Keynote Speakers"
   },
   "speakers": [
-    {
-      "id": 1,
-      "name": "David Chen",
-      "title": "Silicon Valley Tech Leader / Kingdom Leader",
-      "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400"
-    },
-    {
-      "id": 2,
-      "name": "Sarah Williams",
-      "title": "Global Impact CEO",
-      "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
-    },
-    {
-      "id": 3,
-      "name": "Joshua Cheung",
-      "title": "Founder, Impact Asia Alliance",
-      "img": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&q=80&w=400"
-    },
-    {
-      "id": 4,
-      "name": "John Lin",
-      "title": "CEO, Sustainable Development Foundation",
-      "img": "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=400"
-    }
+    { "id": 1, "name": "Rev. Mike Constantz", "title": "Saddleback Church" },
+    { "id": 2, "name": "Rev. John Heston", "title": "First Baptist Church Tempe" },
+    { "id": 3, "name": "Rev. Ryan Nunez", "title": "Palm Valley Church" },
+    { "id": 4, "name": "Dr. Cary Summers", "title": "G&M Global Co-President" },
+    { "id": 5, "name": "Hong Shan-Chun", "title": "ORTV & IAA Chairman" },
+    { "id": 6, "name": "Lin Ben-Jian", "title": "TSMC" },
+    { "id": 7, "name": "Dean Dai Ji-Tzong", "title": "China Evangelical Seminary" },
+    { "id": 8, "name": "Lü Jie-Cheng", "title": "Taiwan Bank" },
+    { "id": 9, "name": "Martin", "title": "Parliament of Uganda" },
+    { "id": 10, "name": "Rev. Choi Seung-Hong", "title": "Seattle Witness Church" },
+    { "id": 11, "name": "Jiang Wen-Qi", "title": "From Doubt to Belief" },
+    { "id": 12, "name": "Pastor Yoshiko Ito", "title": "White House Fellowship Church" }
   ]
 }

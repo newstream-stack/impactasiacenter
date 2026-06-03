@@ -1,39 +1,292 @@
 .section {
-  padding: 7rem 2rem;
+  padding: 8rem 2rem;
   background: var(--bg);
-  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
+.section::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 94, 0, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 .container {
-  max-width: 860px;
+  max-width: 780px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-.intro {
-  margin-bottom: 3.5rem;
-}
-
-.introLine {
-  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
-  line-height: 2;
+/* Label */
+.label {
+  font-size: 0.78rem;
   font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #FF5E00;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Salutation */
+.salutation {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+/* Opening */
+.opening {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: pre-line;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+/* Question block */
+.questionBlock {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid rgba(255, 94, 0, 0.3);
+  padding: 2rem 2rem 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.questionIntro {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.wrongQuestion {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.35);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  text-decoration: line-through;
+  text-decoration-color: rgba(255, 255, 255, 0.15);
+}
+
+.questionBridge {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.rightQuestion {
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+  font-weight: 700;
+  color: #FF5E00;
+  line-height: 1.6;
+}
+
+/* Tech limits list */
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.bulletItem {
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+}
+
+.bulletItem::before {
+  content: '·';
+  position: absolute;
+  left: 0.4rem;
+  color: #FF5E00;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+/* Divider */
+.divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, #FF5E00, transparent);
+  margin: 3rem 0;
+}
+
+/* Manifesto */
+.manifestoTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.manifestoList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.manifestoItem {
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 94, 0, 0.05);
+  border: 1px solid rgba(255, 94, 0, 0.12);
+  border-radius: 0.5rem;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.manifestoItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: #FF5E00;
+  border-radius: 0 2px 2px 0;
+}
+
+/* Invite text */
+.inviteText {
+  font-size: clamp(0.95rem, 1.9vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+}
+
+/* Topics */
+.topicsBlock {
   margin-bottom: 0;
-  letter-spacing: 0.02em;
-  background: linear-gradient(135deg, #ffffff 40%, rgba(255,255,255,0.6) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
-.introLine + .introLine {
-  margin-top: 2rem;
+.topicsTitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
 }
 
+.topicGrid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.topicTag {
+  padding: 0.6rem 1.1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.topicTag:hover {
+  border-color: rgba(255, 94, 0, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* CTA block */
+.ctaBlock {
+  text-align: center;
+  padding: 2.5rem;
+  background: rgba(255, 94, 0, 0.04);
+  border: 1px solid rgba(255, 94, 0, 0.15);
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.ctaTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #FF5E00;
+  margin-bottom: 1rem;
+}
+
+.ctaEvent {
+  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.ctaLocation {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.15em;
+}
+
+/* Closing */
+.closing {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.9;
+  white-space: pre-line;
+  margin-bottom: 0;
+}
+
+/* Verse */
+.verse {
+  border: none;
+  margin: 0 0 3rem 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.verse p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.verse cite {
+  font-size: 0.82rem;
+  font-style: normal;
+  letter-spacing: 0.2em;
+  color: #FF5E00;
+  text-transform: uppercase;
+}
+
+/* Button */
 .moreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   background: transparent;
   border: 1px solid rgba(255, 94, 0, 0.4);
   color: #FF5E00;
@@ -45,9 +298,6 @@
   cursor: pointer;
   border-radius: 50px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
 }
 
 .moreBtn:hover {
@@ -68,6 +318,8 @@
 
 @media (max-width: 768px) {
   .section { padding: 5rem 1.5rem; }
-  .introLine { font-size: 1.2rem; }
-  .moreBtn { font-size: 0.85rem; }
+  .topicGrid { grid-template-columns: 1fr; }
+  .questionBlock { padding: 1.5rem 1.25rem 1.5rem 1.75rem; }
+  .ctaBlock { padding: 1.75rem 1.25rem; }
+  .verse { padding: 1.5rem 0.5rem; }
 }

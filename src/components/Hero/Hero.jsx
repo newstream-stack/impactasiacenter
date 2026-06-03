@@ -24,6 +24,8 @@ export default function Hero() {
           )}
         </div>
         <p className={styles.tagline}>{hero.tagline}</p>
+        <p className={styles.tagline2}>{hero.tagline2}</p>
+        <p className={styles.tagline3}>{hero.tagline3}</p>
         <Countdown />
         <p className={styles.eventName}>{hero.eventName}</p>
         <div className={styles.cta}>

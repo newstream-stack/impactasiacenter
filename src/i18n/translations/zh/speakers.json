@@ -3,17 +3,96 @@
     "title": "重磅講員"
   },
   "speakers": [
-    { "id": 1, "name": "Rev. Mike Constantz", "title": "Saddleback Church" },
-    { "id": 2, "name": "Rev. John Heston", "title": "First Baptist Church Tempe" },
-    { "id": 3, "name": "Rev. Ryan Nunez", "title": "Palm Valley Church" },
-    { "id": 4, "name": "Dr. Cary Summers", "title": "G&M Global Co-President" },
-    { "id": 5, "name": "洪善群", "title": "ORTV & IAA 董事長" },
-    { "id": 6, "name": "林本堅", "title": "TSMC" },
-    { "id": 7, "name": "戴繼宗院長", "title": "中華福音神學院" },
-    { "id": 8, "name": "呂詰誠", "title": "Taiwan Bank" },
-    { "id": 9, "name": "Martin", "title": "烏干達 國會" },
-    { "id": 10, "name": "崔勝洪牧師", "title": "西雅圖證道堂" },
-    { "id": 11, "name": "姜文琪", "title": "從懷疑到相信" },
-    { "id": 12, "name": "伊藤嘉子牧師", "title": "白之家團契教會" }
+    {
+      "id": 1,
+      "name": "林本堅 博士",
+      "title": "台積電（TSMC）前研發副總經理、清華大學半導體學院院長",
+      "img": "/Presidium/林本堅.png",
+      "bio": ""
+    },
+    {
+      "id": 2,
+      "name": "Rev. Mike Constantz",
+      "title": "Saddleback Church",
+      "img": "/Presidium/MIKE.png",
+      "bio": ""
+    },
+    {
+      "id": 3,
+      "name": "Dr. Cary Summers",
+      "title": "CEO of Museum of the Bible",
+      "img": "/Presidium/Cary Summers.png",
+      "bio": ""
+    },
+    {
+      "id": 4,
+      "name": "Rev. Ryan Nunez",
+      "title": "Palm Valley Church",
+      "img": "/Presidium/Ryan Nunez.png",
+      "bio": ""
+    },
+    {
+      "id": 5,
+      "name": "Rev. John Heston",
+      "title": "First Baptist Church Tempe",
+      "img": "/Presidium/John Heston.png",
+      "bio": ""
+    },
+    {
+      "id": 6,
+      "name": "洪善群 博士",
+      "title": "ORTV & IAA 董事長",
+      "img": "/Presidium/洪善群.png",
+      "bio": ""
+    },
+    {
+      "id": 7,
+      "name": "Martin",
+      "title": "烏干達國會議員",
+      "img": "/Presidium/Martin.png",
+      "bio": ""
+    },
+    {
+      "id": 8,
+      "name": "戴繼宗 院長",
+      "title": "中華福音神學院",
+      "img": "/Presidium/戴繼宗.png",
+      "bio": ""
+    },
+    {
+      "id": 9,
+      "name": "崔勝洪 牧師",
+      "title": "西雅圖證道堂",
+      "img": "/Presidium/崔勝洪.png",
+      "bio": ""
+    },
+    {
+      "id": 10,
+      "name": "呂詰誠 董事長",
+      "title": "台灣銀行前董事長、中華民國國際經濟合作協會理事長",
+      "img": "/Presidium/呂桔誠.png",
+      "bio": ""
+    },
+    {
+      "id": 11,
+      "name": "姜文琪",
+      "title": "從懷疑到相信 創辦人",
+      "img": "/Presidium/姜文琪.png",
+      "bio": ""
+    },
+    {
+      "id": 12,
+      "name": "伊藤嘉子 牧師",
+      "title": "白之家團契教會",
+      "img": "/Presidium/伊藤嘉子.png",
+      "bio": ""
+    },
+    {
+      "id": 13,
+      "name": "鄭忠信 博士",
+      "title": "IAA 國際執行長",
+      "img": "/Presidium/鄭忠信.png",
+      "bio": ""
+    }
   ]
 }

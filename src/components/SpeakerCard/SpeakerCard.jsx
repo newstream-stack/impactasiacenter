@@ -6,9 +6,9 @@ function getInitials(name) {
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
 }
 
-export default function SpeakerCard({ name, title, img }) {
+export default function SpeakerCard({ name, title, img, onClick }) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={onClick} style={{ cursor: onClick ? 'pointer' : 'default' }}>
       {img ? (
         <div className={styles.img} style={{ backgroundImage: `url('${img}')` }} />
       ) : (

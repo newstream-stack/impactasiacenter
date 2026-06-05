@@ -3,17 +3,96 @@
     "title": "Keynote Speakers"
   },
   "speakers": [
-    { "id": 1, "name": "Rev. Mike Constantz", "title": "Saddleback Church" },
-    { "id": 2, "name": "Rev. John Heston", "title": "First Baptist Church Tempe" },
-    { "id": 3, "name": "Rev. Ryan Nunez", "title": "Palm Valley Church" },
-    { "id": 4, "name": "Dr. Cary Summers", "title": "G&M Global Co-President" },
-    { "id": 5, "name": "Hong Shan-Chun", "title": "ORTV & IAA Chairman" },
-    { "id": 6, "name": "Lin Ben-Jian", "title": "TSMC" },
-    { "id": 7, "name": "Dean Dai Ji-Tzong", "title": "China Evangelical Seminary" },
-    { "id": 8, "name": "Lü Jie-Cheng", "title": "Taiwan Bank" },
-    { "id": 9, "name": "Martin", "title": "Parliament of Uganda" },
-    { "id": 10, "name": "Rev. Choi Seung-Hong", "title": "Seattle Witness Church" },
-    { "id": 11, "name": "Jiang Wen-Qi", "title": "From Doubt to Belief" },
-    { "id": 12, "name": "Pastor Yoshiko Ito", "title": "White House Fellowship Church" }
+    {
+      "id": 1,
+      "name": "Dr. Lin Ben-Jian",
+      "title": "Former EVP R&D at TSMC, Dean of NTHU Semiconductor Research Institute",
+      "img": "/Presidium/林本堅.png",
+      "bio": ""
+    },
+    {
+      "id": 2,
+      "name": "Rev. Mike Constantz",
+      "title": "Saddleback Church",
+      "img": "/Presidium/MIKE.png",
+      "bio": ""
+    },
+    {
+      "id": 3,
+      "name": "Dr. Cary Summers",
+      "title": "CEO of Museum of the Bible",
+      "img": "/Presidium/Cary Summers.png",
+      "bio": ""
+    },
+    {
+      "id": 4,
+      "name": "Rev. Ryan Nunez",
+      "title": "Palm Valley Church",
+      "img": "/Presidium/Ryan Nunez.png",
+      "bio": ""
+    },
+    {
+      "id": 5,
+      "name": "Rev. John Heston",
+      "title": "First Baptist Church Tempe",
+      "img": "/Presidium/John Heston.png",
+      "bio": ""
+    },
+    {
+      "id": 6,
+      "name": "Dr. Hong Shan-Chun",
+      "title": "ORTV & IAA Chairman",
+      "img": "/Presidium/洪善群.png",
+      "bio": ""
+    },
+    {
+      "id": 7,
+      "name": "Martin",
+      "title": "Member of Parliament, Uganda",
+      "img": "/Presidium/Martin.png",
+      "bio": ""
+    },
+    {
+      "id": 8,
+      "name": "Dean Dai Ji-Tzong",
+      "title": "China Evangelical Seminary",
+      "img": "/Presidium/戴繼宗.png",
+      "bio": ""
+    },
+    {
+      "id": 9,
+      "name": "Rev. Choi Seung-Hong",
+      "title": "Seattle Witness Church",
+      "img": "/Presidium/崔勝洪.png",
+      "bio": ""
+    },
+    {
+      "id": 10,
+      "name": "Lü Jie-Cheng",
+      "title": "Former Chairman of Bank of Taiwan, Chairman of CIECA",
+      "img": "/Presidium/呂桔誠.png",
+      "bio": ""
+    },
+    {
+      "id": 11,
+      "name": "Jiang Wen-Qi",
+      "title": "Founder of From Doubt to Belief",
+      "img": "/Presidium/姜文琪.png",
+      "bio": ""
+    },
+    {
+      "id": 12,
+      "name": "Pastor Yoshiko Ito",
+      "title": "White House Fellowship Church",
+      "img": "/Presidium/伊藤嘉子.png",
+      "bio": ""
+    },
+    {
+      "id": 13,
+      "name": "Dr. Cheng Chung-Hsin",
+      "title": "IAA International Executive Director",
+      "img": "/Presidium/鄭忠信.png",
+      "bio": ""
+    }
   ]
 }

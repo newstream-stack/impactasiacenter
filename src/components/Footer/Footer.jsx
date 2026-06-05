@@ -16,6 +16,7 @@ export default function Footer() {
     { href: '#iaa-intro', label: t('navIAAIntro') },
     { href: '#phoenix', label: t('navPhoenix') },
     { href: '#presidium', label: t('navPresidium') },
+    { href: '#speakers', label: t('navSpeakers') },
     { href: '#themes', label: t('navThemes') },
     { href: '#venue', label: t('navVenue') },
     { href: '#faq', label: t('navFaq') },

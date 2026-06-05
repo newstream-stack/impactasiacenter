@@ -28,27 +28,24 @@ function SpeakerModal({ speaker, onClose }) {
         <button className={styles.modalClose} onClick={onClose} aria-label="關閉">✕</button>
 
         {speaker.img ? (
-          <div className={styles.modalPhotoStrip}>
+          <div className={styles.modalAvatarWrap}>
             <img
               src={`${speaker.img}?v=2`}
               alt={speaker.name}
-              className={styles.modalPhoto}
+              className={styles.modalAvatar}
             />
-            <div className={styles.modalPhotoGradient} />
           </div>
         ) : (
           <div className={styles.modalInitials}>{getInitials(speaker.name)}</div>
         )}
 
-        <div className={styles.modalContent}>
-          <h3 className={styles.modalName}>{speaker.name}</h3>
-          <p className={styles.modalTitle}>{speaker.title}</p>
-          {(speaker.bio) && <div className={styles.modalDivider} />}
-          {speaker.bio
-            ? <p className={styles.modalBio}>{speaker.bio}</p>
-            : <p className={styles.modalBioPlaceholder}>介紹即將更新</p>
-          }
-        </div>
+        <h3 className={styles.modalName}>{speaker.name}</h3>
+        <p className={styles.modalTitle}>{speaker.title}</p>
+        {speaker.bio && <div className={styles.modalDivider} />}
+        {speaker.bio
+          ? <p className={styles.modalBio}>{speaker.bio}</p>
+          : <p className={styles.modalBioPlaceholder}>介紹即將更新</p>
+        }
       </div>
     </div>,
     document.body

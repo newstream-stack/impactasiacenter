@@ -8,18 +8,25 @@ function getInitials(name) {
 
 export default function SpeakerCard({ name, title, img, onClick }) {
   return (
-    <div className={styles.card} onClick={onClick} style={{ cursor: onClick ? 'pointer' : 'default' }}>
-      {img ? (
-        <div className={styles.img} style={{ backgroundImage: `url('${img}')` }} />
-      ) : (
-        <div className={styles.avatar}>
-          <span className={styles.initials}>{getInitials(name)}</span>
-        </div>
-      )}
+    <article className={styles.card} onClick={onClick}>
+      <div className={styles.photoWrap}>
+        {img ? (
+          <img
+            src={`${img}?v=2`}
+            alt={name}
+            className={styles.photo}
+            loading="lazy"
+          />
+        ) : (
+          <div className={styles.initials}>{getInitials(name)}</div>
+        )}
+        <div className={styles.overlay} />
+        <div className={styles.hoverBadge}>查看介紹</div>
+      </div>
       <div className={styles.info}>
         <h4 className={styles.name}>{name}</h4>
         <p className={styles.title}>{title}</p>
       </div>
-    </div>
+    </article>
   )
 }

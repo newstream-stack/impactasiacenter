@@ -1,27 +1,54 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import SpeakerCard from '../SpeakerCard/SpeakerCard'
 import { useI18n } from '../../i18n/I18nContext'
 import SectionHeader from '../SectionHeader/SectionHeader'
 import styles from './Speakers.module.css'
 
+function getInitials(name) {
+  const parts = name.trim().split(/\s+/)
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase()
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+}
+
 function SpeakerModal({ speaker, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
   return createPortal(
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalBox} onClick={e => e.stopPropagation()}>
-        <button className={styles.modalClose} onClick={onClose}>✕</button>
-        {speaker.img && (
-          <div className={styles.modalAvatarWrap}>
-            <img src={speaker.img} alt={speaker.name} className={styles.modalAvatar} />
+        <button className={styles.modalClose} onClick={onClose} aria-label="關閉">✕</button>
+
+        {speaker.img ? (
+          <div className={styles.modalPhotoStrip}>
+            <img
+              src={`${speaker.img}?v=2`}
+              alt={speaker.name}
+              className={styles.modalPhoto}
+            />
+            <div className={styles.modalPhotoGradient} />
           </div>
-        )}
-        <h3 className={styles.modalName}>{speaker.name}</h3>
-        <p className={styles.modalTitle}>{speaker.title}</p>
-        {speaker.bio ? (
-          <p className={styles.modalBio}>{speaker.bio}</p>
         ) : (
-          <p className={styles.modalBioPlaceholder}>介紹即將更新</p>
+          <div className={styles.modalInitials}>{getInitials(speaker.name)}</div>
         )}
+
+        <div className={styles.modalContent}>
+          <h3 className={styles.modalName}>{speaker.name}</h3>
+          <p className={styles.modalTitle}>{speaker.title}</p>
+          {(speaker.bio) && <div className={styles.modalDivider} />}
+          {speaker.bio
+            ? <p className={styles.modalBio}>{speaker.bio}</p>
+            : <p className={styles.modalBioPlaceholder}>介紹即將更新</p>
+          }
+        </div>
       </div>
     </div>,
     document.body

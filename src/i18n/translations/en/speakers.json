@@ -20,7 +20,7 @@
     {
       "id": 3,
       "name": "Dr. Cary Summers",
-      "title": "CEO of Museum of the Bible",
+      "title": "President Emeritus of Museum of the Bible, Inc. / Global Co-President of The Grace and Mercy Foundation",
       "img": "/Presidium/Cary Summers.png",
       "bio": ""
     },
@@ -75,20 +75,34 @@
     },
     {
       "id": 11,
+      "name": "Ryan Kim",
+      "title": "President, G&M Asia and Japan",
+      "img": "/Presidium/Ryan kim.png",
+      "bio": ""
+    },
+    {
+      "id": 12,
+      "name": "Rev. Stephen Lee",
+      "title": "Saddleback Church Hong Kong",
+      "img": "/Presidium/李志剛.png",
+      "bio": ""
+    },
+    {
+      "id": 13,
       "name": "Jiang Wen-Qi",
       "title": "Founder of From Doubt to Belief",
       "img": "/Presidium/姜文琪.png",
       "bio": ""
     },
     {
-      "id": 12,
+      "id": 14,
       "name": "Pastor Yoshiko Ito",
       "title": "White House Fellowship Church",
       "img": "/Presidium/伊藤嘉子.png",
       "bio": ""
     },
     {
-      "id": 13,
+      "id": 15,
       "name": "Dr. Cheng Chung-Hsin",
       "title": "IAA International Executive Director",
       "img": "/Presidium/鄭忠信.png",

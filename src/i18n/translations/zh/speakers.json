@@ -20,7 +20,7 @@
     {
       "id": 3,
       "name": "Dr. Cary Summers",
-      "title": "CEO of Museum of the Bible",
+      "title": "President Emeritus of Museum of the Bible, Inc. / Global Co-President of The Grace and Mercy Foundation",
       "img": "/Presidium/Cary Summers.png",
       "bio": ""
     },
@@ -75,20 +75,34 @@
     },
     {
       "id": 11,
+      "name": "Ryan Kim 理事長",
+      "title": "G&M Asia and Japan",
+      "img": "/Presidium/Ryan kim.png",
+      "bio": ""
+    },
+    {
+      "id": 12,
+      "name": "李志剛 牧師",
+      "title": "馬鞍峰香港教會 主任牧師",
+      "img": "/Presidium/李志剛.png",
+      "bio": ""
+    },
+    {
+      "id": 13,
       "name": "姜文琪",
       "title": "從懷疑到相信 創辦人",
       "img": "/Presidium/姜文琪.png",
       "bio": ""
     },
     {
-      "id": 12,
+      "id": 14,
       "name": "伊藤嘉子 牧師",
       "title": "白之家團契教會",
       "img": "/Presidium/伊藤嘉子.png",
       "bio": ""
     },
     {
-      "id": 13,
+      "id": 15,
       "name": "鄭忠信 博士",
       "title": "IAA 國際執行長",
       "img": "/Presidium/鄭忠信.png",

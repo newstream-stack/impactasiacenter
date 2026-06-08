@@ -157,46 +157,17 @@ export default function Venue() {
             </div>
           </div>
 
-          <div className={styles.hotelsLayout}>
-            <div className={styles.hotelsMapContainer}>
-              <iframe
-                src="https://maps.google.com/maps?q=hotels+near+4525+S+McClintock+Dr,+Tempe,+AZ+85282&output=embed&z=13"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Hotels near First Baptist Church Tempe"
-              ></iframe>
-            </div>
-
-            <div className={styles.hotelsList}>
-              {(venue.hotels || []).map((hotel, i) => (
-                <a
-                  key={i}
-                  href={hotel.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.hotelCard}
-                >
-                  <div className={styles.hotelCardLeft}>
-                    <div className={styles.hotelNumber}>{i + 1}</div>
-                  </div>
-                  <div className={styles.hotelCardBody}>
-                    <div className={styles.hotelName}>{hotel.name}</div>
-                    <div className={styles.hotelAddress}>
-                      <span className={styles.hotelPin}><PinIcon /></span>
-                      {hotel.address}
-                    </div>
-                  </div>
-                  <div className={styles.hotelCardRight}>
-                    <span className={styles.hotelDistance}>{hotel.distance}</span>
-                    <span className={styles.hotelLink}><ExternalLinkIcon /></span>
-                  </div>
-                </a>
-              ))}
-            </div>
+          <div className={styles.hotelsMapContainer}>
+            <iframe
+              src="https://maps.google.com/maps?q=hotels+near+4525+S+McClintock+Dr,+Tempe,+AZ+85282&output=embed&z=13"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Hotels near First Baptist Church Tempe"
+            ></iframe>
           </div>
         </div>
       </div>

@@ -40,65 +40,65 @@
     },
     {
       "id": 6,
-      "name": "洪善群 博士",
-      "title": "ORTV & IAA 董事長",
-      "img": "/Presidium/洪善群.png",
-      "bio": ""
-    },
-    {
-      "id": 7,
       "name": "Martin",
       "title": "烏干達國會議員",
       "img": "/Presidium/Martin.png",
       "bio": ""
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "戴繼宗 院長",
       "title": "中華福音神學院",
       "img": "/Presidium/戴繼宗.png",
       "bio": ""
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "崔勝洪 牧師",
       "title": "西雅圖證道堂",
       "img": "/Presidium/崔勝洪.png",
       "bio": ""
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "呂桔誠 董事長",
       "title": "台灣銀行前董事長、中華民國國際經濟合作協會理事長",
       "img": "/Presidium/呂桔誠.png",
       "bio": ""
     },
     {
-      "id": 11,
+      "id": 10,
       "name": "Ryan Kim 理事長",
       "title": "G&M Asia and Japan",
       "img": "/Presidium/Ryan kim.png",
       "bio": ""
     },
     {
-      "id": 12,
+      "id": 11,
       "name": "李志剛 牧師",
       "title": "馬鞍峰香港教會 主任牧師",
       "img": "/Presidium/李志剛.png",
       "bio": ""
     },
     {
-      "id": 13,
+      "id": 12,
       "name": "姜文琪",
       "title": "從懷疑到相信 創辦人",
       "img": "/Presidium/姜文琪.png",
       "bio": ""
     },
     {
-      "id": 14,
+      "id": 13,
       "name": "伊藤嘉子 牧師",
       "title": "白之家團契教會",
       "img": "/Presidium/伊藤嘉子.png",
+      "bio": ""
+    },
+    {
+      "id": 14,
+      "name": "洪善群 博士",
+      "title": "ORTV & IAA 董事長",
+      "img": "/Presidium/洪善群.png",
       "bio": ""
     },
     {

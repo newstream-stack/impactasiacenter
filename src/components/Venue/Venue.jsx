@@ -23,6 +23,21 @@ const PinIcon = () => (
   </svg>
 )
 
+const HotelIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+    <polyline points="9 22 9 12 15 12 15 22" />
+  </svg>
+)
+
+const ExternalLinkIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+)
+
 const CalIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="4" width="18" height="18" rx="2" />
@@ -131,6 +146,58 @@ export default function Venue() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Google Map of First Baptist Church Tempe"
           ></iframe>
+        </div>
+
+        <div className={styles.hotelsSection}>
+          <div className={styles.hotelsSectionHeader}>
+            <span className={styles.hotelsIcon}><HotelIcon /></span>
+            <div>
+              <h3 className={styles.hotelsTitle}>{venue.hotelsTitle}</h3>
+              <p className={styles.hotelsSubtitle}>{venue.hotelsSubtitle}</p>
+            </div>
+          </div>
+
+          <div className={styles.hotelsLayout}>
+            <div className={styles.hotelsMapContainer}>
+              <iframe
+                src="https://maps.google.com/maps?q=hotels+near+4525+S+McClintock+Dr,+Tempe,+AZ+85282&output=embed&z=13"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Hotels near First Baptist Church Tempe"
+              ></iframe>
+            </div>
+
+            <div className={styles.hotelsList}>
+              {(venue.hotels || []).map((hotel, i) => (
+                <a
+                  key={i}
+                  href={hotel.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.hotelCard}
+                >
+                  <div className={styles.hotelCardLeft}>
+                    <div className={styles.hotelNumber}>{i + 1}</div>
+                  </div>
+                  <div className={styles.hotelCardBody}>
+                    <div className={styles.hotelName}>{hotel.name}</div>
+                    <div className={styles.hotelAddress}>
+                      <span className={styles.hotelPin}><PinIcon /></span>
+                      {hotel.address}
+                    </div>
+                  </div>
+                  <div className={styles.hotelCardRight}>
+                    <span className={styles.hotelDistance}>{hotel.distance}</span>
+                    <span className={styles.hotelLink}><ExternalLinkIcon /></span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

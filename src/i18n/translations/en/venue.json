@@ -4,6 +4,46 @@
     "name": "First Baptist Church Tempe",
     "heading": "Luxurious Tranquility in the Wilderness",
     "desc": "Come to Phoenix in 2026 to witness the union of North American and Asia-Pacific churches. We invite you to join us to see God's wondrous work of making streams in the desert and paths in the wilderness!",
-    "date": "October 20-23, 2026"
+    "date": "October 20-23, 2026",
+    "hotelsTitle": "Nearby Hotels",
+    "hotelsSubtitle": "Recommended accommodations within minutes of the venue",
+    "hotels": [
+      {
+        "name": "Marriott Tempe at The Buttes",
+        "distance": "~2 miles",
+        "address": "2000 Westcourt Way, Tempe, AZ 85282",
+        "mapUrl": "https://maps.google.com/?q=Marriott+Tempe+at+The+Buttes,+2000+Westcourt+Way,+Tempe,+AZ+85282"
+      },
+      {
+        "name": "Hyatt Place Phoenix/Tempe/Downtown",
+        "distance": "~4 miles",
+        "address": "408 N Scottsdale Rd, Tempe, AZ 85281",
+        "mapUrl": "https://maps.google.com/?q=Hyatt+Place+Phoenix+Tempe+Downtown,+408+N+Scottsdale+Rd,+Tempe,+AZ+85281"
+      },
+      {
+        "name": "DoubleTree by Hilton Phoenix Tempe",
+        "distance": "~4 miles",
+        "address": "2100 S Priest Dr, Tempe, AZ 85282",
+        "mapUrl": "https://maps.google.com/?q=DoubleTree+by+Hilton+Phoenix+Tempe,+2100+S+Priest+Dr,+Tempe,+AZ+85282"
+      },
+      {
+        "name": "Residence Inn Phoenix Tempe",
+        "distance": "~4 miles",
+        "address": "5075 S Priest Dr, Tempe, AZ 85282",
+        "mapUrl": "https://maps.google.com/?q=Residence+Inn+Phoenix+Tempe,+5075+S+Priest+Dr,+Tempe,+AZ+85282"
+      },
+      {
+        "name": "Hampton Inn & Suites Phoenix/Tempe",
+        "distance": "~5 miles",
+        "address": "1429 N Scottsdale Rd, Tempe, AZ 85281",
+        "mapUrl": "https://maps.google.com/?q=Hampton+Inn+Suites+Phoenix+Tempe,+1429+N+Scottsdale+Rd,+Tempe,+AZ+85281"
+      },
+      {
+        "name": "Graduate Tempe",
+        "distance": "~5 miles",
+        "address": "225 E Apache Blvd, Tempe, AZ 85281",
+        "mapUrl": "https://maps.google.com/?q=Graduate+Tempe,+225+E+Apache+Blvd,+Tempe,+AZ+85281"
+      }
+    ]
   }
 }

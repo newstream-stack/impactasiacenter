@@ -50,7 +50,7 @@ export default function ChatBot({ onActionClick }) {
 
   const QUICK_ACTIONS = isEn 
     ? [ { label: '📅 Schedule', q: 'What is the schedule?' }, { label: '🎤 Speakers', q: 'Who are the speakers?' }, { label: '📍 Location', q: 'Where is it?' }, { label: '📝 Register', q: 'How to register?' } ]
-    : [ { label: '📅 年會時間表', q: '這次年會的議程是什麼？' }, { label: '🎤 講員名單', q: '有哪些講員會出席？' }, { label: '📍 舉辦地點', q: '年會在美國哪裡舉辦？' }, { label: '📝 如何報名', q: '如何報名年會？' } ];
+    : [ { label: '📅 高峰會時間表', q: '這次高峰會的議程是什麼？' }, { label: '🎤 講員名單', q: '有哪些講員會出席？' }, { label: '📍 舉辦地點', q: '高峰會在美國哪裡舉辦？' }, { label: '📝 如何報名', q: '如何報名高峰會？' } ];
 
   useEffect(() => {
     const timer = setTimeout(() => {

@@ -19,90 +19,97 @@
     },
     {
       "id": 3,
-      "name": "Dr. Cary Summers",
-      "title": "President Emeritus of Museum of the Bible, Inc.\nGlobal Co-President of The G&M.",
-      "img": "/Presidium/Cary Summers.png",
-      "bio": ""
-    },
-    {
-      "id": 4,
-      "name": "Rev. Ryan Nunez",
-      "title": "Palm Valley Church",
-      "img": "/Presidium/Ryan Nunez.png",
-      "bio": ""
-    },
-    {
-      "id": 5,
-      "name": "Rev. John Heston",
-      "title": "First Baptist Church Tempe",
-      "img": "/Presidium/John Heston.png",
-      "bio": ""
-    },
-    {
-      "id": 6,
-      "name": "Martin",
-      "title": "Member of Parliament, Uganda",
-      "img": "/Presidium/Martin.png",
-      "bio": ""
-    },
-    {
-      "id": 7,
       "name": "Dean Dai Ji-Tzong",
       "title": "China Evangelical Seminary",
       "img": "/Presidium/戴繼宗.png",
       "bio": ""
     },
     {
-      "id": 8,
-      "name": "Rev. Choi Seung-Hong",
-      "title": "Seattle Witness Church",
-      "img": "/Presidium/崔勝洪.png",
-      "bio": ""
-    },
-    {
-      "id": 9,
+      "id": 4,
       "name": "Lü Jü-Cheng",
       "title": "Former Chairman of Bank of Taiwan, Chairman of CIECA",
       "img": "/Presidium/呂桔誠.png",
       "bio": ""
     },
     {
-      "id": 10,
+      "id": 5,
+      "name": "Dr. Cary Summers",
+      "title": "President Emeritus of Museum of the Bible, Inc.\nGlobal Co-President of The G&M.",
+      "img": "/Presidium/Cary Summers.png",
+      "bio": ""
+    },
+    {
+      "id": 6,
+      "name": "Rev. Ryan Nunez",
+      "title": "Palm Valley Church",
+      "img": "/Presidium/Ryan Nunez.png",
+      "bio": ""
+    },
+    {
+      "id": 7,
+      "name": "Rev. John Heston",
+      "title": "First Baptist Church Tempe",
+      "img": "/Presidium/John Heston.png",
+      "bio": ""
+    },
+    {
+      "id": 8,
+      "name": "Martin",
+      "title": "Member of Parliament, Uganda",
+      "img": "/Presidium/Martin.png",
+      "bio": ""
+    },
+    {
+      "id": 9,
       "name": "Ryan Kim",
       "title": "President, G&M Asia and Japan",
       "img": "/Presidium/Ryan kim.png",
       "bio": ""
     },
     {
+      "id": 10,
+      "name": "Rev. Choi Seung-Hong",
+      "title": "Seattle Witness Church",
+      "img": "/Presidium/崔勝洪.png",
+      "bio": ""
+    },
+    {
       "id": 11,
+      "name": "Jensen Ko",
+      "title": "G&M of Global Co-President",
+      "img": "/Presidium/Jensen Ko.png",
+      "bio": ""
+    },
+    {
+      "id": 12,
       "name": "Rev. Stephen Lee",
       "title": "Saddleback Church Hong Kong",
       "img": "/Presidium/李志剛.png",
       "bio": ""
     },
     {
-      "id": 12,
+      "id": 13,
       "name": "Jiang Wen-Qi",
       "title": "Founder of From Doubt to Belief",
       "img": "/Presidium/姜文琪.png",
       "bio": ""
     },
     {
-      "id": 13,
+      "id": 14,
       "name": "Pastor Yoshiko Ito",
       "title": "White House Fellowship Church",
       "img": "/Presidium/伊藤嘉子.png",
       "bio": ""
     },
     {
-      "id": 14,
+      "id": 15,
       "name": "Dr. Hong Shan-Chun",
       "title": "ORTV & IAA Chairman",
       "img": "/Presidium/洪善群.png",
       "bio": ""
     },
     {
-      "id": 15,
+      "id": 16,
       "name": "Dr. Cheng Chung-Hsin",
       "title": "IAA International Executive Director",
       "img": "/Presidium/鄭忠信.png",

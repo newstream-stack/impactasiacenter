@@ -157,17 +157,26 @@ export default function Venue() {
             </div>
           </div>
 
-          <div className={styles.hotelsMapContainer}>
-            <iframe
-              src="https://maps.google.com/maps?q=hotels+near+4525+S+McClintock+Dr,+Tempe,+AZ+85282&output=embed&z=13"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Hotels near First Baptist Church Tempe"
-            ></iframe>
+          <div className={styles.hotelsTable}>
+            <div className={styles.hotelsTableHead}>
+              <span>{venue.hotelsColName}</span>
+              <span>{venue.hotelsColAddress}</span>
+              <span>{venue.hotelsColDrive}</span>
+            </div>
+            {venue.hotels.map((hotel, i) => (
+              <a
+                key={i}
+                href={hotel.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.hotelsTableRow}
+              >
+                <span className={styles.hotelName}>{hotel.name}</span>
+                <span className={styles.hotelAddress}>{hotel.address}</span>
+                <span className={styles.hotelDrive}>{hotel.driveTime}</span>
+                <span className={styles.hotelLink}><ExternalLinkIcon /></span>
+              </a>
+            ))}
           </div>
         </div>
       </div>

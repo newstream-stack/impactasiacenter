@@ -7,42 +7,39 @@
     "date": "2026 年 10 月 20-23 日",
     "hotelsTitle": "附近飯店",
     "hotelsSubtitle": "距離會場數分鐘車程的推薦住宿",
+    "hotelsColName": "飯店",
+    "hotelsColAddress": "地址",
+    "hotelsColDrive": "到會場車程",
     "hotels": [
       {
-        "name": "Marriott Tempe at The Buttes",
-        "distance": "約 2 英里",
-        "address": "2000 Westcourt Way, Tempe, AZ 85282",
-        "mapUrl": "https://maps.google.com/?q=Marriott+Tempe+at+The+Buttes,+2000+Westcourt+Way,+Tempe,+AZ+85282"
+        "name": "Embassy Suites by Hilton Phoenix Tempe",
+        "driveTime": "約 3–5 分鐘",
+        "address": "4400 S Rural Rd, Tempe, AZ 85282",
+        "mapUrl": "https://maps.google.com/?q=Embassy+Suites+by+Hilton+Phoenix+Tempe,+4400+S+Rural+Rd,+Tempe,+AZ+85282"
       },
       {
-        "name": "Hyatt Place Phoenix/Tempe/Downtown",
-        "distance": "約 4 英里",
-        "address": "408 N Scottsdale Rd, Tempe, AZ 85281",
-        "mapUrl": "https://maps.google.com/?q=Hyatt+Place+Phoenix+Tempe+Downtown,+408+N+Scottsdale+Rd,+Tempe,+AZ+85281"
+        "name": "Hilton Garden Inn Phoenix Tempe, University Research Park",
+        "driveTime": "約 8–10 分鐘",
+        "address": "7290 Price Rd, Tempe, AZ 85283",
+        "mapUrl": "https://maps.google.com/?q=Hilton+Garden+Inn+Phoenix+Tempe+University+Research+Park,+7290+Price+Rd,+Tempe,+AZ+85283"
       },
       {
-        "name": "DoubleTree by Hilton Phoenix Tempe",
-        "distance": "約 4 英里",
-        "address": "2100 S Priest Dr, Tempe, AZ 85282",
-        "mapUrl": "https://maps.google.com/?q=DoubleTree+by+Hilton+Phoenix+Tempe,+2100+S+Priest+Dr,+Tempe,+AZ+85282"
+        "name": "Holiday Inn Express & Suites Tempe by IHG",
+        "driveTime": "約 10–12 分鐘",
+        "address": "1520 W Baseline Rd, Tempe, AZ 85283",
+        "mapUrl": "https://maps.google.com/?q=Holiday+Inn+Express+Suites+Tempe,+1520+W+Baseline+Rd,+Tempe,+AZ+85283"
       },
       {
-        "name": "Residence Inn Phoenix Tempe",
-        "distance": "約 4 英里",
-        "address": "5075 S Priest Dr, Tempe, AZ 85282",
-        "mapUrl": "https://maps.google.com/?q=Residence+Inn+Phoenix+Tempe,+5075+S+Priest+Dr,+Tempe,+AZ+85282"
+        "name": "Moxy Phoenix Tempe/ASU Area",
+        "driveTime": "約 10–12 分鐘",
+        "address": "1333 S Rural Rd, Tempe, AZ 85281",
+        "mapUrl": "https://maps.google.com/?q=Moxy+Phoenix+Tempe+ASU+Area,+1333+S+Rural+Rd,+Tempe,+AZ+85281"
       },
       {
-        "name": "Hampton Inn & Suites Phoenix/Tempe",
-        "distance": "約 5 英里",
-        "address": "1429 N Scottsdale Rd, Tempe, AZ 85281",
-        "mapUrl": "https://maps.google.com/?q=Hampton+Inn+Suites+Phoenix+Tempe,+1429+N+Scottsdale+Rd,+Tempe,+AZ+85281"
-      },
-      {
-        "name": "Graduate Tempe",
-        "distance": "約 5 英里",
-        "address": "225 E Apache Blvd, Tempe, AZ 85281",
-        "mapUrl": "https://maps.google.com/?q=Graduate+Tempe,+225+E+Apache+Blvd,+Tempe,+AZ+85281"
+        "name": "Hyatt Place Tempe / Phoenix / University",
+        "driveTime": "約 12–15 分鐘",
+        "address": "601 E 6th St, Tempe, AZ 85281",
+        "mapUrl": "https://maps.google.com/?q=Hyatt+Place+Tempe+Phoenix+University,+601+E+6th+St,+Tempe,+AZ+85281"
       }
     ]
   }

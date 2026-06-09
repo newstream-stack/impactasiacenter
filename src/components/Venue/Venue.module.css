@@ -284,21 +284,80 @@
   margin: 0;
 }
 
-.hotelsMapContainer {
-  border-radius: 20px;
-  overflow: hidden;
+.hotelsTable {
   border: 1px solid rgba(255, 255, 255, 0.07);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-  line-height: 0;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.hotelsMapContainer iframe {
-  filter: grayscale(0.6) invert(0.9) contrast(1.1);
-  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+.hotelsTableHead {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.2fr;
+  padding: 0.85rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
 }
 
-.hotelsMapContainer:hover iframe {
-  filter: grayscale(0) invert(0) contrast(1);
+.hotelsTableRow {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.2fr auto;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+  transition: background 0.2s ease;
+  gap: 1rem;
+}
+
+.hotelsTableRow:last-child {
+  border-bottom: none;
+}
+
+.hotelsTableRow:hover {
+  background: rgba(255, 94, 0, 0.05);
+}
+
+.hotelsTableRow:hover .hotelLink {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.hotelName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.35;
+}
+
+.hotelAddress {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.4;
+}
+
+.hotelDrive {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.hotelLink {
+  opacity: 0;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+.hotelLink svg {
+  width: 15px;
+  height: 15px;
 }
 
 @media (max-width: 900px) {
@@ -312,5 +371,37 @@
   .mapContainer { margin-top: 2.5rem; height: 280px; }
   .mapContainer iframe { height: 280px; }
   .hotelsSection { margin-top: 3rem; }
-  .hotelsMapContainer iframe { height: 280px; }
+
+  .hotelsTableHead {
+    display: none;
+  }
+
+  .hotelsTableRow {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    padding: 1rem 1.25rem;
+    gap: 0.25rem 0.75rem;
+  }
+
+  .hotelName {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hotelAddress {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .hotelDrive {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .hotelLink {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    opacity: 1;
+    align-self: center;
+  }
 }

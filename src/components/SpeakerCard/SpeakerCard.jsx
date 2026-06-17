@@ -12,7 +12,7 @@ export default function SpeakerCard({ name, title, img, onClick }) {
       <div className={styles.photoWrap}>
         {img ? (
           <img
-            src={`${img}?v=2`}
+            src={`${img}?v=3`}
             alt={name}
             className={styles.photo}
             loading="lazy"

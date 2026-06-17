@@ -30,7 +30,7 @@ function SpeakerModal({ speaker, onClose }) {
         {speaker.img ? (
           <div className={styles.modalAvatarWrap}>
             <img
-              src={`${speaker.img}?v=2`}
+              src={`${speaker.img}?v=3`}
               alt={speaker.name}
               className={styles.modalAvatar}
             />

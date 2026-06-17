@@ -21,6 +21,7 @@
     "coChairsTitle": "共同主席 (Co-Chairs)",
     "coChairs": [
       {
+        "hidden": true,
         "name": "Rev. Mike Constantz",
         "title": "Saddleback Church",
         "image": "/Presidium/MIKE.png",

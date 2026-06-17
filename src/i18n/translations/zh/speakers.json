@@ -12,6 +12,7 @@
     },
     {
       "id": 2,
+      "hidden": true,
       "name": "Rev. Mike Constantz",
       "title": "Saddleback Church",
       "img": "/Presidium/MIKE.png",

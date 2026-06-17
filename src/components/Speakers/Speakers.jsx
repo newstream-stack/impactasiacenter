@@ -64,7 +64,7 @@ export default function Speakers() {
         <div className={styles.container}>
           <SectionHeader title={speakersSection?.title || '重磅講員'} />
           <div className={styles.grid}>
-            {speakers.map((s) => (
+            {speakers.filter(s => !s.hidden).map((s) => (
               <SpeakerCard
                 key={s.id}
                 {...s}

@@ -59,11 +59,11 @@ export default function Presidium() {
           <div className={styles.coChairsSection}>
             <h3 className={styles.coChairsTitle}>{data.coChairsTitle}</h3>
             <div className={styles.coChairsGrid}>
-              {data.coChairs.map((member, index) => (
+              {data.coChairs.filter(m => !m.hidden).map((member, index) => (
                 <div
                   key={index}
                   className={`${styles.coChairItem} ${member.bio ? styles.clickable : ''}`}
-                  onClick={() => member.bio && setActiveModal(index)}
+                  onClick={() => member.bio && setActiveModal(member)}
                 >
                   {member.image ? (
                     <div className={styles.coChairAvatarWrap}>
@@ -86,7 +86,7 @@ export default function Presidium() {
 
       {activeModal !== null && (
         <BioModal
-          member={data.coChairs[activeModal]}
+          member={activeModal}
           onClose={() => setActiveModal(null)}
         />
       )}

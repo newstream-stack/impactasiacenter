@@ -83,6 +83,7 @@
     },
     {
       "id": 12,
+      "hidden": true,
       "name": "李志剛 牧師",
       "title": "馬鞍峰香港教會 主任牧師",
       "img": "/Presidium/李志剛.png",

@@ -83,6 +83,7 @@
     },
     {
       "id": 12,
+      "hidden": true,
       "name": "Rev. Stephen Lee",
       "title": "Saddleback Church Hong Kong",
       "img": "/Presidium/李志剛.png",

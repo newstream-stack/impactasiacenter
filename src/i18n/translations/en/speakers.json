@@ -5,7 +5,7 @@
   "speakers": [
     {
       "id": 1,
-      "name": "Dr. Lin Ben-Jian",
+      "name": "Dr. Burn-Jeng Lin",
       "title": "Former EVP R&D at TSMC, Dean of NTHU Semiconductor Research Institute",
       "img": "/Presidium/林本堅.png",
       "bio": ""
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "name": "Dean Dai Ji-Tzong",
+      "name": "Dean Ji-Tzong Dai",
       "title": "China Evangelical Seminary",
       "img": "/Presidium/戴繼宗.png",
       "bio": ""
@@ -62,15 +62,15 @@
     },
     {
       "id": 8,
-      "name": "Martin",
+      "name": "Hon. Martin",
       "title": "Member of Parliament, Uganda",
       "img": "/Presidium/Martin.png",
       "bio": ""
     },
     {
       "id": 9,
-      "name": "Ryan Kim",
-      "title": "President, G&M Asia and Japan",
+      "name": "RYAN KIM",
+      "title": "President of G&M Asia and Japan",
       "img": "/Presidium/Ryan kim.png",
       "bio": ""
     },
@@ -98,14 +98,14 @@
     },
     {
       "id": 13,
-      "name": "Jiang Wen-Qi",
+      "name": "Wen-Qi Jiang",
       "title": "Founder of From Doubt to Belief",
       "img": "/Presidium/姜文琪.png",
       "bio": ""
     },
     {
       "id": 14,
-      "name": "Rev. Wataru Sugawara",
+      "name": "Rev. Wataru Sugahara",
       "title": "Kobe Christ Glory Church",
       "img": "/Presidium/菅原亘.png",
       "bio": ""
@@ -113,7 +113,7 @@
     {
       "id": 17,
       "name": "Rev. Lin Yi-Nuo",
-      "title": "Former Senior Pastor of Hope Baptist Church Hong Kong\nBoard Member of Leap Network · Evangelist",
+      "title": "Former Senior Pastor of Crossroad Community Baptist Church, HK",
       "img": "/Presidium/林以諾.png",
       "bio": ""
     },

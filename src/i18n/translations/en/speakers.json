@@ -11,14 +11,6 @@
       "bio": ""
     },
     {
-      "id": 2,
-      "hidden": true,
-      "name": "Rev. Mike Constantz",
-      "title": "Saddleback Church",
-      "img": "/Presidium/MIKE.png",
-      "bio": ""
-    },
-    {
       "id": 3,
       "name": "Dean Ji-Tzong Dai",
       "title": "China Evangelical Seminary",
@@ -26,17 +18,17 @@
       "bio": ""
     },
     {
-      "id": 4,
-      "name": "Joseph Lyu",
-      "title": "Former Chairman of Bank of Taiwan, Chairman of CIECA",
-      "img": "/Presidium/呂桔誠.png",
-      "bio": ""
-    },
-    {
       "id": 15,
       "name": "Dr. Simon Hung",
       "title": "ORTV & IAA Chairman",
       "img": "/Presidium/洪善群.png",
+      "bio": ""
+    },
+    {
+      "id": 4,
+      "name": "Joseph Lyu",
+      "title": "Former Chairman of Bank of Taiwan, Chairman of CIECA",
+      "img": "/Presidium/呂桔誠.png",
       "bio": ""
     },
     {
@@ -89,11 +81,10 @@
       "bio": ""
     },
     {
-      "id": 12,
-      "hidden": true,
-      "name": "Rev. Stephen Lee",
-      "title": "Saddleback Church Hong Kong",
-      "img": "/Presidium/李志剛.png",
+      "id": 14,
+      "name": "Rev. Wataru Sugahara",
+      "title": "Kobe Christ Glory Church",
+      "img": "/Presidium/菅原亘.png",
       "bio": ""
     },
     {
@@ -101,13 +92,6 @@
       "name": "Wen-Qi Jiang",
       "title": "Founder of From Doubt to Belief",
       "img": "/Presidium/姜文琪.png",
-      "bio": ""
-    },
-    {
-      "id": 14,
-      "name": "Rev. Wataru Sugahara",
-      "title": "Kobe Christ Glory Church",
-      "img": "/Presidium/菅原亘.png",
       "bio": ""
     },
     {
@@ -122,6 +106,22 @@
       "name": "Dr. Timothy Cheng",
       "title": "IAA International Executive Director",
       "img": "/Presidium/鄭忠信.png",
+      "bio": ""
+    },
+    {
+      "id": 2,
+      "hidden": true,
+      "name": "Rev. Mike Constantz",
+      "title": "Saddleback Church",
+      "img": "/Presidium/MIKE.png",
+      "bio": ""
+    },
+    {
+      "id": 12,
+      "hidden": true,
+      "name": "Rev. Stephen Lee",
+      "title": "Saddleback Church Hong Kong",
+      "img": "/Presidium/李志剛.png",
       "bio": ""
     }
   ]

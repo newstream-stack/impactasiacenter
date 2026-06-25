@@ -11,14 +11,6 @@
       "bio": ""
     },
     {
-      "id": 2,
-      "hidden": true,
-      "name": "Rev. Mike Constantz",
-      "title": "Saddleback Church",
-      "img": "/Presidium/MIKE.png",
-      "bio": ""
-    },
-    {
       "id": 3,
       "name": "戴繼宗 院長",
       "title": "中華福音神學院",
@@ -26,17 +18,17 @@
       "bio": ""
     },
     {
-      "id": 4,
-      "name": "呂桔誠 董事長",
-      "title": "台灣銀行前董事長、中華民國國際經濟合作協會理事長",
-      "img": "/Presidium/呂桔誠.png",
-      "bio": ""
-    },
-    {
       "id": 15,
       "name": "洪善群 博士",
       "title": "ORTV & IAA 董事長",
       "img": "/Presidium/洪善群.png",
+      "bio": ""
+    },
+    {
+      "id": 4,
+      "name": "呂桔誠 董事長",
+      "title": "台灣銀行前董事長、中華民國國際經濟合作協會理事長",
+      "img": "/Presidium/呂桔誠.png",
       "bio": ""
     },
     {
@@ -89,11 +81,10 @@
       "bio": ""
     },
     {
-      "id": 12,
-      "hidden": true,
-      "name": "李志剛 牧師",
-      "title": "馬鞍峰香港教會 主任牧師",
-      "img": "/Presidium/李志剛.png",
+      "id": 14,
+      "name": "菅原亘 牧師",
+      "title": "神戸キリスト栄光教会",
+      "img": "/Presidium/菅原亘.png",
       "bio": ""
     },
     {
@@ -101,13 +92,6 @@
       "name": "姜文琪 執行長",
       "title": "從懷疑到相信 創辦人",
       "img": "/Presidium/姜文琪.png",
-      "bio": ""
-    },
-    {
-      "id": 14,
-      "name": "菅原亘 牧師",
-      "title": "神戸キリスト栄光教会",
-      "img": "/Presidium/菅原亘.png",
       "bio": ""
     },
     {
@@ -122,6 +106,22 @@
       "name": "鄭忠信 博士",
       "title": "IAA 國際執行長",
       "img": "/Presidium/鄭忠信.png",
+      "bio": ""
+    },
+    {
+      "id": 2,
+      "hidden": true,
+      "name": "Rev. Mike Constantz",
+      "title": "Saddleback Church",
+      "img": "/Presidium/MIKE.png",
+      "bio": ""
+    },
+    {
+      "id": 12,
+      "hidden": true,
+      "name": "李志剛 牧師",
+      "title": "馬鞍峰香港教會 主任牧師",
+      "img": "/Presidium/李志剛.png",
       "bio": ""
     }
   ]

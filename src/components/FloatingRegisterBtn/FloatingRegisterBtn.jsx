@@ -10,7 +10,7 @@ export default function FloatingRegisterBtn() {
   return (
     <a
       href={language === 'en'
-        ? 'https://ct.org.tw/html/activity/6-3-eng.php?article=39&area=&id=&parentid='
+        ? 'https://forms.gle/Mppwe73YhZRsGDLUA'
         : 'https://ct.org.tw/html/activity/6-3.php?article=38&area=&id=&parentid='}
       target="_blank"
       rel="noopener noreferrer"

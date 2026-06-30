@@ -12,9 +12,9 @@
   "registrationUrl": "https://forms.gle/Mppwe73YhZRsGDLUA",
   "btnSupportOnline": "Support Us",
   "donationUrl": "https://ct.org.tw/html/dedication/8-2-2.php?article=117",
-  "countdownTarget": "2026-06-30T23:59:59",
+  "countdownTarget": "2026-07-12T23:59:59",
   "countdownLabel": "Early bird price ends on",
-  "countdownExpiry": "Early bird deadline: Jun 30",
+  "countdownExpiry": "Early bird deadline: Jul 12",
   "ariaBackToTop": "Back to top",
   "ariaClose": "Close",
   "ariaMenu": "Menu",
@@ -37,7 +37,7 @@
       "label": "Individual",
       "ntd": "NT$ 12,600",
       "usd": "approx. US$ 400",
-      "period": "Now until 2026 / 06 / 30"
+      "period": "Now until 2026 / 07 / 12"
     },
     {
       "tag": "Discounted Price",

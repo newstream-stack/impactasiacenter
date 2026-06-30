@@ -12,9 +12,9 @@
   "registrationUrl": "https://ct.org.tw/html/activity/6-3.php?article=38&area=&id=&parentid=",
   "btnSupportOnline": "奉獻",
   "donationUrl": "https://ct.org.tw/html/dedication/8-2-2.php?article=117",
-  "countdownTarget": "2026-06-30T23:59:59",
+  "countdownTarget": "2026-07-12T23:59:59",
   "countdownLabel": "早鳥價倒數",
-  "countdownExpiry": "早鳥到期時間：6/30",
+  "countdownExpiry": "早鳥到期時間：7/12",
   "ariaBackToTop": "回到頂端",
   "ariaClose": "關閉",
   "ariaMenu": "選單",
@@ -37,7 +37,7 @@
       "label": "個人報名",
       "ntd": "NT$ 12,600",
       "usd": "約 US$ 400",
-      "period": "即日起至 2026 / 06 / 30"
+      "period": "即日起至 2026 / 07 / 12"
     },
     {
       "tag": "優惠價",

@@ -38,7 +38,7 @@ const TIMELINE = [
 
 const REGISTRATION_URLS = {
   zh: "https://ct.org.tw/html/activity/6-3.php?article=38&area=&id=&parentid=",
-  en: "https://ct.org.tw/html/activity/6-3.php?article=39&area=&id=&parentid="
+  en: "https://ct.org.tw/html/activity/6-3-eng.php?article=39&area=&id=&parentid="
 };
 
 const LOCATION_INFO = {

@@ -10,12 +10,14 @@
     "hotelsColName": "Hotel",
     "hotelsColAddress": "Address",
     "hotelsColDrive": "Drive to Venue",
+    "hotelsRecommendedLabel": "Conference Pick",
     "hotels": [
       {
         "name": "Embassy Suites by Hilton Phoenix Tempe",
         "driveTime": "~3–5 min",
         "address": "4400 S Rural Rd, Tempe, AZ 85282",
-        "mapUrl": "https://maps.google.com/?q=Embassy+Suites+by+Hilton+Phoenix+Tempe,+4400+S+Rural+Rd,+Tempe,+AZ+85282"
+        "mapUrl": "https://maps.google.com/?q=Embassy+Suites+by+Hilton+Phoenix+Tempe,+4400+S+Rural+Rd,+Tempe,+AZ+85282",
+        "recommended": true
       },
       {
         "name": "Hilton Garden Inn Phoenix Tempe, University Research Park",

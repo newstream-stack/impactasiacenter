@@ -10,12 +10,14 @@
     "hotelsColName": "飯店",
     "hotelsColAddress": "地址",
     "hotelsColDrive": "到會場車程",
+    "hotelsRecommendedLabel": "大會推薦",
     "hotels": [
       {
         "name": "Embassy Suites by Hilton Phoenix Tempe",
         "driveTime": "約 3–5 分鐘",
         "address": "4400 S Rural Rd, Tempe, AZ 85282",
-        "mapUrl": "https://maps.google.com/?q=Embassy+Suites+by+Hilton+Phoenix+Tempe,+4400+S+Rural+Rd,+Tempe,+AZ+85282"
+        "mapUrl": "https://maps.google.com/?q=Embassy+Suites+by+Hilton+Phoenix+Tempe,+4400+S+Rural+Rd,+Tempe,+AZ+85282",
+        "recommended": true
       },
       {
         "name": "Hilton Garden Inn Phoenix Tempe, University Research Park",

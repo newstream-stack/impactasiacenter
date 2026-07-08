@@ -169,9 +169,14 @@ export default function Venue() {
                 href={hotel.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.hotelsTableRow}
+                className={`${styles.hotelsTableRow} ${hotel.recommended ? styles.hotelsTableRowRecommended : ''}`}
               >
-                <span className={styles.hotelName}>{hotel.name}</span>
+                <span className={styles.hotelName}>
+                  {hotel.name}
+                  {hotel.recommended && (
+                    <span className={styles.recommendedBadge}>{venue.hotelsRecommendedLabel}</span>
+                  )}
+                </span>
                 <span className={styles.hotelAddress}>{hotel.address}</span>
                 <span className={styles.hotelDrive}>{hotel.driveTime}</span>
                 <span className={styles.hotelLink}><ExternalLinkIcon /></span>

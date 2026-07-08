@@ -327,11 +327,46 @@
   color: var(--accent);
 }
 
+.hotelsTableRowRecommended {
+  background: rgba(255, 94, 0, 0.08);
+  position: relative;
+}
+
+.hotelsTableRowRecommended::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+}
+
+.hotelsTableRowRecommended:hover {
+  background: rgba(255, 94, 0, 0.13);
+}
+
 .hotelName {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.35;
+}
+
+.recommendedBadge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0a0a0a;
+  background: var(--accent);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .hotelAddress {

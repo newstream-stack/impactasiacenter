@@ -51,7 +51,7 @@ export default function Header() {
 
           <div className={styles.navActions}>
             <button onClick={toggleLanguage} className={styles.langToggle}>
-              {language === 'zh' ? 'EN' : '中文'}
+              {language === 'zh' ? t('languageEnglish') : t('languageChinese')}
             </button>
 
             <button className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={t('ariaMenu')}>

@@ -4,6 +4,13 @@
   },
   "speakers": [
     {
+      "id": 3,
+      "name": "Dean Ji-Tzong Dai",
+      "title": "China Evangelical Seminary",
+      "img": "/Presidium/戴繼宗.png",
+      "bio": ""
+    },
+    {
       "id": 1,
       "name": "Dr. Burn-Jeng Lin",
       "title": "Former EVP R&D at TSMC, Dean of NTHU Semiconductor Research Institute",
@@ -15,13 +22,6 @@
       "name": "Joseph Lyu",
       "title": "Former Chairman of Bank of Taiwan, Chairman of CIECA",
       "img": "/Presidium/呂桔誠.png",
-      "bio": ""
-    },
-    {
-      "id": 3,
-      "name": "Dean Ji-Tzong Dai",
-      "title": "China Evangelical Seminary",
-      "img": "/Presidium/戴繼宗.png",
       "bio": ""
     },
     {

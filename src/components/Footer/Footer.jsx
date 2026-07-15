@@ -18,6 +18,7 @@ export default function Footer() {
     { href: '#presidium', label: t('navPresidium') },
     { href: '#speakers', label: t('navSpeakers') },
     { href: '#themes', label: t('navThemes') },
+    { href: '#schedule', label: t('navSchedule') },
     { href: '#venue', label: t('navVenue') },
     { href: '#faq', label: t('navFaq') },
   ]

@@ -14,9 +14,26 @@
   "registrationUrl": "https://ct.org.tw/html/activity/6-3.php?article=38&area=&id=&parentid=",
   "btnSupportOnline": "奉獻",
   "donationUrl": "https://ct.org.tw/html/dedication/8-2-2.php?article=117",
-  "countdownTarget": "2026-07-31T23:59:59",
-  "countdownLabel": "早鳥價倒數",
-  "countdownExpiry": "早鳥到期日期：7/31",
+  "registrationPricing": {
+    "title": "現在開放報名",
+    "tiers": [
+      {
+        "name": "原價",
+        "price": "NT$18,000",
+        "period": "2026/09/01–10/10"
+      },
+      {
+        "name": "早鳥價",
+        "price": "NT$12,600",
+        "period": "即日起至7/31"
+      },
+      {
+        "name": "優惠價",
+        "price": "NT$14,600",
+        "period": "2026/08/01–08/31"
+      }
+    ]
+  },
   "ariaBackToTop": "回到頂端",
   "ariaClose": "關閉",
   "ariaMenu": "選單",

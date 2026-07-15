@@ -14,9 +14,26 @@
   "registrationUrl": "https://ct.org.tw/html/activity/6-3-eng.php?article=39&area=&id=&parentid=",
   "btnSupportOnline": "Support Us",
   "donationUrl": "https://ct.org.tw/html/dedication/8-2-2.php?article=117",
-  "countdownTarget": "2026-07-31T23:59:59",
-  "countdownLabel": "Early bird countdown",
-  "countdownExpiry": "Early bird deadline: Jul 31",
+  "registrationPricing": {
+    "title": "Registration Now Open",
+    "tiers": [
+      {
+        "name": "Standard Price",
+        "price": "NT$18,000",
+        "period": "Sep 1–Oct 10, 2026"
+      },
+      {
+        "name": "Early Bird Price",
+        "price": "NT$12,600",
+        "period": "Now through Jul 31"
+      },
+      {
+        "name": "Discounted Price",
+        "price": "NT$14,600",
+        "period": "Aug 1–31, 2026"
+      }
+    ]
+  },
   "ariaBackToTop": "Back to top",
   "ariaClose": "Close",
   "ariaMenu": "Menu",

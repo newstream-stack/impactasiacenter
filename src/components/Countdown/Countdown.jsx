@@ -1,64 +1,24 @@
-import { useState, useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import styles from './Countdown.module.css';
 
 export default function Countdown() {
-  const { language, t } = useI18n();
-  const isEn = language === 'en';
-  
-  const targetDate = new Date(t('countdownTarget')).getTime();
-  const isValidDate = !isNaN(targetDate);
-
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0, hours: 0, minutes: 0, seconds: 0
-  });
-
-  useEffect(() => {
-    if (!isValidDate) return;
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        return;
-      }
-      
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
-      });
-    }, 1000);
-    
-    return () => clearInterval(timer);
-  }, [targetDate, isValidDate]);
-
-  if (!isValidDate) return null;
-
-  const Label = ({ value, labelEn, labelZh }) => (
-    <div className={styles.item}>
-      <span className={styles.value}>{value.toString().padStart(2, '0')}</span>
-      <span className={styles.label}>
-        {isEn ? labelEn : labelZh}
-      </span>
-    </div>
-  );
+  const { t } = useI18n();
+  const pricing = t('registrationPricing');
 
   return (
-    <div className={`${styles.countdownWrapper} reveal`}>
-      <p className={styles.countdownLabel}>{t('countdownLabel')}</p>
-      <div className={styles.timerRow}>
-        <Label value={timeLeft.days} labelEn="Days" labelZh="天" />
-        <span className={styles.separator}>:</span>
-        <Label value={timeLeft.hours} labelEn="Hours" labelZh="時" />
-        <span className={styles.separator}>:</span>
-        <Label value={timeLeft.minutes} labelEn="Mins" labelZh="分" />
-        <span className={styles.separator}>:</span>
-        <Label value={timeLeft.seconds} labelEn="Secs" labelZh="秒" />
+    <section className={`${styles.pricingWrapper} reveal`} aria-label={pricing.title}>
+      <div className={styles.frame}>
+        <p className={styles.title}>{pricing.title}</p>
+        <div className={styles.pricingRow}>
+          {pricing.tiers.map((tier) => (
+            <article className={styles.tier} key={tier.name}>
+              <p className={styles.tierName}>{tier.name}</p>
+              <p className={styles.price}>{tier.price}</p>
+              <p className={styles.period}>{tier.period}</p>
+            </article>
+          ))}
+        </div>
       </div>
-      <p className={styles.countdownExpiry}>{t('countdownExpiry')}</p>
-    </div>
+    </section>
   );
 }

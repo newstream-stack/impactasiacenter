@@ -25,7 +25,9 @@
       {
         "name": "早鳥價",
         "price": "NT$12,600",
-        "period": "即日起至7/31"
+        "period": "即日起至7/31",
+        "featured": true,
+        "badge": "限時早鳥優惠"
       },
       {
         "name": "優惠價",

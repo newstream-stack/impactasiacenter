@@ -25,7 +25,9 @@
       {
         "name": "Early Bird Price",
         "price": "NT$12,600",
-        "period": "Now through Jul 31"
+        "period": "Now through Jul 31",
+        "featured": true,
+        "badge": "BEST VALUE"
       },
       {
         "name": "Discounted Price",

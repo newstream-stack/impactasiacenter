@@ -11,7 +11,8 @@ export default function Countdown() {
         <p className={styles.title}>{pricing.title}</p>
         <div className={styles.pricingRow}>
           {pricing.tiers.map((tier) => (
-            <article className={styles.tier} key={tier.name}>
+            <article className={`${styles.tier} ${tier.featured ? styles.featured : ''}`} key={tier.name}>
+              {tier.featured && <span className={styles.badge}>{tier.badge}</span>}
               <p className={styles.tierName}>{tier.name}</p>
               <p className={styles.price}>{tier.price}</p>
               <p className={styles.period}>{tier.period}</p>

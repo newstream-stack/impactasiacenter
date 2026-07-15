@@ -36,7 +36,7 @@
 
 .pricingRow {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .tier {
@@ -47,6 +47,10 @@
 
 .tier + .tier {
   border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.badge {
+  display: none;
 }
 
 .tierName,
@@ -77,6 +81,16 @@
   color: rgba(255, 255, 255, 0.58);
   font-size: clamp(0.62rem, 1.65vw, 0.8rem);
   line-height: 1.35;
+}
+
+.featured .tierName,
+.featured .price {
+  color: #ffd166;
+  text-shadow: 0 0 18px rgba(255, 209, 102, 0.24);
+}
+
+.featured .period {
+  color: rgba(255, 225, 163, 0.82);
 }
 
 @media (min-width: 768px) {

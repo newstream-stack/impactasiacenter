@@ -31,6 +31,10 @@
   font-weight: 600;
 }
 
+.subtitleLocation::after {
+  content: ' | ';
+}
+
 /* Fluid Color Title */
 .fluidTitle {
   font-size: clamp(2.5rem, 8vw, 5.5rem);
@@ -166,6 +170,14 @@
   .subtitle {
     font-size: 0.8rem;
     letter-spacing: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    line-height: 1.4;
+  }
+
+  .subtitleLocation::after {
+    content: none;
   }
 
   .eventName {

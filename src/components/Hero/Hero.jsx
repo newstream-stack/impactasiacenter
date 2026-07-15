@@ -7,10 +7,14 @@ const HERO_IMG = '/opening.jpg';
 export default function Hero() {
   const { t, language } = useI18n();
   const hero = t('hero');
+  const [location, date] = hero.subtitle.split(' | ');
   return (
     <section id="hero-section" className={styles.hero} style={{ backgroundImage: `linear-gradient(to bottom, rgba(34,37,51,0.6), #222533), url('${HERO_IMG}')` }}>
       <div className={styles.content}>
-        <p className={styles.subtitle}>{hero.subtitle}</p>
+        <p className={styles.subtitle}>
+          <span className={styles.subtitleLocation}>{location}</span>
+          <span className={styles.subtitleDate}>{date}</span>
+        </p>
         <div className={styles.titleContainer}>
           {language === 'en' ? (
             <div className={styles.futuristicTitle}>

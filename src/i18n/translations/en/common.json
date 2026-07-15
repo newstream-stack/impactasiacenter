@@ -31,15 +31,19 @@
       "tag": "Standard Price",
       "label": "Individual",
       "ntd": "NT$ 18,000",
-      "usd": "approx. US$ 580",
-      "period": "2026 / 08 / 01 - 10 / 10"
+      "period": "2026 / 09 / 01 - 10 / 10"
     },
     {
       "tag": "Early Bird Price",
       "label": "Individual",
       "ntd": "NT$ 12,600",
-      "usd": "approx. US$ 400",
       "period": "Now until 2026 / 07 / 31"
+    },
+    {
+      "tag": "Discounted Price",
+      "label": "Individual",
+      "ntd": "NT$ 14,600",
+      "period": "2026 / 08 / 01 - 08 / 31"
     }
   ],
   "faqA2Note": "＊Group rate: 10 registrations get 1 free (must register simultaneously)",

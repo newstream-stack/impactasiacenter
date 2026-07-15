@@ -170,11 +170,6 @@
   color: var(--text);
 }
 
-.pricingUsd {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.45);
-}
-
 .pricingPeriod {
   margin-top: 0.35rem;
   font-size: 0.8rem;

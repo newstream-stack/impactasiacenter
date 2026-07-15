@@ -49,7 +49,6 @@ export default function FAQ() {
                   <div className={styles.pricingRow}>
                     <span className={styles.pricingLabel}>{tier.label}</span>
                     <span className={styles.pricingPrice}>{tier.ntd}</span>
-                    <span className={styles.pricingUsd}>{tier.usd}</span>
                   </div>
                   <div className={styles.pricingPeriod}>{tier.period}</div>
                 </div>

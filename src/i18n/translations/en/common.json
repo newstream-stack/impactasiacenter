@@ -36,6 +36,31 @@
       }
     ]
   },
+  "scheduleSection": {
+    "eyebrow": "SUMMIT SCHEDULE",
+    "title": "Gathering Schedule",
+    "days": [
+      {
+        "date": "Oct 20 (Tue.)",
+        "sessions": [
+          { "time": "15:00", "label": "Registration" },
+          { "time": "19:00–21:30", "label": "Opening Session" }
+        ]
+      },
+      {
+        "date": "Oct 21–22 (Wed.–Thu.)",
+        "sessions": [
+          { "time": "09:30–21:30", "label": "Summit Sessions" }
+        ]
+      },
+      {
+        "date": "Oct 23 (Fri.)",
+        "sessions": [
+          { "time": "09:30–13:30", "label": "Concludes at 13:30" }
+        ]
+      }
+    ]
+  },
   "ariaBackToTop": "Back to top",
   "ariaClose": "Close",
   "ariaMenu": "Menu",

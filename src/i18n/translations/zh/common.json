@@ -36,6 +36,31 @@
       }
     ]
   },
+  "scheduleSection": {
+    "eyebrow": "SUMMIT SCHEDULE",
+    "title": "聚會時間",
+    "days": [
+      {
+        "date": "10/20（週二）",
+        "sessions": [
+          { "time": "15:00", "label": "報到" },
+          { "time": "19:00–21:30", "label": "開幕聚會" }
+        ]
+      },
+      {
+        "date": "10/21–22（週三至週四）",
+        "sessions": [
+          { "time": "09:30–21:30", "label": "全天聚會" }
+        ]
+      },
+      {
+        "date": "10/23（週五）",
+        "sessions": [
+          { "time": "09:30–13:30", "label": "13:30 結束" }
+        ]
+      }
+    ]
+  },
   "ariaBackToTop": "回到頂端",
   "ariaClose": "關閉",
   "ariaMenu": "選單",

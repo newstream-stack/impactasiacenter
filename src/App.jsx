@@ -7,6 +7,7 @@ import AboutIntro from './components/AboutIntro/AboutIntro';
 import TrailerSection from './components/TrailerSection/TrailerSection';
 import Speakers from './components/Speakers/Speakers';
 import Themes from './components/Themes/Themes';
+import Schedule from './components/Schedule/Schedule';
 import IAAIntro from './components/IAAIntro/IAAIntro';
 import Presidium from './components/Presidium/Presidium';
 import PhoenixIntro from './components/PhoenixIntro/PhoenixIntro';
@@ -36,6 +37,7 @@ export default function App() {
       <div className="reveal"><Presidium /></div>
       <div className="reveal"><Speakers /></div>
       <div className="reveal"><Themes onThemeClick={setActiveTheme} /></div>
+      <div className="reveal"><Schedule /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <div className="reveal"><Venue /></div>
       <div className="reveal"><FAQ /></div>

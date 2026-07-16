@@ -10,31 +10,31 @@
       },
       {
         "label": "Modern Desert Oasis",
-        "desc": "Nestled in the vast \"Valley of the Sun\" basin, surrounded by red-rock mountain ranges — the most vibrant metropolis in the Sonoran Desert.",
+        "desc": "Set in the Valley of the Sun within the Sonoran Desert, Phoenix blends an urban landscape with surrounding mountains and desert preserves.",
         "icon": "mountain"
       },
       {
         "label": "Seamless International Access",
-        "desc": "Adjacent to Phoenix Sky Harbor (PHX), just 10–15 minutes from the conference venue in Tempe- convenient access.",
+        "desc": "Phoenix Sky Harbor International Airport (PHX) provides access to the region; the Tempe conference venue is roughly a 15–25 minute drive, depending on traffic.",
         "icon": "plane"
       }
     ],
     "stats": [
       {
-        "value": "$165B+",
-        "label": "TSMC Total Investment"
+        "value": "$165B",
+        "label": "TSMC Announced Investment"
       },
       {
-        "value": "6.0%",
-        "label": "Projected Personal Income Growth"
+        "value": "6.3%",
+        "label": "Projected Phoenix Metro Personal Income Growth"
       },
       {
         "value": "6",
-        "label": "Advanced Wafer Fabs Planned"
+        "label": "TSMC Fabs Planned"
       },
       {
-        "value": "No.1",
-        "label": "Among Fastest-Growing U.S. Cities"
+        "value": "No. 5",
+        "label": "Largest U.S. City"
       }
     ],
     "categories": [
@@ -46,15 +46,15 @@
         "items": [
           {
             "label": "Semiconductor Cluster",
-            "desc": "TSMC's Arizona fab is driving the entire supply chain into the region, with total investment expected to exceed $165 billion, building 6 advanced wafer fabs and an R&D center. Intel, KoMiCo, Fujifilm, and other global giants continue to expand, forming a complete semiconductor ecosystem."
+            "desc": "TSMC has announced a $165 billion Arizona investment, with plans for six wafer fabs, two advanced-packaging facilities, and an R&D center. The project continues to attract suppliers and talent, while Intel, KoMiCo, Fujifilm, and others are expanding their regional presence."
           },
           {
             "label": "Emerging Technologies",
-            "desc": "AI, autonomous vehicles (e.g., Joby Aviation's air taxi testing), and battery technology are becoming key new growth drivers."
+            "desc": "Phoenix continues to focus on advanced manufacturing, emerging technology, bioscience, and renewable energy, supported by workforce development and research partnerships."
           },
           {
             "label": "Innovation Energy",
-            "desc": "In 2026, Phoenix hosted the inaugural Arizona Tech Week and the Forbes 30 Under 30 Summit, showcasing its global competitiveness in entrepreneurship and advanced industries."
+            "desc": "In 2026, Phoenix hosted the inaugural Arizona Tech Week and the Forbes Under 30 Summit, showcasing the region's momentum in entrepreneurship, investment, and advanced industries."
           }
         ]
       },
@@ -66,15 +66,15 @@
         "items": [
           {
             "label": "Core Pillars",
-            "desc": "Beyond semiconductor manufacturing, financial services, healthcare, e-commerce logistics (as the Southwest's distribution hub), and tourism remain core economic pillars."
+            "desc": "Beyond semiconductor manufacturing, Phoenix is developing professional services, bioscience, renewable energy, tourism, and events as part of a diversified economy."
           },
           {
             "label": "Global Connectivity",
-            "desc": "In 2026, Phoenix Sky Harbor International Airport (PHX) launched its first direct flight to Asia, greatly enhancing business efficiency and international tourism appeal."
+            "desc": "Phoenix Sky Harbor International Airport (PHX) launched its first nonstop service to Asia in December 2025. Nonstop flights to Taipei now improve access for business and international visitors."
           },
           {
             "label": "Jobs & Income",
-            "desc": "The job market is expected to continue recovering in 2026, with personal income growth projected at 6.0%, demonstrating strong economic resilience."
+            "desc": "The University of Arizona's first-quarter forecast projects Phoenix metro personal income growth of 6.3% in 2026, rebounding from 2025."
           }
         ]
       },
@@ -86,15 +86,15 @@
         "items": [
           {
             "label": "Population Influx",
-            "desc": "Continuous population migration is driving demand for residential and commercial space, with the 2026 real estate market expected to benefit from interest rate reductions."
+            "desc": "Phoenix had an estimated population of about 1.7 million as of July 2024, making it the fifth-largest U.S. city. Continued growth is driving demand for residential and commercial space."
           },
           {
             "label": "Quality of Life",
-            "desc": "With premium dining (e.g., Din Tai Fung) and major resort developments (e.g., VAI Resort), Phoenix is becoming a world-class culinary destination and high-quality of life city."
+            "desc": "Dining and leisure options continue to expand across Greater Phoenix; Arizona's first Din Tai Fung opened in Scottsdale in 2026."
           },
           {
-            "label": "Cost Advantage",
-            "desc": "Compared to coastal cities, Phoenix maintains a relatively lower cost of living and excellent climate, attracting large numbers of professionals and families."
+            "label": "Diverse Lifestyle Options",
+            "desc": "From downtown to surrounding communities, Greater Phoenix offers a broad mix of housing, work, and leisure options; living costs and commute conditions vary by city and neighborhood."
           }
         ]
       }

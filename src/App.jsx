@@ -32,7 +32,7 @@ export default function App() {
       <div className="reveal"><AboutIntro onMoreClick={setActiveTheme} /></div>
       <div className="reveal"><Timeline /></div>
       <div className="reveal"><TrailerSection /></div>
-      <div className="reveal"><IAAIntro onBlockClick={setActiveTheme} /></div>
+      <div className="reveal"><IAAIntro /></div>
       <div className="reveal"><PhoenixIntro /></div>
       <div className="reveal"><Presidium /></div>
       <div className="reveal"><Speakers /></div>

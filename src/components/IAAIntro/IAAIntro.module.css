@@ -6,74 +6,234 @@
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.highlight {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3.5rem;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 24px;
-  padding: 2.5rem;
+.highlightTitle {
+  font-size: clamp(1.35rem, 2.6vw, 1.7rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.highlightText {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.tagline {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
+  align-items: center;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1.9;
+  opacity: 0.85;
+  margin-bottom: 3.5rem;
 }
 
-.card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--accent);
-  transform: translateY(-10px);
+.accordion {
+  display: flex;
+  flex-direction: column;
 }
 
-.cardTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
+.item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.itemHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
   color: #fff;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
 }
 
-.cardText {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #999;
+.itemNumber {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.itemTitle {
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.itemOpen .itemTitle {
+  color: var(--accent);
+}
+
+.itemTag {
+  display: inline-block;
+  margin-left: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .itemTag { display: block; margin-left: 0; margin-top: 0.3rem; }
+}
+
+.itemIcon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.itemOpen .itemIcon {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.itemBody {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.itemOpen .itemBody {
+  grid-template-rows: 1fr;
+}
+
+.itemBodyInner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.introBlock {
+  border-left: 3px solid rgba(255, 94, 0, 0.4);
+  padding-left: 1.25rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.introLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.intro {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.points {
+  list-style: none;
+  padding: 0 0 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.point {
+  padding: 1.1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+}
+
+.pointTitle {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #fff;
+}
+
+.point span {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.paragraph {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
   text-align: justify;
 }
 
-.cardFooter {
-  margin-top: 2.5rem;
-}
-
-.learnMore {
-  color: var(--accent);
+.emphasis {
+  color: #fff;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.1rem;
 }
 
-.arrow {
-  transition: transform 0.3s ease;
+.quoteBox {
+  margin: 0 0 2rem;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255, 94, 0, 0.06);
+  border: 1px solid rgba(255, 94, 0, 0.2);
+  border-radius: 12px;
 }
 
-.card:hover .arrow {
-  transform: translateX(5px);
+.quoteLabel {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.quoteText {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.7;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
   .section { padding: 4rem 0; }
-  .grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .card { padding: 2rem; }
+  .itemHeader { padding: 1.25rem 0; gap: 1rem; }
+  .itemTitle { font-size: 1.05rem; }
 }

@@ -6,51 +6,315 @@
   "iaaIntro": {
     "title": "Impact Asia Alliance (IAA) Global Summit",
     "subtitle": "Impact Asia Alliance Global Summit",
+    "highlight": {
+      "title": "From the Church, Into the World",
+      "text": "Not leaving the church behind, but carrying faith, calling and mission into the crowds, industries, cities and nations."
+    },
+    "tagline": "Connecting Kingdom Leaders.\nTransforming Society. Blessing the Nations.",
     "blocks": [
       {
-        "title": "Background & Vision",
+        "title": "Core Positioning",
+        "tag": "POSITIONING",
         "paragraphs": [
-          "In an era of rapid global change, Asia is playing an increasingly critical role in the international community, not only in the economic and technological fields, but also in cultural exchange and values' dialogue.",
-          "In this context, the Impact Asia Alliance (IAA), promoted by the Christian Tribune Foundation, is dedicated to connecting churches, leaders, and workplace influencers across Asia, establishing a transnational, cross-domain, and cross-church exchange platform to promote connection and walk together in faith and mission."
+          "The Impact Asia Alliance (IAA) is concerned not only with spiritual renewal and building within the church, but with **how believers, equipped by local churches, step into every sphere of the world and respond to the calling entrusted to them by God**.",
+          "IAA does not aim to build a new denomination, church system, or ministry structure. Instead, it **respects and connects existing churches, organizations and professional leaders**, enabling Kingdom resources scattered across different nations, cultures and fields to see one another, complete one another, and collaborate together.",
+          "Therefore, IAA's position is not to \"lead people away from the church,\" but to **help believer-leaders equipped by the church step into society with mature faith and professional competence** — bearing witness to the Gospel, serving communities, transforming culture and blessing the nations in the real world."
+        ],
+        "detail": {
+          "intro": "IAA is more than another international conference — it is a global platform that gathers and connects Kingdom leaders, fostering cross-sector collaboration, dialogue and exchange.",
+          "quoteLabel": "Official Positioning Statement",
+          "quote": "Impact Asia Alliance is more than another international conference. It is a global platform that gathers and connects Kingdom leaders, fostering cross-sector dialogue, learning and collaboration."
+        }
+      },
+      {
+        "title": "Our Origin",
+        "tag": "ORIGIN",
+        "paragraphs": [
+          "Many Christians are shepherded, equipped and built up within the church, yet are **not always clear on how to carry their faith into the workplace, industry, culture and public life**.",
+          "At the same time, God has raised up many leaders around the world who are faithfully at work in business, education, technology, media, healthcare, culture, sports, indigenous communities and mission fields — yet **lack a platform where they can meet across boundaries, learn from one another, and collaborate**.",
+          "IAA exists to meet this need: **so that the church and the world are no longer separated, spiritual life and professional practice no longer operate in isolation, and one person's calling can enter into a larger Kingdom collaboration network**."
         ]
       },
       {
-        "title": "A Continuous Platform for Asian Influence",
+        "title": "What We Believe",
+        "tag": "CONVICTIONS",
         "paragraphs": [
-          "The IAA Global Summit is not a one-off event, but a long-term platform to enable connections across the Asia-Pacific region.",
-          "Through each summit, church leaders and participants from different countries and cities in Asia gather to exchange, share, and connect on a common faith basis, establishing cross-regional relationship networks.",
-          "The summit also becomes an important node for promoting deeper cooperation between Asian churches and leaders, enabling churches and leaders from different cultures and backgrounds to know and learn from each other, and move forward together in unity."
+          "The church as the foundation, the world as the mission field — five core convictions that sustain IAA's mission."
+        ],
+        "detail": {
+          "points": [
+            {
+              "title": "01 The Church Is the Foundation",
+              "desc": "The local church is the foundation for believers' spiritual growth, equipping in truth, community building, and sending. **IAA does not replace the church, but walks alongside it**."
+            },
+            {
+              "title": "02 The World Is the Mission Field",
+              "desc": "Business, technology, education, culture, media, healthcare, public affairs, sports and every people group **are all vital mission fields for living out faith and serving people**."
+            },
+            {
+              "title": "03 Every Calling Matters",
+              "desc": "Pastoral ministry is not the only full-time calling. **God also raises up leaders in every industry, making professional skill, resources and influence vessels for blessing the world**."
+            },
+            {
+              "title": "04 Influence Flows from Life and Truth",
+              "desc": "What IAA pursues is not fame, power or scale, but **the lasting influence that flows from the life of Christ, the truth of Scripture, and servant leadership**."
+            },
+            {
+              "title": "05 Collaboration over Competition",
+              "desc": "Kingdom work is not about building separate territories, but about **completing one another across different gifts, cultures and ministries to accomplish a greater mission together**."
+            }
+          ],
+          "quoteLabel": "Core Conviction",
+          "quote": "We believe that when churches faithfully equip believers, and believer-leaders courageously enter the world, every industry and field can become an important mission field for witnessing the Gospel, serving society, and blessing the nations."
+        }
+      },
+      {
+        "title": "IAA's Mission",
+        "tag": "MISSION",
+        "paragraphs": [
+          "Connector, Companion, Collaborator, Catalyst, Impact Center — the five roles IAA carries."
+        ],
+        "detail": {
+          "intro": "IAA's mission is to become a **connector, companion, collaborator and impact center** for a shared mission.",
+          "points": [
+            {
+              "title": "Connector",
+              "desc": "Identifying and gathering leaders raised up by God in different fields around the world, **fostering relational connections across nations, churches, cultures, generations and professions**."
+            },
+            {
+              "title": "Companion",
+              "desc": "Not only meeting at the summit, but supporting one another through calling, challenge and practice — **building trusted, lasting Kingdom partnerships**."
+            },
+            {
+              "title": "Collaborator",
+              "desc": "Facilitating concrete collaboration between churches, organizations, businesses and professional leaders, so **resources, experience and capability can jointly respond to the world's needs**."
+            },
+            {
+              "title": "Catalyst",
+              "desc": "Recognizing new work already underway, providing a platform, visibility and strategic exchange so **promising initiatives can be amplified, replicated and extended**."
+            },
+            {
+              "title": "Impact Center",
+              "desc": "Integrating content, media, research, talent and international networks to **continually drive influence from faith into social practice**."
+            }
+          ],
+          "quoteLabel": "Mission Statement",
+          "quote": "IAA connects Kingdom leaders through international summits, thematic forums, leadership exchange, media outreach, education and collaborative action — turning calling into practice, and individual influence into shared influence."
+        }
+      },
+      {
+        "title": "Leaders IAA Gathers",
+        "tag": "WHO WE GATHER",
+        "paragraphs": [
+          "From church and mission to business, technology, education, media, healthcare, sports and global mission fields — Kingdom leaders across eight spheres."
+        ],
+        "detail": {
+          "intro": "IAA's audience is not limited to church pastors, but includes **all Christian leaders who step from the church into every sphere of the world to carry out their calling**. Pastors play a vital role as equippers, senders and companions.",
+          "points": [
+            {
+              "title": "Church & Missions",
+              "desc": "Pastors, mission leaders, cross-cultural missionaries, church networks and gospel organizations"
+            },
+            {
+              "title": "Business & Entrepreneurship",
+              "desc": "Entrepreneurs, CEOs, executives, social enterprises and young founders"
+            },
+            {
+              "title": "Technology & AI",
+              "desc": "Tech leaders, engineers, researchers, and workers in AI and the semiconductor industry"
+            },
+            {
+              "title": "Education & the Next Generation",
+              "desc": "Principals, teachers, children's and youth workers, education innovators"
+            },
+            {
+              "title": "Media & Creative Culture",
+              "desc": "Media professionals, publishers, film and TV, artists, designers and content creators"
+            },
+            {
+              "title": "Healthcare & Social Care",
+              "desc": "Physicians, healthcare leaders, nonprofit organizations and social service workers"
+            },
+            {
+              "title": "Sports & Public Life",
+              "desc": "Athletes, coaches, sports missionaries and public affairs leaders"
+            },
+            {
+              "title": "Ethnic Communities & Global Mission Fields",
+              "desc": "Indigenous peoples, ethnic minorities, and ministry leaders serving Africa, islands, remote regions and unreached peoples"
+            }
+          ],
+          "quoteLabel": "What We Value Is Not Just a Title",
+          "quote": "IAA looks for leaders with a foundation of faith, public concern, professional competence, a spirit of collaboration and cross-cultural vision. They may not stand on a stage, yet they are carrying out their calling in their own post; they may not lead a large organization, yet they may be starting something important."
+        }
+      },
+      {
+        "title": "Impact Fields IAA Focuses On",
+        "tag": "IMPACT FIELDS",
+        "paragraphs": [
+          "From the Gospel entering society to global compassion and missions — eight impact fields IAA focuses on."
+        ],
+        "detail": {
+          "points": [
+            {
+              "title": "1. The Gospel Entering Society",
+              "desc": "**Bringing faith into families, workplaces, cities and public life**, including social gospel initiatives such as \"From Doubt to Faith\" and \"Men Are Warriors.\""
+            },
+            {
+              "title": "2. FTT & PEACE",
+              "desc": "Connecting global Great Commission resources to **advance church planting, leadership equipping, poverty relief, healthcare and next-generation education**."
+            },
+            {
+              "title": "3. Bible Reading Movement",
+              "desc": "Encouraging individuals, families, churches and the next generation to return to Scripture, **building lives and governance rooted in truth**."
+            },
+            {
+              "title": "4. Next-Generation & Youth Innovation",
+              "desc": "**Developing children, youth, Sunday school leaders and young entrepreneurial leaders** to face the AI generation and future society."
+            },
+            {
+              "title": "5. Technology & the Future of Humanity",
+              "desc": "Fostering dialogue between technology, AI, semiconductors and faith ethics, so **technology serves humanity rather than replacing human dignity and purpose**."
+            },
+            {
+              "title": "6. Culture, Media & Sports",
+              "desc": "Engaging people through story, art, media, creativity and sports to **build gospel-valued cultural influence**."
+            },
+            {
+              "title": "7. Indigenous Peoples & Ethnic Reconciliation",
+              "desc": "**Respecting and preserving ethnic cultures**, fostering connections among tribal leaders, historical reconciliation and cross-ethnic collaboration."
+            },
+            {
+              "title": "8. Global Compassion & Missions",
+              "desc": "Including \"Hearing the Heartbeat of Africa,\" \"The Lost Pearl,\" \"Bringing Love Back to Cambodia,\" and **support for ethnic minority missions**."
+            }
+          ]
+        }
+      },
+      {
+        "title": "What the Annual Summit Does",
+        "tag": "THE ANNUAL SUMMIT",
+        "paragraphs": [
+          "See, Listen, Discern, Connect, Collaborate, Send — the six key movements of the summit."
+        ],
+        "detail": {
+          "intro": "The IAA Global Summit is not a one-way lecture event, but an annual gathering built around \"**seeing, connecting, discerning, collaborating and sending**.\"",
+          "points": [
+            {
+              "title": "See",
+              "desc": "Seeing the new work **God is doing across different nations, ethnic groups and fields**."
+            },
+            {
+              "title": "Listen",
+              "desc": "Listening to the real experience, challenges and insight of frontline leaders, **rather than mere ministry presentations**."
+            },
+            {
+              "title": "Discern",
+              "desc": "Jointly discerning **the direction of the times, society's needs, and the Kingdom's response**."
+            },
+            {
+              "title": "Connect",
+              "desc": "Enabling previously unacquainted leaders to build relationships, **opening the door to cross-sector collaboration**."
+            },
+            {
+              "title": "Collaborate",
+              "desc": "Moving from dialogue into concrete action — **enabling shared resources, joint projects and long-term partnerships**."
+            },
+            {
+              "title": "Send",
+              "desc": "**Returning to one's own city and mission field with new vision, relationships and purpose**."
+            }
+          ],
+          "quoteLabel": "The Question the Summit Answers Together",
+          "quote": "What is God doing in the world today? How can we join His work together, each in our own field?"
+        }
+      },
+      {
+        "title": "IAA's Principles of Collaboration",
+        "tag": "WAYS OF WORKING",
+        "paragraphs": [
+          "Christ-centered, respecting the local church — seven principles that run through everything IAA does."
+        ],
+        "detail": {
+          "points": [
+            {
+              "title": "01 Christ-Centered",
+              "desc": "A shared faith is the foundation of collaboration; **influence must return to the life and truth of Christ**."
+            },
+            {
+              "title": "02 Respecting the Local Church",
+              "desc": "**No cross-sector initiative is intended to weaken or replace the local church**."
+            },
+            {
+              "title": "03 Respecting Each Calling",
+              "desc": "Partners are never asked to give up their existing name, organization or mission — **instead, we work together toward shared goals**."
+            },
+            {
+              "title": "04 Crossing Boundaries Without Losing Foundation",
+              "desc": "Courageously entering different cultures and professional fields **while maintaining clear faith values**."
+            },
+            {
+              "title": "05 Collaboration Creates Multiplication",
+              "desc": "**Shifting from competing for resources to sharing them, from working alone to achieving together**."
+            },
+            {
+              "title": "06 From Exchange to Action",
+              "desc": "Every forum and gathering should, as much as possible, **lead to further connection, projects or concrete action**."
+            },
+            {
+              "title": "07 Measuring Impact by Service",
+              "desc": "True influence is not measured by visibility alone, but by **whether people are helped, society is blessed, and the Gospel is made visible**."
+            }
+          ],
+          "quoteLabel": "IAA Does Not Replace — It Completes",
+          "quote": "IAA does not replace the local church, mission organizations, or professional associations, nor does it fold partners into a single organizational system. IAA builds an open, faith-rooted international platform for connection, so different groups can keep their own identity while collaborating on a shared mission."
+        }
+      },
+      {
+        "title": "Outcomes We Expect",
+        "tag": "EXPECTED OUTCOMES",
+        "paragraphs": [
+          "Building **a trusted network of Kingdom leaders across nations, cultures and fields**.",
+          "Discovering and supporting **emerging ministries, leaders and initiatives**.",
+          "Facilitating **collaboration among churches, organizations, businesses, education and media**.",
+          "Making Asia's experience and testimony visible to the world, and **bringing the world's resources into Asia**.",
+          "Developing **next-generation leaders equipped to face AI, technology, culture and global change**.",
+          "Extending the annual summit into **a year-round collaboration platform and impact center**.",
+          "Enabling more Christians to step out from the church and **live out a public witness of the Gospel in their own field**."
         ]
       },
       {
-        "title": "Connecting Asian Leaders & Global Elites",
+        "title": "Long-Term Vision",
+        "tag": "VISION",
         "paragraphs": [
-          "One of IAA's core missions is to promote connection and exchange between churches and leaders across Asia.",
-          "With its inception in Taiwan, IAA gradually connected churches and leaders in Malaysia, Indonesia, Japan, and other places, exppanding to include key influencers and global elites in different fields. Through physical gatherings and continuous interaction, it establishes stable and long-term relationships, enabling leaders from different backgrounds to support each other and collaborate in missions, pastoral care, and social responsiblity initiatives.",
-          "Such connections occur not only during the summit, but also extends to continued cooperation and exchanges after each summit ends."
-        ]
+          "IAA aspires to become a Kingdom impact platform that starts in Asia and connects the world — one that does not treat large-scale events as an end goal, but as a means toward **building long-term relationships, developing leaders, facilitating collaboration and supporting action**.",
+          "We long to see believer-leaders equipped by the local church carry out their calling across every sphere of the world, and people from different nations, generations and professions complete one another in shared faith — **so that individual gifts become a shared blessing**."
+        ],
+        "detail": {
+          "quoteLabel": "Long-Term Vision",
+          "quote": "From Asia to the nations. From the church to the world. From calling to influence."
+        }
       },
       {
-        "title": "Raising Faith Influence in Various Fields",
+        "title": "Official Brand Statement",
+        "tag": "BRAND STATEMENT",
         "paragraphs": [
-          "IAA focuses on how faith is practiced and lived out in various fields outside the church, including the workplace, culture, media, and social participation.",
-          "Through the platform's connection and exchange, leaders from different backgrounds are encouraged to learn from and inspire each other, continuing to exert positive influence based on faith values in their respective positions.",
-          "IAA believes that influence is formed through connection and walking together, rather than the action of a single individual."
-        ]
-      },
-      {
-        "title": "Responding to Challenges & Opportunities in a Changing Era",
-        "paragraphs": [
-          "Faced with rapid contemporary technological development, the rise of AI, and changes in global social structures, churches and faith communities are in a new stage of transformation.",
-          "The IAA Global Summit provides a stable and continuous exchange platform in this era, enabling churches and leaders across Asia to dialogue, understand, and respond together to the challenges and opportunities faced by this generation."
-        ]
-      },
-      {
-        "title": "Asia's Role in Faith and Influence",
-        "paragraphs": [
-          "The Impact Asia Alliance (IAA) Global Summit is a platform that continuously connects Asian churches and leaders.",
-          "Through transnational exchange and cooperation, the Summit promotes deeper understanding and partnership between different cultures and regions, enabling Asian churches and leaders to witness together the influence of faith in contemporary society."
-        ]
+          "Impact Asia Alliance is more than another international conference. It is a global platform that gathers and connects Kingdom leaders, fostering cross-sector dialogue, learning and collaboration."
+        ],
+        "detail": {
+          "points": [
+            {
+              "title": "Official English Statement",
+              "desc": "Impact Asia Alliance is more than another international conference. It is a global platform that gathers and connects Kingdom leaders, fostering cross-sector dialogue, learning and collaboration. We believe that when churches faithfully equip believers, and Christian leaders courageously enter the world, every sphere of society can become a field for witnessing the Gospel, serving communities and blessing the nations. **IAA exists to connect, accompany and collaborate with these leaders, and to serve as a center for Kingdom impact**."
+            },
+            {
+              "title": "中文定位宣言 Official Chinese Statement",
+              "desc": "亞洲論壇影響力國際年會不是另一場國際會議聚會，而是一個匯聚連結世界神國領袖、促進跨領域合作、研討與交流的平台。我們相信，當教會忠心裝備信徒，信徒領袖勇敢進入世界，各行各業都能成為見證福音、服事社會、祝福萬國的重要禾場。**IAA 的使命，就是成為這份共同使命的連結者、同行者、合作者與影響力中心**。"
+            }
+          ],
+          "quoteLabel": "Brand Tagline",
+          "quote": "Connecting Kingdom Leaders. Transforming Society. Blessing the Nations. — 連結神國領袖．轉化社會．祝福萬國"
+        }
       }
     ]
   }

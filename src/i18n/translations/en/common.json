@@ -26,14 +26,9 @@
       {
         "name": "Early Bird Price",
         "price": "NT$12,600",
-        "period": "Now through Jul 31",
+        "period": "Now through Aug 31",
         "featured": true,
         "badge": "BEST VALUE"
-      },
-      {
-        "name": "Discounted Price",
-        "price": "NT$14,600",
-        "period": "Aug 1–31, 2026"
       }
     ]
   },
@@ -82,13 +77,7 @@
       "tag": "Early Bird Price",
       "label": "Individual",
       "ntd": "NT$ 12,600",
-      "period": "Now until 2026 / 07 / 31"
-    },
-    {
-      "tag": "Discounted Price",
-      "label": "Individual",
-      "ntd": "NT$ 14,600",
-      "period": "2026 / 08 / 01 - 08 / 31"
+      "period": "Now until 2026 / 08 / 31"
     }
   ],
   "faqA2Note": "＊Group rate: 10 registrations get 1 free (must register simultaneously)",

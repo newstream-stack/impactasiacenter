@@ -21,12 +21,12 @@
       {
         "name": "原價",
         "price": "NT$18,000",
-        "period": "2026/09/01–10/10"
+        "period": ""
       },
       {
         "name": "優惠價",
         "price": "NT$12,600",
-        "period": "即日起至8/31",
+        "period": "即日起至9/30",
         "featured": true,
         "badge": "限時早鳥優惠"
       }

@@ -1,0 +1,134 @@
+.section {
+  padding: 8rem 0 6rem;
+  background: var(--bg);
+  color: #fff;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.imageWrap {
+  max-width: 420px;
+  margin: 0 auto 3.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.itemHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+}
+
+.itemNumber {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.itemTitleWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.itemTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.itemOpen .itemTitle {
+  color: var(--accent);
+}
+
+.itemSubtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.itemIcon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.itemOpen .itemIcon {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.itemBody {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.itemOpen .itemBody {
+  grid-template-rows: 1fr;
+}
+
+.itemBodyInner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: 0.25rem 0 2.25rem;
+}
+
+.paragraph {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 768px) {
+  .section { padding: 5rem 0 3rem; }
+  .itemHeader { padding: 1.25rem 0; gap: 1rem; }
+  .itemTitle { font-size: 1.05rem; }
+  .paragraph { font-size: 0.92rem; }
+}

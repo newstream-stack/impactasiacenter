@@ -2,6 +2,7 @@ import common from './common.json';
 import hero from './hero.json';
 import about from './about.json';
 import timeline from './timeline.json';
+import journeyStory from './journeyStory.json';
 import iaaIntro from './iaaIntro.json';
 import presidium from './presidium.json';
 import phoenix from './phoenix.json';
@@ -16,6 +17,7 @@ const translations = {
   ...hero,
   ...about,
   ...timeline,
+  ...journeyStory,
   ...iaaIntro,
   ...presidium,
   ...phoenix,

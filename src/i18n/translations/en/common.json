@@ -21,12 +21,12 @@
       {
         "name": "Standard Price",
         "price": "NT$18,000",
-        "period": ""
+        "period": "(approximately US$560)"
       },
       {
         "name": "Special Price",
         "price": "NT$12,600",
-        "period": "",
+        "period": "(approximately US$400)",
         "featured": true,
         "badge": "BEST VALUE"
       }

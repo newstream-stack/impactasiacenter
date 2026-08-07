@@ -15,7 +15,7 @@ export default function Countdown() {
               {tier.featured && <span className={styles.badge}>{tier.badge}</span>}
               <p className={styles.tierName}>{tier.name}</p>
               <p className={styles.price}>{tier.price}</p>
-              <p className={styles.period}>{tier.period}</p>
+              {tier.period && <p className={styles.period}>{tier.period}</p>}
             </article>
           ))}
         </div>

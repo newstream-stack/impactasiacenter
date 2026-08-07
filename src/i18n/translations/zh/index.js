@@ -9,6 +9,7 @@ import speakers from './speakers.json';
 import themes from './themes.json';
 import venue from './venue.json';
 import footer from './footer.json';
+import dailyProgram from './dailyProgram.json';
 
 const translations = {
   ...common,
@@ -22,6 +23,7 @@ const translations = {
   ...themes,
   ...venue,
   ...footer,
+  ...dailyProgram,
 };
 
 export default translations;

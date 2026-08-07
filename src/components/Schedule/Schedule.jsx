@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import styles from './Schedule.module.css';
 
 export default function Schedule() {
   const { t } = useI18n();
   const schedule = t('scheduleSection');
+  const dailyProgram = t('dailyProgram');
 
   return (
     <section className={styles.section} id="schedule">
@@ -26,6 +28,23 @@ export default function Schedule() {
             </article>
           ))}
         </div>
+
+        {/* Hidden temporarily
+        <p className={styles.dailyProgramTitle}>{dailyProgram.homeLinkTitle}</p>
+        <div className={styles.dailyProgramLinks}>
+          {dailyProgram.days.map((day) => (
+            <Link
+              className={styles.dailyProgramLink}
+              to={`/day/${day.id}`}
+              key={day.id}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {dailyProgram.dayLabel} {day.id}
+            </Link>
+          ))}
+        </div>
+        */}
       </div>
     </section>
   );

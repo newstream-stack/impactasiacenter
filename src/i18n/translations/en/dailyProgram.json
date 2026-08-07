@@ -1,0 +1,55 @@
+{
+  "dailyProgram": {
+    "backLabel": "Back to Home",
+    "dayLabel": "Day",
+    "homeLinkTitle": "View the detailed program for each day",
+    "notFoundTitle": "Program not found",
+    "notFoundBody": "Please check that the QR code links to a valid day.",
+    "days": [
+      {
+        "id": 1,
+        "date": "Oct 20",
+        "weekday": "Tuesday",
+        "title": "Day 1",
+        "sessions": [
+          { "time": "09:00", "title": "Registration", "location": "" },
+          { "time": "09:30", "title": "Opening", "location": "" },
+          { "time": "12:00", "title": "Lunch", "location": "" },
+          { "time": "19:00", "title": "Evening Session", "location": "" }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "Oct 21",
+        "weekday": "Wednesday",
+        "title": "Day 2",
+        "sessions": [
+          { "time": "09:00", "title": "Morning Session", "location": "" },
+          { "time": "12:00", "title": "Lunch", "location": "" },
+          { "time": "19:00", "title": "Evening Session", "location": "" }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "Oct 22",
+        "weekday": "Thursday",
+        "title": "Day 3",
+        "sessions": [
+          { "time": "09:00", "title": "Morning Session", "location": "" },
+          { "time": "12:00", "title": "Lunch", "location": "" },
+          { "time": "19:00", "title": "Evening Session", "location": "" }
+        ]
+      },
+      {
+        "id": 4,
+        "date": "Oct 23",
+        "weekday": "Friday",
+        "title": "Day 4",
+        "sessions": [
+          { "time": "09:00", "title": "Morning Session", "location": "" },
+          { "time": "12:00", "title": "Closing", "location": "" }
+        ]
+      }
+    ]
+  }
+}

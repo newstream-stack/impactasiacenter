@@ -1,0 +1,126 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg) 0%, #1d202d 50%, var(--bg) 100%);
+}
+
+.container {
+  position: relative;
+  width: min(100% - 2.5rem, 640px);
+  margin: 0 auto;
+  padding: 4rem 0 5rem;
+}
+
+.langToggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  padding: 0.4rem 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.weekday {
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.date {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.dayNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 2rem 0;
+}
+
+.dayTab {
+  padding: 0.5rem 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.dayTabActive {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0 0 3rem;
+  list-style: none;
+}
+
+.session {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(145deg, rgba(37, 40, 55, 0.9), rgba(22, 24, 35, 0.78));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+.time {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 700;
+  min-width: 3.5rem;
+}
+
+.sessionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sessionTitle {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.sessionLocation {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.notFoundBody {
+  margin: 1rem 0 2rem;
+  color: var(--text-muted);
+}
+
+.backLink {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}

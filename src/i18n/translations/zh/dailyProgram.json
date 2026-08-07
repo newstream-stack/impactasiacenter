@@ -1,0 +1,55 @@
+{
+  "dailyProgram": {
+    "backLabel": "返回首頁",
+    "dayLabel": "Day",
+    "homeLinkTitle": "點選查看每日詳細流程",
+    "notFoundTitle": "找不到這一天的流程",
+    "notFoundBody": "請確認 QRcode 對應的天數是否正確。",
+    "days": [
+      {
+        "id": 1,
+        "date": "10 / 20",
+        "weekday": "星期二",
+        "title": "第一天",
+        "sessions": [
+          { "time": "09:00", "title": "報到", "location": "" },
+          { "time": "09:30", "title": "開幕", "location": "" },
+          { "time": "12:00", "title": "午餐", "location": "" },
+          { "time": "19:00", "title": "晚會", "location": "" }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "10 / 21",
+        "weekday": "星期三",
+        "title": "第二天",
+        "sessions": [
+          { "time": "09:00", "title": "晨間聚會", "location": "" },
+          { "time": "12:00", "title": "午餐", "location": "" },
+          { "time": "19:00", "title": "晚會", "location": "" }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "10 / 22",
+        "weekday": "星期四",
+        "title": "第三天",
+        "sessions": [
+          { "time": "09:00", "title": "晨間聚會", "location": "" },
+          { "time": "12:00", "title": "午餐", "location": "" },
+          { "time": "19:00", "title": "晚會", "location": "" }
+        ]
+      },
+      {
+        "id": 4,
+        "date": "10 / 23",
+        "weekday": "星期五",
+        "title": "第四天",
+        "sessions": [
+          { "time": "09:00", "title": "晨間聚會", "location": "" },
+          { "time": "12:00", "title": "閉幕", "location": "" }
+        ]
+      }
+    ]
+  }
+}

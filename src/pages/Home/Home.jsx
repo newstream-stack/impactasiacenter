@@ -20,7 +20,7 @@ import Footer from '../../components/Footer/Footer';
 import { useReveal } from '../../hooks/useReveal'
 import BackToTop from '../../components/BackToTop/BackToTop'
 import FloatingRegisterBtn from '../../components/FloatingRegisterBtn/FloatingRegisterBtn'
-import { smoothScrollTo } from '../../utils/scroll'
+// import { smoothScrollTo } from '../../utils/scroll'
 
 export default function Home() {
   const [activeTheme, setActiveTheme] = useState(null);
@@ -28,12 +28,13 @@ export default function Home() {
 
   useReveal();
 
-  useEffect(() => {
-    if (location.hash) {
-      const timer = setTimeout(() => smoothScrollTo(location.hash), 100);
-      return () => clearTimeout(timer);
-    }
-  }, [location.hash]);
+  // Temporarily disabled during dev — was auto-scrolling on every HMR reload. Re-enable when done testing.
+  // useEffect(() => {
+  //   if (location.hash) {
+  //     const timer = setTimeout(() => smoothScrollTo(location.hash), 100);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [location.hash]);
 
   return (
     <>

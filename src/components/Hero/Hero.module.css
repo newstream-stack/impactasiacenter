@@ -161,6 +161,122 @@
   font-weight: 400;
 }
 
+.hotelWrapper {
+  width: min(100%, 460px);
+  margin: 1rem auto 0;
+}
+
+.hotelCard {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1.1rem;
+  background: linear-gradient(135deg, rgba(20, 23, 35, 0.7), rgba(35, 37, 51, 0.58));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.hotelCard:hover {
+  border-color: rgba(255, 94, 0, 0.5);
+  background: linear-gradient(135deg, rgba(20, 23, 35, 0.82), rgba(35, 37, 51, 0.7));
+  transform: translateY(-1px);
+}
+
+.hotelIcon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 0.7rem;
+  background: rgba(255, 94, 0, 0.14);
+  border: 1px solid rgba(255, 94, 0, 0.25);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotelIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hotelInfo {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hotelEyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hotelName {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.hotelMeta {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hotelLinkIcon {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+}
+
+.hotelLinkIcon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.hotelCard:hover .hotelLinkIcon {
+  color: var(--accent);
+}
+
+.hotelMoreLink {
+  display: block;
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.hotelMoreLink:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .hotelWrapper {
+    margin-top: 0.85rem;
+  }
+
+  .hotelMeta {
+    white-space: normal;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     min-height: 80vh;

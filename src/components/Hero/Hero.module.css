@@ -280,6 +280,21 @@
   box-shadow: 0 6px 18px rgba(255, 94, 0, 0.45);
 }
 
+.hotelPhotos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.hotelPhoto {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 @media (max-width: 600px) {
   .hotelWrapper {
     margin-top: 0.85rem;

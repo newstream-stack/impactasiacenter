@@ -76,6 +76,10 @@ export default function Hero() {
               <ExternalLinkIcon />
               {hero.viewMoreHotels}
             </a>
+            <div className={styles.hotelPhotos}>
+              <img src="/hotel.png" alt={recommendedHotel.name} className={styles.hotelPhoto} loading="lazy" />
+              <img src="/hotel1.png" alt={recommendedHotel.name} className={styles.hotelPhoto} loading="lazy" />
+            </div>
           </div>
         )}
 

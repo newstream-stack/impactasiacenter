@@ -8,6 +8,7 @@
   background-position: center;
   /* background-attachment: fixed; - Removed: Very poor performance on mobile iOS/Android */
   padding-top: 5rem; /* Offset for Header */
+  padding-bottom: 4rem;
 }
 
 .content {

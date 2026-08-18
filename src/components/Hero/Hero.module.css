@@ -253,18 +253,31 @@
 }
 
 .hotelMoreLink {
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
   margin-top: 0.6rem;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.2s ease;
+  padding: 0.55rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), #ff8a3d);
+  border-radius: 0.7rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(255, 94, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotelMoreLink svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 .hotelMoreLink:hover {
-  color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 94, 0, 0.45);
 }
 
 @media (max-width: 600px) {

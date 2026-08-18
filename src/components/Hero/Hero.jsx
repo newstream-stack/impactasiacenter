@@ -1,7 +1,6 @@
 import styles from './Hero.module.css';
 import { useI18n } from '../../i18n/I18nContext';
 import Countdown from '../Countdown/Countdown';
-import { smoothScrollTo } from '../../utils/scroll';
 
 const HERO_IMG = '/opening.jpg';
 
@@ -69,10 +68,12 @@ export default function Hero() {
               <span className={styles.hotelLinkIcon}><ExternalLinkIcon /></span>
             </a>
             <a
-              href="#venue"
-              onClick={(e) => { e.preventDefault(); smoothScrollTo('#venue'); }}
+              href="https://www.hilton.com/en/attend-my-event/phxtpes-91l-89df9ea1-a620-4440-b972-8c30e85323bc/"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.hotelMoreLink}
             >
+              <ExternalLinkIcon />
               {hero.viewMoreHotels}
             </a>
           </div>

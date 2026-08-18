@@ -93,6 +93,7 @@ export default function Venue() {
                 src={src}
                 alt={`venue-${i + 1}`}
                 className={`${styles.slide} ${i === current ? styles.slideActive : ''}`}
+                loading={i === 0 ? 'eager' : 'lazy'}
               />
             ))}
 

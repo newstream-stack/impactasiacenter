@@ -10,7 +10,7 @@ function BioModal({ member, onClose }) {
         <button className={styles.modalClose} onClick={onClose}>✕</button>
         {member.image && (
           <div className={styles.modalAvatarWrap}>
-            <img src={member.image} alt={member.name} className={styles.modalAvatar} />
+            <img src={member.image} alt={member.name} className={styles.modalAvatar} width="100" height="100" />
           </div>
         )}
         <div className={styles.modalRole}>{member.role}</div>
@@ -45,7 +45,7 @@ export default function Presidium() {
               <div key={index} className={styles.memberCard}>
                 {member.image && (
                   <div className={styles.avatarWrap}>
-                    <img src={member.image} alt={member.name} className={styles.avatar} />
+                    <img src={member.image} alt={member.name} className={styles.avatar} width="140" height="140" loading="lazy" />
                   </div>
                 )}
                 <span className={styles.role}>{member.role}</span>
@@ -67,7 +67,7 @@ export default function Presidium() {
                 >
                   {member.image ? (
                     <div className={styles.coChairAvatarWrap}>
-                      <img src={member.image} alt={member.name} className={styles.coChairAvatar} />
+                      <img src={member.image} alt={member.name} className={styles.coChairAvatar} width="80" height="80" loading="lazy" />
                     </div>
                   ) : (
                     <div className={styles.coChairInitial}>

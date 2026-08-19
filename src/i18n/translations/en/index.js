@@ -11,6 +11,7 @@ import themes from './themes.json';
 import venue from './venue.json';
 import footer from './footer.json';
 import dailyProgram from './dailyProgram.json';
+import letter from './letter.json';
 
 const translations = {
   ...common,
@@ -26,6 +27,7 @@ const translations = {
   ...venue,
   ...footer,
   ...dailyProgram,
+  letter,
 };
 
 export default translations;

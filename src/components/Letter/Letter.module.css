@@ -1,0 +1,263 @@
+.section {
+  padding: 2rem 0 0;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.letter {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background:
+    radial-gradient(120% 160% at 0% 0%, rgba(255, 140, 0, 0.06), transparent 55%),
+    rgba(255, 255, 255, 0.025);
+  padding: 3.5rem 3.75rem;
+  overflow: hidden;
+}
+
+.letter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), rgba(255, 140, 0, 0));
+}
+
+.letter p {
+  margin: 0 0 1.15rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.96rem;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+.letterGreeting {
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem !important;
+}
+
+.letterBlock {
+  margin-bottom: 1.6rem;
+}
+
+.letterBlock p:last-child {
+  margin-bottom: 0;
+}
+
+.letterHeading {
+  position: relative;
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 2.5rem 0 1.25rem;
+  padding-left: 1rem;
+}
+
+.letterHeading::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.letterQuoteBlock {
+  margin: 1.75rem 0;
+  padding: 1.5rem 1.75rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: rgba(255, 140, 0, 0.06);
+}
+
+.letterQuoteBlock p {
+  margin: 0 0 0.6rem;
+  color: var(--text);
+  font-size: 1.02rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.letterQuoteBlock p:last-child {
+  margin-bottom: 0;
+}
+
+.letterEmphasis {
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+.letterPrayerList {
+  margin: 0 0 1.6rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.letterPrayerList li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+.letterPrayerList li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.letterReflectionList {
+  counter-reset: reflection;
+  margin: 0 0 1.6rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.letterReflectionList li {
+  counter-increment: reflection;
+  position: relative;
+  padding: 0.85rem 1.25rem 0.85rem 3rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.letterReflectionList li::before {
+  content: counter(reflection);
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: rgba(255, 140, 0, 0.15);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letterSignature {
+  margin-top: 2.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+}
+
+.letterSignatureMarks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  padding: 0.25rem 0;
+}
+
+.letterSignatureMark {
+  display: block;
+  height: 68px;
+  width: auto;
+  filter: invert(1);
+  opacity: 0.85;
+}
+
+.letterSignatureNames {
+  display: flex;
+  gap: 3rem;
+}
+
+.letterSignatureBlock {
+  text-align: right;
+}
+
+.letterSignatureName {
+  position: relative;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.5rem;
+}
+
+.letterSignatureName::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.letterSignatureTitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .letter {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .letterHeading {
+    font-size: 1.15rem;
+  }
+
+  .letterSignature {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+  }
+
+  .letterSignatureMarks {
+    display: none;
+  }
+
+  .letterSignatureNames {
+    gap: 2rem;
+  }
+}

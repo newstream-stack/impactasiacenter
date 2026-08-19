@@ -3,6 +3,7 @@ import { useI18n } from '../../i18n/I18nContext';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import TimelineModal from '../TimelineModal/TimelineModal';
 import JourneyStory from '../JourneyStory/JourneyStory';
+import Letter from '../Letter/Letter';
 import styles from './Timeline.module.css';
 
 export default function Timeline() {
@@ -14,6 +15,7 @@ export default function Timeline() {
   return (
     <>
       <JourneyStory />
+      <Letter />
       <section className={styles.section}>
         <div className={styles.container}>
           <SectionHeader

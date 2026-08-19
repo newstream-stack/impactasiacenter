@@ -29,7 +29,7 @@ function FaqItem({ question, children }) {
 }
 
 export default function FAQ() {
-  const { t } = useI18n()
+  const { t, language } = useI18n()
 
   const groups = [
     {
@@ -57,6 +57,11 @@ export default function FAQ() {
   return (
     <section id="faq" className={styles.section}>
       <div className={styles.container}>
+        <img
+          className={styles.banner}
+          src={language === 'zh' ? '/992.jpg' : '/993.jpg'}
+          alt=""
+        />
         <SectionHeader
           eyebrow={t('faqEyebrow')}
           title={t('faqTitle')}

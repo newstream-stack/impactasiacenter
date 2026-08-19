@@ -42,7 +42,7 @@ export default function Home() {
       <Hero />
       <div className="reveal"><Vision /></div>
       <div className="reveal"><AboutIntro onMoreClick={setActiveTheme} /></div>
-      <div className="reveal"><Timeline /></div>
+      <Timeline />
       <div className="reveal"><TrailerSection /></div>
       <div className="reveal"><IAAIntro /></div>
       <div className="reveal"><PhoenixIntro /></div>

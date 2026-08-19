@@ -14,9 +14,9 @@ export default function Timeline() {
 
   return (
     <>
-      <JourneyStory />
-      <Letter />
-      <section className={styles.section}>
+      <div className="reveal"><JourneyStory /></div>
+      <div className="reveal"><Letter /></div>
+      <section className={`reveal ${styles.section}`}>
         <div className={styles.container}>
           <SectionHeader
             title={timelineSection.title}

@@ -45,8 +45,8 @@ export default function Letter() {
 
           <div className={styles.letterSignature}>
             <div className={styles.letterSignatureMarks}>
-              <img src="/洪.png" alt="" className={styles.letterSignatureMark} />
-              <img src="/忠.png" alt="" className={styles.letterSignatureMark} />
+              <img src="/signature-1.png" alt="" className={styles.letterSignatureMark} />
+              <img src="/signature-2.png" alt="" className={styles.letterSignatureMark} />
             </div>
             <div className={styles.letterSignatureNames}>
               <div className={styles.letterSignatureBlock}>

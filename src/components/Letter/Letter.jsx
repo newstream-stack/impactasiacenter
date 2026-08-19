@@ -44,17 +44,17 @@ export default function Letter() {
           </div>
 
           <div className={styles.letterSignature}>
-            <div className={styles.letterSignatureMarks}>
+            <div className={styles.letterSignatureBlock}>
               <img src="/signature-1.png" alt="" className={styles.letterSignatureMark} />
-              <img src="/signature-2.png" alt="" className={styles.letterSignatureMark} />
-            </div>
-            <div className={styles.letterSignatureNames}>
-              <div className={styles.letterSignatureBlock}>
+              <div className={styles.letterSignatureText}>
                 <p className={styles.letterSignatureName}>{t('letter.signature1Name')}</p>
                 <p className={styles.letterSignatureTitle}>{t('letter.signature1Title1')}</p>
                 <p className={styles.letterSignatureTitle}>{t('letter.signature1Title2')}</p>
               </div>
-              <div className={styles.letterSignatureBlock}>
+            </div>
+            <div className={styles.letterSignatureBlock}>
+              <img src="/signature-2.png" alt="" className={styles.letterSignatureMark} />
+              <div className={styles.letterSignatureText}>
                 <p className={styles.letterSignatureName}>{t('letter.signature2Name')}</p>
                 <p className={styles.letterSignatureTitle}>{t('letter.signature2Title1')}</p>
                 <p className={styles.letterSignatureTitle}>{t('letter.signature2Title2')}</p>

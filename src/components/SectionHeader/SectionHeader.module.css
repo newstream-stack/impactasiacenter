@@ -25,6 +25,14 @@
   letter-spacing: 0.02em;
   color: var(--text);
   margin-bottom: 1.1rem;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+/* Long English section titles ("Venue Information", "Gathering Schedule") were
+   clipping against the narrow container at the pinned mobile size */
+@media (max-width: 480px) {
+  .title { font-size: clamp(1.6rem, 6.5vw, 2rem); }
 }
 
 .title.accent {

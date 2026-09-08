@@ -10,12 +10,51 @@ function RichText({ text }) {
   )
 }
 
+function ChapterBody({ block }) {
+  const points = block.detail?.points
+  const intro = block.detail?.intro
+
+  return (
+    <div className={styles.body}>
+      {intro && <p className={styles.chapterIntro}><RichText text={intro} /></p>}
+
+      {points ? (
+        <ul className={styles.points}>
+          {points.map((p, i) => (
+            <li key={i} className={styles.point}>
+              <strong className={styles.pointTitle}>{p.title}</strong>
+              <span className={styles.pointDesc}><RichText text={p.desc} /></span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className={styles.paragraphs}>
+          {block.paragraphs.map((p, i) => (
+            <p key={i} className={styles.paragraph}><RichText text={p} /></p>
+          ))}
+        </div>
+      )}
+
+      {block.detail?.quote && (
+        <blockquote className={styles.quoteBox}>
+          {block.detail.quoteLabel && (
+            <span className={styles.quoteLabel}>{block.detail.quoteLabel}</span>
+          )}
+          <p className={styles.quoteText}><RichText text={block.detail.quote} /></p>
+        </blockquote>
+      )}
+    </div>
+  )
+}
+
 export default function IAAIntro() {
   const { t } = useI18n()
   const data = t('iaaIntro')
-  const [openIndex, setOpenIndex] = useState(0)
+  const [openIndex, setOpenIndex] = useState(null)
 
   if (!data) return null
+
+  const blocks = data.blocks || []
 
   return (
     <section id="iaa-intro" className={styles.section}>
@@ -40,78 +79,28 @@ export default function IAAIntro() {
           </p>
         )}
 
-        <div className={styles.accordion}>
-          {data.blocks.map((block, index) => {
+        {/* All chapters collapsed by default — 11 scannable rows instead of a wall */}
+        <ol className={styles.list}>
+          {blocks.map((block, index) => {
             const isOpen = openIndex === index
-            const points = block.detail?.points
-            const intro = block.detail?.intro
-            const introLabel = block.detail?.introLabel
-
             return (
-              <div key={index} className={`${styles.item} ${isOpen ? styles.itemOpen : ''}`}>
+              <li key={block.title} className={`${styles.item} ${isOpen ? styles.itemOpen : ''}`}>
                 <button
                   type="button"
-                  className={styles.itemHeader}
+                  className={styles.row}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
                 >
-                  <span className={styles.itemNumber}>{String(index + 1).padStart(2, '0')}</span>
-                  <span className={styles.itemTitle}>
-                    {block.title}
-                    {block.tag && <span className={styles.itemTag}>{block.tag}</span>}
-                  </span>
-                  <span className={styles.itemIcon}>{isOpen ? '−' : '+'}</span>
+                  <span className={styles.num}>{String(index + 1).padStart(2, '0')}</span>
+                  <span className={styles.rowTitle}>{block.title}</span>
+                  {block.tag && <span className={styles.rowTag}>{block.tag}</span>}
+                  <span className={styles.chevron} aria-hidden="true" />
                 </button>
-
-                <div className={styles.itemBody}>
-                  <div className={styles.itemBodyInner}>
-                    {intro && (
-                      <div className={styles.introBlock}>
-                        {introLabel && <span className={styles.introLabel}>{introLabel}</span>}
-                        <p className={styles.intro}><RichText text={intro} /></p>
-                      </div>
-                    )}
-
-                    {points ? (
-                      <ul className={styles.points}>
-                        {points.map((p, i) => (
-                          <li key={i} className={styles.point}>
-                            <strong className={styles.pointTitle}>{p.title}</strong>
-                            <span><RichText text={p.desc} /></span>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <div className={styles.paragraphs}>
-                        {block.paragraphs.map((p, i) => (
-                          <p key={i} className={styles.paragraph}><RichText text={p} /></p>
-                        ))}
-                      </div>
-                    )}
-
-                    {block.detail?.outro && (
-                      <div className={styles.introBlock}>
-                        {block.detail.outroLabel && (
-                          <span className={styles.introLabel}>{block.detail.outroLabel}</span>
-                        )}
-                        <p className={styles.intro}><RichText text={block.detail.outro} /></p>
-                      </div>
-                    )}
-
-                    {block.detail?.quote && (
-                      <div className={styles.quoteBox}>
-                        {block.detail.quoteLabel && (
-                          <span className={styles.quoteLabel}>{block.detail.quoteLabel}</span>
-                        )}
-                        <p className={styles.quoteText}><RichText text={block.detail.quote} /></p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
+                {isOpen && <ChapterBody block={block} />}
+              </li>
             )
           })}
-        </div>
+        </ol>
       </div>
     </section>
   )

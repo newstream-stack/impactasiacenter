@@ -1,6 +1,6 @@
 .section {
-  padding: 7rem 0;
-  background: linear-gradient(180deg, var(--bg) 0%, #1d202d 50%, var(--bg) 100%);
+  padding: var(--section-pad) 0;
+  background: linear-gradient(180deg, var(--bg) 0%, #241f22 50%, var(--bg) 100%);
 }
 
 .container {
@@ -10,20 +10,24 @@
 }
 
 .eyebrow {
-  margin: 0 0 0.65rem;
-  color: var(--accent);
-  font-size: 0.78rem;
+  margin: 0 0 1.1rem;
+  font-size: var(--fs-eyebrow);
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.34em;
   text-transform: uppercase;
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title {
   margin: 0;
-  color: #fff;
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .scheduleGrid {
@@ -39,10 +43,11 @@
   min-height: 15rem;
   padding: 2rem 1.5rem;
   text-align: left;
-  background: linear-gradient(145deg, rgba(37, 40, 55, 0.9), rgba(22, 24, 35, 0.78));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.25rem;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.008));
+  border: 1px solid var(--border);
+  border-radius: 1.1rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .dayCard::before {
@@ -52,14 +57,15 @@
   width: 3rem;
   height: 3px;
   content: '';
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright));
   border-radius: 0 0 999px 999px;
 }
 
 .date {
   margin: 0;
-  color: #fff;
-  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -87,8 +93,9 @@
 }
 
 .time {
-  color: var(--accent);
-  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.9vw, 1.7rem);
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -123,8 +130,9 @@
 }
 
 .dailyProgramLink:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #17131a;
 }
 
 @media (max-width: 760px) {
@@ -141,4 +149,9 @@
     min-height: auto;
     padding: 1.5rem;
   }
+}
+
+.dayCard:hover {
+  border-color: rgba(233, 197, 138, 0.35);
+  transform: translateY(-4px);
 }

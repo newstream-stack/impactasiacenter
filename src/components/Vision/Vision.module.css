@@ -1,62 +1,81 @@
+/* Full-bleed cinematic scripture moment — the visual beat right after the hero */
 .section {
-  padding: 8rem 2rem;
-  background: var(--bg-dark);
   position: relative;
+  min-height: min(88vh, 760px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(6rem, 12vw, 10rem) 1.5rem;
   overflow: hidden;
+  isolation: isolate;
 }
 
-.section::before {
-  content: '"';
+.media {
   position: absolute;
-  top: -2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: clamp(12rem, 20vw, 18rem);
-  font-weight: 900;
-  line-height: 1;
-  color: rgba(255, 94, 0, 0.04);
-  pointer-events: none;
-  user-select: none;
-  font-style: italic;
+  inset: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center 30%;
+  transform: scale(1.04);
+}
+
+/* Heavy top/bottom falloff so the section melts into the page, plus a warm centre glow */
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 55% at 50% 45%, rgba(255, 150, 40, 0.16) 0%, transparent 70%),
+    linear-gradient(to bottom, var(--bg) 0%, rgba(12, 11, 16, 0.62) 26%, rgba(12, 11, 16, 0.62) 72%, var(--bg) 100%);
 }
 
 .inner {
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
   position: relative;
-  z-index: 1;
-}
-
-.quoteBar {
-  width: 48px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 2px;
-  margin: 0 auto 2.5rem;
+  /* px, not em: this container inherits the 16px body size, so em would be far too narrow */
+  max-width: min(92vw, 820px);
+  margin: 0;
+  text-align: center;
 }
 
 .verse {
-  font-size: clamp(1.25rem, 2.8vw, 1.7rem);
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.9;
-  letter-spacing: 0.01em;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.6vw, 2.9rem);
+  font-weight: 500;
+  line-height: 1.72;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.7);
+}
+
+.line {
+  display: block;
 }
 
 .ref {
-  font-style: normal;
-  font-size: 0.85rem;
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
   display: block;
-  margin-top: 2rem;
-  opacity: 0.8;
+  margin-top: 2.6rem;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 768px) {
-  .section { padding: 5rem 1.5rem; }
-  .section::before { display: none; }
+  .section {
+    min-height: 0;
+    padding: 5.5rem 1.5rem;
+  }
+
+  .media { background-position: center 22%; }
+
+  .inner { max-width: none; }
+
+  .verse { line-height: 1.9; }
 }

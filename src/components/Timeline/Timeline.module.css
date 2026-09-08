@@ -1,6 +1,7 @@
 .section {
-  padding: 8rem 0;
+  padding: var(--section-pad) 0;
   background: var(--bg);
+  overflow: hidden;
 }
 
 .container {
@@ -9,217 +10,186 @@
   padding: 0 2rem;
 }
 
-
-.timeline {
+/* ---------- Horizontal journey rail ---------- */
+.rail {
   position: relative;
-  width: 100%;
 }
 
-.line {
+/* The connecting line sits behind the year markers */
+.railLine {
   position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateX(-50%);
+  top: 0.62rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border) 8%, var(--border) 92%, transparent);
+  pointer-events: none;
 }
 
-.item {
-  position: relative;
-  width: 100%;
-  margin-bottom: 4rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-height: 250px;
-}
-
-.even {
-  flex-direction: row-reverse;
-}
-
-.dot {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-  background: #FF5E00;
-  border-radius: 50%;
-  z-index: 5;
-  box-shadow: 0 0 15px rgba(255, 94, 0, 0.4);
-}
-
-.activeItem .dot {
-  width: 24px;
-  height: 24px;
-  background: #fff;
-  border: 4px solid #FF5E00;
-  box-shadow: 0 0 25px rgba(255, 94, 0, 0.8);
-}
-
-.content {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.even .content {
-  align-items: flex-end;
-  text-align: right;
-}
-
-.textContent {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.location h3 {
-  font-size: 1.8rem;
-  font-weight: 800;
+.track {
+  list-style: none;
   margin: 0;
+  padding: 0 0 1.25rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(190px, 1fr);
+  gap: clamp(1rem, 2.2vw, 1.75rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-deep) transparent;
+  /* Let cards bleed to the viewport edge on small screens */
+  margin-inline: -2rem;
+  padding-inline: 2rem;
+}
+
+.track::-webkit-scrollbar { height: 4px; }
+.track::-webkit-scrollbar-track { background: transparent; }
+.track::-webkit-scrollbar-thumb {
+  background: var(--gold-deep);
+  border-radius: 2px;
+}
+
+.stop {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .year {
-  font-size: 0.9rem;
-  color: #FF5E00;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  order: 2;
+  margin-top: 0.9rem;
 }
 
-.description {
-  font-size: 1.1rem;
-  opacity: 0.7;
-  max-width: 320px;
+.dot {
+  order: 1;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  margin-bottom: 1.9rem;
+  flex-shrink: 0;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.imageContainer {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 1rem;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.4s;
+.activeItem .dot {
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(217, 164, 65, 0.18), 0 0 16px rgba(217, 164, 65, 0.7);
+}
+
+.activeItem .year {
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  order: 3;
+  margin-top: 0.5rem;
 }
 
 .clickable {
   cursor: pointer;
 }
 
-.clickable:hover .imageOverlay {
-  opacity: 1;
+.imageContainer {
+  position: relative;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  /* 4:3 fits both the 16:9 posters and the one 4:5 poster without cropping either */
+  aspect-ratio: 4 / 3;
+  background: #141017;
+  transition: border-color 0.3s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.clickable:hover .image {
-  transform: scale(1.04);
+.clickable:hover .imageContainer {
+  border-color: rgba(233, 197, 138, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.5);
+}
+
+.imageBackdrop {
+  position: absolute;
+  inset: -12%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(24px) saturate(1.15) brightness(0.45);
+  pointer-events: none;
 }
 
 .image {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-  transition: opacity 0.4s, transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  /* contain, not cover: these posters carry baked-in text that must not be cut */
+  object-fit: contain;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item:hover .image {
-  opacity: 1;
+.clickable:hover .image {
+  transform: scale(1.05);
 }
 
 .imageOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.05) 55%);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 1.25rem;
-  opacity: 0;
-  transition: opacity 0.35s ease;
+  background: linear-gradient(to top, rgba(10, 9, 14, 0.85) 0%, transparent 45%);
+  pointer-events: none;
 }
 
 .readMore {
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: #fff;
-  background: #FF5E00;
-  padding: 0.4rem 1.1rem;
-  border-radius: 2rem;
-}
-
-/* Always-visible badge for touch devices / mobile */
-.readMoreBadge {
   position: absolute;
+  left: 0.85rem;
   bottom: 0.85rem;
-  right: 0.85rem;
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #fff;
-  background: #FF5E00;
-  padding: 0.3rem 0.8rem;
-  border-radius: 2rem;
-  pointer-events: none;
-  display: none;
+  letter-spacing: 0.06em;
+  color: var(--gold-bright);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.activeItem .imageContainer {
-  border: 2px solid #FF5E00;
-  box-shadow: 0 0 30px rgba(255, 94, 0, 0.3);
+.clickable:hover .readMore {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.region {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 1rem 0 0.3rem;
+  line-height: 1.35;
+}
+
+.description {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .line {
-    left: 2rem;
+  .container { padding: 0 1.25rem; }
+
+  .track {
+    grid-auto-columns: minmax(200px, 68vw);
+    margin-inline: -1.25rem;
+    padding-inline: 1.25rem;
   }
 
-  .dot {
-    left: 2rem;
-  }
-
-  .activeItem .dot {
-    left: 2rem;
-  }
-
-  .item {
-    justify-content: flex-start;
-    padding-left: 3.5rem;
-    padding-right: 0;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    text-align: left !important;
-    overflow: hidden;
-  }
-
-  .content {
-    width: 100%;
-    min-width: 0;
-    align-items: flex-start !important;
-    box-sizing: border-box;
-  }
-
-  .even .content {
-    align-items: flex-start !important;
-    text-align: left !important;
-  }
-
-  .description {
-    max-width: 100%;
-  }
-
-  .imageContainer {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .readMoreBadge {
-    display: block;
-  }
+  .region { font-size: 0.95rem; }
 }

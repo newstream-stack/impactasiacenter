@@ -1,6 +1,6 @@
 .page {
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--bg) 0%, #1d202d 50%, var(--bg) 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, #241f22 50%, var(--bg) 100%);
 }
 
 .container {
@@ -24,7 +24,7 @@
 
 .weekday {
   margin: 0 0 0.4rem;
-  color: var(--accent);
+  color: var(--gold);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -63,9 +63,9 @@
 }
 
 .dayTabActive {
-  color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
+  color: #17131a;
+  background: var(--gold);
+  border-color: var(--gold);
 }
 
 .sessions {
@@ -88,7 +88,7 @@
 
 .time {
   flex-shrink: 0;
-  color: var(--accent);
+  color: var(--gold);
   font-size: 1.15rem;
   font-weight: 700;
   min-width: 3.5rem;
@@ -120,7 +120,7 @@
 
 .backLink {
   display: inline-block;
-  color: var(--accent);
+  color: var(--gold);
   text-decoration: none;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid var(--gold);
 }

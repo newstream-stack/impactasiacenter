@@ -24,7 +24,7 @@
   max-width: 680px;
   max-height: 88vh;
   overflow-y: auto;
-  background: #13151f;
+  background: #191620;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.5rem;
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255,255,255,0.04);
@@ -32,11 +32,11 @@
   pointer-events: none;
   transition: transform 0.45s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.35s ease;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,94,0,0.3) transparent;
+  scrollbar-color: rgba(233,197,138,0.4) transparent;
 }
 
 .modal::-webkit-scrollbar { width: 4px; }
-.modal::-webkit-scrollbar-thumb { background: rgba(255,94,0,0.3); border-radius: 2px; }
+.modal::-webkit-scrollbar-thumb { background: rgba(233,197,138,0.4); border-radius: 2px; }
 
 .modalActive {
   transform: translate(-50%, -50%) scale(1);
@@ -94,9 +94,9 @@
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #FF5E00;
-  background: rgba(255, 94, 0, 0.12);
-  border: 1px solid rgba(255, 94, 0, 0.3);
+  color: var(--gold);
+  background: rgba(233, 197, 138, 0.14);
+  border: 1px solid rgba(233, 197, 138, 0.4);
   padding: 0.25rem 0.75rem;
   border-radius: 2rem;
 }
@@ -140,7 +140,7 @@
 }
 
 .locationPin {
-  color: #FF5E00;
+  color: var(--gold);
   font-size: 0.9rem;
 }
 
@@ -166,8 +166,8 @@
 .tagline {
   margin: 0 0 1.75rem;
   padding: 1rem 1.25rem;
-  background: rgba(255, 94, 0, 0.06);
-  border-left: 3px solid #FF5E00;
+  background: rgba(233, 197, 138, 0.06);
+  border-left: 3px solid var(--gold);
   border-radius: 0 0.75rem 0.75rem 0;
   font-size: 1rem;
   font-weight: 500;
@@ -177,14 +177,14 @@
 }
 
 .taglineDash {
-  color: #FF5E00;
+  color: var(--gold);
   margin-right: 0.25rem;
 }
 
 .divider {
   width: 48px;
   height: 2px;
-  background: linear-gradient(to right, #FF5E00, transparent);
+  background: linear-gradient(to right, var(--gold), transparent);
   margin-bottom: 1.75rem;
   border-radius: 1px;
 }

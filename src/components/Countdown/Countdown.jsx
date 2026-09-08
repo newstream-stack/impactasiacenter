@@ -6,7 +6,7 @@ export default function Countdown() {
   const pricing = t('registrationPricing');
 
   return (
-    <section className={`${styles.pricingWrapper} reveal`} aria-label={pricing.title}>
+    <section className={styles.pricingWrapper} aria-label={pricing.title}>
       <div className={styles.frame}>
         <p className={styles.title}>{pricing.title}</p>
         <div className={styles.pricingRow}>

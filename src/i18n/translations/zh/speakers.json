@@ -1,6 +1,7 @@
 {
   "speakersSection": {
-    "title": "重磅講員"
+    "title": "重磅講員",
+    "showAll": "看全部 {n} 位講員"
   },
   "speakers": [
     {

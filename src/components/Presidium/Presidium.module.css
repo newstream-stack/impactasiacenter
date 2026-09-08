@@ -1,5 +1,5 @@
 .section {
-  padding: 8rem 0;
+  padding: var(--section-pad) 0;
   background: var(--bg-dark);
   color: white;
   position: relative;
@@ -19,109 +19,161 @@
 }
 
 .title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.1em;
-  background: linear-gradient(135deg, #fff 0%, #aaa 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
 }
 
 .subtitle {
-  font-size: 1rem;
-  color: var(--accent);
+  font-size: var(--fs-eyebrow);
   text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.34em;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
   display: block;
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .line {
-  width: 60px;
-  height: 4px;
-  background: var(--accent);
+  width: 64px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
   margin: 0 auto;
-  border-radius: 2px;
+  position: relative;
 }
 
+.line::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px rgba(217, 164, 65, 0.8);
+}
+
+/* Chairs read as editorial rows: rectangular portrait beside the text,
+   matching the speaker cards instead of the old orange-ringed avatars. */
 .mainGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-  margin-bottom: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 1.5rem;
+  margin-bottom: clamp(4rem, 8vw, 6rem);
 }
 
 .memberCard {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 3rem;
-  border-radius: 20px;
-  text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.008));
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+  border-radius: 1.1rem;
+  text-align: left;
+  transition: border-color 0.35s ease, background 0.35s ease, transform 0.35s ease;
+}
+
+.memberBody {
+  min-width: 0;
+  align-self: center;
 }
 
 .avatarWrap {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 200px;
+  aspect-ratio: 4 / 5;
+  border-radius: 0.75rem;
   overflow: hidden;
-  margin: 0 auto 2rem;
-  border: 3px solid var(--accent);
+  margin: 0;
+  border: 1px solid var(--border);
   flex-shrink: 0;
+  background: #141017;
 }
 
 .avatar {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
+  filter: grayscale(0.3) brightness(0.94);
+  transition: filter 0.4s ease, transform 0.5s ease;
 }
 
 .memberCard:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--accent);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+  border-color: rgba(233, 197, 138, 0.4);
+  background: linear-gradient(160deg, rgba(255, 140, 40, 0.06), rgba(255, 255, 255, 0.012));
+}
+
+.memberCard:hover .avatar {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.04);
 }
 
 .role {
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.64rem;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  letter-spacing: 0.22em;
+  margin-bottom: 0.65rem;
   display: block;
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .name {
-  font-size: 1.75rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: #fff;
+  margin-bottom: 0.4rem;
+  color: var(--text);
   text-wrap: balance;
 }
 
 .memberTitle {
-  font-size: 1rem;
-  color: #999;
+  font-size: 0.84rem;
+  color: var(--text-muted);
   line-height: 1.6;
+  margin: 0;
 }
 
 .bio {
-  font-size: 0.9rem;
-  color: #aaa;
-  line-height: 1.8;
-  margin-top: 1.25rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-top: 1rem;
   text-align: left;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+@media (max-width: 620px) {
+  .memberCard {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    padding: 1.25rem;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .avatarWrap {
+    width: min(72%, 260px);
+    aspect-ratio: 4 / 5;
+  }
+
+  .memberBody { text-align: left; width: 100%; }
+  .name { font-size: 1.2rem; }
 }
 
 .coChairsSection {
@@ -130,11 +182,12 @@
 }
 
 .coChairsTitle {
-  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
   font-weight: 700;
   text-align: center;
-  margin-bottom: 3rem;
-  color: #eee;
+  margin-bottom: 2.5rem;
+  color: var(--text);
 }
 
 .coChairsGrid {
@@ -152,7 +205,7 @@
   padding: 2rem 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
   transition: all 0.3s ease;
   position: relative;
   min-height: 200px;
@@ -160,15 +213,22 @@
   max-width: calc(25% - 1.125rem);
 }
 
+@media (max-width: 860px) {
+  .coChairItem {
+    flex-basis: calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+  }
+}
+
 .clickable {
   cursor: pointer;
 }
 
 .clickable:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--accent);
+  background: rgba(255, 140, 40, 0.05);
+  border-color: rgba(233, 197, 138, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
 }
 
 .coChairAvatarWrap {
@@ -177,7 +237,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 1rem;
-  border: 2px solid var(--accent);
+  border: 1px solid var(--gold);
   flex-shrink: 0;
 }
 
@@ -205,24 +265,25 @@
 }
 
 .coChairName {
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-weight: 700;
   font-size: 1rem;
-  margin-bottom: 0.25rem;
-  color: #fff;
+  margin-bottom: 0.3rem;
+  color: var(--text);
 }
 
 .coChairTitle {
-  font-size: 0.78rem;
-  color: #888;
-  line-height: 1.4;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 .coChairReadMore {
   margin-top: auto;
   padding-top: 0.75rem;
-  font-size: 0.72rem;
-  color: var(--accent);
-  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
 }
 
 /* Modal */
@@ -239,7 +300,7 @@
 }
 
 .modalBox {
-  background: #1e2030;
+  background: #241f27;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
   padding: 3rem 2.5rem 2.5rem;
@@ -278,7 +339,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 1.5rem;
-  border: 3px solid var(--accent);
+  border: 1px solid var(--gold);
 }
 
 .modalAvatar {
@@ -290,7 +351,7 @@
 
 .modalRole {
   font-size: 0.8rem;
-  color: var(--accent);
+  color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-weight: 600;

@@ -52,11 +52,18 @@ function SpeakerModal({ speaker, onClose }) {
   )
 }
 
+const PREVIEW_COUNT = 8
+
 export default function Speakers() {
   const { t } = useI18n()
   const speakersSection = t('speakersSection')
   const speakers = t('speakers') || []
   const [activeSpeaker, setActiveSpeaker] = useState(null)
+  const [expanded, setExpanded] = useState(false)
+
+  const visible = speakers.filter(s => !s.hidden)
+  const shown = expanded ? visible : visible.slice(0, PREVIEW_COUNT)
+  const hiddenCount = visible.length - shown.length
 
   return (
     <>
@@ -64,7 +71,7 @@ export default function Speakers() {
         <div className={styles.container}>
           <SectionHeader title={speakersSection?.title || '重磅講員'} />
           <div className={styles.grid}>
-            {speakers.filter(s => !s.hidden).map((s) => (
+            {shown.map((s) => (
               <SpeakerCard
                 key={s.id}
                 {...s}
@@ -72,6 +79,17 @@ export default function Speakers() {
               />
             ))}
           </div>
+
+          {hiddenCount > 0 && (
+            <button
+              type="button"
+              className={styles.expandBtn}
+              onClick={() => setExpanded(true)}
+            >
+              {(speakersSection?.showAll || '看全部 {n} 位講員').replace('{n}', visible.length)}
+              <span className={styles.expandArrow}>↓</span>
+            </button>
+          )}
         </div>
       </section>
 

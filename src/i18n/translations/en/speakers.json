@@ -1,6 +1,7 @@
 {
   "speakersSection": {
-    "title": "Keynote Speakers"
+    "title": "Keynote Speakers",
+    "showAll": "View all {n} speakers"
   },
   "speakers": [
     {

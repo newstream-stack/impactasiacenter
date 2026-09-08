@@ -184,6 +184,16 @@ export default function Venue() {
               </a>
             ))}
           </div>
+
+          <a
+            href="https://www.hilton.com/en/attend-my-event/phxtpes-91l-89df9ea1-a620-4440-b972-8c30e85323bc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.hotelsBookingLink}
+          >
+            <ExternalLinkIcon />
+            {venue.hotelsBookingLabel}
+          </a>
         </div>
       </div>
     </section>

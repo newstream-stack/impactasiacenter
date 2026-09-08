@@ -1,389 +1,485 @@
 .hero {
-  min-height: 100vh;
+  position: relative;
+  min-height: 100svh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 8rem 0 5.5rem;
+  isolation: isolate;
+}
+
+/* Artwork sits in its own layer so the scrim can be tuned independently */
+.media {
+  position: absolute;
+  inset: 0;
   background-size: cover;
-  background-position: center;
-  /* background-attachment: fixed; - Removed: Very poor performance on mobile iOS/Android */
-  padding-top: 5rem; /* Offset for Header */
-  padding-bottom: 4rem;
+  background-position: center 42%;
+  z-index: -2;
+  animation: slowZoom 26s ease-out forwards;
+}
+
+/* Desktop uses the text-free artwork; the mobile poster is swapped in below */
+.mediaMobile { display: none; }
+
+@keyframes slowZoom {
+  from { transform: scale(1.06); }
+  to { transform: scale(1); }
+}
+
+/* The artwork's left wall is already dark, so the side scrim stays light —
+   just enough to hold the type, letting the light shaft and gold skyline read. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(10, 10, 16, 0.78) 0%, rgba(10, 10, 16, 0.45) 30%, rgba(10, 10, 16, 0.08) 55%, transparent 78%),
+    linear-gradient(to top, var(--bg) 0%, rgba(10, 10, 16, 0.6) 22%, transparent 58%);
 }
 
 .content {
-  z-index: 10;
-  padding: 0 1.5rem;
-  max-width: 900px;
-  animation: float 4s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #FF5E00;
-  text-transform: uppercase;
-  letter-spacing: 0.4rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.subtitleLocation::after {
-  content: ' | ';
-}
-
-/* Fluid Color Title */
-.fluidTitle {
-  font-size: clamp(2.5rem, 8vw, 5.5rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  background: linear-gradient(
-    to right,
-    #FF5E00 10%,
-    #fff 30%,
-    #FF5E00 50%,
-    #fff 70%,
-    #FF5E00 90%
-  );
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fluidShift 4s linear infinite;
-  will-change: background-position;
-  white-space: pre-line;
-  text-wrap: balance;
-}
-
-@keyframes fluidShift {
-  to { background-position: 200% center; }
-}
-
-.titleContainer {
-  margin: 2rem 0;
-}
-
-.futuristicTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Orbitron', sans-serif;
-  line-height: 0.9;
-  perspective: 1000px;
-}
-
-.futuristicTitle .small {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 900;
-  letter-spacing: 0.8em;
-  color: var(--accent);
-  margin: 0.5rem 0;
-  text-shadow: 0 0 10px rgba(255, 94, 0, 0.3);
-  margin-left: 0.8em; /* Offset for letter-spacing */
-}
-
-.futuristicTitle .large {
-  font-size: clamp(2.5rem, 10vw, 7rem);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  background: linear-gradient(
-    to right,
-    var(--accent) 0%,
-    #fff 25%,
-    var(--accent) 50%,
-    #fff 75%,
-    var(--accent) 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 15px rgba(255, 94, 0, 0.2));
-  transform: rotateX(10deg);
-  margin: 0.2rem 0;
-  animation: fluidShift 4s linear infinite;
-}
-
-.futuristicTitle .large:last-child {
-  background: linear-gradient(
-    to right,
-    #fff 0%,
-    var(--accent) 25%,
-    #fff 50%,
-    var(--accent) 75%,
-    #fff 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.2));
-  animation: fluidShift 4s linear infinite reverse; /* Reverse for a bit of dynamic variety */
-}
-
-.tagline {
-  font-size: clamp(1rem, 2.5vw, 1.6rem);
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.15em;
-  font-weight: 400;
-  margin-top: -0.5rem;
-  margin-bottom: 0;
-}
-
-.tagline2 {
-  font-size: clamp(0.85rem, 2vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.08em;
-  font-weight: 400;
-  margin-top: 0.75rem;
-  margin-bottom: 0;
-}
-
-.tagline3 {
-  font-size: clamp(0.9rem, 2.2vw, 1.15rem);
-  color: #FF5E00;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  margin-top: 0.6rem;
-  margin-bottom: 0;
-  white-space: pre-line;
-  line-height: 1.8;
-}
-
-.eventName {
-  font-size: 1.4rem;
-  margin-top: 1.5rem;
-  opacity: 0.75;
-  letter-spacing: 0.25em;
-  font-weight: 400;
-}
-
-.hotelWrapper {
-  width: min(100%, 460px);
-  margin: 1rem auto 0;
-}
-
-.hotelCard {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 0.9rem 1.1rem;
-  background: linear-gradient(135deg, rgba(20, 23, 35, 0.7), rgba(35, 37, 51, 0.58));
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 1rem;
-  text-decoration: none;
-  backdrop-filter: blur(10px);
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-}
-
-.hotelCard:hover {
-  border-color: rgba(255, 94, 0, 0.5);
-  background: linear-gradient(135deg, rgba(20, 23, 35, 0.82), rgba(35, 37, 51, 0.7));
-  transform: translateY(-1px);
-}
-
-.hotelIcon {
-  flex-shrink: 0;
-  width: 38px;
-  height: 38px;
-  border-radius: 0.7rem;
-  background: rgba(255, 94, 0, 0.14);
-  border: 1px solid rgba(255, 94, 0, 0.25);
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hotelIcon svg {
-  width: 18px;
-  height: 18px;
-}
-
-.hotelInfo {
-  flex: 1;
-  min-width: 0;
+  position: relative;
+  width: min(1280px, 100% - 3rem);
+  margin: 0 auto;
+  max-width: none;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
 }
 
-.hotelEyebrow {
+/* ---- Masthead ---- */
+.eventName {
+  margin: 0 0 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 232, 0.55);
+}
+
+/* ---- Eyebrow ---- */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0 0 1.6rem;
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ---- Title ---- */
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+  margin: 0 0 1.6rem;
+  max-width: 15em;
+  color: #fff;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+}
+
+.titleLine2 {
+  display: block;
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---- Supporting copy ---- */
+.lead {
+  font-family: var(--font-display);
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--gold-bright);
+  margin: 0 0 0.7rem;
+}
+
+.sub {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+  max-width: 30em;
+}
+
+.creed {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.1rem;
+  margin-bottom: 2.4rem;
+  font-size: 0.86rem;
+  letter-spacing: 0.2em;
+  color: rgba(244, 239, 232, 0.7);
+}
+
+.creed span {
+  position: relative;
+  padding-left: 1.35rem;
+}
+
+.creed span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.7;
+}
+
+/* ---- Key dates ---- */
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2.5rem;
+  margin: 1.5rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metaItem dt {
   font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text-muted);
+}
+
+.metaItem dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.metaUrgent {
+  color: var(--gold-bright) !important;
+}
+
+/* ---- Actions ---- */
+.cta {
+  margin-top: 2.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #a9712a, #f4d68a 45%, #e7b757 70%, #a9712a);
+  color: #17131a;
+  border: none;
+  padding: 1.05rem 2.6rem;
+  border-radius: 3rem;
+  font-weight: 800;
+  font-size: 0.98rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(169, 113, 42, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(244, 214, 138, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btnGhost {
+  padding: 1.05rem 1.6rem;
+  border-radius: 3rem;
+  border: 1px solid var(--border);
+  color: var(--text-body);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.btnGhost:hover {
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
+/* ---- Official hotel partner band ---- */
+.hotelBand {
+  display: flex;
+  align-items: stretch;
+  gap: 1.1rem;
+  width: min(100%, 620px);
+  margin-top: 2rem;
+  padding: 0.7rem 0.9rem 0.7rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: rgba(12, 11, 16, 0.55);
+  backdrop-filter: blur(16px);
+  text-decoration: none;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.hotelBand:hover {
+  border-color: rgba(233, 197, 138, 0.45);
+  background: rgba(12, 11, 16, 0.72);
+  transform: translateY(-2px);
+}
+
+/* hotel.png is a 3.4:1 panorama — a near-square thumbnail cropped away most of it */
+.hotelPhoto {
+  width: 152px;
+  height: 84px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 0.65rem;
+}
+
+.hotelBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.hotelLabel {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hotelName {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
-  line-height: 1.3;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .hotelMeta {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.74rem;
+  color: var(--text-muted);
   line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.hotelLinkIcon {
-  flex-shrink: 0;
-  color: rgba(255, 255, 255, 0.35);
-  display: flex;
-  align-items: center;
-}
-
-.hotelLinkIcon svg {
-  width: 15px;
-  height: 15px;
-}
-
-.hotelCard:hover .hotelLinkIcon {
-  color: var(--accent);
-}
-
-.hotelMoreLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  margin-top: 0.6rem;
-  padding: 0.55rem 1rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, var(--accent), #ff8a3d);
-  border-radius: 0.7rem;
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(255, 94, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hotelMoreLink svg {
-  width: 14px;
-  height: 14px;
+.hotelSep {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--gold);
   flex-shrink: 0;
 }
 
-.hotelMoreLink:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(255, 94, 0, 0.45);
-}
-
-.hotelPhotos {
+.hotelAction {
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin-top: 0.6rem;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  align-self: center;
+  padding: 0.6rem 1.1rem;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #a9712a, #f4d68a 45%, #e7b757 70%, #a9712a);
+  color: #17131a;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
-.hotelPhoto {
+.hotelAction svg {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.25s ease;
+}
+
+.hotelBand:hover .hotelAction svg {
+  transform: translateX(3px);
+}
+
+/* ---- Scroll cue ---- */
+.scrollCue {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 46px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.scrollLine {
+  display: block;
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  height: 40%;
+  background: var(--gold);
+  animation: cue 2.2s ease-in-out infinite;
 }
 
-@media (max-width: 600px) {
-  .hotelWrapper {
-    margin-top: 0.85rem;
-  }
-
-  .hotelMeta {
-    white-space: normal;
-  }
+@keyframes cue {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(250%); }
 }
 
-@media (max-width: 768px) {
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  /* The artwork is 16:9 — cropping it into a tall viewport hides most of it.
+     On phones it becomes a full-width band at the top, text sits on solid ground below. */
   .hero {
-    min-height: 80vh;
-    padding-top: 6rem;
-  }
-  
-  .subtitle {
-    font-size: 0.8rem;
-    letter-spacing: 0.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    line-height: 1.4;
-  }
-
-  .subtitleLocation::after {
-    content: none;
+    padding: calc(56.25vw + 1.75rem) 0 3rem;
+    justify-content: flex-start;
+    min-height: 0;
   }
 
   .eventName {
-    font-size: 1rem;
-    letter-spacing: 0.15em;
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+    margin-bottom: 0.7rem;
   }
+
+  .title { margin-bottom: 1.1rem; }
+  .sub { margin-bottom: 1.1rem; }
+  .creed { margin-bottom: 1.6rem; gap: 0.4rem 1rem; }
+  .cta { margin-top: 1.5rem; gap: 0.7rem; }
+
+  .mediaDesktop { display: none; }
+
+  .mediaMobile {
+    display: block;
+    inset: 0 0 auto 0;
+    height: 56.25vw; /* full 16:9 poster, nothing cropped */
+    background-size: cover;
+    background-position: center;
+    animation: none;
+  }
+
+  .scrim {
+    inset: 0 0 auto 0;
+    height: calc(56.25vw + 3rem);
+    background: linear-gradient(to bottom, transparent 72%, rgba(10, 10, 16, 0.5) 88%, var(--bg) 100%);
+  }
+
+  .content {
+    width: min(100%, 100% - 2.5rem);
+    background: var(--bg);
+  }
+
+  /* Poster already shows the headline — keep it for a11y/SEO, hide it visually */
+  .headline {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Stack the eyebrow so the separator dot never lands mid-wrap */
+  .eyebrow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    letter-spacing: 0.24em;
+    margin-bottom: 1.2rem;
+  }
+
+  .dot { display: none; }
+
+  .title {
+    max-width: none;
+  }
+
+  .sub { max-width: none; }
 
   .cta {
     flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    max-width: 300px;
-    margin: 3rem auto 0;
+    align-items: stretch;
+    width: min(100%, 340px);
   }
 
-  .btnPrimary, .btnSecondary {
+  .btnPrimary,
+  .btnGhost {
     width: 100%;
-    padding: 1.2rem;
+    text-align: center;
+    padding: 1.1rem;
   }
+
+  /* Hotel band stacks so the booking CTA stays full-width and tappable */
+  .hotelBand {
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .hotelPhoto {
+    width: 100%;
+    height: 130px;
+  }
+
+  .hotelName { white-space: normal; }
+
+  .hotelMeta {
+    white-space: normal;
+    flex-wrap: wrap;
+    row-gap: 0.15rem;
+  }
+
+  .hotelAction {
+    align-self: stretch;
+    justify-content: center;
+    padding: 0.8rem 1.1rem;
+    font-size: 0.82rem;
+  }
+
+  .scrollCue { display: none; }
 }
 
-.cta {
-  margin-top: 3rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btnPrimary {
-  background: #FF5E00;
-  color: #fff;
-  border: none;
-  padding: 1rem 2.5rem;
-  border-radius: 3rem;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(255, 94, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btnPrimary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(255, 94, 0, 0.6);
-}
-
-.btnSecondary {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1rem 2.5rem;
-  border-radius: 3rem;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.btnSecondary:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.18);
+@media (prefers-reduced-motion: reduce) {
+  .media { animation: none; }
+  .scrollLine { animation: none; }
 }

@@ -22,48 +22,46 @@ export default function Timeline() {
             title={timelineSection.title}
             subtitle={timelineSection.subtitle}
             showLine={false}
-            style={{ marginBottom: '6rem' }}
+            style={{ marginBottom: '3.5rem' }}
           />
 
-          <div className={styles.timeline}>
-            <div className={styles.line} />
-            {timelineData.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.item} ${index % 2 === 0 ? styles.even : styles.odd} ${item.active ? styles.activeItem : ''}`}
-              >
-                <div className={styles.dot} />
-
-                <div className={styles.content}>
-                  <div className={styles.textContent}>
-                    <div className={styles.location}>
-                      <h3>{item.region}</h3>
-                      <span className={styles.year}>{item.year}</span>
-                    </div>
-                    <p className={styles.description}>{item.description}</p>
-                  </div>
+          {/* Horizontal rail: five editions read as one journey instead of five full-width rows */}
+          <div className={styles.rail}>
+            <div className={styles.railLine} />
+            <ul className={styles.track}>
+              {timelineData.map((item, index) => (
+                <li
+                  key={index}
+                  className={`${styles.stop} ${item.active ? styles.activeItem : ''}`}
+                >
+                  <span className={styles.year}>{item.year}</span>
+                  <span className={styles.dot} />
 
                   <div
-                    className={`${styles.imageContainer} ${item.detail ? styles.clickable : ''}`}
+                    className={`${styles.card} ${item.detail ? styles.clickable : ''}`}
                     onClick={() => item.detail && setSelectedItem(item)}
                     role={item.detail ? 'button' : undefined}
                     tabIndex={item.detail ? 0 : undefined}
                     onKeyDown={(e) => { if (item.detail && (e.key === 'Enter' || e.key === ' ')) setSelectedItem(item) }}
                     aria-label={item.detail ? item.region : undefined}
                   >
-                    <img src={item.img} alt={item.region} className={styles.image} />
-                    {item.detail && (
-                      <>
-                        <div className={styles.imageOverlay}>
-                          <span className={styles.readMore}>了解更多 →</span>
-                        </div>
-                        <span className={styles.readMoreBadge}>了解更多 →</span>
-                      </>
-                    )}
+                    <div className={styles.imageContainer}>
+                      {/* Blurred copy fills the letterbox bands so nothing is cropped */}
+                      <span
+                        className={styles.imageBackdrop}
+                        style={{ backgroundImage: `url('${item.img}')` }}
+                        aria-hidden="true"
+                      />
+                      <img src={item.img} alt={item.region} className={styles.image} loading="lazy" />
+                      <span className={styles.imageOverlay} />
+                      {item.detail && <span className={styles.readMore}>了解更多 →</span>}
+                    </div>
+                    <h3 className={styles.region}>{item.region}</h3>
+                    <p className={styles.description}>{item.description}</p>
                   </div>
-                </div>
-              </div>
-            ))}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

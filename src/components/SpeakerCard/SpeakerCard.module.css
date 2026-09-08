@@ -1,117 +1,149 @@
+/* Portrait fills the card; name and title sit on the image under a scrim.
+   Removing the separate text block below the photo is what shortens the section. */
 .card {
-  background: #13151f;
-  border-radius: 1rem;
+  position: relative;
+  border-radius: 0.9rem;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--border);
   cursor: pointer;
+  background: #141017;
+  aspect-ratio: 3 / 4;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
               border-color 0.35s ease,
               box-shadow 0.35s ease;
-  display: flex;
-  flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(255, 94, 0, 0.55);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 94, 0, 0.2);
+  transform: translateY(-6px);
+  border-color: rgba(233, 197, 138, 0.5);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.55);
 }
 
-/* Photo area */
 .photoWrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 3 / 4;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  background: #0d0f18;
 }
 
 .photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 18%;
   display: block;
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
-  filter: grayscale(0.25) brightness(0.92);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+  filter: grayscale(0.35) brightness(0.88) contrast(1.05);
 }
 
 .card:hover .photo {
-  transform: scale(1.06);
-  filter: grayscale(0) brightness(1);
+  transform: scale(1.05);
+  filter: grayscale(0) brightness(1) contrast(1);
 }
 
-/* Subtle dark gradient at the bottom of the image */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    transparent 45%,
-    rgba(10, 11, 18, 0.55) 75%,
-    rgba(10, 11, 18, 0.9) 100%
+    transparent 38%,
+    rgba(10, 9, 14, 0.55) 68%,
+    rgba(10, 9, 14, 0.95) 100%
   );
   pointer-events: none;
 }
 
-/* "查看介紹" badge that fades in on hover */
+/* Thin gold line that draws in on hover, above the name */
+.card::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  bottom: 4.6rem;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.card:hover::after {
+  width: 32px;
+}
+
 .hoverBadge {
   position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(6px);
-  background: rgba(255, 94, 0, 0.9);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 0.3rem 0.9rem;
+  top: 0.9rem;
+  right: 0.9rem;
+  background: linear-gradient(135deg, #a9712a, #f4d68a 50%, #a9712a);
+  color: #17131a;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.32rem 0.8rem;
   border-radius: 100px;
   opacity: 0;
+  transform: translateY(-5px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   white-space: nowrap;
   pointer-events: none;
+  z-index: 2;
 }
 
 .card:hover .hoverBadge {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
-/* Initials fallback */
 .initials {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  font-weight: 800;
-  color: rgba(255, 94, 0, 0.4);
-  background: linear-gradient(135deg, #1e2030, #0d0f18);
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: rgba(217, 164, 65, 0.35);
+  background: linear-gradient(135deg, #241f27, #141017);
   user-select: none;
 }
 
-/* Text below photo */
+/* Text overlaid on the portrait */
 .info {
-  padding: 1.1rem 1.25rem 1.35rem;
-  flex: 1;
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  padding: 0 1rem 1.15rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.25rem;
+  pointer-events: none;
 }
 
 .name {
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
   font-weight: 700;
   color: #fff;
   margin: 0;
   line-height: 1.35;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
 }
 
 .title {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.72rem;
+  color: rgba(244, 239, 232, 0.68);
   margin: 0;
   line-height: 1.45;
+  /* Long institutional titles must not push the card layout around */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .info { padding: 0 0.7rem 0.85rem; }
+  .name { font-size: 0.86rem; }
+  .title { font-size: 0.66rem; -webkit-line-clamp: 2; }
+  .card::after { bottom: 3.9rem; left: 0.7rem; }
 }

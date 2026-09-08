@@ -74,8 +74,8 @@
 }
 
 .arrow:hover {
-  background: rgba(255, 94, 0, 0.7);
-  border-color: var(--accent);
+  background: rgba(233, 197, 138, 0.7);
+  border-color: var(--gold);
   transform: translateY(-50%) scale(1.08);
 }
 
@@ -111,7 +111,7 @@
 .dotActive {
   width: 20px;
   border-radius: 3px;
-  background: var(--accent);
+  background: var(--gold);
 }
 
 .dot:hover {
@@ -119,19 +119,19 @@
 }
 
 .dotActive:hover {
-  background: var(--accent);
+  background: var(--gold);
 }
 
 .tag {
   position: absolute;
   bottom: 1.5rem;
   left: 1.5rem;
-  background: var(--accent);
+  background: linear-gradient(135deg, #a9712a, #f4d68a 45%, #e7b757 70%, #a9712a);
   padding: 0.45rem 0.9rem;
   border-radius: 6px;
   font-weight: 700;
   font-size: 0.78rem;
-  color: white;
+  color: #17131a;
   z-index: 3;
   letter-spacing: 0.04em;
 }
@@ -199,12 +199,12 @@
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: rgba(255, 94, 0, 0.1);
-  border: 1px solid rgba(255, 94, 0, 0.15);
+  background: rgba(233, 197, 138, 0.1);
+  border: 1px solid rgba(233, 197, 138, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--gold);
   flex-shrink: 0;
 }
 
@@ -254,12 +254,12 @@
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: rgba(255, 94, 0, 0.12);
-  border: 1px solid rgba(255, 94, 0, 0.2);
+  background: rgba(233, 197, 138, 0.12);
+  border: 1px solid rgba(233, 197, 138, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--gold);
   flex-shrink: 0;
 }
 
@@ -319,16 +319,16 @@
 }
 
 .hotelsTableRow:hover {
-  background: rgba(255, 94, 0, 0.05);
+  background: rgba(233, 197, 138, 0.05);
 }
 
 .hotelsTableRow:hover .hotelLink {
   opacity: 1;
-  color: var(--accent);
+  color: var(--gold);
 }
 
 .hotelsTableRowRecommended {
-  background: rgba(255, 94, 0, 0.08);
+  background: rgba(233, 197, 138, 0.08);
   position: relative;
 }
 
@@ -339,11 +339,11 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: var(--accent);
+  background: var(--gold);
 }
 
 .hotelsTableRowRecommended:hover {
-  background: rgba(255, 94, 0, 0.13);
+  background: rgba(233, 197, 138, 0.13);
 }
 
 .hotelName {
@@ -363,7 +363,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   color: #0a0a0a;
-  background: var(--accent);
+  background: var(--gold);
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
   white-space: nowrap;
@@ -378,7 +378,7 @@
 .hotelDrive {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--gold);
   white-space: nowrap;
 }
 
@@ -439,4 +439,38 @@
     opacity: 1;
     align-self: center;
   }
+}
+
+/* Official hotel group-rate booking CTA (moved out of the hero) */
+.hotelsBookingLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #17131a;
+  background: linear-gradient(135deg, #a9712a, #f4d68a 45%, #e7b757 70%, #a9712a);
+  border-radius: 3rem;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(169, 113, 42, 0.32);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotelsBookingLink svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.hotelsBookingLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(244, 214, 138, 0.4);
+}
+
+@media (max-width: 600px) {
+  .hotelsBookingLink { width: 100%; }
 }

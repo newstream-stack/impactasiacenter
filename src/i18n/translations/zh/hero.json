@@ -7,6 +7,12 @@
     "tagline3": "一個神・一個教會・一個家庭\n從亞洲・走向錫安",
     "eventName": "IMPACT ASIA ALLIANCE SUMMIT",
     "viewMoreHotels": "大會推薦飯店優惠",
-    "recommendedHotelLabel": "大會推薦飯店"
+    "recommendedHotelLabel": "大會推薦飯店",
+    "meta": {
+      "dateLabel": "活動日期",
+      "dateValue": "2026.10.20 – 10.23",
+      "deadlineLabel": "早鳥優惠截止",
+      "deadlineValue": "2026.09.30"
+    }
   }
 }

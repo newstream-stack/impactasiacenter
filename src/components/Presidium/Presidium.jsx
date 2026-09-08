@@ -48,10 +48,13 @@ export default function Presidium() {
                     <img src={member.image} alt={member.name} className={styles.avatar} width="140" height="140" loading="lazy" />
                   </div>
                 )}
-                <span className={styles.role}>{member.role}</span>
-                <h3 className={styles.name}>{member.name}</h3>
-                <p className={styles.memberTitle}>{member.title}</p>
-                {member.bio && <p className={styles.bio}>{member.bio}</p>}
+                {/* Single wrapper: without it the five children auto-place into the card grid */}
+                <div className={styles.memberBody}>
+                  <span className={styles.role}>{member.role}</span>
+                  <h3 className={styles.name}>{member.name}</h3>
+                  <p className={styles.memberTitle}>{member.title}</p>
+                  {member.bio && <p className={styles.bio}>{member.bio}</p>}
+                </div>
               </div>
             ))}
           </div>

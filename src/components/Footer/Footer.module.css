@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
   opacity: 0.4;
 }
 
@@ -36,7 +36,7 @@
   margin-bottom: 1.25rem;
   font-weight: 800;
   letter-spacing: 0.15em;
-  color: var(--accent);
+  color: var(--gold);
   display: inline-block;
 }
 
@@ -52,7 +52,7 @@
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 1.5rem;
   display: block;
 }

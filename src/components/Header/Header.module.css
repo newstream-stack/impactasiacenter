@@ -10,11 +10,12 @@
 }
 
 .navbar.scrolled {
-  background: rgba(26, 28, 38, 0.97);
+  background: rgba(22, 20, 26, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 0.85rem 2rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(233, 197, 138, 0.12);
 }
 
 .container {
@@ -29,7 +30,7 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   font-size: 1.1rem;
-  color: #FF5E00;
+  color: var(--gold);
   flex-shrink: 0;
 }
 
@@ -64,8 +65,8 @@
 
 .langToggle:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: #FF5E00;
-  color: #FF5E00;
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 /* Hamburger Styles */
@@ -103,7 +104,7 @@
   to { opacity: 1; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .hamburger {
     display: flex;
   }
@@ -120,7 +121,7 @@
     right: 0;
     width: 280px;
     height: 100vh;
-    background: #1a1c26;
+    background: #1a1721;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
@@ -133,6 +134,36 @@
 
   .linksVisible {
     transform: translateX(0);
+  }
+}
+
+/* On phones the logo, language toggle and hamburger were colliding */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 1.1rem;
+  }
+
+  .navbar.scrolled {
+    padding: 0.7rem 1.1rem;
+  }
+
+  .logo {
+    font-size: 0.86rem;
+    letter-spacing: 0.06em;
+  }
+
+  .navActions {
+    gap: 0.6rem;
+  }
+
+  .langToggle {
+    padding: 4px 8px;
+    font-size: 0.72rem;
+    min-width: 40px;
+  }
+
+  .hamburger {
+    padding: 8px;
   }
 }
 
@@ -164,7 +195,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #FF5E00;
+  background: var(--gold);
   border-radius: 1px;
   transition: width 0.25s ease;
 }
@@ -178,7 +209,7 @@
 }
 
 .links a.active {
-  color: #FF5E00;
+  color: var(--gold);
 }
 
 .links a.active::after {
@@ -186,7 +217,7 @@
 }
 
 /* Mobile: active link styling */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .links a {
     font-size: 1.1rem;
   }
@@ -196,7 +227,7 @@
   }
 
   .links a.active {
-    color: #FF5E00;
+    color: var(--gold);
   }
 }
 

@@ -1,11 +1,43 @@
 :root {
-  --bg: #222533;
-  --bg-dark: #1a1c27;
+  /* ---- Surfaces: warm canyon-night, layered so sections can separate ---- */
+  --bg: #14131a;
+  --bg-dark: #0d0c12;
+  --bg-raised: #1c1a23;
+  --bg-warm: #221d1e;
+
+  /* ---- Energy accent: the canyon-wall orange ---- */
   --accent: #FF5E00;
-  --text: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.6);
-  --border: rgba(255, 255, 255, 0.1);
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --accent-soft: #ff8a3d;
+
+  /* ---- Metallic gold: foil accent for eyebrows, rules, display type ---- */
+  --gold: #d9a441;
+  --gold-bright: #f4d68a;
+  --gold-deep: #a9712a;
+  --gold-gradient: linear-gradient(100deg, #a9712a 0%, #f4d68a 28%, #fff6dd 46%, #e7b757 64%, #a9712a 100%);
+
+  /* ---- Type ---- */
+  --font-display: 'Noto Serif TC', 'Songti TC', Georgia, serif;
+  --font-body: 'Inter', 'Noto Sans TC', 'PingFang TC', system-ui, sans-serif;
+
+  /* Fluid display scale — real contrast between levels */
+  --fs-hero: clamp(3rem, 7.5vw, 6.5rem);
+  --fs-h1: clamp(2rem, 4.4vw, 3.4rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2.3rem);
+  --fs-lead: clamp(1.05rem, 1.6vw, 1.35rem);
+  --fs-body: clamp(0.98rem, 1.15vw, 1.08rem);
+  --fs-eyebrow: 0.78rem;
+
+  /* ---- Text: brighter than before so copy stops receding ---- */
+  --text: #f4efe8;
+  --text-body: rgba(244, 239, 232, 0.82);
+  --text-muted: rgba(244, 239, 232, 0.58);
+  --border: rgba(233, 197, 138, 0.16);
+
+  /* ---- Rhythm ---- */
+  --section-pad: clamp(5rem, 11vw, 9rem);
+  --measure: 34em; /* comfortable CJK line length */
+
+  font-family: var(--font-body);
   color-scheme: dark;
 }
 
@@ -15,6 +47,8 @@ body {
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--text);
+  font-size: var(--fs-body);
+  line-height: 1.9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,6 +56,45 @@ body {
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Display type: serif, tighter leading, no letter-spacing hacks */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+p { margin: 0 0 1.15em; }
+
+::selection {
+  background: rgba(217, 164, 65, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold-deep), var(--gold));
+  border-radius: 5px;
+}
+
+/* Reusable metallic-gold text treatment */
+.goldText {
+  background: var(--gold-gradient);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hairline gold rule used to separate sections */
+.goldRule {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
 }
 
 /* --- Scroll Reveal Animation (managed by useReveal hook) --- */
@@ -43,3 +116,6 @@ body {
   transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

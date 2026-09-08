@@ -1,20 +1,25 @@
 .section {
-  padding: 8rem 0;
+  padding: var(--section-pad) 0;
   background: var(--bg);
   color: white;
   position: relative;
   overflow: hidden;
 }
 
+/* Ghosted wordmark: anchored near the top so it never sits behind the stat bar,
+   where it read as a rendering artefact. */
 .bgText {
   position: absolute;
-  top: 50%;
+  top: 3rem;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(8rem, 20vw, 18rem);
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 17vw, 15rem);
   font-weight: 900;
-  letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.02);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(233, 197, 138, 0.07);
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
@@ -38,29 +43,30 @@
 
 .subtitle {
   display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.35em;
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.34em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  margin: 0 0 1.5rem;
-  background: linear-gradient(135deg, #fff 0%, #888 100%);
-  -webkit-background-clip: text;
+  margin-bottom: 1.2rem;
+  background: var(--gold-gradient);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 0 0 1.4rem;
+  color: var(--text);
+}
+
 .titleLine {
-  width: 60px;
-  height: 4px;
-  background: var(--accent);
+  width: 64px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
   border-radius: 2px;
   margin: 0 auto 2.5rem;
 }
@@ -86,8 +92,8 @@
 }
 
 .introCard:hover {
-  background: rgba(255, 94, 0, 0.05);
-  border-color: rgba(255, 94, 0, 0.25);
+  background: rgba(233, 197, 138, 0.05);
+  border-color: rgba(233, 197, 138, 0.25);
   transform: translateY(-3px);
 }
 
@@ -96,12 +102,12 @@
   height: 40px;
   flex-shrink: 0;
   border-radius: 10px;
-  background: rgba(255, 94, 0, 0.1);
-  border: 1px solid rgba(255, 94, 0, 0.18);
+  background: rgba(233, 197, 138, 0.1);
+  border: 1px solid rgba(233, 197, 138, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--gold);
   margin-top: 0.1rem;
 }
 
@@ -119,7 +125,7 @@
 .introLabel {
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--gold);
   letter-spacing: 0.03em;
 }
 
@@ -151,13 +157,14 @@
 }
 
 .statItem:hover {
-  background: rgba(255, 94, 0, 0.06);
+  background: rgba(233, 197, 138, 0.06);
 }
 
 .statValue {
+  font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 800;
-  color: var(--accent);
+  font-weight: 700;
+  color: var(--gold);
   letter-spacing: 0.02em;
   margin-bottom: 0.4rem;
   line-height: 1;
@@ -191,9 +198,9 @@
 
 .card:hover {
   background: rgba(255, 255, 255, 0.04);
-  border-color: var(--accent);
+  border-color: rgba(233, 197, 138, 0.45);
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 94, 0, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(233, 197, 138, 0.15);
 }
 
 .cardTop {
@@ -207,12 +214,12 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(255, 94, 0, 0.12);
-  border: 1px solid rgba(255, 94, 0, 0.2);
+  background: rgba(233, 197, 138, 0.12);
+  border: 1px solid rgba(233, 197, 138, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--gold);
   flex-shrink: 0;
 }
 
@@ -226,13 +233,14 @@
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold);
 }
 
 .cardHeading {
+  font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   margin: 0 0 0.4rem;
   line-height: 1.4;
 }
@@ -258,7 +266,7 @@
 
 .listItem {
   padding-left: 1rem;
-  border-left: 2px solid rgba(255, 94, 0, 0.3);
+  border-left: 2px solid rgba(233, 197, 138, 0.3);
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -266,7 +274,7 @@
 }
 
 .card:hover .listItem {
-  border-left-color: rgba(255, 94, 0, 0.6);
+  border-left-color: rgba(233, 197, 138, 0.6);
 }
 
 .itemLabel {
@@ -291,7 +299,7 @@
 .outroDivider {
   width: 80px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
   margin: 0 auto 2rem;
 }
 

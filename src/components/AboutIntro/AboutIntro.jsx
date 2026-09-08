@@ -52,8 +52,11 @@ export default function AboutIntro({ onMoreClick }) {
         <div className={styles.topicsBlock}>
           <p className={styles.topicsTitle}>{inv.topicsTitle}</p>
           <ul className={styles.topicGrid}>
-            {inv.topics.map((topic) => (
-              <li key={topic} className={styles.topicTag}>{topic}</li>
+            {inv.topics.map((topic, i) => (
+              <li key={topic} className={styles.topicItem}>
+                <span className={styles.topicNum}>{String(i + 1).padStart(2, '0')}</span>
+                <span className={styles.topicLabel}>{topic}</span>
+              </li>
             ))}
           </ul>
           <p className={styles.inviteText}>{inv.inviteText}</p>

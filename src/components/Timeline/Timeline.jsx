@@ -46,14 +46,7 @@ export default function Timeline() {
                     aria-label={item.detail ? item.region : undefined}
                   >
                     <div className={styles.imageContainer}>
-                      {/* Blurred copy fills the letterbox bands so nothing is cropped */}
-                      <span
-                        className={styles.imageBackdrop}
-                        style={{ backgroundImage: `url('${item.img}')` }}
-                        aria-hidden="true"
-                      />
                       <img src={item.img} alt={item.region} className={styles.image} loading="lazy" />
-                      <span className={styles.imageOverlay} />
                       {item.detail && <span className={styles.readMore}>了解更多 →</span>}
                     </div>
                     <h3 className={styles.region}>{item.region}</h3>

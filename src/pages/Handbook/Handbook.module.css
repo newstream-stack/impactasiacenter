@@ -10,9 +10,10 @@
 
 /* ---------- top bar ---------- */
 .topbar {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 0.6rem;
   padding: 1.1rem clamp(1rem, 4vw, 2.4rem);
 }
@@ -36,7 +37,11 @@
 .lang:hover { color: var(--gold-bright); border-color: rgba(233, 197, 138, 0.4); }
 
 .label {
-  min-width: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 9rem);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

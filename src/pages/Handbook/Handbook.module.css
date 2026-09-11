@@ -217,6 +217,73 @@
   margin: 0 0 1.1em;
 }
 
+/* gallery */
+.galleryWrap {
+  margin-top: 0.6rem;
+}
+.galleryStage {
+  position: relative;
+}
+.galleryNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.1rem;
+  height: 2.1rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #fff;
+  background: rgba(15, 13, 18, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+.galleryNav:hover:not(:disabled) { background: rgba(15, 13, 18, 0.75); }
+.galleryNav:disabled { opacity: 0.3; cursor: default; }
+.galleryNavPrev { left: 0.5rem; }
+.galleryNavNext { right: 0.5rem; }
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  touch-action: pan-x;
+  gap: 0.7rem;
+  margin: 0 -0.2rem;
+  padding: 0 0.2rem;
+  scrollbar-width: none;
+}
+.gallery::-webkit-scrollbar { display: none; }
+.galleryItem {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #241f27, #141017);
+}
+.galleryDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+.galleryDot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(233, 197, 138, 0.25);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.galleryDotOn { background: var(--gold); transform: scale(1.4); }
+
 /* facts */
 .facts { margin: 0; display: flex; flex-direction: column; }
 .factRow {

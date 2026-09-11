@@ -28,6 +28,69 @@ function Portrait({ src, name, className }) {
   );
 }
 
+function Gallery({ images }) {
+  const scrollRef = useRef(null);
+  const [active, setActive] = useState(0);
+
+  const onScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setActive(Math.round(el.scrollLeft / el.clientWidth));
+  }, []);
+
+  const scrollTo = (i) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTo({ left: i * el.clientWidth, behavior: 'smooth' });
+  };
+
+  return (
+    <div className={styles.galleryWrap}>
+      <div className={styles.galleryStage}>
+        <div
+          className={styles.gallery}
+          ref={scrollRef}
+          onScroll={onScroll}
+          data-gallery-scroll
+        >
+          {images.map((src, i) => (
+            <img key={src} src={src} alt="" className={styles.galleryItem} loading="lazy" />
+          ))}
+        </div>
+        <button
+          type="button"
+          className={`${styles.galleryNav} ${styles.galleryNavPrev}`}
+          onClick={() => scrollTo(active - 1)}
+          disabled={active === 0}
+          aria-label="prev"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          className={`${styles.galleryNav} ${styles.galleryNavNext}`}
+          onClick={() => scrollTo(active + 1)}
+          disabled={active === images.length - 1}
+          aria-label="next"
+        >
+          ›
+        </button>
+      </div>
+      <div className={styles.galleryDots}>
+        {images.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            className={`${styles.galleryDot} ${i === active ? styles.galleryDotOn : ''}`}
+            onClick={() => scrollTo(i)}
+            aria-label={`${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function PageBody({ page, t }) {
   switch (page.type) {
     case 'cover':
@@ -203,6 +266,7 @@ function PageBody({ page, t }) {
           <div className={styles.prose}>
             {page.body.map((para, i) => <p key={i}>{para}</p>)}
           </div>
+          {page.gallery && <Gallery images={page.gallery} />}
         </div>
       );
   }
@@ -280,6 +344,10 @@ export default function Handbook() {
     const SWIPE_THRESHOLD = 40;
 
     const onStart = (e) => {
+      if (e.target.closest('[data-gallery-scroll]')) {
+        swipe.current = null;
+        return;
+      }
       const t = e.touches[0];
       swipe.current = { x: t.clientX, y: t.clientY, lockedAxis: null };
     };

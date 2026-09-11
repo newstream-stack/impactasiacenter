@@ -80,12 +80,18 @@ function PageBody({ page, t }) {
           <div className={styles.schedule}>
             {page.days.map((d, i) => (
               <div className={styles.schedDay} key={i}>
-                <p className={styles.schedDate}>{d.date}</p>
+                <div className={styles.schedDateRow}>
+                  <p className={styles.schedDate}>{d.date}</p>
+                  {d.theme && <p className={styles.schedTheme}>{d.theme}</p>}
+                </div>
                 {d.sessions.map((s, j) => (
-                  <p className={styles.schedRow} key={j}>
+                  <div className={styles.schedRow} key={j}>
                     <span className={styles.schedTime}>{s.time}</span>
-                    <span>{s.title}</span>
-                  </p>
+                    <div className={styles.schedTextCol}>
+                      <span className={styles.schedTitle}>{s.title}</span>
+                      {s.note && <span className={styles.schedNote}>{s.note}</span>}
+                    </div>
+                  </div>
                 ))}
               </div>
             ))}

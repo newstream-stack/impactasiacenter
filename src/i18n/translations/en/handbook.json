@@ -45,22 +45,55 @@
         "heading": "Daily Programme",
         "days": [
           {
-            "date": "Oct 20 · Tue",
+            "date": "Oct 20 · Day 1",
+            "theme": "Gather · See · Set Out",
             "sessions": [
               { "time": "15:00", "title": "Registration" },
-              { "time": "19:00–21:30", "title": "Opening Session" }
+              { "time": "17:00–18:30", "title": "Welcome Dinner" },
+              { "time": "19:00–20:00", "title": "Opening Ceremony & Service", "note": "Phoenix Taiwanese Presbyterian & First Baptist worship teams; opened by Rev. John Heston (2nd Baptist) and Rev. Shan-Chun Hung; translation by Rev. Li Tao-Hong" },
+              { "time": "20:00–20:50", "title": "War or Peace of the Chips?", "note": "Summit keynote · Dean Burn Jeng Lin, semiconductor hub of Phoenix, USA" },
+              { "time": "20:50–21:00", "title": "\"New Jerusalem\"", "note": "Performed by Phoenix Taiwanese Presbyterian Church" }
             ]
           },
           {
-            "date": "Oct 21–22 · Wed–Thu",
+            "date": "Oct 21 · Day 2",
+            "theme": "Gospel · Mission · Influence",
             "sessions": [
-              { "time": "09:30–21:30", "title": "Full-day sessions (tracks and evening gatherings)" }
+              { "time": "08:30–09:00", "title": "Worship", "note": "IAA Asia Team, \"Come Praise the Lord\"" },
+              { "time": "09:00–10:00", "title": "Grace & Mercy / PRS / JSU" },
+              { "time": "10:30–11:30", "title": "Talk by the Founder of the Bible Museum" },
+              { "time": "12:00–13:30", "title": "Lunch" },
+              { "time": "13:30–14:30", "title": "Heart, Strength & Soul: Sharing the Gospel", "note": "Stand-up gospel comedy with Justin Lin; pickleball evangelism" },
+              { "time": "14:30–15:30", "title": "Sunrise in the East: Church Awakening", "note": "Pastor Pu Yuan-Ju" },
+              { "time": "16:00–17:00", "title": "From Doubt to Faith", "note": "Wenchi Chiang" },
+              { "time": "17:30–18:30", "title": "Dinner" },
+              { "time": "20:00–21:00", "title": "Gospel Across the Pacific: East Meets West", "note": "Rev. Choi Seung-Hong, Seattle Grace Church" }
             ]
           },
           {
-            "date": "Oct 23 · Fri",
+            "date": "Oct 22 · Day 3",
+            "theme": "Innovate · Transform · Act",
             "sessions": [
-              { "time": "09:30–13:30", "title": "Closing Session, ends 13:30" }
+              { "time": "07:30–08:30", "title": "PRS Morning Prayer & Bible Breakfast (by invitation)" },
+              { "time": "09:00–10:00", "title": "PRS: Silence Is Gold — Listening to God's Word" },
+              { "time": "10:30–11:30", "title": "AI Gospel Media: Film Production & Case Studies" },
+              { "time": "12:00–13:30", "title": "Lunch" },
+              { "time": "14:30–17:30", "title": "SBC | Warrick's FTT & PEACE", "note": "Practice & case studies with Dr. Ryan, Dr. Ahn Kang-Hee, Rev. Paul Liu; worship by Mǎ Jùnfēng Chinese congregation and Palm Valley Church" },
+              { "time": "17:30–18:30", "title": "Dinner" },
+              { "time": "18:30–19:00", "title": "Taiwan Semiconductors: Future Trends & Global Impact", "note": "Lu Jie-Cheng" },
+              { "time": "19:00–21:00", "title": "Phoenix Reborn — Night of the Phoenix", "note": "Joint culture, music and dance performance by Phoenix Chinese churches; Dai Ji-Zong, \"Song of Life in the Wilderness\"" }
+            ]
+          },
+          {
+            "date": "Oct 23 · Day 4",
+            "theme": "Respond · Covenant · Send",
+            "sessions": [
+              { "time": "07:30–08:30", "title": "PRS Morning Prayer & English Bible Breakfast (by invitation)" },
+              { "time": "09:00–10:00", "title": "Group Response & Action Sharing" },
+              { "time": "10:00–10:30", "title": "Coffee & Fellowship" },
+              { "time": "10:30–11:00", "title": "Back to God's Original Intent: A New Heaven and Earth", "note": "Summit closing keynote · Executive Director Cheng Chung-Hsin" },
+              { "time": "11:00–11:30", "title": "Behold! That Light in the Wilderness", "note": "Native American prayer and tribute" },
+              { "time": "11:30–12:30", "title": "Communion, Closing Service & Commissioning", "note": "IAA Malaysia Chair Wang Zu-Xiang; joint communion of Phoenix Chinese and American pastors; announcement of next year's Impact Asia Alliance Summit by IAA Chair Shan-Chun Hung" }
             ]
           }
         ]

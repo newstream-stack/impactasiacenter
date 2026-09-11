@@ -231,6 +231,7 @@
   padding: 0.6rem 1rem;
   border-radius: 0.75rem;
   outline: none;
+  font-size: 16px;
   transition: border-color 0.2s;
 }
 
@@ -309,5 +310,18 @@
     right: 1rem;
     bottom: 1rem;
     height: 32rem;
+  }
+
+  .floatingBtn {
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .tooltip {
+    right: 1rem;
+    bottom: 5.5rem;
+    max-width: calc(100vw - 2rem);
   }
 }

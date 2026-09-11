@@ -253,23 +253,53 @@ export default function Handbook() {
     return () => window.removeEventListener('keydown', onKey);
   }, [go]);
 
-  const touchStart = useRef(null);
+  const bookRef = useRef(null);
+  const swipe = useRef(null); // { x, y, lockedAxis: null | 'x' | 'y' }
 
-  const onTouchStart = useCallback((e) => {
-    const t = e.touches[0];
-    touchStart.current = { x: t.clientX, y: t.clientY };
-  }, []);
+  useEffect(() => {
+    const el = bookRef.current;
+    if (!el) return;
 
-  const onTouchEnd = useCallback((e) => {
-    if (!touchStart.current) return;
-    const t = e.changedTouches[0];
-    const dx = t.clientX - touchStart.current.x;
-    const dy = t.clientY - touchStart.current.y;
-    touchStart.current = null;
-
+    const LOCK_THRESHOLD = 10;
     const SWIPE_THRESHOLD = 40;
-    if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) return;
-    go(dx < 0 ? 'next' : 'prev');
+
+    const onStart = (e) => {
+      const t = e.touches[0];
+      swipe.current = { x: t.clientX, y: t.clientY, lockedAxis: null };
+    };
+
+    const onMove = (e) => {
+      const s = swipe.current;
+      if (!s) return;
+      const t = e.touches[0];
+      const dx = t.clientX - s.x;
+      const dy = t.clientY - s.y;
+
+      if (!s.lockedAxis) {
+        if (Math.abs(dx) < LOCK_THRESHOLD && Math.abs(dy) < LOCK_THRESHOLD) return;
+        s.lockedAxis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+      }
+      if (s.lockedAxis === 'x') e.preventDefault();
+    };
+
+    const onEnd = (e) => {
+      const s = swipe.current;
+      swipe.current = null;
+      if (!s || s.lockedAxis !== 'x') return;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - s.x;
+      if (Math.abs(dx) < SWIPE_THRESHOLD) return;
+      go(dx < 0 ? 'next' : 'prev');
+    };
+
+    el.addEventListener('touchstart', onStart, { passive: true });
+    el.addEventListener('touchmove', onMove, { passive: false });
+    el.addEventListener('touchend', onEnd, { passive: true });
+    return () => {
+      el.removeEventListener('touchstart', onStart);
+      el.removeEventListener('touchmove', onMove);
+      el.removeEventListener('touchend', onEnd);
+    };
   }, [go]);
 
   const underneath = pages[index];
@@ -302,11 +332,7 @@ export default function Handbook() {
           ‹
         </button>
 
-        <div
-          className={styles.book}
-          onTouchStart={onTouchStart}
-          onTouchEnd={onTouchEnd}
-        >
+        <div className={styles.book} ref={bookRef}>
           <div className={styles.staticPage}>
             <PageBody page={underneath} t={t} />
           </div>
@@ -363,7 +389,6 @@ export default function Handbook() {
             />
           ))}
         </div>
-        <span className={styles.hint}>{meta.hint}</span>
       </footer>
     </div>
   );

@@ -75,6 +75,7 @@
   width: min(92vw, 480px);
   height: min(76vh, 660px);
   perspective: 2400px;
+  touch-action: pan-y;
 }
 
 .staticPage,

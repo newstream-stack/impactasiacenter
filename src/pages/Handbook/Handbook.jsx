@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import styles from './Handbook.module.css';
 
@@ -330,7 +330,6 @@ export default function Handbook() {
   return (
     <div className={styles.page}>
       <header className={styles.topbar}>
-        <Link className={styles.home} to="/">{meta.backHome}</Link>
         <span className={styles.label}>{meta.label}</span>
         <button type="button" className={styles.lang} onClick={toggleLanguage}>
           {language === 'zh' ? 'EN' : '中文'}

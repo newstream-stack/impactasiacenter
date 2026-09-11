@@ -253,6 +253,25 @@ export default function Handbook() {
     return () => window.removeEventListener('keydown', onKey);
   }, [go]);
 
+  const touchStart = useRef(null);
+
+  const onTouchStart = useCallback((e) => {
+    const t = e.touches[0];
+    touchStart.current = { x: t.clientX, y: t.clientY };
+  }, []);
+
+  const onTouchEnd = useCallback((e) => {
+    if (!touchStart.current) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchStart.current.x;
+    const dy = t.clientY - touchStart.current.y;
+    touchStart.current = null;
+
+    const SWIPE_THRESHOLD = 40;
+    if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) return;
+    go(dx < 0 ? 'next' : 'prev');
+  }, [go]);
+
   const underneath = pages[index];
   const leafFrontPage = turn
     ? (turn.dir === 'next' ? pages[turn.from] : pages[turn.from - 1])
@@ -283,7 +302,11 @@ export default function Handbook() {
           ‹
         </button>
 
-        <div className={styles.book}>
+        <div
+          className={styles.book}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
           <div className={styles.staticPage}>
             <PageBody page={underneath} t={t} />
           </div>

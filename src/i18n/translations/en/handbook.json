@@ -134,6 +134,42 @@
       {
         "type": "schedule",
         "num": "07",
+        "heading": "Phoenix Reborn — Night of the Phoenix",
+        "days": [
+          {
+            "date": "Culture Night Programme",
+            "theme": "7:00 – 9:00 PM",
+            "sessions": [
+              { "time": "7:00–7:03", "title": "Opening Remarks by the Organizer", "note": "Tim Cheng" },
+              { "time": "7:03–7:13", "title": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
+              { "time": "7:13–7:14", "title": "MC Transition / Stage Change", "note": "Lu Hang" },
+              { "time": "7:14–7:22", "title": "First Baptist Church – Violin Performance", "note": "Joy" },
+              { "time": "7:22–7:23", "title": "MC Transition" },
+              { "time": "7:23–7:29", "title": "Northwest Chinese Church Choir – My Strength in the Wilderness", "note": "Zhi-Bang" },
+              { "time": "7:29–7:30", "title": "MC Introduction of Phoenix Wushu Academy" },
+              { "time": "7:30–7:35", "title": "Phoenix Wushu Academy – Chinese Traditional Dance", "note": "Jane Ho" },
+              { "time": "7:35–7:42", "title": "Phoenix Wushu Academy – Chinese Martial Arts" },
+              { "time": "7:42–7:43", "title": "MC Transition / Stage Change" },
+              { "time": "7:43–7:50", "title": "Pipa Solo", "note": "Ma Lai" },
+              { "time": "7:50–7:51", "title": "MC Transition / Stage Change" },
+              { "time": "7:51–7:59", "title": "Mexican Dance", "note": "Maria V" },
+              { "time": "7:59–8:00", "title": "MC Transition" },
+              { "time": "8:00–8:06", "title": "Greater Chinese Christian Church Choir", "note": "Song: \"A Wisp of Cloud\"" },
+              { "time": "8:06–8:07", "title": "MC Transition" },
+              { "time": "8:07–8:12", "title": "Mrs. Tai – Vocal Solo", "note": "Song: \"The Way Through the Sea\"｜Mrs. Tai" },
+              { "time": "8:12–8:13", "title": "Introduction of Rev. David Tai" },
+              { "time": "8:13–8:43", "title": "Rev. David Tai – Gospel Message", "note": "Rev. David Tai" },
+              { "time": "8:43–8:44", "title": "MC Transition / Choir Takes the Stage" },
+              { "time": "8:44–8:50", "title": "Phoenix Joint Church Choir – Finale Choral Presentation", "note": "Song: \"Blessed Through Me\"｜Yi-Lin" },
+              { "time": "8:50–8:53", "title": "Closing Remarks and Appreciation by the Organizer", "note": "Tim Cheng" },
+              { "time": "8:53–8:55", "title": "MC Conclusion" }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "schedule",
+        "num": "08",
         "heading": "Oct 23 · Day 4",
         "days": [
           {
@@ -152,12 +188,12 @@
       },
       {
         "type": "presidium",
-        "num": "08",
+        "num": "09",
         "heading": "Organizing Committee"
       },
       {
         "type": "speakers",
-        "num": "09",
+        "num": "10",
         "heading": "Speakers"
       },
       {

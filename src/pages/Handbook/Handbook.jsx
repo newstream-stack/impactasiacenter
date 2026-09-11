@@ -57,24 +57,6 @@ function Gallery({ images }) {
             <img key={src} src={src} alt="" className={styles.galleryItem} loading="lazy" />
           ))}
         </div>
-        <button
-          type="button"
-          className={`${styles.galleryNav} ${styles.galleryNavPrev}`}
-          onClick={() => scrollTo(active - 1)}
-          disabled={active === 0}
-          aria-label="prev"
-        >
-          ‹
-        </button>
-        <button
-          type="button"
-          className={`${styles.galleryNav} ${styles.galleryNavNext}`}
-          onClick={() => scrollTo(active + 1)}
-          disabled={active === images.length - 1}
-          aria-label="next"
-        >
-          ›
-        </button>
       </div>
       <div className={styles.galleryDots}>
         {images.map((_, i) => (

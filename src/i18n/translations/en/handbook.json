@@ -15,37 +15,53 @@
         "type": "cover",
         "navLabel": "Cover",
         "kicker": "IMPACT ASIA 2026",
-        "title": "Impact Asia\nSummit",
-        "subtitle": "Event Handbook",
+        "title": "From Wilderness\nTo Rebirth",
+        "subtitle": "From Digital Civilization to Eternal Governance",
         "dates": "Oct 20 – 23, 2026",
-        "city": "Phoenix, Arizona, USA"
+        "city": "Phoenix, Arizona, USA",
+        "venue": "First Baptist Church Tempe"
       },
       {
         "type": "text",
         "num": "01",
-        "heading": "Welcome",
+        "heading": "An Invitation to Global Leaders",
         "body": [
-          "Welcome to the Impact Asia Summit. For four days we gather in Phoenix, in the heart of the Sonoran Desert, to rethink the next step for technology, leadership and stewardship — grounded in faith.",
-          "This handbook is your companion for the week: programme, venue, tracks and practical notes are all here. May these days become a turning point for your life and your work."
+          "Dear Global Leaders,",
+          "We stand at the most critical crossroads in history. Artificial intelligence is reshaping the course of civilization — surpassing any revolution that came before.",
+          "Yet the most critical question for humanity remains not: \"How powerful will AI become?\" But rather: \"Do humans still remember the purpose for which God created us?\"",
+          "Technology can expand human capabilities, but it cannot create love; it can generate information, but it cannot generate wisdom; it can connect the world, but it cannot heal the human heart.",
+          "Our declaration: Technology may change the speed of the world, but only Truth determines its direction. AI can expand human capability, but it can never replace human dignity or divine destiny. The greatest crisis of the future is not that AI becomes too powerful — it is that humanity loses heaven's wisdom.",
+          "We sincerely invite pastors, innovators, educators, business leaders, media pioneers, and next-generation influencers to join this historic gathering.",
+          "Together we will explore: Faith & Artificial Intelligence, Future Church Leadership, Digital Civilization & Biblical Stewardship, Global Kingdom Collaboration, the Rising Influence of Asia, and the Future & Hope of Humanity.",
+          "The future does not belong to machines — but to leaders who carry wisdom, character, courage, and the love of Christ.",
+          "\"Arise, shine, for your light has come, and the glory of the LORD rises upon you.\" — Isaiah 60:1"
         ]
       },
       {
         "type": "facts",
         "num": "02",
-        "heading": "Essentials",
+        "heading": "Phoenix",
         "items": [
-          { "k": "Dates", "v": "October 20–23, 2026 (Tue–Fri)" },
-          { "k": "City", "v": "Phoenix / Tempe, Arizona, USA" },
-          { "k": "Fee", "v": "Standard NT$18,000; early-bird NT$12,600" },
-          { "k": "Included", "v": "All summit sessions over four days, plus five meals (flights and lodging not included)" },
-          { "k": "Organiser", "v": "Impact Asia Alliance" },
-          { "k": "Contact", "v": "service@ct.org.tw" }
+          { "k": "Southwest Hub", "v": "At the heart of Arizona in the American Southwest — the state's capital and center of government and commerce." },
+          { "k": "Modern Desert Oasis", "v": "Set in the Sonoran Desert's \"Valley of the Sun,\" where the city weaves together with surrounding mountains and desert preserves." },
+          { "k": "Easy International Access", "v": "Fly into Phoenix Sky Harbor International Airport (PHX); about 15–25 minutes by car to the summit venue in Tempe." },
+          { "k": "Semiconductor Hub", "v": "TSMC has announced $165 billion in investment and 6 planned fabs, earning Phoenix the nickname \"Desert Silicon Valley.\"" },
+          { "k": "City Scale", "v": "Population of roughly 1.7 million — the 5th largest city in the USA." }
+        ]
+      },
+      {
+        "type": "text",
+        "num": "03",
+        "heading": "First Baptist Church of Tempe",
+        "body": [
+          "First Baptist Church of Tempe was founded in 1887 and carries over a century of history. Grounded in the truth of Scripture as the core of its faith and teaching, the church holds \"Love God, Love People\" as its mission — devoted to discipleship, biblical education, missions, and community service.",
+          "For more than a hundred years, the church has equipped believers across generations through diverse ministries, living out faith and sharing the gospel in daily life and community, united by the shared goal of \"glorifying God in all things.\""
         ]
       },
       {
         "type": "schedule",
-        "num": "03",
-        "heading": "Daily Programme",
+        "num": "04",
+        "heading": "Oct 20 · Day 1",
         "days": [
           {
             "date": "Oct 20 · Day 1",
@@ -57,7 +73,14 @@
               { "time": "20:00–20:50", "title": "War or Peace of the Chips?", "note": "Summit keynote · Dean Burn Jeng Lin, semiconductor hub of Phoenix, USA" },
               { "time": "20:50–21:00", "title": "\"New Jerusalem\"", "note": "Performed by Phoenix Taiwanese Presbyterian Church" }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "type": "schedule",
+        "num": "05",
+        "heading": "Oct 21 · Day 2",
+        "days": [
           {
             "date": "Oct 21 · Day 2",
             "theme": "Gospel · Mission · Influence",
@@ -72,7 +95,14 @@
               { "time": "17:30–18:30", "title": "Dinner" },
               { "time": "20:00–21:00", "title": "Gospel Across the Pacific: East Meets West", "note": "Rev. Choi Seung-Hong, Seattle Grace Church" }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "type": "schedule",
+        "num": "06",
+        "heading": "Oct 22 · Day 3",
+        "days": [
           {
             "date": "Oct 22 · Day 3",
             "theme": "Innovate · Transform · Act",
@@ -86,7 +116,14 @@
               { "time": "18:30–19:00", "title": "Taiwan Semiconductors: Future Trends & Global Impact", "note": "Lu Jie-Cheng" },
               { "time": "19:00–21:00", "title": "Phoenix Reborn — Night of the Phoenix", "note": "Joint culture, music and dance performance by Phoenix Chinese churches; Dai Ji-Zong, \"Song of Life in the Wilderness\"" }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "type": "schedule",
+        "num": "07",
+        "heading": "Oct 23 · Day 4",
+        "days": [
           {
             "date": "Oct 23 · Day 4",
             "theme": "Respond · Covenant · Send",
@@ -102,54 +139,24 @@
         ]
       },
       {
-        "type": "themeList",
-        "num": "04",
-        "heading": "Tracks",
-        "items": [
-          { "title": "Digital Transformation & the Future of AI", "summary": "How AI can lead business change on a foundation of faith." },
-          { "title": "Kingdom Influence Leadership", "summary": "Keeping spiritual vitality under pressure, leading as a servant." },
-          { "title": "Stewarding the Land", "summary": "Caring for creation as stewards, linking ESG and sustainable business." }
-        ]
-      },
-      {
         "type": "presidium",
-        "num": "05",
+        "num": "08",
         "heading": "Organizing Committee"
       },
       {
         "type": "speakers",
-        "num": "06",
+        "num": "09",
         "heading": "Speakers"
       },
       {
         "type": "facts",
-        "num": "07",
+        "num": "10",
         "heading": "Venue & Travel",
         "items": [
           { "k": "Arrival", "v": "Fly into Phoenix Sky Harbor International Airport (PHX)" },
           { "k": "Transfer", "v": "About 15–25 minutes by car to the venue in Tempe" },
           { "k": "The city", "v": "A modern desert oasis in the Valley of the Sun, known as the Silicon Desert" },
           { "k": "Local time", "v": "Arizona does not observe DST; 15 hours behind Taiwan" }
-        ]
-      },
-      {
-        "type": "qa",
-        "num": "08",
-        "heading": "FAQ",
-        "items": [
-          { "q": "What does the fee cover?", "a": "All summit sessions across four days, plus five meals. The fee is quoted in TWD and excludes flights and lodging." },
-          { "q": "Until when is the early-bird price?", "a": "Through 2026/09/30 at NT$12,600; afterwards the standard NT$18,000 applies." },
-          { "q": "What if I can no longer attend?", "a": "Transferring your place is preferred. Email service@ct.org.tw by Oct 13 with the change." }
-        ]
-      },
-      {
-        "type": "text",
-        "num": "09",
-        "heading": "Before You Come",
-        "body": [
-          "Carry your passport and registration confirmation, and wear your badge throughout the venue.",
-          "Phoenix has a wide day-to-night temperature swing in October — dress in layers and bring sun protection and moisturiser.",
-          "Please silence phones during sessions; follow on-site staff for photography and filming."
         ]
       },
       {

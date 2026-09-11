@@ -41,7 +41,9 @@ function PageBody({ page, t }) {
           <div className={styles.coverMeta}>
             <span>{page.dates}</span>
             <span>{page.city}</span>
+            {page.venue && <span className={styles.coverVenue}>{page.venue}</span>}
           </div>
+          <img className={styles.coverLogo} src="/logo.png" alt="" />
         </div>
       );
 
@@ -80,10 +82,11 @@ function PageBody({ page, t }) {
           <div className={styles.schedule}>
             {page.days.map((d, i) => (
               <div className={styles.schedDay} key={i}>
-                <div className={styles.schedDateRow}>
-                  <p className={styles.schedDate}>{d.date}</p>
-                  {d.theme && <p className={styles.schedTheme}>{d.theme}</p>}
-                </div>
+                {d.theme && (
+                  <div className={styles.schedDateRow}>
+                    <p className={styles.schedTheme}>{d.theme}</p>
+                  </div>
+                )}
                 {d.sessions.map((s, j) => (
                   <div className={styles.schedRow} key={j}>
                     <span className={styles.schedTime}>{s.time}</span>

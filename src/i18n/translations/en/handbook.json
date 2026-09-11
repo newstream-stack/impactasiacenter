@@ -6,11 +6,14 @@
       "prev": "Previous",
       "next": "Next",
       "backHome": "Back to Home",
-      "hint": "Turn pages with ← → , or tap the left / right edge"
+      "hint": "Turn pages with ← → , or tap the left / right edge",
+      "tocTitle": "Jump to Page",
+      "close": "Close"
     },
     "pages": [
       {
         "type": "cover",
+        "navLabel": "Cover",
         "kicker": "IMPACT ASIA 2026",
         "title": "Impact Asia\nSummit",
         "subtitle": "Event Handbook",
@@ -151,6 +154,7 @@
       },
       {
         "type": "back",
+        "navLabel": "Back Cover",
         "line": "May this journey become a turning point for your life and your work.",
         "org": "Impact Asia Alliance",
         "contact": "service@ct.org.tw"

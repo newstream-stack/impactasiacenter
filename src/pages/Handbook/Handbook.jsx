@@ -217,7 +217,14 @@ export default function Handbook() {
 
   const [index, setIndex] = useState(initial);
   const [turn, setTurn] = useState(null); // { dir: 'next'|'prev', from: number }
+  const [tocOpen, setTocOpen] = useState(false);
   const timer = useRef(null);
+
+  const jumpTo = useCallback((i) => {
+    if (turn) return;
+    setIndex(i);
+    setTocOpen(false);
+  }, [turn]);
 
   useEffect(() => () => clearTimeout(timer.current), []);
 
@@ -383,7 +390,13 @@ export default function Handbook() {
       </div>
 
       <footer className={styles.bottombar}>
-        <span className={styles.counter}>{pageLabel}</span>
+        <button
+          type="button"
+          className={styles.counter}
+          onClick={() => setTocOpen(true)}
+        >
+          {pageLabel}
+        </button>
         <div className={styles.dots}>
           {pages.map((_, i) => (
             <button
@@ -396,6 +409,33 @@ export default function Handbook() {
           ))}
         </div>
       </footer>
+
+      {tocOpen && (
+        <div className={styles.tocOverlay} onClick={() => setTocOpen(false)}>
+          <div className={styles.tocPanel} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.tocHeader}>
+              <span>{meta.tocTitle}</span>
+              <button type="button" className={styles.tocClose} onClick={() => setTocOpen(false)} aria-label={meta.close}>
+                ✕
+              </button>
+            </div>
+            <ul className={styles.tocList}>
+              {pages.map((p, i) => (
+                <li key={i}>
+                  <button
+                    type="button"
+                    className={`${styles.tocItem} ${i === index ? styles.tocItemOn : ''}`}
+                    onClick={() => jumpTo(i)}
+                  >
+                    <span className={styles.tocNum}>{String(i + 1).padStart(2, '0')}</span>
+                    <span>{p.heading || p.navLabel}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

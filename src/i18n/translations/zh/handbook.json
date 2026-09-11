@@ -6,11 +6,14 @@
       "prev": "上一頁",
       "next": "下一頁",
       "backHome": "返回首頁",
-      "hint": "翻頁：鍵盤 ← → ，或點擊頁面左右緣"
+      "hint": "翻頁：鍵盤 ← → ，或點擊頁面左右緣",
+      "tocTitle": "跳到頁面",
+      "close": "關閉"
     },
     "pages": [
       {
         "type": "cover",
+        "navLabel": "封面",
         "kicker": "IMPACT ASIA 2026",
         "title": "亞洲影響力\n高峰會",
         "subtitle": "大會手冊",
@@ -151,6 +154,7 @@
       },
       {
         "type": "back",
+        "navLabel": "封底",
         "line": "願這趟旅程，成為你生命與職場的轉捩點。",
         "org": "Impact Asia Alliance",
         "contact": "service@ct.org.tw"

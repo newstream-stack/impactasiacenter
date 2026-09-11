@@ -84,7 +84,6 @@ function PageBody({ page, t }) {
           </h1>
           <span className={styles.coverSub}>{page.subtitle}</span>
           <div className={styles.coverMeta}>
-            <span>{page.dates}</span>
             <span>{page.city}</span>
             {page.venue && <span className={styles.coverVenue}>{page.venue}</span>}
           </div>

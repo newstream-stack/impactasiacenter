@@ -325,9 +325,17 @@
   text-transform: uppercase;
   color: #17131a;
   background: var(--gold);
-  border-radius: 999px;
+  border-radius: 6px;
   padding: 0.15rem 0.6rem;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 420px) {
+  .roleTag {
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.5rem;
+  }
 }
 .personName {
   font-family: var(--font-display);

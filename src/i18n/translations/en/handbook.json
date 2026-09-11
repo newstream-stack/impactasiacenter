@@ -149,17 +149,6 @@
         "heading": "Speakers"
       },
       {
-        "type": "facts",
-        "num": "10",
-        "heading": "Venue & Travel",
-        "items": [
-          { "k": "Arrival", "v": "Fly into Phoenix Sky Harbor International Airport (PHX)" },
-          { "k": "Transfer", "v": "About 15–25 minutes by car to the venue in Tempe" },
-          { "k": "The city", "v": "A modern desert oasis in the Valley of the Sun, known as the Silicon Desert" },
-          { "k": "Local time", "v": "Arizona does not observe DST; 15 hours behind Taiwan" }
-        ]
-      },
-      {
         "type": "back",
         "navLabel": "Back Cover",
         "line": "May this journey become a turning point for your life and your work.",

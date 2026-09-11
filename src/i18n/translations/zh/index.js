@@ -11,6 +11,7 @@ import themes from './themes.json';
 import venue from './venue.json';
 import footer from './footer.json';
 import dailyProgram from './dailyProgram.json';
+import handbook from './handbook.json';
 import letter from './letter.json';
 
 const translations = {
@@ -27,6 +28,7 @@ const translations = {
   ...venue,
   ...footer,
   ...dailyProgram,
+  ...handbook,
   letter,
 };
 

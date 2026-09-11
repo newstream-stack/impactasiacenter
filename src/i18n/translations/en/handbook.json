@@ -1,0 +1,127 @@
+{
+  "handbook": {
+    "meta": {
+      "label": "Event Handbook",
+      "pageOf": "Page {n} / {total}",
+      "prev": "Previous",
+      "next": "Next",
+      "backHome": "Back to Home",
+      "hint": "Turn pages with ← → , or tap the left / right edge"
+    },
+    "pages": [
+      {
+        "type": "cover",
+        "kicker": "IMPACT ASIA 2026",
+        "title": "Impact Asia\nSummit",
+        "subtitle": "Event Handbook",
+        "dates": "Oct 20 – 23, 2026",
+        "city": "Phoenix, Arizona, USA"
+      },
+      {
+        "type": "text",
+        "num": "01",
+        "heading": "Welcome",
+        "body": [
+          "Welcome to the Impact Asia Summit. For four days we gather in Phoenix, in the heart of the Sonoran Desert, to rethink the next step for technology, leadership and stewardship — grounded in faith.",
+          "This handbook is your companion for the week: programme, venue, tracks and practical notes are all here. May these days become a turning point for your life and your work."
+        ]
+      },
+      {
+        "type": "facts",
+        "num": "02",
+        "heading": "Essentials",
+        "items": [
+          { "k": "Dates", "v": "October 20–23, 2026 (Tue–Fri)" },
+          { "k": "City", "v": "Phoenix / Tempe, Arizona, USA" },
+          { "k": "Fee", "v": "Standard NT$18,000; early-bird NT$12,600" },
+          { "k": "Included", "v": "All summit sessions over four days, plus five meals (flights and lodging not included)" },
+          { "k": "Organiser", "v": "Impact Asia Alliance" },
+          { "k": "Contact", "v": "service@ct.org.tw" }
+        ]
+      },
+      {
+        "type": "schedule",
+        "num": "03",
+        "heading": "Daily Programme",
+        "days": [
+          {
+            "date": "Oct 20 · Tue",
+            "sessions": [
+              { "time": "15:00", "title": "Registration" },
+              { "time": "19:00–21:30", "title": "Opening Session" }
+            ]
+          },
+          {
+            "date": "Oct 21–22 · Wed–Thu",
+            "sessions": [
+              { "time": "09:30–21:30", "title": "Full-day sessions (tracks and evening gatherings)" }
+            ]
+          },
+          {
+            "date": "Oct 23 · Fri",
+            "sessions": [
+              { "time": "09:30–13:30", "title": "Closing Session, ends 13:30" }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "themeList",
+        "num": "04",
+        "heading": "Tracks",
+        "items": [
+          { "title": "Digital Transformation & the Future of AI", "summary": "How AI can lead business change on a foundation of faith." },
+          { "title": "Kingdom Influence Leadership", "summary": "Keeping spiritual vitality under pressure, leading as a servant." },
+          { "title": "Stewarding the Land", "summary": "Caring for creation as stewards, linking ESG and sustainable business." }
+        ]
+      },
+      {
+        "type": "presidium",
+        "num": "05",
+        "heading": "Organizing Committee"
+      },
+      {
+        "type": "speakers",
+        "num": "06",
+        "heading": "Speakers"
+      },
+      {
+        "type": "facts",
+        "num": "07",
+        "heading": "Venue & Travel",
+        "items": [
+          { "k": "Arrival", "v": "Fly into Phoenix Sky Harbor International Airport (PHX)" },
+          { "k": "Transfer", "v": "About 15–25 minutes by car to the venue in Tempe" },
+          { "k": "The city", "v": "A modern desert oasis in the Valley of the Sun, known as the Silicon Desert" },
+          { "k": "Local time", "v": "Arizona does not observe DST; 15 hours behind Taiwan" }
+        ]
+      },
+      {
+        "type": "qa",
+        "num": "08",
+        "heading": "FAQ",
+        "items": [
+          { "q": "What does the fee cover?", "a": "All summit sessions across four days, plus five meals. The fee is quoted in TWD and excludes flights and lodging." },
+          { "q": "Until when is the early-bird price?", "a": "Through 2026/09/30 at NT$12,600; afterwards the standard NT$18,000 applies." },
+          { "q": "What if I can no longer attend?", "a": "Transferring your place is preferred. Email service@ct.org.tw by Oct 13 with the change." }
+        ]
+      },
+      {
+        "type": "text",
+        "num": "09",
+        "heading": "Before You Come",
+        "body": [
+          "Carry your passport and registration confirmation, and wear your badge throughout the venue.",
+          "Phoenix has a wide day-to-night temperature swing in October — dress in layers and bring sun protection and moisturiser.",
+          "Please silence phones during sessions; follow on-site staff for photography and filming."
+        ]
+      },
+      {
+        "type": "back",
+        "line": "May this journey become a turning point for your life and your work.",
+        "org": "Impact Asia Alliance",
+        "contact": "service@ct.org.tw"
+      }
+    ]
+  }
+}

@@ -308,6 +308,13 @@ export default function Handbook() {
   const [tocOpen, setTocOpen] = useState(false);
   const timer = useRef(null);
 
+  useEffect(() => {
+    const { style } = document.body;
+    const prevOverflow = style.overflow;
+    style.overflow = 'hidden';
+    return () => { style.overflow = prevOverflow; };
+  }, []);
+
   const jumpTo = useCallback((i) => {
     if (turn) return;
     setIndex(i);

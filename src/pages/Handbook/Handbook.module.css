@@ -1,6 +1,7 @@
 .page {
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   background:
@@ -67,6 +68,7 @@
 /* ---------- stage ---------- */
 .stage {
   flex: 1;
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,7 +98,7 @@
 .book {
   position: relative;
   width: min(92vw, 480px);
-  height: min(76vh, 660px);
+  height: min(100%, 660px);
   perspective: 2400px;
   touch-action: pan-y;
 }
@@ -859,7 +861,7 @@
 
 @media (max-width: 560px) {
   .nav { display: none; }
-  .book { width: min(94vw, 420px); height: min(72vh, 600px); }
+  .book { width: min(94vw, 420px); height: min(100%, 600px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

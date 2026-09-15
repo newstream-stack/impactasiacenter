@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useLocation } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import styles from './Handbook.module.css';
@@ -69,6 +70,81 @@ function Gallery({ images }) {
           />
         ))}
       </div>
+    </div>
+  );
+}
+
+function BioModal({ person, onClose }) {
+  return createPortal(
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={styles.modalBox} onClick={(e) => e.stopPropagation()}>
+        <button type="button" className={styles.modalClose} onClick={onClose} aria-label="Close">✕</button>
+        <Portrait src={person.image} name={person.name} className={styles.modalThumb} />
+        {person.role && <span className={styles.modalRole}>{person.role}</span>}
+        <p className={styles.modalName}>{person.name}</p>
+        <p className={styles.modalTitle}>{person.title}</p>
+        {person.bio && <p className={styles.modalBio}>{person.bio}</p>}
+      </div>
+    </div>,
+    document.body
+  );
+}
+
+function PresidiumPage({ page, t }) {
+  const p = t('presidium');
+  const coChairs = (p.coChairs || []).filter((c) => !c.hidden);
+  const [selected, setSelected] = useState(null);
+
+  return (
+    <div className={styles.leafInner}>
+      <span className={styles.pageNum}>{page.num}</span>
+      <h2 className={styles.pageHeading}>{page.heading}</h2>
+      <div className={styles.people}>
+        {(p.main || []).map((m, i) => (
+          <button
+            type="button"
+            className={`${styles.personLead} ${m.bio ? styles.personClickable : ''}`}
+            key={i}
+            onClick={() => m.bio && setSelected(m)}
+          >
+            <Portrait src={m.image} name={m.name} className={styles.thumbLg} />
+            <div className={styles.personText}>
+              <span className={styles.roleTag}>{m.role}</span>
+              <p className={styles.personName}>{m.name}</p>
+              <div className={styles.titleRow}>
+                <p className={styles.personTitle}>{m.title}</p>
+                {m.bio && <span className={styles.readMore}>{p.readMore}</span>}
+              </div>
+            </div>
+          </button>
+        ))}
+      </div>
+      {coChairs.length > 0 && (
+        <>
+          <p className={styles.groupLabel}>{p.coChairsTitle}</p>
+          <ul className={styles.personList}>
+            {coChairs.map((c, i) => (
+              <li key={i}>
+                <button
+                  type="button"
+                  className={`${styles.personListBtn} ${c.bio ? styles.personClickable : ''}`}
+                  onClick={() => c.bio && setSelected(c)}
+                >
+                  <Portrait src={c.image} name={c.name} className={styles.thumb} />
+                  <div className={styles.personText}>
+                    <span className={styles.personNameSm}>{c.name}</span>
+                    <div className={styles.titleRow}>
+                      <span className={styles.personTitleSm}>{c.title}</span>
+                      {c.bio && <span className={styles.readMore}>{p.readMore}</span>}
+                    </div>
+                  </div>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {selected && <BioModal person={selected} onClose={() => setSelected(null)} />}
     </div>
   );
 }
@@ -162,44 +238,8 @@ function PageBody({ page, t }) {
         </div>
       );
 
-    case 'presidium': {
-      const p = t('presidium');
-      const coChairs = (p.coChairs || []).filter((c) => !c.hidden);
-      return (
-        <div className={styles.leafInner}>
-          <span className={styles.pageNum}>{page.num}</span>
-          <h2 className={styles.pageHeading}>{page.heading}</h2>
-          <div className={styles.people}>
-            {(p.main || []).map((m, i) => (
-              <div className={styles.personLead} key={i}>
-                <Portrait src={m.image} name={m.name} className={styles.thumbLg} />
-                <div className={styles.personText}>
-                  <span className={styles.roleTag}>{m.role}</span>
-                  <p className={styles.personName}>{m.name}</p>
-                  <p className={styles.personTitle}>{m.title}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          {coChairs.length > 0 && (
-            <>
-              <p className={styles.groupLabel}>{p.coChairsTitle}</p>
-              <ul className={styles.personList}>
-                {coChairs.map((c, i) => (
-                  <li key={i}>
-                    <Portrait src={c.image} name={c.name} className={styles.thumb} />
-                    <div className={styles.personText}>
-                      <span className={styles.personNameSm}>{c.name}</span>
-                      <span className={styles.personTitleSm}>{c.title}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-        </div>
-      );
-    }
+    case 'presidium':
+      return <PresidiumPage page={page} t={t} />;
 
     case 'speakers': {
       const list = (t('speakers') || []).filter((s) => !s.hidden);

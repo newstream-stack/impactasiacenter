@@ -97,7 +97,6 @@ function PresidiumPage({ page, t }) {
 
   return (
     <div className={styles.leafInner}>
-      <span className={styles.pageNum}>{page.num}</span>
       <h2 className={styles.pageHeading}>{page.heading}</h2>
       <div className={styles.people}>
         {(p.main || []).map((m, i) => (
@@ -155,7 +154,6 @@ function SpeakersPage({ page, t }) {
 
   return (
     <div className={styles.leafInner}>
-      <span className={styles.pageNum}>{page.num}</span>
       <h2 className={styles.pageHeading}>{page.heading}</h2>
       <ul className={styles.speakerGrid}>
         {list.map((s) => (
@@ -214,8 +212,7 @@ function PageBody({ page, t }) {
     case 'facts':
       return (
         <div className={styles.leafInner}>
-          <span className={styles.pageNum}>{page.num}</span>
-          <h2 className={styles.pageHeading}>{page.heading}</h2>
+              <h2 className={styles.pageHeading}>{page.heading}</h2>
           <dl className={styles.facts}>
             {page.items.map((it, i) => (
               <div className={styles.factRow} key={i}>
@@ -230,8 +227,7 @@ function PageBody({ page, t }) {
     case 'schedule':
       return (
         <div className={styles.leafInner}>
-          <span className={styles.pageNum}>{page.num}</span>
-          <h2 className={styles.pageHeading}>{page.heading}</h2>
+              <h2 className={styles.pageHeading}>{page.heading}</h2>
           <div className={styles.schedule}>
             {page.days.map((d, i) => (
               <div className={styles.schedDay} key={i}>
@@ -258,8 +254,7 @@ function PageBody({ page, t }) {
     case 'themeList':
       return (
         <div className={styles.leafInner}>
-          <span className={styles.pageNum}>{page.num}</span>
-          <h2 className={styles.pageHeading}>{page.heading}</h2>
+              <h2 className={styles.pageHeading}>{page.heading}</h2>
           <ol className={styles.themeList}>
             {page.items.map((it, i) => (
               <li key={i}>
@@ -280,8 +275,7 @@ function PageBody({ page, t }) {
     case 'qa':
       return (
         <div className={styles.leafInner}>
-          <span className={styles.pageNum}>{page.num}</span>
-          <h2 className={styles.pageHeading}>{page.heading}</h2>
+              <h2 className={styles.pageHeading}>{page.heading}</h2>
           <div className={styles.qa}>
             {page.items.map((it, i) => (
               <div className={styles.qaRow} key={i}>
@@ -297,8 +291,7 @@ function PageBody({ page, t }) {
     default:
       return (
         <div className={styles.leafInner}>
-          <span className={styles.pageNum}>{page.num}</span>
-          <h2 className={styles.pageHeading}>{page.heading}</h2>
+              <h2 className={styles.pageHeading}>{page.heading}</h2>
           <div className={styles.prose}>
             {page.body.map((para, i) => <p key={i}>{para}</p>)}
           </div>

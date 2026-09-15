@@ -364,6 +364,15 @@ export default function Handbook() {
   const bookRef = useRef(null);
   const swipe = useRef(null); // { x, y, lockedAxis: null | 'x' | 'y' }
 
+  const onBookTap = useCallback((e) => {
+    if (turn) return;
+    if (e.target.closest('button, a, [data-gallery-scroll]')) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const pct = (e.clientX - rect.left) / rect.width;
+    if (pct <= 0.22) go('prev');
+    else if (pct >= 0.78) go('next');
+  }, [turn, go]);
+
   useEffect(() => {
     const el = bookRef.current;
     if (!el) return;
@@ -443,7 +452,7 @@ export default function Handbook() {
           ‹
         </button>
 
-        <div className={styles.book} ref={bookRef}>
+        <div className={styles.book} ref={bookRef} onClick={onBookTap}>
           <div className={styles.staticPage}>
             <PageBody page={underneath} t={t} />
           </div>
@@ -456,24 +465,6 @@ export default function Handbook() {
               <div className={`${styles.leafFace} ${styles.leafBack}`} />
             </div>
           )}
-
-          {/* click zones on the page edges */}
-          <button
-            type="button"
-            className={`${styles.edge} ${styles.edgeLeft}`}
-            onClick={() => go('prev')}
-            disabled={index === 0 || !!turn}
-            aria-label={meta.prev}
-            tabIndex={-1}
-          />
-          <button
-            type="button"
-            className={`${styles.edge} ${styles.edgeRight}`}
-            onClick={() => go('next')}
-            disabled={index === total - 1 || !!turn}
-            aria-label={meta.next}
-            tabIndex={-1}
-          />
         </div>
 
         <button

@@ -149,6 +149,39 @@ function PresidiumPage({ page, t }) {
   );
 }
 
+function SpeakersPage({ page, t }) {
+  const list = (t('speakers') || []).filter((s) => !s.hidden);
+  const [selected, setSelected] = useState(null);
+
+  return (
+    <div className={styles.leafInner}>
+      <span className={styles.pageNum}>{page.num}</span>
+      <h2 className={styles.pageHeading}>{page.heading}</h2>
+      <ul className={styles.speakerGrid}>
+        {list.map((s) => (
+          <li key={s.id}>
+            <button
+              type="button"
+              className={`${styles.personListBtn} ${s.bio ? styles.personClickable : ''}`}
+              onClick={() => s.bio && setSelected({ name: s.name, title: s.title, bio: s.bio, image: s.img })}
+            >
+              <Portrait src={s.img} name={s.name} className={styles.thumb} />
+              <div className={styles.personText}>
+                <span className={styles.personNameSm}>{s.name}</span>
+                <div className={styles.titleRow}>
+                  <span className={styles.personTitleSm}>{s.title}</span>
+                  {s.bio && <span className={styles.readMore}>{t('presidium').readMore}</span>}
+                </div>
+              </div>
+            </button>
+          </li>
+        ))}
+      </ul>
+      {selected && <BioModal person={selected} onClose={() => setSelected(null)} />}
+    </div>
+  );
+}
+
 function PageBody({ page, t }) {
   switch (page.type) {
     case 'cover':
@@ -241,26 +274,8 @@ function PageBody({ page, t }) {
     case 'presidium':
       return <PresidiumPage page={page} t={t} />;
 
-    case 'speakers': {
-      const list = (t('speakers') || []).filter((s) => !s.hidden);
-      return (
-        <div className={styles.leafInner}>
-          <span className={styles.pageNum}>{page.num}</span>
-          <h2 className={styles.pageHeading}>{page.heading}</h2>
-          <ul className={styles.speakerGrid}>
-            {list.map((s) => (
-              <li key={s.id}>
-                <Portrait src={s.img} name={s.name} className={styles.thumb} />
-                <div className={styles.personText}>
-                  <span className={styles.personNameSm}>{s.name}</span>
-                  <span className={styles.personTitleSm}>{s.title}</span>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      );
-    }
+    case 'speakers':
+      return <SpeakersPage page={page} t={t} />;
 
     case 'qa':
       return (

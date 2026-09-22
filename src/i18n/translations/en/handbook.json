@@ -81,8 +81,8 @@
             "sessions": [
               { "time": "15:00", "title": "Registration" },
               { "time": "17:00–18:30", "title": "Welcome Dinner" },
-              { "time": "19:00–20:00", "title": "Opening Ceremony & Service", "note": "Phoenix Taiwanese Presbyterian & First Baptist worship teams; opened by Rev. John Heston (2nd Baptist) and Rev. Shan-Chun Hung; translation by Rev. Li Tao-Hong" },
-              { "time": "20:00–20:50", "title": "War or Peace of the Chips?", "note": "Summit keynote · Dean Burn Jeng Lin, semiconductor hub of Phoenix, USA" },
+              { "time": "19:00–20:00", "title": "Opening Ceremony & Service", "note": "Opened by Chairman Shan-Chun Hung; translation by Rev. Li Tao-Hong｜Phoenix Taiwanese Presbyterian worship team (\"The Love of the Cross,\" \"Praise the Risen Lord\")｜First Baptist worship team｜2nd Baptist Senior Pastor Rev. John Heston" },
+              { "time": "20:00–20:50", "title": "War or Peace of the Chips?", "note": "Keynote · Dean Burn Jeng Lin, semiconductor hub of Phoenix, USA" },
               { "time": "20:50–21:00", "title": "\"New Jerusalem\"", "note": "Performed by Phoenix Taiwanese Presbyterian Church" }
             ]
           }
@@ -103,9 +103,9 @@
               { "time": "12:00–13:30", "title": "Lunch" },
               { "time": "13:30–14:30", "title": "Heart, Strength & Soul: Sharing the Gospel", "note": "Stand-up gospel comedy with Justin Lin; sports evangelism" },
               { "time": "14:30–15:30", "title": "Sunrise in the East: Japan Church Awakening", "note": "Rev. Wataru Sugahara" },
-              { "time": "16:00–17:00", "title": "From Doubt to Faith", "note": "Wenchi Chiang" },
+              { "time": "16:00–17:00", "title": "The Versatile Tool of Evangelism: From Doubt to Faith", "note": "Wen-Qi Jiang, CEO" },
               { "time": "17:30–18:30", "title": "Dinner" },
-              { "time": "19:00–20:00", "title": "Gospel Across the Pacific: East Meets West", "note": "Rev. Choi Seung-Hong, Seattle Grace Church" }
+              { "time": "19:00–20:00", "title": "The Soul's Anchor in an Age of Massive Change", "note": "Rev. Choi Seung-Hong, Seattle Grace Church" }
             ]
           }
         ]
@@ -129,6 +129,7 @@
               { "time": "15:30–16:00", "title": "Worship", "note": "SBC Chinese Congregation" },
               { "time": "16:00–17:00", "title": "Rev. Kang Hee Ahn. & Rev. Paul Liu" },
               { "time": "17:30–18:30", "title": "Dinner" },
+              { "title": "Flute Performance by Song Song-Shu — This Is the Road of Grace" },
               { "time": "18:30–19:00", "title": "Taiwan Semiconductors: Future Trends & Global Impact", "note": "Lu Jie-Cheng" },
               { "time": "19:00–21:00", "title": "Phoenix Reborn — Night of the Phoenix", "note": "Joint culture, music and dance performance by Phoenix Chinese churches; Dai Ji-Zong, \"Song of Life in the Wilderness\"" }
             ]
@@ -176,7 +177,7 @@
               { "time": "07:30–08:30", "title": "PRS Morning Prayer & Chinese Bible Breakfast (by invitation)" },
               { "time": "09:00–10:00", "title": "Hearing the Heartbeat of Africa (Uganda Live Link)", "note": "Hon. Martin" },
               { "time": "10:00–10:30", "title": "Coffee & Fellowship" },
-              { "time": "10:30–11:00", "title": "Back to God's Original Intent: A New Heaven and Earth", "note": "Summit closing keynote · Executive Director Cheng Chung-Hsin" },
+              { "time": "10:30–11:00", "title": "Back to God's Original Intent: A New Heaven and Earth", "note": "Summit closing keynote · Executive Director Timothy Cheng" },
               { "time": "11:00–11:30", "title": "Behold! That Light in the Wilderness", "note": "Native American prayer and tribute" },
               { "time": "11:30–12:30", "title": "Communion, Closing Service & Commissioning", "note": "IAA Malaysia Chair Wang Zu-Xiang; joint communion of Phoenix Chinese and American pastors｜IAA Chair Shan-Chun Hung" },
               { "time": "12:30", "title": "Flute Praise by Song Song-Shu／JOANNE Hula Dance Prayer" }

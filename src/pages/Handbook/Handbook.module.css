@@ -341,10 +341,25 @@
   font-variant-numeric: tabular-nums;
 }
 .schedDot {
+  position: relative;
+  color: transparent;
+}
+.schedDot::after {
+  content: '';
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.schedDotCompact {
   flex-shrink: 0;
   width: 0.4rem;
   height: 0.4rem;
-  margin-top: 0.55rem;
+  margin-top: 0.6rem;
   border-radius: 50%;
   background: var(--gold);
 }

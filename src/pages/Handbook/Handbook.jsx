@@ -229,7 +229,9 @@ function PageBody({ page, t }) {
         <div className={styles.leafInner}>
               <h2 className={styles.pageHeading}>{page.heading}</h2>
           <div className={styles.schedule}>
-            {page.days.map((d, i) => (
+            {page.days.map((d, i) => {
+              const allNoTime = d.sessions.every((s) => !s.time);
+              return (
               <div className={styles.schedDay} key={i}>
                 {d.theme && (
                   <div className={styles.schedDateRow}>
@@ -240,7 +242,9 @@ function PageBody({ page, t }) {
                   <div className={`${styles.schedRow} ${s.highlight ? styles.schedRowHighlight : ''}`} key={j}>
                     {s.time
                       ? <span className={styles.schedTime}>{s.time}</span>
-                      : <span className={styles.schedDot} aria-hidden="true" />}
+                      : allNoTime
+                        ? <span className={styles.schedDotCompact} aria-hidden="true" />
+                        : <span className={`${styles.schedTime} ${styles.schedDot}`} aria-hidden="true">00:00–00:00</span>}
                     <div className={styles.schedTextCol}>
                       <span className={styles.schedTitle}>{s.title}</span>
                       {s.note && <span className={styles.schedNote}>{s.note}</span>}
@@ -248,7 +252,8 @@ function PageBody({ page, t }) {
                   </div>
                 ))}
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       );

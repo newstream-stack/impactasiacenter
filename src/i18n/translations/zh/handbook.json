@@ -98,14 +98,14 @@
             "theme": "福音．宣教．影響力",
             "sessions": [
               { "time": "08:30–09:00", "title": "敬拜事奉", "note": "IAA 亞洲團隊《來讚美主》" },
-              { "time": "09:00–10:00", "title": "Grace & Mercy／PRS／JSU" },
-              { "time": "10:30–11:30", "title": "聖經博物館創辦人專題" },
+              { "time": "09:00–10:00", "title": "Grace & Mercy／PRS", "note": "那永恆的光依然照亮｜Dr. Cary Summers" },
+              { "time": "10:30–11:30", "title": "Grace & Mercy／JSU", "note": "Ryan Kim" },
               { "time": "12:00–13:30", "title": "午餐" },
-              { "time": "13:30–14:30", "title": "盡心．盡力．盡性．傳福音", "note": "林以諾福音脫口秀｜皮克球傳福音" },
-              { "time": "14:30–15:30", "title": "日出東方．教會甦醒", "note": "普原巨牧師" },
+              { "time": "13:30–14:30", "title": "盡心．盡力．盡性．傳福音", "note": "林以諾福音脫口秀｜運動宣教" },
+              { "time": "14:30–15:30", "title": "日出東方．日本教會甦醒", "note": "菅原亘 牧師" },
               { "time": "16:00–17:00", "title": "從懷疑到相信", "note": "姜文琪" },
               { "time": "17:30–18:30", "title": "晚餐" },
-              { "time": "20:00–21:00", "title": "福音太平洋東西方對接", "note": "西雅圖證道堂崔勝洪牧師" }
+              { "time": "19:00–20:00", "title": "福音太平洋東西方對接", "note": "西雅圖證道堂崔勝洪牧師" }
             ]
           }
         ]
@@ -119,11 +119,15 @@
             "date": "10 / 22　第三天",
             "theme": "創新．轉化．行動",
             "sessions": [
-              { "time": "07:30–08:30", "title": "PRS 晨禱與查經早餐會（邀請）" },
+              { "time": "07:30–08:30", "title": "PRS 晨禱與英文查經早餐會（邀請）" },
               { "time": "09:00–10:00", "title": "PRS 沈默是金．聆聽神的話語" },
               { "time": "10:30–11:30", "title": "AI 福音多媒體影音電影製作與範例" },
               { "time": "12:00–13:30", "title": "午餐" },
-              { "time": "14:30–17:30", "title": "SBC｜華里克的 FTT & PEACE", "note": "實踐與案例｜Dr. Ryan｜Dr. AHN Kang Hee｜Rev. Paul Liu；馬駿峰教會中文堂與 Palm Valley Church 敬拜讚美" },
+              { "time": "13:30–14:00", "title": "敬拜事奉", "note": "Palm Valley Church" },
+              { "time": "14:00–15:00", "title": "Rev. Ryan Nunez" },
+              { "time": "15:00–15:30", "title": "休息" },
+              { "time": "15:30–16:00", "title": "敬拜事奉", "note": "SBC中文堂" },
+              { "time": "16:00–17:00", "title": "Rev. Kang Hee Ahn. & Rev. Paul Liu" },
               { "time": "17:30–18:30", "title": "晚餐" },
               { "time": "18:30–19:00", "title": "台灣半導體的未來趨勢與全球影響力", "note": "呂桔誠" },
               { "time": "19:00–21:00", "title": "浴火鳳凰——鳳凰之夜", "note": "鳳城華人教會聯合文化、音樂、舞蹈演出；戴繼宗《曠野中的生命笙歌》" }
@@ -140,29 +144,22 @@
             "date": "文化之夜節目表",
             "theme": "10/22  7:00 – 9:00 PM",
             "sessions": [
-              { "time": "7:00–7:03", "title": "主辦人開場致詞", "note": "Opening Remarks by the Organizer｜Tim Cheng" },
-              { "time": "7:03–7:13", "title": "鳳城華人教會敬拜團－開場敬拜讚美", "note": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
-              { "time": "7:13–7:14", "title": "主持人串場／換場", "note": "MC Transition / Stage Change｜呂行" },
-              { "time": "7:14–7:22", "title": "第一浸信會－小提琴演奏", "note": "First Baptist Church – Violin Performance｜Joy" },
-              { "time": "7:22–7:23", "title": "主持人串場", "note": "MC Transition" },
-              { "time": "7:23–7:29", "title": "西北教會詩班－《曠野中唯一的力量》", "note": "Northwest Chinese Church Choir – My Strength in the Wilderness｜至邦" },
-              { "time": "7:29–7:30", "title": "主持人介紹鳳城武術學校", "note": "MC Introduction of Phoenix Wushu Academy" },
-              { "time": "7:30–7:35", "title": "鳳城武術學校－中國民族舞蹈", "note": "Phoenix Wushu Academy – Chinese Traditional Dance｜Jane Ho" },
-              { "time": "7:35–7:42", "title": "鳳城武術學校－中國武術", "note": "Phoenix Wushu Academy – Chinese Martial Arts" },
-              { "time": "7:42–7:43", "title": "主持人串場／換場", "note": "MC Transition / Stage Change" },
-              { "time": "7:43–7:50", "title": "琵琶獨奏", "note": "Pipa Solo｜馬萊" },
-              { "time": "7:50–7:51", "title": "主持人串場／換場", "note": "MC Transition / Stage Change" },
-              { "time": "7:51–7:59", "title": "墨西哥舞蹈", "note": "Mexican Dance｜Maria V" },
-              { "time": "7:59–8:00", "title": "主持人串場", "note": "MC Transition" },
-              { "time": "8:00–8:06", "title": "鳳城小詩班", "note": "Greater Chinese Christian Church Choir｜獻詩：一片雲霧" },
-              { "time": "8:06–8:07", "title": "主持人串場", "note": "MC Transition" },
-              { "time": "8:07–8:12", "title": "戴師母獨唱", "note": "Mrs. Tai – Vocal Solo｜獻詩：大海中的道路｜戴師母" },
-              { "time": "8:12–8:13", "title": "介紹戴繼宗牧師", "note": "Introduction of Rev. David Tai" },
-              { "time": "8:13–8:43", "title": "戴繼宗牧師－福音信息", "note": "Rev. David Tai – Gospel Message｜戴牧師" },
-              { "time": "8:43–8:44", "title": "主持人串場／詩班就位", "note": "MC Transition / Choir Takes the Stage" },
-              { "time": "8:44–8:50", "title": "鳳凰城聯合教會詩班－壓軸獻詩", "note": "Phoenix Joint Church Choir – Finale Choral Presentation｜獻詩：藉我賜恩福｜益琳" },
-              { "time": "8:50–8:53", "title": "主辦人閉幕致詞及感謝", "note": "Closing Remarks and Appreciation by the Organizer｜Tim Cheng" },
-              { "time": "8:53–8:55", "title": "主持人總結", "note": "MC conclusion" }
+              { "title": "主辦人開場致詞", "note": "Opening Remarks by the Organizer" },
+              { "title": "鳳城華人教會敬拜團－開場敬拜讚美", "note": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
+              { "title": "主持人介紹", "note": "MC Transition｜呂行" },
+              { "title": "第一浸信會－小提琴演奏", "note": "First Baptist Church – Violin Performance｜Joy" },
+              { "title": "西北教會詩班－《曠野中唯一的力量》", "note": "Northwest Chinese Church Choir – My Strength in the Wilderness｜至邦" },
+              { "title": "主持人介紹鳳城武術學校", "note": "MC Introduction of Phoenix Wushu Academy" },
+              { "title": "鳳城武術學校－中國民族舞蹈", "note": "Phoenix Wushu Academy – Chinese Traditional Dance｜Jane Ho" },
+              { "title": "鳳城武術學校－中國武術", "note": "Phoenix Wushu Academy – Chinese Martial Arts" },
+              { "title": "琵琶獨奏", "note": "Pipa Solo｜馬萊" },
+              { "title": "墨西哥舞蹈", "note": "Mexican Dance｜Maria V" },
+              { "title": "鳳城小詩班", "note": "Greater Chinese Christian Church Choir｜獻詩：一片雲霧" },
+              { "title": "戴師母獨唱", "note": "Mrs. Tai – Vocal Solo｜獻詩：大海中的道路｜戴師母" },
+              { "title": "戴繼宗牧師－福音信息", "note": "Rev. David Tai – Gospel Message｜戴牧師", "highlight": true },
+              { "title": "鳳凰城聯合教會詩班－壓軸獻詩", "note": "Phoenix Joint Church Choir – Finale Choral Presentation｜獻詩：藉我賜恩福｜益琳" },
+              { "title": "主辦人閉幕致詞及感謝", "note": "Closing Remarks and Appreciation by the Organizer｜Tim Cheng" },
+              { "title": "主持人總結", "note": "MC conclusion" }
             ]
           }
         ]
@@ -176,12 +173,13 @@
             "date": "10 / 23　第四天",
             "theme": "回應．立約．差遣",
             "sessions": [
-              { "time": "07:30–08:30", "title": "PRS 晨禱與英文查經早餐會（邀請）" },
-              { "time": "09:00–10:00", "title": "分組回應與行動分享" },
+              { "time": "07:30–08:30", "title": "PRS 晨禱與中文查經早餐會（邀請）" },
+              { "time": "09:00–10:00", "title": "聽見非洲的心跳（烏干達連線）", "note": "Hon. Martin" },
               { "time": "10:00–10:30", "title": "茶點交流" },
               { "time": "10:30–11:00", "title": "回到起初神心意．迎接新天新地", "note": "大會總結專題｜鄭忠信執行長" },
               { "time": "11:00–11:30", "title": "看哪！那曠野的一道光", "note": "印地安人的祈禱與禮讚" },
-              { "time": "11:30–12:30", "title": "聖餐．閉幕禮拜．差遣禮", "note": "IAA Malaysia 主席王祖祥；鳳城華人教會牧者＋美國牧者聯合聖餐；明年亞洲論壇影響力國際年會布達｜IAA 主席洪善群" }
+              { "time": "11:30–12:30", "title": "聖餐．閉幕禮拜．差遣禮", "note": "IAA Malaysia 主席王祖祥；鳳城華人教會牧者＋美國牧者聯合聖餐｜IAA 主席洪善群" },
+              { "time": "12:30", "title": "宋松樹長笛頌讚／JOANNE 呼拉舞祈禱" }
             ]
           }
         ]

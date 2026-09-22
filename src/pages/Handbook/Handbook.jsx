@@ -237,8 +237,10 @@ function PageBody({ page, t }) {
                   </div>
                 )}
                 {d.sessions.map((s, j) => (
-                  <div className={styles.schedRow} key={j}>
-                    <span className={styles.schedTime}>{s.time}</span>
+                  <div className={`${styles.schedRow} ${s.highlight ? styles.schedRowHighlight : ''}`} key={j}>
+                    {s.time
+                      ? <span className={styles.schedTime}>{s.time}</span>
+                      : <span className={styles.schedDot} aria-hidden="true" />}
                     <div className={styles.schedTextCol}>
                       <span className={styles.schedTitle}>{s.title}</span>
                       {s.note && <span className={styles.schedNote}>{s.note}</span>}

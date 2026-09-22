@@ -98,14 +98,14 @@
             "theme": "Gospel · Mission · Influence",
             "sessions": [
               { "time": "08:30–09:00", "title": "Worship", "note": "IAA Asia Team, \"Come Praise the Lord\"" },
-              { "time": "09:00–10:00", "title": "Grace & Mercy / PRS / JSU" },
-              { "time": "10:30–11:30", "title": "Talk by the Founder of the Bible Museum" },
+              { "time": "09:00–10:00", "title": "Grace & Mercy / PRS", "note": "The Light in Israel Continues｜Dr. Cary Summers" },
+              { "time": "10:30–11:30", "title": "Grace & Mercy / JSU", "note": "Ryan Kim" },
               { "time": "12:00–13:30", "title": "Lunch" },
-              { "time": "13:30–14:30", "title": "Heart, Strength & Soul: Sharing the Gospel", "note": "Stand-up gospel comedy with Justin Lin; pickleball evangelism" },
-              { "time": "14:30–15:30", "title": "Sunrise in the East: Church Awakening", "note": "Pastor Pu Yuan-Ju" },
+              { "time": "13:30–14:30", "title": "Heart, Strength & Soul: Sharing the Gospel", "note": "Stand-up gospel comedy with Justin Lin; sports evangelism" },
+              { "time": "14:30–15:30", "title": "Sunrise in the East: Japan Church Awakening", "note": "Rev. Wataru Sugahara" },
               { "time": "16:00–17:00", "title": "From Doubt to Faith", "note": "Wenchi Chiang" },
               { "time": "17:30–18:30", "title": "Dinner" },
-              { "time": "20:00–21:00", "title": "Gospel Across the Pacific: East Meets West", "note": "Rev. Choi Seung-Hong, Seattle Grace Church" }
+              { "time": "19:00–20:00", "title": "Gospel Across the Pacific: East Meets West", "note": "Rev. Choi Seung-Hong, Seattle Grace Church" }
             ]
           }
         ]
@@ -119,11 +119,15 @@
             "date": "Oct 22 · Day 3",
             "theme": "Innovate · Transform · Act",
             "sessions": [
-              { "time": "07:30–08:30", "title": "PRS Morning Prayer & Bible Breakfast (by invitation)" },
+              { "time": "07:30–08:30", "title": "PRS Morning Prayer & English Bible Breakfast (by invitation)" },
               { "time": "09:00–10:00", "title": "PRS: Silence Is Gold — Listening to God's Word" },
               { "time": "10:30–11:30", "title": "AI Gospel Media: Film Production & Case Studies" },
               { "time": "12:00–13:30", "title": "Lunch" },
-              { "time": "14:30–17:30", "title": "SBC | Warrick's FTT & PEACE", "note": "Practice & case studies with Dr. Ryan, Dr. Ahn Kang-Hee, Rev. Paul Liu; worship by Mǎ Jùnfēng Chinese congregation and Palm Valley Church" },
+              { "time": "13:30–14:00", "title": "Worship", "note": "Palm Valley Church" },
+              { "time": "14:00–15:00", "title": "Rev. Ryan Nunez" },
+              { "time": "15:00–15:30", "title": "Break" },
+              { "time": "15:30–16:00", "title": "Worship", "note": "SBC Chinese Congregation" },
+              { "time": "16:00–17:00", "title": "Rev. Kang Hee Ahn. & Rev. Paul Liu" },
               { "time": "17:30–18:30", "title": "Dinner" },
               { "time": "18:30–19:00", "title": "Taiwan Semiconductors: Future Trends & Global Impact", "note": "Lu Jie-Cheng" },
               { "time": "19:00–21:00", "title": "Phoenix Reborn — Night of the Phoenix", "note": "Joint culture, music and dance performance by Phoenix Chinese churches; Dai Ji-Zong, \"Song of Life in the Wilderness\"" }
@@ -140,29 +144,22 @@
             "date": "Culture Night Programme",
             "theme": "7:00 – 9:00 PM",
             "sessions": [
-              { "time": "7:00–7:03", "title": "Opening Remarks by the Organizer", "note": "Tim Cheng" },
-              { "time": "7:03–7:13", "title": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
-              { "time": "7:13–7:14", "title": "MC Transition / Stage Change", "note": "Lu Hang" },
-              { "time": "7:14–7:22", "title": "First Baptist Church – Violin Performance", "note": "Joy" },
-              { "time": "7:22–7:23", "title": "MC Transition" },
-              { "time": "7:23–7:29", "title": "Northwest Chinese Church Choir – My Strength in the Wilderness", "note": "Zhi-Bang" },
-              { "time": "7:29–7:30", "title": "MC Introduction of Phoenix Wushu Academy" },
-              { "time": "7:30–7:35", "title": "Phoenix Wushu Academy – Chinese Traditional Dance", "note": "Jane Ho" },
-              { "time": "7:35–7:42", "title": "Phoenix Wushu Academy – Chinese Martial Arts" },
-              { "time": "7:42–7:43", "title": "MC Transition / Stage Change" },
-              { "time": "7:43–7:50", "title": "Pipa Solo", "note": "Ma Lai" },
-              { "time": "7:50–7:51", "title": "MC Transition / Stage Change" },
-              { "time": "7:51–7:59", "title": "Mexican Dance", "note": "Maria V" },
-              { "time": "7:59–8:00", "title": "MC Transition" },
-              { "time": "8:00–8:06", "title": "Greater Chinese Christian Church Choir", "note": "Song: \"A Wisp of Cloud\"" },
-              { "time": "8:06–8:07", "title": "MC Transition" },
-              { "time": "8:07–8:12", "title": "Mrs. Tai – Vocal Solo", "note": "Song: \"The Way Through the Sea\"｜Mrs. Tai" },
-              { "time": "8:12–8:13", "title": "Introduction of Rev. David Tai" },
-              { "time": "8:13–8:43", "title": "Rev. David Tai – Gospel Message", "note": "Rev. David Tai" },
-              { "time": "8:43–8:44", "title": "MC Transition / Choir Takes the Stage" },
-              { "time": "8:44–8:50", "title": "Phoenix Joint Church Choir – Finale Choral Presentation", "note": "Song: \"Blessed Through Me\"｜Yi-Lin" },
-              { "time": "8:50–8:53", "title": "Closing Remarks and Appreciation by the Organizer", "note": "Tim Cheng" },
-              { "time": "8:53–8:55", "title": "MC Conclusion" }
+              { "title": "Opening Remarks by the Organizer" },
+              { "title": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
+              { "title": "MC Transition", "note": "Lu Hang" },
+              { "title": "First Baptist Church – Violin Performance", "note": "Joy" },
+              { "title": "Northwest Chinese Church Choir – My Strength in the Wilderness", "note": "Zhi-Bang" },
+              { "title": "MC Introduction of Phoenix Wushu Academy" },
+              { "title": "Phoenix Wushu Academy – Chinese Traditional Dance", "note": "Jane Ho" },
+              { "title": "Phoenix Wushu Academy – Chinese Martial Arts" },
+              { "title": "Pipa Solo", "note": "Ma Lai" },
+              { "title": "Mexican Dance", "note": "Maria V" },
+              { "title": "Greater Chinese Christian Church Choir", "note": "Song: \"A Wisp of Cloud\"" },
+              { "title": "Mrs. Tai – Vocal Solo", "note": "Song: \"The Way Through the Sea\"｜Mrs. Tai" },
+              { "title": "Rev. David Tai – Gospel Message", "note": "Rev. David Tai", "highlight": true },
+              { "title": "Phoenix Joint Church Choir – Finale Choral Presentation", "note": "Song: \"Blessed Through Me\"｜Yi-Lin" },
+              { "title": "Closing Remarks and Appreciation by the Organizer", "note": "Tim Cheng" },
+              { "title": "MC Conclusion" }
             ]
           }
         ]
@@ -176,12 +173,13 @@
             "date": "Oct 23 · Day 4",
             "theme": "Respond · Covenant · Send",
             "sessions": [
-              { "time": "07:30–08:30", "title": "PRS Morning Prayer & English Bible Breakfast (by invitation)" },
-              { "time": "09:00–10:00", "title": "Group Response & Action Sharing" },
+              { "time": "07:30–08:30", "title": "PRS Morning Prayer & Chinese Bible Breakfast (by invitation)" },
+              { "time": "09:00–10:00", "title": "Hearing the Heartbeat of Africa (Uganda Live Link)", "note": "Hon. Martin" },
               { "time": "10:00–10:30", "title": "Coffee & Fellowship" },
               { "time": "10:30–11:00", "title": "Back to God's Original Intent: A New Heaven and Earth", "note": "Summit closing keynote · Executive Director Cheng Chung-Hsin" },
               { "time": "11:00–11:30", "title": "Behold! That Light in the Wilderness", "note": "Native American prayer and tribute" },
-              { "time": "11:30–12:30", "title": "Communion, Closing Service & Commissioning", "note": "IAA Malaysia Chair Wang Zu-Xiang; joint communion of Phoenix Chinese and American pastors; announcement of next year's Impact Asia Alliance Summit by IAA Chair Shan-Chun Hung" }
+              { "time": "11:30–12:30", "title": "Communion, Closing Service & Commissioning", "note": "IAA Malaysia Chair Wang Zu-Xiang; joint communion of Phoenix Chinese and American pastors｜IAA Chair Shan-Chun Hung" },
+              { "time": "12:30", "title": "Flute Praise by Song Song-Shu／JOANNE Hula Dance Prayer" }
             ]
           }
         ]

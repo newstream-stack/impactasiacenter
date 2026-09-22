@@ -340,6 +340,26 @@
   color: var(--gold);
   font-variant-numeric: tabular-nums;
 }
+.schedDot {
+  flex-shrink: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-top: 0.55rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.schedRowHighlight {
+  padding: 0.6rem 0.9rem;
+  margin-left: -0.9rem;
+  margin-right: -0.9rem;
+  background: rgba(217, 164, 65, 0.08);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+}
+.schedRowHighlight .schedTitle {
+  color: var(--gold-bright);
+  font-weight: 600;
+}
 
 /* theme list */
 .themeList { margin: 0; padding: 0; list-style: none; counter-reset: tl; }

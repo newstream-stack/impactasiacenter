@@ -68,10 +68,6 @@ export default function Hero() {
               <dt>{hero.meta.dateLabel}</dt>
               <dd>{hero.meta.dateValue}</dd>
             </div>
-            <div className={styles.metaItem}>
-              <dt>{hero.meta.deadlineLabel}</dt>
-              <dd className={styles.metaUrgent}>{hero.meta.deadlineValue}</dd>
-            </div>
           </dl>
         )}
 

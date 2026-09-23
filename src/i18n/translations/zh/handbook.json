@@ -99,8 +99,8 @@
             "theme": "福音．宣教．影響力",
             "sessions": [
               { "time": "08:30–09:00", "title": "敬拜事奉", "note": "IAA 亞洲團隊《來讚美主》" },
-              { "time": "09:00–10:00", "title": "Grace & Mercy／PRS", "note": "那永恆的光依然照亮 The Light in Israel Continues｜Dr. Cary Summers" },
-              { "time": "10:30–11:30", "title": "Grace & Mercy／JSU", "note": "Ryan Kim" },
+              { "time": "09:00–10:00", "title": "PRS 沈默是金．聆聽神的話語" },
+              { "time": "10:30–11:30", "title": "Grace & Mercy／JSU 人來就好", "note": "President Ryan Kim" },
               { "time": "12:00–13:30", "title": "午餐" },
               { "time": "13:30–14:30", "title": "盡心．盡力．盡性．傳福音", "note": "林以諾福音脫口秀｜運動宣教" },
               { "time": "14:30–15:30", "title": "日出東方．日本教會甦醒", "note": "菅原亘 牧師" },
@@ -121,7 +121,7 @@
             "theme": "創新．轉化．行動",
             "sessions": [
               { "time": "07:30–08:30", "title": "PRS 晨禱與英文查經早餐會（邀請）" },
-              { "time": "09:00–10:00", "title": "PRS 沈默是金．聆聽神的話語" },
+              { "time": "09:00–10:00", "title": "Grace & Mercy／PRS", "note": "那永恆的光依然照亮 The Light in Israel Continues｜Dr. Cary Summers" },
               { "time": "10:30–11:30", "title": "AI 福音多媒體影音電影製作與範例" },
               { "time": "12:00–13:30", "title": "午餐" },
               { "time": "13:30–14:00", "title": "敬拜事奉", "note": "Palm Valley Church" },

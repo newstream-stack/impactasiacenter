@@ -8,129 +8,111 @@
       "id": 3,
       "name": "戴繼宗 院長",
       "title": "中華福音神學院",
-      "img": "/Presidium/戴繼宗.png",
-      "bio": ""
+      "img": "/Presidium/戴繼宗.png"
     },
     {
       "id": 1,
       "name": "林本堅 博士",
       "title": "台積電（TSMC）前研發副總經理、清華大學半導體學院院長",
-      "img": "/Presidium/林本堅.png",
-      "bio": ""
+      "img": "/Presidium/林本堅.png"
     },
     {
       "id": 4,
       "name": "呂桔誠 董事長",
       "title": "台灣銀行前董事長、中華民國國際經濟合作協會理事長",
-      "img": "/Presidium/呂桔誠.png",
-      "bio": ""
+      "img": "/Presidium/呂桔誠.png"
     },
     {
       "id": 15,
       "name": "洪善群 博士",
       "title": "ORTV & IAA 董事長",
-      "img": "/Presidium/洪善群.png",
-      "bio": "洪善群長老早年投入救世傳播協會，推動福音電影、音樂與媒體事工，被譽為華人福音藝術與媒體宣教的先驅。2019年自救傳會長交棒後，持續關心福音媒體發展，目前亦擔任《基督教論壇報》董事長。"
+      "img": "/Presidium/洪善群.png"
     },
     {
       "id": 5,
       "name": "Dr. Cary Summers",
       "title": "President Emeritus of the Museum of the Bible",
-      "img": "/Presidium/Cary Summers.png",
-      "bio": "Cary Summers is President Emeritus of the Museum of the Bible and founder and CEO of Nehemiah Group. He currently serves as Global Co-President of The Grace and Mercy Foundation."
+      "img": "/Presidium/Cary Summers.png"
     },
     {
       "id": 6,
       "name": "Rev. Ryan Nunez",
       "title": "Palm Valley Church",
-      "img": "/Presidium/Ryan Nunez.png",
-      "bio": "亞利桑那州棕櫚谷教會（Palm Valley Church）主任牧師。該教會在鳳凰城西谷擁有多個校區（Goodyear、Buckeye等），是當地成長最快且最具規模的教會之一。他以「實際且貼近生活」的講道風格著稱，擅長將深奧的聖經真理轉化為現代人聽得懂、用得出來的日常建議，幫助人們在真實生活中遇見上帝，並在挑戰中找到前進的動力。"
+      "img": "/Presidium/Ryan Nunez.png"
     },
     {
       "id": 18,
       "name": "Rev. Kang Hee Ahn",
       "title": "Founder of Global Assistance Partner(globalassistancepartners.org), Founder and President of Covering All Nations(coveringallnations.com)",
-      "img": "/Presidium/Kang Hee Ahn.png",
-      "bio": ""
+      "img": "/Presidium/Kang Hee Ahn.png"
     },
     {
       "id": 19,
       "name": "劉保羅 牧師",
       "title": "美南浸信會 牧師",
-      "img": "/Presidium/Pastor Paul Liu.png",
-      "bio": ""
+      "img": "/Presidium/Pastor Paul Liu.png"
     },
     {
       "id": 7,
       "name": "Rev. John Heston",
       "title": "First Baptist Church Tempe",
-      "img": "/Presidium/John Heston.png",
-      "bio": "賀約翰博士現任坦佩第一浸信會主任牧師，擁有逾25年教會領導經驗。他致力於引導個人歸向基督，積極投入地方與全球外展事工，並高度重視門徒訓練。賀牧師於2024年5月6日正式加入坦佩第一浸信會服事，與妻子史黛西及四名子女Ethan、Olivia、Lucas和Wesley同行。"
+      "img": "/Presidium/John Heston.png"
     },
     {
       "id": 9,
       "name": "Ryan Kim 理事長",
       "title": "President of the Grace and Mercy Asia and Japan",
-      "img": "/Presidium/Ryan kim.png",
-      "bio": ""
+      "img": "/Presidium/Ryan kim.png"
     },
     {
       "id": 10,
       "name": "崔勝洪 牧師",
       "title": "西雅圖證道堂",
-      "img": "/Presidium/崔勝洪.png",
-      "bio": ""
+      "img": "/Presidium/崔勝洪.png"
     },
     {
       "id": 11,
       "name": "Jensen Ko",
       "title": "Global Co-President and Co-Chairman of the Board at the Grace and Mercy Foundation",
-      "img": "/Presidium/Jensen Ko.png",
-      "bio": ""
+      "img": "/Presidium/Jensen Ko.png"
     },
     {
       "id": 14,
       "name": "菅原亘 牧師",
       "title": "神戸キリスト栄光教会",
-      "img": "/Presidium/菅原亘.png",
-      "bio": ""
+      "img": "/Presidium/菅原亘.png"
     },
     {
       "id": 13,
       "name": "姜文琪 執行長",
       "title": "從懷疑到相信 創辦人",
-      "img": "/Presidium/姜文琪.png",
-      "bio": ""
+      "img": "/Presidium/姜文琪.png"
     },
     {
       "id": 17,
       "name": "林以諾 牧師",
       "title": "香港盼望浸信會前主任牧師\n飛躍網絡董事・福音佈道者",
-      "img": "/Presidium/林以諾.png",
-      "bio": ""
+      "img": "/Presidium/林以諾.png"
     },
     {
       "id": 16,
       "name": "鄭忠信 博士",
       "title": "IAA 國際執行長",
-      "img": "/Presidium/鄭忠信.png",
-      "bio": "現任《基督教論壇報》社長暨亞洲論壇影響力中心執行長，以創新與轉化思維引領媒體與教會更新。他帶領論壇報完成數位轉型，拓展新聞、評論與生活內容，成為華人教會重要公共平台；在亞洲論壇影響力，他積極建立跨國教會交流與合作網絡，促進信仰理念在亞洲廣泛傳播，影響深遠。"
+      "img": "/Presidium/鄭忠信.png"
     },
     {
       "id": 2,
       "hidden": true,
       "name": "Rev. Mike Constantz",
       "title": "Saddleback Church",
-      "img": "/Presidium/MIKE.png",
-      "bio": "馬鞍峰教會全球使命牧師，華理克牧師最信任的同工之一，長期負責該教會在全球範圍內的宣教與社區發展事務。他是「和平計畫」（PEACE Plan）的主要推動者與執行領袖，旨在動員全球教會的力量應對貧窮、疾病、文盲、不公正及屬靈空虛五大全球性挑戰。他的專長在於訓練教會如何與地方政府、企業進行三方合作，將宣教從短期探訪轉向長期且具永續性的社區轉化，影響了全球數以萬計的教會模型。"
+      "img": "/Presidium/MIKE.png"
     },
     {
       "id": 12,
       "hidden": true,
       "name": "李志剛 牧師",
       "title": "馬鞍峰香港教會 主任牧師",
-      "img": "/Presidium/李志剛.png",
-      "bio": ""
+      "img": "/Presidium/李志剛.png"
     }
   ]
 }

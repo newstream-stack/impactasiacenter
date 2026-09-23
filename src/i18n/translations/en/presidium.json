@@ -8,14 +8,12 @@
         "role": "Conference Chairman",
         "name": "Dr. Simon Hung",
         "title": "Chairman, ORTV & IAA",
-        "bio": "Elder Simon Hung entered Overseas Radio & Television, Inc. (ORTV) as a young man and dedicated decades there, pioneering gospel films, music, and media ministry — earning recognition as a trailblazer in Chinese evangelical arts and media missions along the way. After stepping down as Executive Director of ORTV in 2019, he has continued to champion gospel media development and currently serves as Chairman of the Christian Tribune.",
         "image": "/Presidium/洪善群.png"
       },
       {
         "role": "Conference Executive Director",
         "name": "Dr. Timothy Cheng",
         "title": "International Executive Director, IAA",
-        "bio": "Currently serving as CEO of Christian Tribune and Executive Director of Impact Asia Center, Dr. Cheng leads media and church renewal through innovative and transformative thinking. He guided the former through its digital transformation, expanding news, commentary, and lifestyle content into a vital public platform for the Chinese church. At Impact Asia Center, he actively builds cross-national church exchanges and cooperation networks, spreading faith values across Asia with far-reaching influence.",
         "image": "/Presidium/鄭忠信.png"
       }
     ],
@@ -25,50 +23,42 @@
         "hidden": true,
         "name": "Rev. Mike Constantz",
         "title": "Saddleback Church",
-        "image": "/Presidium/MIKE.png",
-        "bio": "Pastor of Global Missions at Saddleback Church and one of Pastor Rick Warren's most trusted colleagues, overseeing the church's global missions and community development work. He is the chief architect and executive leader of the PEACE Plan — a movement that mobilizes ordinary people in ordinary places to do extraordinary things, uniting churches worldwide to address five global giants: poverty, disease, illiteracy, injustice, and spiritual emptiness. His expertise lies in training churches to partner with local governments and businesses in tri-sector collaboration, transforming missions from short-term visits into long-term, sustainable community transformation — a model that has influenced tens of thousands of churches globally."
+        "image": "/Presidium/MIKE.png"
       },
       {
         "name": "Rev. John Heston",
         "title": "First Baptist Church Tempe",
-        "image": "/Presidium/John Heston.png",
-        "bio": "Dr. John Heston serves as FBC's Senior Pastor. He is a seasoned Pastor with over 25 years of experience in church leadership. He is committed to shepherding individuals to Christ, engaging the community in local and global outreach and has a strong focus on discipleship. Pastor Heston began serving at FBC on May 6, 2024 along with his wife Stacy and their 4 children, Ethan, Olivia, Lucas and Wesley."
+        "image": "/Presidium/John Heston.png"
       },
       {
         "name": "Rev. Ryan Nunez",
         "title": "Palm Valley Church",
-        "image": "/Presidium/Ryan Nunez.png",
-        "bio": "Senior Pastor of Palm Valley Church (PVC) in Arizona, one of the fastest-growing and largest churches in the West Valley of Phoenix, with multiple campuses including Goodyear and Buckeye. Known for a practical, life-applicable teaching style, he excels at translating deep biblical truth into everyday guidance that people can understand and apply. His goal is to help people encounter God in real life and find the motivation to move forward through life's challenges."
+        "image": "/Presidium/Ryan Nunez.png"
       },
       {
         "name": "Dr. Cary Summers",
         "title": "President Emeritus of the Museum of the Bible",
-        "image": "/Presidium/Cary Summers.png",
-        "bio": "Cary Summers is President Emeritus of the Museum of the Bible and founder and CEO of Nehemiah Group. He currently serves as Global Co-President of The Grace and Mercy Foundation."
+        "image": "/Presidium/Cary Summers.png"
       },
       {
         "name": "Rev. Paulus Wong",
         "title": "IAA Malaysian Convener",
-        "bio": "Senior Pastor of the Chinese congregation at Grace Community Church Seremban, IAA Malaysia Convener, Chinese Chairman of the National Evangelical Christian Fellowship (NECF), and Chairman of the Chinese Global Leadership Summit (GLS) Malaysia.",
         "image": "/Presidium/王祖祥.png"
       },
       {
         "name": "Rev. Yoshiko Ito",
         "title": "Shiroi-ie Fellowship Church",
-        "bio": "Rev. Yoshiko Ito serves as the Senior Pastor of the Shiroi-ie Fellowship Church in Okinawa and Principal of the affiliated Shiroi-ie Christian School. She also hosts the Okinawa gospel radio program \"Yoshiko Ito's Beautiful Gift,\" chairs the Okinawa Executive Committee for the TV program \"Lifeline,\" and leads the NPO \"Father's House,\" which provides day care and after-school services. Her ministry spans church, education, media, and social welfare, with tireless dedication to the expansion of God's Kingdom at home and abroad.",
         "image": "/Presidium/伊藤嘉子.png"
       },
       {
         "name": "Rev. John Cheng",
         "title": "Board Member, Impact Asia Center",
-        "image": "/Presidium/鄭博仁.png",
-        "bio": "Pastor Emeritus of Wuchang Church in Kaohsiung, Taiwan, he served as Senior Pastor there for many years, leading the congregation from hundreds to thousands while establishing a solid elder-led governance system and discipleship training framework. He served as Chairman of the Kaohsiung Pastoral Fellowship Prayer Meeting and is recognized as one of the 'Spiritual Elders of Kaohsiung,' championing cross-denominational unity through citywide prayer altars and evangelistic movements that have profoundly shaped church cohesion in the city. A proponent of 'city transformation' and 'workplace missions,' he emphasizes the church's engagement with society, and in recent years has been actively involved with Impact Asia Center, helping connect leaders across sectors to advance cross-border missions and a Kingdom vision."
+        "image": "/Presidium/鄭博仁.png"
       },
       {
         "name": "Mr. Steven Chen",
         "title": "Board Member, Impact Asia Center",
-        "image": "/Presidium/陳貴荔.png",
-        "bio": "A core elder of Good News Church Kaohsiung and a model for leading marketplace believers to integrate faith into their professional lives, Chen currently serves as a Board Member of the Christian Tribune, actively supporting the media's digital transformation and its commitment to amplifying the gospel message through modern communication channels."
+        "image": "/Presidium/陳貴荔.png"
       }
     ]
   }

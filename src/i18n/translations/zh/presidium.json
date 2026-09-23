@@ -8,14 +8,12 @@
         "role": "大會主席",
         "name": "洪善群 博士",
         "title": "ORTV & IAA 董事長",
-        "bio": "洪善群長老早年投入救世傳播協會，推動福音電影、音樂與媒體事工，被譽為華人福音藝術與媒體宣教的先驅。2019年自救傳會長交棒後，持續關心福音媒體發展，目前亦擔任《基督教論壇報》董事長。",
         "image": "/Presidium/洪善群.png"
       },
       {
         "role": "大會執行長",
         "name": "鄭忠信 博士",
         "title": "IAA 國際執行長",
-        "bio": "現任《基督教論壇報》社長暨亞洲論壇影響力中心執行長，以創新與轉化思維引領媒體與教會更新。他帶領論壇報完成數位轉型，拓展新聞、評論與生活內容，成為華人教會重要公共平台；在亞洲論壇影響力，他積極建立跨國教會交流與合作網絡，促進信仰理念在亞洲廣泛傳播，影響深遠。",
         "image": "/Presidium/鄭忠信.png"
       }
     ],
@@ -25,50 +23,42 @@
         "hidden": true,
         "name": "Rev. Mike Constantz",
         "title": "Saddleback Church",
-        "image": "/Presidium/MIKE.png",
-        "bio": "馬鞍峰教會全球使命牧師，華理克牧師最信任的同工之一，長期負責該教會在全球範圍內的宣教與社區發展事務。他是「和平計畫」（PEACE Plan）的主要推動者與執行領袖，旨在動員全球教會的力量應對貧窮、疾病、文盲、不公正及屬靈空虛五大全球性挑戰。他的專長在於訓練教會如何與地方政府、企業進行三方合作，將宣教從短期探訪轉向長期且具永續性的社區轉化，影響了全球數以萬計的教會模型。"
+        "image": "/Presidium/MIKE.png"
       },
       {
         "name": "Rev. John Heston",
         "title": "First Baptist Church Tempe",
-        "image": "/Presidium/John Heston.png",
-        "bio": "賀約翰博士現任坦佩第一浸信會主任牧師，擁有逾25年教會領導經驗。他致力於引導個人歸向基督，積極投入地方與全球外展事工，並高度重視門徒訓練。賀牧師於2024年5月6日正式加入坦佩第一浸信會服事，與妻子史黛西及四名子女Ethan、Olivia、Lucas和Wesley同行。"
+        "image": "/Presidium/John Heston.png"
       },
       {
         "name": "Rev. Ryan Nunez",
         "title": "Palm Valley Church",
-        "image": "/Presidium/Ryan Nunez.png",
-        "bio": "亞利桑那州棕櫚谷教會（Palm Valley Church）主任牧師。該教會在鳳凰城西谷擁有多個校區（Goodyear、Buckeye等），是當地成長最快且最具規模的教會之一。他以「實際且貼近生活」的講道風格著稱，擅長將深奧的聖經真理轉化為現代人聽得懂、用得出來的日常建議，幫助人們在真實生活中遇見上帝，並在挑戰中找到前進的動力。"
+        "image": "/Presidium/Ryan Nunez.png"
       },
       {
         "name": "Dr. Cary Summers",
         "title": "President Emeritus of the Museum of the Bible",
-        "image": "/Presidium/Cary Summers.png",
-        "bio": "Cary Summers is President Emeritus of the Museum of the Bible and founder and CEO of Nehemiah Group. He currently serves as Global Co-President of The Grace and Mercy Foundation."
+        "image": "/Presidium/Cary Summers.png"
       },
       {
         "name": "王祖祥 牧師",
         "title": "IAA馬來西亞召集人",
-        "bio": "芙蓉愛恩社區教會中文主理牧師、大馬IAA召集人、全國福音聯誼會（NECF）中文主席、大馬中文全球領導力峰會（GLS）主席。",
         "image": "/Presidium/王祖祥.png"
       },
       {
         "name": "伊藤嘉子 牧師",
         "title": "白之家團契教會",
-        "bio": "伊藤嘉子牧師是沖繩「白之家團契教會」的主任牧師，同時擔任教會附屬「白之家基督教學校」的校長。此外，她也是沖繩廣播福音節目《伊藤嘉子的美麗禮物》主持人、電視節目「生命線」沖繩執行委員會委員長，以及NPO法人「父親之家」的理事長，推動日間照護與學童照顧服務。她的服事涵蓋教會、教育、媒體、福祉等多個領域，並持續不斷地在國內外為神國的擴展盡心竭力。",
         "image": "/Presidium/伊藤嘉子.png"
       },
       {
         "name": "鄭博仁 牧師",
         "title": "亞洲論壇影響力中心董事",
-        "image": "/Presidium/鄭博仁.png",
-        "bio": "高雄武昌教會顧問牧師，曾擔任主任牧師多年，帶領教會從數百人成長至數千人，並建立穩固的長老治會制度與門徒訓練體系。他是高雄市教牧同工聯禱會前主席，也是「高雄屬靈父老」之一，致力推動跨宗派合一，發起多次城市級祈禱祭壇與福音運動，對高雄地區教會凝聚力影響深遠。他主張「城市轉化」與「職場宣教」，強調教會應與社會對接，近年亦積極參與亞洲論壇影響力中心的服事，協助連結各界領袖推動跨國宣教與傳遞國度視野。"
+        "image": "/Presidium/鄭博仁.png"
       },
       {
         "name": "陳貴荔 董事長",
         "title": "亞洲論壇影響力中心董事",
-        "image": "/Presidium/陳貴荔.png",
-        "bio": "高雄好消息教會的核心長老，更是帶領職場信徒將信仰落實在專業工作中的典範。現任基督教論壇報董事。積極支持媒體數位轉型，致力於讓福音訊息透過現代化的傳播媒介發揮影響力。"
+        "image": "/Presidium/陳貴荔.png"
       }
     ]
   }

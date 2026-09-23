@@ -1,7 +1,7 @@
 {
   "handbook": {
     "meta": {
-      "label": "Event Handbook",
+      "label": "Summit Handbook",
       "pageOf": "Page {n} / {total}",
       "prev": "Previous",
       "next": "Next",
@@ -81,7 +81,7 @@
             "sessions": [
               { "time": "15:00", "title": "Registration" },
               { "time": "17:00–18:30", "title": "Welcome Dinner" },
-              { "time": "19:00–20:00", "title": "Opening Ceremony & Service", "note": "Opened by Chairman Shan-Chun Hung; translation by Rev. Li Tao-Hong｜Phoenix Taiwanese Presbyterian worship team (\"The Love of the Cross,\" \"Praise the Risen Lord\")｜First Baptist worship team｜2nd Baptist Senior Pastor Rev. John Heston" },
+              { "time": "19:00–20:00", "title": "Opening Ceremony & Service", "note": "Opened by Chairman Dr. Simon Hung; translation by Rev. Li Tao-Hong｜Phoenix Taiwanese Presbyterian worship team (\"The Love of the Cross,\" \"Praise the Risen Lord\")｜First Baptist worship team｜2nd Baptist Senior Pastor Rev. John Heston" },
               { "time": "20:00–20:50", "title": "War or Peace of the Chips?", "note": "Keynote · Dr. Burn-Jeng Lin, semiconductor hub of Phoenix, USA" },
               { "time": "20:50–21:00", "title": "\"New Jerusalem\"", "note": "Performed by Phoenix Taiwanese Presbyterian Church" }
             ]
@@ -101,11 +101,11 @@
               { "time": "09:00–10:00", "title": "Grace & Mercy / PRS", "note": "The Light in Israel Continues｜Dr. Cary Summers" },
               { "time": "10:30–11:30", "title": "Grace & Mercy / JSU", "note": "Ryan Kim" },
               { "time": "12:00–13:30", "title": "Lunch" },
-              { "time": "13:30–14:30", "title": "Heart, Strength & Soul: Sharing the Gospel", "note": "Stand-up gospel comedy with Justin Lin; sports evangelism" },
+              { "time": "13:30–14:30", "title": "Heart, Strength & Soul: Sharing the Gospel", "note": "Stand-up gospel comedy with Rev. Lin Yi-Nuo; sports evangelism" },
               { "time": "14:30–15:30", "title": "Sunrise in the East: Japan Church Awakening", "note": "Rev. Wataru Sugahara" },
-              { "time": "16:00–17:00", "title": "The Versatile Tool of Evangelism: From Doubt to Faith", "note": "Wen-Qi Jiang, CEO" },
+              { "time": "16:00–17:00", "title": "The Versatile Tool of Evangelism: From Doubt to Faith", "note": "Wen-Qi Jiang, Executive Director" },
               { "time": "17:30–18:30", "title": "Dinner" },
-              { "time": "19:00–20:00", "title": "The Soul's Anchor in an Age of Massive Change", "note": "Rev. Choi Seung-Hong, Seattle Grace Church" }
+              { "time": "19:00–20:00", "title": "The Soul's Anchor in an Age of Massive Change", "note": "Rev. Alex Cui, Seattle Grace Church" }
             ]
           }
         ]
@@ -129,8 +129,8 @@
               { "time": "15:30–16:00", "title": "Worship", "note": "SBC Chinese Congregation" },
               { "time": "16:00–17:00", "title": "Rev. Kang Hee Ahn. & Rev. Paul Liu" },
               { "time": "17:30–18:30", "title": "Dinner" },
-              { "title": "Flute Performance by Song Song-Shu — This Is the Road of Grace" },
-              { "time": "18:30–19:00", "title": "Taiwan Semiconductors: Future Trends & Global Impact", "note": "Lu Jie-Cheng" },
+              { "title": "Flute Performance by Solnamoo Song — This Is the Road of Grace" },
+              { "time": "18:30–19:00", "title": "Taiwan Semiconductors: Future Trends & Global Impact", "note": "Joseph Lyu" },
               { "time": "19:00–21:00", "title": "Phoenix Reborn — Night of the Phoenix", "note": "Joint culture, music and dance performance by Phoenix Chinese churches; Dai Ji-Zong, \"Song of Life in the Wilderness\"" }
             ]
           }
@@ -143,7 +143,7 @@
         "days": [
           {
             "date": "Culture Night Programme",
-            "theme": "7:00 – 9:00 PM",
+            "theme": "10/22  7:00 – 9:00 PM",
             "sessions": [
               { "title": "Opening Remarks by the Organizer" },
               { "title": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
@@ -157,7 +157,7 @@
               { "title": "Mexican Dance", "note": "Maria V" },
               { "title": "Greater Chinese Christian Church Choir", "note": "Song: \"A Wisp of Cloud\"" },
               { "title": "Mrs. Tai – Vocal Solo", "note": "Song: \"The Way Through the Sea\"｜Mrs. Tai" },
-              { "title": "Rev. David Tai – Song of Life in the Wilderness", "note": "Rev. David Tai", "highlight": true },
+              { "title": "Dean Ji-Tzong Dai – Song of Life in the Wilderness", "note": "Dean Ji-Tzong Dai", "highlight": true },
               { "title": "Phoenix Joint Church Choir – Finale Choral Presentation", "note": "Song: \"Blessed Through Me\"｜Yi-Lin" },
               { "title": "Closing Remarks and Appreciation by the Organizer" },
               { "title": "MC Conclusion" }
@@ -179,8 +179,8 @@
               { "time": "10:00–10:30", "title": "Coffee & Fellowship" },
               { "time": "10:30–11:00", "title": "Back to God's Original Intent: A New Heaven and Earth", "note": "Summit closing keynote · Executive Director Timothy Cheng" },
               { "time": "11:00–11:30", "title": "Behold! That Light in the Wilderness", "note": "Native American prayer and tribute" },
-              { "time": "11:30–12:30", "title": "Communion, Closing Service & Commissioning", "note": "IAA Malaysia Chair Wang Zu-Xiang; joint communion of Phoenix Chinese and American pastors｜IAA Chair Shan-Chun Hung" },
-              { "time": "12:30", "title": "Flute Praise by Song Song-Shu／JOANNE Hula Dance Prayer" }
+              { "time": "11:30–12:30", "title": "Communion, Closing Service & Commissioning", "note": "IAA Malaysia Chair Wang Zu-Xiang; joint communion of Phoenix Chinese and American pastors｜IAA Chair Dr. Simon Hung" },
+              { "time": "12:30", "title": "Flute Praise by Solnamoo Song／JOANNE Hula Dance Prayer" }
             ]
           }
         ]

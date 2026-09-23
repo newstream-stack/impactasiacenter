@@ -5,10 +5,10 @@
   },
   "speakers": [
     {
-      "id": 3,
-      "name": "戴繼宗 院長",
-      "title": "中華福音神學院",
-      "img": "/Presidium/戴繼宗.png"
+      "id": 15,
+      "name": "洪善群 博士",
+      "title": "ORTV & IAA 董事長",
+      "img": "/Presidium/洪善群.png"
     },
     {
       "id": 1,
@@ -23,10 +23,10 @@
       "img": "/Presidium/呂桔誠.png"
     },
     {
-      "id": 15,
-      "name": "洪善群 博士",
-      "title": "ORTV & IAA 董事長",
-      "img": "/Presidium/洪善群.png"
+      "id": 3,
+      "name": "戴繼宗 院長",
+      "title": "中華福音神學院",
+      "img": "/Presidium/戴繼宗.png"
     },
     {
       "id": 5,

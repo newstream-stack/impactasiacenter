@@ -299,6 +299,7 @@ function PageBody({ page, t }) {
       return (
         <div className={styles.leafInner}>
               <h2 className={styles.pageHeading}>{page.heading}</h2>
+          {page.address && <p className={styles.pageAddress}>{page.address}</p>}
           <div className={styles.prose}>
             {page.body.map((para, i) => <p key={i}>{para}</p>)}
           </div>

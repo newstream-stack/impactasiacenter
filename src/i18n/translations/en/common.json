@@ -36,24 +36,94 @@
   "scheduleSection": {
     "eyebrow": "SUMMIT SCHEDULE",
     "title": "Gathering Schedule",
+    "programToggle": "View full programme",
     "days": [
       {
+        "dayNumber": "10.20",
+        "weekday": "Day 1",
+        "theme": "Gather · See · Set Out",
         "date": "Oct 20 (Tue.)",
         "sessions": [
           { "time": "15:00", "label": "Registration" },
-          { "time": "19:00–21:30", "label": "Opening Session" }
+          { "time": "17:00–18:30", "label": "Welcome Dinner" },
+          { "time": "19:00–20:00", "label": "Opening Ceremony & Service", "note": "Opened by Chairman Dr. Simon Hung; translation by Rev. Li Tao-Hong｜Phoenix Taiwanese Presbyterian worship team (\"The Love of the Cross,\" \"Praise the Risen Lord\")｜First Baptist worship team｜2nd Baptist Senior Pastor Rev. John Heston" },
+          { "time": "20:00–20:50", "label": "War or Peace of the Chips?", "note": "Keynote · Dr. Burn-Jeng Lin, semiconductor hub of Phoenix, USA" },
+          { "time": "20:50–21:00", "label": "\"New Jerusalem\"", "note": "Performed by Phoenix Taiwanese Presbyterian Church" }
         ]
       },
       {
-        "date": "Oct 21–22 (Wed.–Thu.)",
+        "dayNumber": "10.21",
+        "weekday": "Day 2",
+        "theme": "Gospel · Mission · Influence",
+        "date": "Oct 21 (Wed.)",
         "sessions": [
-          { "time": "09:30–21:30", "label": "Summit Sessions" }
+          { "time": "08:30–09:00", "label": "Worship", "note": "IAA Asia Team, \"Come Praise the Lord\"" },
+          { "time": "09:00–10:00", "label": "PRS: Silence Is Gold — Listening to God's Word" },
+          { "time": "10:30–11:30", "label": "Grace & Mercy / JSU Just Show You Are", "note": "President Ryan Kim" },
+          { "time": "12:00–13:30", "label": "Lunch" },
+          { "time": "13:30–14:30", "label": "Heart, Strength & Soul: Sharing the Gospel", "note": "Stand-up gospel comedy with Rev. Lin Yi-Nuo; sports evangelism" },
+          { "time": "14:30–15:30", "label": "Sunrise in the East: Japan Church Awakening", "note": "Rev. Wataru Sugahara" },
+          { "time": "16:00–17:00", "label": "The Versatile Tool of Evangelism: From Doubt to Faith", "note": "Wen-Qi Jiang, Executive Director" },
+          { "time": "17:30–18:30", "label": "Dinner" },
+          { "time": "19:00–20:00", "label": "The Soul's Anchor in an Age of Massive Change", "note": "Rev. Alex Cui, Seattle Grace Church" }
         ]
       },
       {
+        "dayNumber": "10.22",
+        "weekday": "Day 3",
+        "theme": "Innovate · Transform · Act",
+        "date": "Oct 22 (Thu.)",
+        "sessions": [
+          { "time": "07:30–08:30", "label": "PRS Morning Prayer & English Bible Breakfast", "note": "By invitation" },
+          { "time": "09:00–10:00", "label": "Grace & Mercy / PRS", "note": "The Light in Israel Continues｜Dr. Cary Summers" },
+          { "time": "10:30–11:30", "label": "AI Gospel Media: Film Production & Case Studies" },
+          { "time": "12:00–13:30", "label": "Lunch" },
+          { "time": "13:30–14:00", "label": "Worship", "note": "Palm Valley Church" },
+          { "time": "14:00–15:00", "label": "Rev. Ryan Nunez" },
+          { "time": "15:00–15:30", "label": "Break" },
+          { "time": "15:30–16:00", "label": "Worship", "note": "SBC Chinese Congregation" },
+          { "time": "16:00–17:00", "label": "Rev. Kang Hee Ahn. & Rev. Paul Liu" },
+          { "time": "17:30–18:30", "label": "Dinner" },
+          { "label": "Flute Performance by Solnamoo Song — This Is the Road of Grace" },
+          { "time": "18:30–19:00", "label": "Taiwan Semiconductors: Future Trends & Global Impact", "note": "Joseph Lyu" },
+          {
+            "time": "19:00–21:00",
+            "label": "Phoenix Reborn — Night of the Phoenix",
+            "note": "Joint culture, music and dance performance by Phoenix Chinese churches; Dai Ji-Zong, \"Song of Life in the Wilderness\"",
+            "program": [
+              { "title": "Opening Remarks by the Organizer" },
+              { "title": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
+              { "title": "MC Transition", "note": "Lu Hang" },
+              { "title": "First Baptist Church – Violin Performance", "note": "Joy" },
+              { "title": "Northwest Chinese Church Choir – My Strength in the Wilderness", "note": "Zhi-Bang" },
+              { "title": "MC Introduction of Phoenix Wushu Academy" },
+              { "title": "Phoenix Wushu Academy – Chinese Traditional Dance", "note": "Jane Ho" },
+              { "title": "Phoenix Wushu Academy – Chinese Martial Arts" },
+              { "title": "Pipa Solo", "note": "Ma Lai" },
+              { "title": "Mexican Dance", "note": "Maria V" },
+              { "title": "Greater Chinese Christian Church Choir", "note": "Song: \"A Wisp of Cloud\"" },
+              { "title": "Mrs. Tai – Vocal Solo", "note": "Song: \"The Way Through the Sea\"" },
+              { "title": "Dean Ji-Tzong Dai – Song of Life in the Wilderness", "highlight": true },
+              { "title": "Phoenix Joint Church Choir – Finale Choral Presentation", "note": "Song: \"Blessed Through Me\"｜Yi-Lin" },
+              { "title": "Closing Remarks and Appreciation by the Organizer" },
+              { "title": "MC Conclusion" }
+            ]
+          }
+        ]
+      },
+      {
+        "dayNumber": "10.23",
+        "weekday": "Day 4",
+        "theme": "Respond · Covenant · Send",
         "date": "Oct 23 (Fri.)",
         "sessions": [
-          { "time": "09:30–13:30", "label": "Concludes at 13:30" }
+          { "time": "07:30–08:30", "label": "PRS Morning Prayer & Chinese Bible Breakfast", "note": "By invitation" },
+          { "time": "09:00–10:00", "label": "Hearing the Heartbeat of Africa (Uganda Live Link)", "note": "Hon. Martin" },
+          { "time": "10:00–10:30", "label": "Coffee & Fellowship" },
+          { "time": "10:30–11:00", "label": "Back to God's Original Intent: A New Heaven and Earth", "note": "Summit closing keynote · Executive Director Timothy Cheng" },
+          { "time": "11:00–11:30", "label": "Behold! That Light in the Wilderness", "note": "Native American prayer and tribute" },
+          { "time": "11:30–12:30", "label": "Communion, Closing Service & Commissioning", "note": "IAA Malaysia Chair Rev. Paulus Wong; joint communion of Phoenix Chinese and American pastors｜IAA Chair Dr. Simon Hung" },
+          { "time": "12:30", "label": "Flute Praise by Solnamoo Song／JOANNE Hula Dance Prayer" }
         ]
       }
     ]

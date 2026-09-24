@@ -15,13 +15,36 @@ export default function Schedule() {
         <div className={styles.scheduleGrid}>
           {schedule.days.map((day) => (
             <article className={styles.dayCard} key={day.date}>
-              <p className={styles.date}>{day.date}</p>
+              <header className={styles.dayHeader}>
+                <p className={styles.dayNumber}>{day.dayNumber}</p>
+                <div>
+                  <p className={styles.weekday}>{day.weekday}</p>
+                  <p className={styles.theme}>{day.theme}</p>
+                </div>
+              </header>
               <div className={styles.divider} />
               <ul className={styles.sessions}>
                 {day.sessions.map((session) => (
-                  <li className={styles.session} key={`${day.date}-${session.time}`}>
-                    <span className={styles.time}>{session.time}</span>
-                    {session.label && <span className={styles.label}>{session.label}</span>}
+                  <li className={styles.session} key={`${day.date}-${session.time}-${session.label}`}>
+                    {session.time && <span className={styles.time}>{session.time}</span>}
+                    <span className={styles.label}>{session.label}</span>
+                    {session.note && <span className={styles.note}>{session.note}</span>}
+                    {session.program && (
+                      <details className={styles.program}>
+                        <summary className={styles.programSummary}>{schedule.programToggle}</summary>
+                        <ol className={styles.programList}>
+                          {session.program.map((item, index) => (
+                            <li
+                              className={item.highlight ? styles.programItemHighlight : styles.programItem}
+                              key={`${item.title}-${index}`}
+                            >
+                              <span className={styles.programTitle}>{item.title}</span>
+                              {item.note && <span className={styles.programNote}>{item.note}</span>}
+                            </li>
+                          ))}
+                        </ol>
+                      </details>
+                    )}
                   </li>
                 ))}
               </ul>

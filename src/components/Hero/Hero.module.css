@@ -211,22 +211,22 @@
 }
 
 .btnGhost {
-  padding: 1.05rem 1.6rem;
+  padding: 1.05rem 2.6rem;
   border-radius: 3rem;
-  border: 1px solid var(--border);
-  color: var(--text-body);
+  border: 1px solid rgba(244, 214, 138, 0.45);
+  color: var(--gold-bright);
   text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  backdrop-filter: blur(8px);
-  background: rgba(255, 255, 255, 0.04);
-  transition: border-color 0.25s ease, color 0.25s ease;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: rgba(244, 214, 138, 0.1);
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
 }
 
 .btnGhost:hover {
-  border-color: var(--gold);
-  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+  color: #fff6dd;
+  background: rgba(244, 214, 138, 0.18);
 }
 
 /* ---- Official hotel partner band ---- */

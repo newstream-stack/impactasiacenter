@@ -91,22 +91,22 @@
             "label": "浴火鳳凰——鳳凰之夜",
             "note": "鳳城華人教會聯合文化、音樂、舞蹈演出；戴繼宗《曠野中的生命笙歌》",
             "program": [
-              { "title": "主辦人開場致詞" },
-              { "title": "鳳城華人教會敬拜團－開場敬拜讚美" },
-              { "title": "主持人介紹", "note": "呂行" },
-              { "title": "第一浸信會－小提琴演奏", "note": "Joy" },
-              { "title": "西北教會詩班－《曠野中唯一的力量》", "note": "至邦" },
-              { "title": "主持人介紹鳳城武術學校" },
-              { "title": "鳳城武術學校－中國民族舞蹈", "note": "Jane Ho" },
-              { "title": "鳳城武術學校－中國武術" },
-              { "title": "琵琶獨奏", "note": "馬萊" },
-              { "title": "墨西哥舞蹈", "note": "Maria V" },
-              { "title": "鳳城小詩班", "note": "獻詩：一片雲霧" },
-              { "title": "戴師母獨唱", "note": "獻詩：大海中的道路" },
-              { "title": "戴繼宗牧師－曠野中的生命笙歌", "highlight": true },
-              { "title": "鳳凰城聯合教會詩班－壓軸獻詩", "note": "獻詩：藉我賜恩福｜益琳" },
-              { "title": "主辦人閉幕致詞及感謝" },
-              { "title": "主持人總結" }
+              { "title": "主辦人開場致詞", "note": "Opening Remarks by the Organizer" },
+              { "title": "鳳城華人教會敬拜團－開場敬拜讚美", "note": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
+              { "title": "主持人介紹", "note": "MC Transition｜呂行" },
+              { "title": "第一浸信會－小提琴演奏", "note": "First Baptist Church – Violin Performance｜Joy" },
+              { "title": "西北教會詩班－《曠野中唯一的力量》", "note": "Northwest Chinese Church Choir – My Strength in the Wilderness｜至邦" },
+              { "title": "主持人介紹鳳城武術學校", "note": "MC Introduction of Phoenix Wushu Academy" },
+              { "title": "鳳城武術學校－中國民族舞蹈", "note": "Phoenix Wushu Academy – Chinese Traditional Dance｜Jane Ho" },
+              { "title": "鳳城武術學校－中國武術", "note": "Phoenix Wushu Academy – Chinese Martial Arts" },
+              { "title": "琵琶獨奏", "note": "Pipa Solo｜馬萊" },
+              { "title": "墨西哥舞蹈", "note": "Mexican Dance｜Maria V" },
+              { "title": "鳳城小詩班", "note": "Greater Chinese Christian Church Choir｜獻詩：一片雲霧" },
+              { "title": "戴師母獨唱", "note": "Mrs. Tai – Vocal Solo｜獻詩：大海中的道路｜戴師母" },
+              { "title": "戴繼宗牧師－曠野中的生命笙歌", "note": "Dean Ji-Tzong Dai – Gospel Message｜戴繼宗牧師", "highlight": true },
+              { "title": "鳳凰城聯合教會詩班－壓軸獻詩", "note": "Phoenix Joint Church Choir – Finale Choral Presentation｜獻詩：藉我賜恩福｜益琳" },
+              { "title": "主辦人閉幕致詞及感謝", "note": "Closing Remarks and Appreciation by the Organizer" },
+              { "title": "主持人總結", "note": "MC conclusion" }
             ]
           }
         ]

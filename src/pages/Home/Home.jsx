@@ -45,11 +45,11 @@ export default function Home() {
       <Timeline />
       <div className="reveal"><TrailerSection /></div>
       <div className="reveal"><IAAIntro /></div>
+      <div className="reveal"><Schedule /></div>
       <div className="reveal"><PhoenixIntro /></div>
       <div className="reveal"><Presidium /></div>
       <div className="reveal"><Speakers /></div>
       <div className="reveal"><Themes onThemeClick={setActiveTheme} /></div>
-      <div className="reveal"><Schedule /></div>
       <DetailView theme={activeTheme} onClose={() => setActiveTheme(null)} />
       <div className="reveal"><Venue /></div>
       <div className="reveal"><FAQ /></div>

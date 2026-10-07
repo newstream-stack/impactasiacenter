@@ -223,6 +223,31 @@
   margin: 0 0 1.1em;
 }
 
+/* qr */
+.qrBox {
+  align-self: center;
+  width: fit-content;
+  margin-top: 0.8rem;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 8px;
+  line-height: 0;
+}
+.qrImg {
+  display: block;
+  width: 13rem;
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+.qrLink {
+  align-self: center;
+  margin-top: 0.9rem;
+  color: var(--gold);
+  font-size: 0.85rem;
+  word-break: break-all;
+  text-align: center;
+}
+
 /* gallery */
 .galleryWrap {
   margin-top: 0.6rem;

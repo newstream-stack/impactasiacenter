@@ -22,8 +22,20 @@
         "venue": "First Baptist Church Tempe"
       },
       {
-        "type": "text",
+        "type": "qr",
         "num": "01",
+        "heading": "Live Translation",
+        "body": [
+          "Live translation is available throughout the summit.",
+          "Scan the QR code below with your phone, or tap the link below, to follow along in your language."
+        ],
+        "image": "/AUPK7975.jpg",
+        "link": "https://live.vurbo.ai/?s=AUPK7975",
+        "alt": "Live translation QR code"
+      },
+      {
+        "type": "text",
+        "num": "02",
         "heading": "An Invitation to Global Leaders",
         "body": [
           "Dear Global Leaders,",
@@ -39,7 +51,7 @@
       },
       {
         "type": "facts",
-        "num": "02",
+        "num": "03",
         "heading": "Phoenix",
         "items": [
           { "k": "Southwest Hub", "v": "At the heart of Arizona in the American Southwest — the state's capital and center of government and commerce." },
@@ -51,7 +63,7 @@
       },
       {
         "type": "text",
-        "num": "03",
+        "num": "04",
         "heading": "First Baptist Church of Tempe",
         "address": "4525 S McClintock Dr. Tempe, AZ 85282",
         "body": [
@@ -73,7 +85,7 @@
       },
       {
         "type": "schedule",
-        "num": "04",
+        "num": "05",
         "heading": "Oct 20 · Day 1",
         "days": [
           {
@@ -91,7 +103,7 @@
       },
       {
         "type": "schedule",
-        "num": "05",
+        "num": "06",
         "heading": "Oct 21 · Day 2",
         "days": [
           {
@@ -113,7 +125,7 @@
       },
       {
         "type": "schedule",
-        "num": "06",
+        "num": "07",
         "heading": "Oct 22 · Day 3",
         "days": [
           {
@@ -139,7 +151,7 @@
       },
       {
         "type": "schedule",
-        "num": "07",
+        "num": "08",
         "heading": "Phoenix Reborn — Night of the Phoenix",
         "days": [
           {
@@ -170,7 +182,7 @@
       },
       {
         "type": "schedule",
-        "num": "08",
+        "num": "09",
         "heading": "Oct 23 · Day 4",
         "days": [
           {
@@ -190,12 +202,12 @@
       },
       {
         "type": "presidium",
-        "num": "09",
+        "num": "10",
         "heading": "Organizing Committee"
       },
       {
         "type": "speakers",
-        "num": "10",
+        "num": "11",
         "heading": "Speakers"
       },
       {

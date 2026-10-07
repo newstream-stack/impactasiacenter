@@ -258,6 +258,24 @@ function PageBody({ page, t }) {
         </div>
       );
 
+    case 'qr':
+      return (
+        <div className={styles.leafInner}>
+          <h2 className={styles.pageHeading}>{page.heading}</h2>
+          <div className={styles.prose}>
+            {page.body.map((para, i) => <p key={i}>{para}</p>)}
+          </div>
+          <div className={styles.qrBox}>
+            <img className={styles.qrImg} src={page.image} alt={page.alt} />
+          </div>
+          {page.link && (
+            <a className={styles.qrLink} href={page.link} target="_blank" rel="noopener noreferrer">
+              {page.link.replace(/^https:\/\//, '')}
+            </a>
+          )}
+        </div>
+      );
+
     case 'themeList':
       return (
         <div className={styles.leafInner}>

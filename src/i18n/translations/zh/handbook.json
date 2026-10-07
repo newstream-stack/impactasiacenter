@@ -22,8 +22,20 @@
         "venue": "First Baptist Church Tempe"
       },
       {
-        "type": "text",
+        "type": "qr",
         "num": "01",
+        "heading": "即時翻譯系統",
+        "body": [
+          "本次大會提供即時翻譯服務。",
+          "請以手機掃描下方 QR Code，或點選下方網址，即可在會場收聽或閱讀翻譯。"
+        ],
+        "image": "/AUPK7975.jpg",
+        "link": "https://live.vurbo.ai/?s=AUPK7975",
+        "alt": "即時翻譯系統 QR Code"
+      },
+      {
+        "type": "text",
+        "num": "02",
         "heading": "全球領袖的邀請",
         "body": [
           "親愛的全球領袖：",
@@ -39,7 +51,7 @@
       },
       {
         "type": "facts",
-        "num": "02",
+        "num": "03",
         "heading": "鳳凰城",
         "items": [
           { "k": "美國西南樞紐", "v": "位於美國西南部亞利桑那州的心臟地帶，是該州的首府與政經中心。" },
@@ -51,7 +63,7 @@
       },
       {
         "type": "text",
-        "num": "03",
+        "num": "04",
         "heading": "First Baptist Church of Tempe",
         "address": "4525 S McClintock Dr. Tempe, AZ 85282",
         "body": [
@@ -73,7 +85,7 @@
       },
       {
         "type": "schedule",
-        "num": "04",
+        "num": "05",
         "heading": "10 / 20　第一天",
         "days": [
           {
@@ -91,7 +103,7 @@
       },
       {
         "type": "schedule",
-        "num": "05",
+        "num": "06",
         "heading": "10 / 21　第二天",
         "days": [
           {
@@ -113,7 +125,7 @@
       },
       {
         "type": "schedule",
-        "num": "06",
+        "num": "07",
         "heading": "10 / 22　第三天",
         "days": [
           {
@@ -139,7 +151,7 @@
       },
       {
         "type": "schedule",
-        "num": "07",
+        "num": "08",
         "heading": "浴火鳳凰——鳳凰之夜",
         "days": [
           {
@@ -170,7 +182,7 @@
       },
       {
         "type": "schedule",
-        "num": "08",
+        "num": "09",
         "heading": "10 / 23　第四天",
         "days": [
           {
@@ -190,12 +202,12 @@
       },
       {
         "type": "presidium",
-        "num": "09",
+        "num": "10",
         "heading": "主席團"
       },
       {
         "type": "speakers",
-        "num": "10",
+        "num": "11",
         "heading": "講員"
       },
       {

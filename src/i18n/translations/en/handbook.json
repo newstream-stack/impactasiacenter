@@ -146,22 +146,24 @@
             "date": "Culture Night Programme",
             "theme": "10/22  7:00 – 9:00 PM",
             "sessions": [
-              { "title": "Opening Remarks by the Organizer" },
-              { "title": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship" },
-              { "title": "MC Transition", "note": "Lu Hang" },
-              { "title": "First Baptist Church – Violin Performance", "note": "Joy" },
-              { "title": "Northwest Chinese Church Choir – My Strength in the Wilderness", "note": "Zhi-Bang" },
-              { "title": "MC Introduction of Phoenix Wushu Academy" },
+              { "title": "MC", "note": "Lu Hang" },
+              { "title": "Opening Remarks by the Organizer", "note": "Tim Cheng" },
+              { "title": "Greater Chinese Christian Church Worship Team – Opening Praise & Worship", "note": "Lin Wen-Shan" },
+              { "title": "MC Introduction of Phoenix Wushu Academy", "note": "Lu Hang" },
               { "title": "Phoenix Wushu Academy – Chinese Traditional Dance", "note": "Jane Ho" },
-              { "title": "Phoenix Wushu Academy – Chinese Martial Arts" },
+              { "title": "Phoenix Wushu Academy – Chinese Martial Arts", "note": "Jane Ho" },
+              { "title": "First Chinese Baptist Church – Violin Performance", "note": "Joy" },
+              { "title": "Northwest Chinese Church Choir – My Strength in the Wilderness", "note": "Zhi-Bang" },
+              { "title": "Vocal solo", "note": "Dong Wei" },
               { "title": "Pipa Solo", "note": "Ma Lai" },
-              { "title": "Mexican Dance", "note": "Maria V" },
-              { "title": "Greater Chinese Christian Church Choir", "note": "Song: \"A Wisp of Cloud\"" },
-              { "title": "Mrs. Tai – Vocal Solo", "note": "Song: \"The Way Through the Sea\"｜Mrs. Tai" },
-              { "title": "Dean Ji-Tzong Dai – Song of Life in the Wilderness", "note": "Dean Ji-Tzong Dai", "highlight": true },
-              { "title": "Phoenix Joint Church Choir – Finale Choral Presentation", "note": "Song: \"Blessed Through Me\"｜Yi-Lin" },
-              { "title": "Closing Remarks and Appreciation by the Organizer" },
-              { "title": "MC Conclusion" }
+              { "title": "Greater Chinese Christian Church Choir – A Cloud of Mist", "note": "Ilin" },
+              { "title": "Mrs. Yeh Min Ke – Vocal Solo", "note": "Mrs. Yeh Min Ke" },
+              { "title": "Rev. Dean Ji-Tzong Dai – Gospel Message", "note": "Rev. Dean Ji-Tzong Dai", "highlight": true },
+              { "title": "Mrs. Yeh Min Ke – Vocal Solo", "note": "Mrs. Yeh Min Ke" },
+              { "title": "MC Transition / Choir Takes the Stage" },
+              { "title": "Phoenix Joint Church Choir – Finale Choral Presentation", "note": "Yi-Lin" },
+              { "title": "Closing Remarks and Appreciation by the Organizer", "note": "Tim Cheng" },
+              { "title": "MC Conclusion", "note": "Lu Hang" }
             ]
           }
         ]

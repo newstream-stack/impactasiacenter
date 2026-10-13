@@ -58,8 +58,8 @@
         "date": "Oct 21 (Wed.)",
         "sessions": [
           { "time": "08:30–09:00", "label": "Worship", "note": "IAA Asia Team, \"Come Praise the Lord\"" },
-          { "time": "09:00–10:00", "label": "PRS: Silence Is Gold — Listening to God's Word" },
-          { "time": "10:30–11:30", "label": "Grace & Mercy / JSU Just Show You Are", "note": "President Ryan Kim" },
+          { "time": "09:00–10:00", "label": "PRS: Why Is Public Reading of Scripture Important and Urgent?", "note": "Global Co-president Dr. Cary Summers" },
+          { "time": "10:30–11:30", "label": "JSU: Just Show Up Book Club", "note": "President Ryan Kim" },
           { "time": "12:00–13:30", "label": "Lunch" },
           { "time": "13:30–14:30", "label": "Heart, Strength & Soul: Sharing the Gospel", "note": "Rev. Lin Yi-Nuo's Gospel Talk Show\nTech Spins Wildly, Faith Stands Firm\n| Sports Evangelism" },
           { "time": "14:30–15:30", "label": "Sunrise in the East: Japan Church Awakening", "note": "Rev. Wataru Sugahara" },
@@ -75,8 +75,8 @@
         "theme": "Innovate · Transform · Act",
         "date": "Oct 22 (Thu.)",
         "sessions": [
-          { "time": "07:30–08:30", "label": "PRS Morning Prayer & English Bible Breakfast", "note": "By invitation" },
-          { "time": "09:00–10:00", "label": "Grace & Mercy / PRS", "note": "The Light in Israel Continues｜Dr. Cary Summers" },
+          { "time": "07:30–08:30", "label": "English PRS & Breakfast" },
+          { "time": "09:00–10:00", "label": "The Light in Israel Continues", "note": "Dr. Cary Summers" },
           { "time": "10:30–11:30", "label": "AI Gospel Media: Film Production & Case Studies" },
           { "time": "12:00–13:30", "label": "Lunch" },
           { "time": "13:30–14:00", "label": "Worship", "note": "Palm Valley Church" },
@@ -120,7 +120,7 @@
         "theme": "Respond · Covenant · Send",
         "date": "Oct 23 (Fri.)",
         "sessions": [
-          { "time": "07:30–08:30", "label": "PRS Morning Prayer & Chinese Bible Breakfast", "note": "By invitation" },
+          { "time": "07:30–08:30", "label": "Chinese PRS & Breakfast" },
           { "time": "09:00–10:00", "label": "Hearing the Heartbeat of Africa (Uganda Live Link)", "note": "Hon. Martin" },
           { "time": "10:00–10:30", "label": "Coffee & Fellowship" },
           { "time": "10:30–11:00", "label": "Back to God's Original Intent: A New Heaven and Earth", "note": "Summit closing keynote · Executive Director Timothy Cheng" },

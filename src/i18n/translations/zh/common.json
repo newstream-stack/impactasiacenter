@@ -66,7 +66,7 @@
           { "time": "14:30–15:30", "label": "日出東方．日本教會甦醒", "note": "菅原亘 牧師" },
           { "time": "16:00–17:00", "label": "傳福音的百搭工具－從懷疑到相信", "note": "姜文琪 執行長" },
           { "time": "17:30–18:30", "label": "晚餐" },
-          { "time": "18:45–19:00", "label": "敬拜事奉", "note": "IAA 亞洲團隊" },
+          { "time": "18:30–18:45", "label": "敬拜事奉", "note": "IAA 亞洲團隊" },
           { "time": "19:00–20:00", "label": "When Intelligence isn't Human", "note": "Ben Peterson 本·彼得森" },
           { "time": "20:00–21:00", "label": "巨變時代，福音給我們靈魂的錨", "note": "西雅圖證道堂崔勝洪牧師" }
         ]
@@ -78,6 +78,7 @@
         "date": "10/22（週四）",
         "sessions": [
           { "time": "07:30–08:30", "label": "英文 PRS 聚會暨早餐" },
+          { "time": "08:30–09:00", "label": "敬拜事奉", "note": "IAA 亞洲團隊" },
           { "time": "09:00–10:00", "label": "以色列之光持續照耀", "note": "Dr. Cary Summers" },
           { "time": "10:30–11:30", "label": "AI 福音多媒體影音電影製作與範例" },
           { "time": "12:00–13:30", "label": "午餐" },
@@ -86,8 +87,8 @@
           { "time": "15:00–15:30", "label": "休息" },
           { "time": "15:30–16:00", "label": "敬拜事奉", "note": "Saddleback Church Mandarin Community 馬鞍峰教會中文堂" },
           { "time": "16:00–17:00", "label": "Rev. Kang Hee Ahn. & Rev. Paul Liu", "note": "神要將祂的榮耀遍及萬國的異象" },
-          { "time": "17:30–18:30", "label": "晚餐" },
-          { "label": "宋松樹 長笛演奏－這是恩典之路" },
+          { "time": "17:30–18:15", "label": "晚餐" },
+          { "time": "18:15–18:30", "label": "敬拜事奉", "note": "IAA 亞洲團隊" },
           { "time": "18:30–19:00", "label": "The Critical Technology of the Critical Island at the Critical Moment", "note": "A Journey of Blessing, Stewardship and Trust | 呂桔誠" },
           {
             "time": "19:00–21:00",
@@ -123,6 +124,7 @@
         "date": "10/23（週五）",
         "sessions": [
           { "time": "07:30–08:30", "label": "中文 PRS 聚會暨早餐" },
+          { "time": "08:30–09:00", "label": "敬拜事奉", "note": "IAA 亞洲團隊" },
           { "time": "09:00–10:00", "label": "聽見非洲的心跳（烏干達連線）", "note": "Hon. Martin" },
           { "time": "10:00–10:30", "label": "茶點交流" },
           { "time": "10:30–11:00", "label": "回到起初神心意．迎接新天新地", "note": "大會總結專題｜鄭忠信執行長" },

@@ -1,3 +1,21 @@
+/* ---------- warm paper theme (scoped to handbook + its portaled overlays) ---------- */
+.page, .modalOverlay, .tocOverlay {
+  --bg: #faf5ea;
+  --bg-dark: #f4ecdb;
+  --bg-raised: #f1e8d5;
+  --bg-warm: #f4ecdb;
+  --gold: #8f5f12;
+  --gold-bright: #6f470a;
+  --gold-deep: #a9712a;
+  --gold-gradient: linear-gradient(90deg, #a9712a 0%, #d0a04a 50%, #a9712a 100%);
+  --accent: #b8741f;
+  --accent-soft: #c98a3c;
+  --text: #231c17;
+  --text-body: rgba(35, 28, 23, 0.86);
+  --text-muted: rgba(35, 28, 23, 0.6);
+  --border: rgba(143, 95, 18, 0.28);
+}
+
 .page {
   height: 100vh;
   height: 100dvh;
@@ -5,8 +23,7 @@
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(120% 80% at 50% -10%, rgba(217, 164, 65, 0.10), transparent 60%),
-    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg) 45%, var(--bg-dark) 100%);
+    #faf5ea;
 }
 
 /* ---------- top bar ---------- */
@@ -35,7 +52,7 @@
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 .home:hover,
-.lang:hover { color: var(--gold-bright); border-color: rgba(233, 197, 138, 0.4); }
+.lang:hover { color: var(--gold-bright); border-color: rgba(40, 28, 12, 0.4); }
 
 .label {
   position: absolute;
@@ -85,13 +102,13 @@
   font-size: 1.6rem;
   line-height: 1;
   color: var(--gold);
-  background: rgba(28, 26, 35, 0.7);
+  background: rgba(250, 245, 234, 0.85);
   border: 1px solid var(--border);
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
 }
-.nav:hover:not(:disabled) { background: rgba(217, 164, 65, 0.14); transform: scale(1.05); }
+.nav:hover:not(:disabled) { background: rgba(143, 95, 18, 0.14); transform: scale(1.05); }
 .nav:disabled { opacity: 0.25; cursor: default; }
 
 /* ---------- the book ---------- */
@@ -114,10 +131,10 @@
 /* the page you currently see */
 .staticPage {
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.28) 0, rgba(0, 0, 0, 0) 5%),
-    linear-gradient(160deg, var(--bg-raised) 0%, #16141c 100%);
+    linear-gradient(90deg, rgba(143, 95, 18, 0.08) 0, rgba(143, 95, 18, 0) 5%),
+    linear-gradient(160deg, var(--bg-raised) 0%, #faf5ea 100%);
   border: 1px solid var(--border);
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 30px 60px -20px rgba(60, 40, 15, 0.18);
 }
 
 /* ---------- turning leaf ---------- */
@@ -148,7 +165,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 55%);
+  background: linear-gradient(90deg, rgba(250, 245, 234, 0.7) 0%, rgba(143, 95, 18, 0) 55%);
   opacity: 0;
   pointer-events: none;
 }
@@ -165,14 +182,14 @@
 }
 .leafFront {
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.28) 0, rgba(0, 0, 0, 0) 5%),
-    linear-gradient(160deg, var(--bg-raised) 0%, #16141c 100%);
+    linear-gradient(90deg, rgba(143, 95, 18, 0.08) 0, rgba(143, 95, 18, 0) 5%),
+    linear-gradient(160deg, var(--bg-raised) 0%, #faf5ea 100%);
   border: 1px solid var(--border);
-  box-shadow: 8px 0 24px -8px rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 0 24px -8px rgba(60, 40, 15, 0.15);
 }
 .leafBack {
   transform: rotateY(180deg);
-  background: linear-gradient(160deg, #211e27 0%, #191720 100%);
+  background: linear-gradient(160deg, #f1e8d5 0%, #faf5ea 100%);
   border: 1px solid var(--border);
 }
 
@@ -185,12 +202,12 @@
   flex-direction: column;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(217, 164, 65, 0.35) transparent;
+  scrollbar-color: rgba(143, 95, 18, 0.35) transparent;
 }
 .leafInner::-webkit-scrollbar { width: 5px; }
 .leafInner::-webkit-scrollbar-track { background: transparent; }
 .leafInner::-webkit-scrollbar-thumb {
-  background: rgba(217, 164, 65, 0.35);
+  background: rgba(143, 95, 18, 0.35);
   border-radius: 999px;
 }
 
@@ -230,6 +247,7 @@
   margin-top: 0.8rem;
   padding: 0.5rem;
   background: #fff;
+  border: 1px solid var(--border);
   border-radius: 8px;
   line-height: 0;
 }
@@ -274,7 +292,7 @@
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: linear-gradient(135deg, #241f27, #141017);
+  background: linear-gradient(135deg, #f1e8d5, #faf5ea);
 }
 .galleryDots {
   display: flex;
@@ -288,7 +306,7 @@
   padding: 0;
   border-radius: 50%;
   border: 0;
-  background: rgba(233, 197, 138, 0.25);
+  background: rgba(143, 95, 18, 0.25);
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -327,7 +345,7 @@
   gap: 0.2rem;
   margin: 0 0 1rem;
   padding: 0.55rem 0.9rem;
-  background: rgba(217, 164, 65, 0.08);
+  background: rgba(143, 95, 18, 0.08);
   border-left: 3px solid var(--gold);
   border-radius: 0 6px 6px 0;
 }
@@ -400,7 +418,7 @@
   padding: 0.6rem 0.9rem;
   margin-left: -0.9rem;
   margin-right: -0.9rem;
-  background: rgba(217, 164, 65, 0.08);
+  background: rgba(143, 95, 18, 0.08);
   border-left: 3px solid var(--gold);
   border-radius: 0 6px 6px 0;
 }
@@ -446,7 +464,7 @@
   border-radius: 5px;
   border: 1px solid var(--border);
   filter: grayscale(0.3) brightness(0.94) contrast(1.03);
-  background: linear-gradient(135deg, #241f27, #141017);
+  background: linear-gradient(135deg, #f1e8d5, #faf5ea);
 }
 .thumb { width: 68px; height: 84px; }
 .thumbLg { width: 104px; height: 128px; }
@@ -456,7 +474,7 @@
   justify-content: center;
   font-family: var(--font-display);
   font-size: 1.8rem;
-  color: rgba(217, 164, 65, 0.4);
+  color: rgba(40, 28, 12, 0.4);
   filter: none;
 }
 
@@ -476,7 +494,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #17131a;
+  color: #faf5ea;
   background: var(--gold);
   border-radius: 6px;
   padding: 0.15rem 0.6rem;
@@ -560,7 +578,7 @@
 .modalOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 8, 11, 0.75);
+  background: rgba(40, 28, 12, 0.45);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -608,7 +626,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #17131a;
+  color: #faf5ea;
   background: var(--gold);
   border-radius: 6px;
   padding: 0.15rem 0.6rem;
@@ -695,7 +713,7 @@
   align-items: flex-start;
   text-align: left;
   background:
-    linear-gradient(180deg, rgba(10, 9, 14, 0.5) 0%, rgba(10, 9, 14, 0.7) 55%, rgba(10, 9, 14, 0.92) 100%),
+    linear-gradient(180deg, rgba(250, 245, 234, 0.55) 0%, rgba(250, 245, 234, 0.78) 55%, rgba(250, 245, 234, 0.96) 100%),
     url('/temp.jpg') center / cover no-repeat;
 }
 .coverKicker {
@@ -723,7 +741,6 @@
   margin: 1.3rem 0;
   display: flex;
   flex-direction: column;
-  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.5);
 }
 .coverSub {
   font-family: var(--font-display);
@@ -741,7 +758,7 @@
   transform: translateX(-50%);
   width: 5.5rem;
   height: auto;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 4px 14px rgba(60, 40, 15, 0.2));
   opacity: 0.95;
 }
 .coverMeta {
@@ -798,7 +815,7 @@
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
-.counter:hover, .counter:active { color: var(--gold-bright); border-color: rgba(233, 197, 138, 0.4); }
+.counter:hover, .counter:active { color: var(--gold-bright); border-color: rgba(40, 28, 12, 0.4); }
 .dots { display: flex; gap: 0.5rem; }
 .dot {
   position: relative;
@@ -807,7 +824,7 @@
   padding: 0;
   border-radius: 50%;
   border: 0;
-  background: rgba(233, 197, 138, 0.25);
+  background: rgba(143, 95, 18, 0.25);
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -816,7 +833,7 @@
   position: absolute;
   inset: -12px;
 }
-.dot:active { background: rgba(233, 197, 138, 0.55); transform: scale(1.3); }
+.dot:active { background: rgba(143, 95, 18, 0.55); transform: scale(1.3); }
 .dotOn { background: var(--gold); transform: scale(1.4); }
 .dotOn:active { background: var(--gold-bright); }
 .hint {
@@ -829,7 +846,7 @@
 .tocOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(8, 7, 10, 0.7);
+  background: rgba(40, 28, 12, 0.4);
   backdrop-filter: blur(2px);
   display: flex;
   align-items: flex-end;
@@ -892,8 +909,8 @@
   cursor: pointer;
   transition: background 0.15s ease;
 }
-.tocItem:hover { background: rgba(217, 164, 65, 0.08); }
-.tocItemOn { color: var(--gold-bright); background: rgba(217, 164, 65, 0.12); }
+.tocItem:hover { background: rgba(143, 95, 18, 0.08); }
+.tocItemOn { color: var(--gold-bright); background: rgba(143, 95, 18, 0.12); }
 .tocNum {
   flex-shrink: 0;
   font-family: var(--font-display);

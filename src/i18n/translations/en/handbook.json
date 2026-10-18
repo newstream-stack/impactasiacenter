@@ -110,14 +110,16 @@
             "date": "Oct 21 · Day 2",
             "theme": "Gospel · Mission · Influence",
             "sessions": [
-              { "time": "08:30–09:00", "title": "Worship", "note": "IAA Asia Team, \"Come Praise the Lord\"" },
+              { "time": "08:30–09:00", "title": "Worship", "note": "IAA Asia Team" },
               { "time": "09:00–10:00", "title": "PRS: Why Is Public Reading of Scripture Important and Urgent?", "note": "Global Co-president Dr. Cary Summers" },
               { "time": "10:30–11:30", "title": "JSU: Just Show Up Book Club", "note": "President Ryan Kim" },
-              { "time": "12:00–13:30", "title": "Lunch" },
+              { "time": "12:00–13:15", "title": "Lunch" },
+              { "time": "13:15–13:30", "title": "Worship", "note": "IAA Asia Team" },
               { "time": "13:30–14:30", "title": "Heart, Strength & Soul: Sharing the Gospel", "note": "Rev. Lin Yi-Nuo's Gospel Talk Show\nTech Spins Wildly, Faith Stands Firm\n| Sports Evangelism" },
               { "time": "14:30–15:30", "title": "Sunrise in the East: Japan Church Awakening", "note": "Rev. Wataru Sugahara" },
               { "time": "16:00–17:00", "title": "The Versatile Tool of Evangelism: From Doubt to Faith", "note": "Wen-Qi Jiang, Executive Director" },
               { "time": "17:30–18:30", "title": "Dinner" },
+              { "time": "18:45–19:00", "title": "Worship", "note": "IAA Asia Team" },
               { "time": "19:00–20:00", "title": "When Intelligence isn't Human", "note": "Ben Peterson 本·彼得森" },
               { "time": "20:00–21:00", "title": "The Soul's Anchor in an Age of Massive Change", "note": "Rev. Alex Cui, Evangelical Chinese Church of Seattle" }
             ]

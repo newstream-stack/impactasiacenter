@@ -72,16 +72,6 @@ export default function Hero() {
         )}
 
         <div className={styles.cta}>
-          <a
-            href={language === 'en'
-              ? 'https://ct.org.tw/html/activity/6-3-eng.php?article=39&area=&id=&parentid='
-              : 'https://ct.org.tw/html/activity/6-3.php?article=38&area=&id=&parentid='}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.btnPrimary}
-          >
-            {t('btnRegister')}
-          </a>
           <a href="#schedule" className={styles.btnGhost}>{t('navSchedule')}</a>
         </div>
 

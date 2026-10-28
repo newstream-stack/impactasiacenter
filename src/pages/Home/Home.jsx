@@ -19,7 +19,6 @@ import Footer from '../../components/Footer/Footer';
 // import ChatBot from '../../components/ChatBot/ChatBot';
 import { useReveal } from '../../hooks/useReveal'
 import BackToTop from '../../components/BackToTop/BackToTop'
-import FloatingRegisterBtn from '../../components/FloatingRegisterBtn/FloatingRegisterBtn'
 // import { smoothScrollTo } from '../../utils/scroll'
 
 export default function Home() {
@@ -55,7 +54,6 @@ export default function Home() {
       <div className="reveal"><FAQ /></div>
       <Footer />
       <BackToTop />
-      <FloatingRegisterBtn />
       {/* <ChatBot onActionClick={handleSetActiveTheme} /> */}
     </>
   );
